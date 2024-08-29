@@ -3,7 +3,14 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
 import MainTable from "./components/MainTable.tsx";
-import { etakJoonobjektid, etakPunktobjektid, etakPindobjektidMain, etakPindobjektidOverlap } from "./pages/featureClasses";
+import {
+  etakJoonobjektid,
+  etakPunktobjektid,
+  etakPindobjektidMain,
+  etakPindobjektidOverlap,
+  metadata,
+  derivedLayers,
+} from "./data/featureClasses.tsx";
 
 function App() {
   return (
@@ -39,7 +46,7 @@ function App() {
           <MainTable
             backgroundColor="#C4C1A4"
             objectName="Metaandmed"
-            itemNames={["alusdokument"]}
+            itemNames={metadata}
             dataTypeClass="etak"
           />
           <MainTable
@@ -84,7 +91,7 @@ function App() {
           <MainTable
             backgroundColor="#A1DD70"
             objectName="Tuletiskihid"
-            itemNames={["vooluveed_kkr"]}
+            itemNames={derivedLayers}
             dataTypeClass="tuletiskiht"
           />
         </Box>

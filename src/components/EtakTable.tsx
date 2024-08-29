@@ -9,12 +9,15 @@ import Typography from "@mui/material/Typography";
 
 import { useLocation, Location } from "react-router-dom";
 
-import { mainRows, getTableName } from "./Helpers";
+import { mainRows } from "../data/constantFields.tsx";
+import { getTableName } from "../utils/utils.tsx";
 import { EtakTableProps } from "../types/interfaces";
 
-import multipointIcon from '../assets/multipoint.svg';
 
-export default function EtakTable({ addedRows }: EtakTableProps) {
+
+export default function EtakTable({ addedRows, imageSrc }: EtakTableProps) {
+
+  console.log(imageSrc);
   const location: Location = useLocation();
 
   const tableName = getTableName(location);
@@ -39,8 +42,8 @@ export default function EtakTable({ addedRows }: EtakTableProps) {
         marginTop: 2,
       }}
     >
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <img src={multipointIcon} alt="Multipoint" width={50} height={50} />
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <img src={imageSrc} alt="Multipoint" width={50} height={50} />
         <Typography variant="h4" sx={{ marginLeft: 2 }}>
           {tableName}
         </Typography>

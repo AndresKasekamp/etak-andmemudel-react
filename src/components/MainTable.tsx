@@ -27,10 +27,10 @@ const MainTable = ({
       </Typography>
 
       {itemNames.map((item) => (
-        <ListItem disablePadding key={item}>
-          <RouterLink to={`${dataTypeClass}/${item}`}>
+        <ListItem disablePadding key={item.fcName}>
+          <RouterLink to={`${dataTypeClass}/${item.fcName}`}>
             <ListItemButton component={Link} sx={{ color: "white" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.fcName} />
             </ListItemButton>
           </RouterLink>
         </ListItem>

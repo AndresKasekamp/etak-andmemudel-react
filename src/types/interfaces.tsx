@@ -2,21 +2,24 @@ import { Name } from "./types";
 
 export interface FeatureClass {
   fcName: string;
-  elements: Row[]; // Replace 'Row' with the correct type of elements in EtakTable
+  elements: Row[];
+
 }
 // Define types for the parameters and the return value
 export interface FeatureClassPath {
   path: string;
   element: React.ReactElement;
+
 }
 
 export interface Row {
   position: number;
-  row: RowData; // Replace 'any' with the specific type of your row
+  row: RowData; 
 }
 
 export interface EtakTableProps {
   addedRows: Row[];
+  imageSrc: string
 }
 
 export interface RowData {
@@ -29,6 +32,6 @@ export interface RowData {
 export interface TableProps {
   backgroundColor: string;
   objectName: string;
-  itemNames: string[];
+  itemNames: FeatureClass[];
   dataTypeClass: string;
 }

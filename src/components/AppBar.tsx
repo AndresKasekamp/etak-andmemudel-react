@@ -4,7 +4,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import HomeLink from "./HomeLink";
 
-export default function ButtonAppBar() {
+export default function EtakAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="sticky" sx={{ backgroundColor: "#32774e" }}>

@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import { paths } from "./paths";
-import { NavbarWrapper } from "../components/Helpers";
+import NavBarWrapper from "../components/NavBarWrapper";
+
+// TODO error page luua
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <NavbarWrapper />,
+    element: <NavBarWrapper />,
     children: paths(),
   },
 ]);

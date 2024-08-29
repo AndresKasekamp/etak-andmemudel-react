@@ -2,12 +2,17 @@ import {
   // etakJoonobjektid,
   // etakPindobjektidMain,
   // etakPindobjektidOverlap,
-  // etakPunktobjektid,
-  etakPunktobjektid2,
-} from "./featureClasses";
+  etakPunktobjektid,
+} from "../data/featureClasses";
 import App from "../App";
 import EtakTable from "../components/EtakTable";
 import { FeatureClass, FeatureClassPath } from "../types/interfaces";
+
+// Image sources
+import pointImageSource from "../assets/multipoint.svg";
+// import polyImageSource from "../assets/polygon-hole-o.svg";
+// import polyLineImageSource from "../assets/polyline-pt.svg";
+// import cubeImageSource from "../assets/cube-3d.svg";
 
 const initPath = {
   path: "/",
@@ -16,11 +21,12 @@ const initPath = {
 
 const featureClassPath = (
   featureclasses: FeatureClass[],
-  dataTypeClass: string
+  dataTypeClass: string,
+  image: string
 ): FeatureClassPath[] => {
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `${dataTypeClass}/${fc.fcName}`,
-    element: <EtakTable addedRows={fc.elements} />,
+    element: <EtakTable addedRows={fc.elements} imageSrc={image} />,
   }));
 
   return featureclassPaths;
@@ -29,7 +35,7 @@ const featureClassPath = (
 export const paths = () => [
   initPath,
 
-  ...featureClassPath(etakPunktobjektid2, "punktobjekt"),
+  ...featureClassPath(etakPunktobjektid, "punktobjekt", pointImageSource),
   // ...featureClassPath(etakJoonobjektid, "joonobjekt"),
   // ...featureClassPath(etakPindobjektidOverlap, "pindobjekt"),
   // ...featureClassPath(etakPindobjektidMain, "pindobjekt"),
