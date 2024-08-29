@@ -1,4 +1,5 @@
 import { createData, otherRegisterSources } from "./constantFields.tsx";
+import { etakPunktobjektidDomains } from "./domains.tsx";
 
 export const etakPunktobjektid = [
   {
@@ -54,6 +55,11 @@ export const etakPunktobjektid = [
         position: 16,
       },
     ],
+    domainTables: [
+      etakPunktobjektidDomains.d0101,
+      etakPunktobjektidDomains.kivi_tyyp,
+      etakPunktobjektidDomains.vajalikkus,
+    ],
   },
 
   {
@@ -98,6 +104,9 @@ export const etakPunktobjektid = [
         row: otherRegisterSources.knr_id,
         position: 15,
       },
+    ],
+    domainTables: [
+      etakPunktobjektidDomains.vajalikkus,
     ],
   },
 
@@ -144,6 +153,9 @@ export const etakPunktobjektid = [
         position: 15,
       },
     ],
+    domainTables: [
+      etakPunktobjektidDomains.vajalikkus,
+    ],
   },
 
   {
@@ -169,6 +181,9 @@ export const etakPunktobjektid = [
         position: 2,
       },
     ],
+    domainTables: [
+      etakPunktobjektidDomains.vajalikkus,
+    ],
   },
 
   {
@@ -193,6 +208,9 @@ export const etakPunktobjektid = [
         ),
         position: 2,
       },
+    ],
+    domainTables: [
+      etakPunktobjektidDomains.vajalikkus,
     ],
   },
 
@@ -249,6 +267,9 @@ export const etakPunktobjektid = [
         position: 4,
       },
     ],
+    domainTables: [
+      etakPunktobjektidDomains.vajalikkus,
+    ],
   },
 
   {
@@ -264,6 +285,9 @@ export const etakPunktobjektid = [
         position: 5,
       },
     ],
+    domainTables: [
+      etakPunktobjektidDomains.vajalikkus,
+    ],
   },
 
   {
@@ -278,6 +302,9 @@ export const etakPunktobjektid = [
         ),
         position: 5,
       },
+    ],
+    domainTables: [
+      etakPunktobjektidDomains.vajalikkus,
     ],
   },
 ];

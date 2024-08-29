@@ -7,32 +7,10 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
-import { useLocation, Location } from "react-router-dom";
-
-import { mainRows } from "../data/constantFields.tsx";
-import { getTableName } from "../utils/utils.tsx";
-import { EtakTableProps } from "../types/interfaces";
+import { EtakTableProps2 } from "../types/interfaces.tsx";
 
 
-
-export default function EtakTable({ addedRows, imageSrc }: EtakTableProps) {
-
-  console.log(imageSrc);
-  const location: Location = useLocation();
-
-  const tableName = getTableName(location);
-
-  const updatedRows = [...mainRows];
-
-  // Manipulating underlying array
-  addedRows.forEach((row) => {
-    if (row.position >= 0 && row.position <= updatedRows.length) {
-      updatedRows.splice(row.position, 0, row.row);
-    } else {
-      console.warn(`Invalid position ${row.position} for row insertion.`);
-    }
-  });
-
+const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
   return (
     <TableContainer
       component={Paper}
@@ -84,4 +62,6 @@ export default function EtakTable({ addedRows, imageSrc }: EtakTableProps) {
       </Table>
     </TableContainer>
   );
-}
+};
+
+export default EtakTable;

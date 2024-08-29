@@ -5,7 +5,7 @@ import {
   etakPunktobjektid,
 } from "../data/featureClasses";
 import App from "../App";
-import EtakTable from "../components/EtakTable";
+import EtakDataMain from "../components/EtakDataMain";
 import { FeatureClass, FeatureClassPath } from "../types/interfaces";
 
 // Image sources
@@ -26,7 +26,7 @@ const featureClassPath = (
 ): FeatureClassPath[] => {
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `${dataTypeClass}/${fc.fcName}`,
-    element: <EtakTable addedRows={fc.elements} imageSrc={image} />,
+    element: <EtakDataMain addedRows={fc.elements} imageSrc={image} associatedDomains={fc.domainTables} />,
   }));
 
   return featureclassPaths;
