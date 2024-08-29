@@ -106,7 +106,7 @@ export const etakPunktobjektid = [
       },
     ],
     domainTables: [
-      etakPunktobjektidDomains.vajalikkus,
+      etakPunktobjektidDomains.vajalikkus, etakPunktobjektidDomains.d0103, etakPunktobjektidDomains.pinnavormP_tyyp
     ],
   },
 

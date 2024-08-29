@@ -27,10 +27,30 @@ export const etakPunktobjektidDomains = {
     ],
   },
 
+  pinnavormP_tyyp: {
+    name: "pinnavormP_tyyp",
+    desc: "Pinnavormi tüüp punktina",
+    dataType: "lühike täisarv",
+    elements: [
+      createDataDomains(10, "Auk"),
+      createDataDomains(20, "Tehisküngas"),
+      createDataDomains(50, "Koobas"),
+      createDataDomains(60, "Ebatasane ala"),
+      createDataDomains(70, "Kärestik"),
+    ],
+  },
+
   d0101: {
     name: "0101",
     desc: "Kivi",
     dataType: "lühike täisarv",
     elements: [createDataDomains(101, "Kivi")],
+  },
+
+  d0103: {
+    name: "0103",
+    desc: "Pinnvorm",
+    dataType: "lühike täisarv",
+    elements: [createDataDomains(103, "Pinnavorm")],
   },
 };
