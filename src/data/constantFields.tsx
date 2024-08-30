@@ -1,5 +1,5 @@
 import { Name } from "../types/types";
-import { RowData, headingData } from "../types/interfaces";
+import { RowData } from "../types/interfaces";
 
 export const createData = (
   name: Name,
@@ -10,7 +10,6 @@ export const createData = (
   return { name, dataType, domain, desc };
 };
 
-export const otherMainRows = [{}];
 
 export const otherShapes = [
   {
