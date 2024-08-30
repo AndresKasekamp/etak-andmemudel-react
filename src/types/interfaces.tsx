@@ -33,7 +33,7 @@ export interface Row {
   row: RowData;
 }
 
-interface headingData {
+export interface headingData {
   geomType: string;
   geomDimension: number;
   estName: string;

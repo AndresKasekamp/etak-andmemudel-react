@@ -1,5 +1,5 @@
 import { Name } from "../types/types";
-import { RowData } from "../types/interfaces";
+import { RowData, headingData } from "../types/interfaces";
 
 export const createData = (
   name: Name,
@@ -106,7 +106,7 @@ export const otherRegisterSources = {
     { name: "mark", color: "#C1E1C1" },
     "lühike täisarv",
     "toevaartus",
-    "Kas kõrgrajatis on navigatsioonimärk"
+    "Objekt on kasutusel navigatioonimärgina"
   ),
 };
 
@@ -175,3 +175,70 @@ export const mainRows = [
     "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
   ),
 ];
+
+export const generateKood = (domain: string) => {
+  const koodField = {
+    row: createData(
+      { name: "kood", color: "#FFFFFF" },
+      "lühike täisarv",
+      domain,
+      "Nähtuse kood ETAK reaalsusmudelis"
+    ),
+    position: 1,
+  };
+
+  return koodField;
+};
+
+export const generateTyyp = (domain: string, desc: string) => {
+  const tyypField = {
+    row: createData(
+      { name: "tyyp", color: "#FFFFFF" },
+      "lühike täisarv",
+      domain,
+      desc
+    ),
+    position: 2,
+  };
+
+  return tyypField;
+};
+
+export const generateKorgus = (desc: string, position: number) => {
+  const korgusField = {
+    row: createData(
+      { name: "korgus", color: "#FFFFFF" },
+      "lühike täisarv",
+      "",
+      desc
+    ),
+    position,
+  };
+
+  return korgusField;
+};
+
+export const generateField = (row: RowData, position: number) => {
+  const field = {
+    row,
+    position,
+  };
+
+  return field;
+};
+
+export const generateHeadingData = (
+  geomType: string,
+  estName: string,
+  geomDimension: number = 2.5
+) => {
+  const heading = {
+    geomType,
+    geomDimension,
+    estName,
+  };
+
+  return heading;
+};
+
+
