@@ -129,7 +129,7 @@ export const mainRows = [
     { name: "objectid", color: "#DAD0ED" },
     "täisarv",
     "",
-    "ESRI identifikaator"
+    "Tehniline identifikaator"
   ),
   createData(
     { name: "shape", color: "#DAD0ED" },
@@ -166,7 +166,7 @@ export const mainRows = [
     { name: "vajalik", color: "#f4c1c1" },
     "lühike täisarv",
     "vajalikkus",
-    "Objekt vajab tähelepanu"
+    "Objekti staatus"
   ),
   createData(
     { name: "geom_muutmisaeg", color: "#f4c1c1" },

@@ -30,7 +30,7 @@ export const etakPunktobjektid = [
           { name: "korgus", color: "#FFFFFF" },
           "lühike täisarv",
           "",
-          "Kaitsealuse üksiku kivi kõrgus täismeetrites"
+          "Kaitsealuse üksiku kivi kõrgus maapinnast [m]"
         ),
         position: 3,
       },
@@ -128,7 +128,7 @@ export const etakPunktobjektid = [
           { name: "tyyp", color: "#FFFFFF" },
           "lühike täisarv",
           "seisuveekogu_tyyp",
-          "Seisuveekogu tüüp"
+          "Seisuveekogu tüüp punktina"
         ),
         position: 2,
       },

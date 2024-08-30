@@ -21,8 +21,8 @@ export const etakPunktobjektidDomains = {
     desc: "Kivi tüüp",
     dataType: "lühike täisarv",
     elements: [
-      createDataDomains(10, "lühike täisarv"),
-      createDataDomains(20, "lühike täisarv"),
+      createDataDomains(10, "Üksik kivi"),
+      createDataDomains(20, "Kivihunnik"),
       createDataDomains(30, "Kivine ala"),
     ],
   },
