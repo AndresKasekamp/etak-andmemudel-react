@@ -11,6 +11,7 @@ export default function EtakDataMain({
   addedRows,
   imageSrc,
   associatedDomains,
+  headingData
 }: EtakTableProps) {
   const location: Location = useLocation();
 
@@ -33,11 +34,11 @@ export default function EtakDataMain({
         updatedRows={updatedRows}
         imageSrc={imageSrc}
         tableName={tableName}
+        headingData={headingData}
       ></EtakTable>
 
       <div style={{ display: "flex", alignItems: "start" }}>
         {associatedDomains.map((domain, idx) => (
-          // @ts-expect-error - something wrong domain type if empty object
           <DomainTable key={idx} domain={domain}></DomainTable>
         ))}
       </div>

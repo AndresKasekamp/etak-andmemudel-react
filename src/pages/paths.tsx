@@ -26,7 +26,7 @@ const featureClassPath = (
 ): FeatureClassPath[] => {
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `${dataTypeClass}/${fc.fcName}`,
-    element: <EtakDataMain addedRows={fc.elements} imageSrc={image} associatedDomains={fc.domainTables} />,
+    element: <EtakDataMain addedRows={fc.elements} imageSrc={image} associatedDomains={fc.domainTables} headingData={fc.headingData} />,
   }));
 
   return featureclassPaths;

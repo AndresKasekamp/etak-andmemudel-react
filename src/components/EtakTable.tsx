@@ -18,7 +18,7 @@ import autoTable from "jspdf-autotable";
 import { EtakTableProps2 } from "../types/interfaces.tsx";
 import ObjectCount from "./ObjectCount.tsx";
 
-const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
+const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableProps2) => {
   const handleExportPDF = () => {
     const doc = new jsPDF();
 
@@ -57,7 +57,7 @@ const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
         <Tooltip
           title={
             <span style={{ fontSize: "1.5em" }}>
-              Nähtusklassi geomeetria: punkt
+              Nähtusklassi geomeetria: {headingData.geomType}
             </span>
           }
           placement="top"
@@ -68,7 +68,7 @@ const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
         <Tooltip
           title={
             <span style={{ fontSize: "1.5em" }}>
-              Ruumikuju dimensioon: 2.5D
+              Ruumikuju dimensioon: {headingData.geomDimension}D
             </span>
           }
           placement="top"
@@ -82,7 +82,7 @@ const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
               transform: "translateY(-2px)",
             }}
           >
-            2.5D
+            {headingData.geomDimension}D
           </Box>
         </Tooltip>
 
@@ -102,7 +102,7 @@ const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
       </div>
       <div>
         <Typography variant="h5" sx={{ marginLeft: 2 }}>
-          Kivi
+        {headingData.estName}
         </Typography>
 
         <Typography sx={{ marginLeft: 2 }}>Andmestik: levituum</Typography>

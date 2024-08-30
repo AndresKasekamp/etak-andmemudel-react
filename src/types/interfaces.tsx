@@ -4,6 +4,7 @@ export interface FeatureClass {
   fcName: string;
   elements: Row[];
   domainTables: Domain[];
+  headingData: headingData;
 }
 // Define types for the parameters and the return value
 export interface FeatureClassPath {
@@ -12,8 +13,8 @@ export interface FeatureClassPath {
 }
 
 interface DataDomainElements {
-  kood: number
-  nimetus: string
+  kood: number;
+  nimetus: string;
 }
 
 interface Domain {
@@ -32,16 +33,24 @@ export interface Row {
   row: RowData;
 }
 
+interface headingData {
+  geomType: string;
+  geomDimension: number;
+  estName: string;
+}
+
 export interface EtakTableProps {
   addedRows: Row[];
   imageSrc: string;
-  associatedDomains: object[];
+  associatedDomains: Domain[];
+  headingData: headingData;
 }
 
 export interface EtakTableProps2 {
   updatedRows: RowData[];
   imageSrc: string;
   tableName: string;
+  headingData: headingData;
 }
 
 export interface RowData {
@@ -58,12 +67,11 @@ export interface TableProps {
   dataTypeClass: string;
 }
 
-
 // Define the structure of the API response
 export interface ObjectCountResponse {
   totalFeatures: number; // Assuming totalFeatures is a number
 }
 
 export interface ObjectCountProps {
-  url: string
+  url: string;
 }

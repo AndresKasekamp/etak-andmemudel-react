@@ -60,6 +60,11 @@ export const etakPunktobjektid = [
       etakPunktobjektidDomains.kivi_tyyp,
       etakPunktobjektidDomains.vajalikkus,
     ],
+    headingData: {
+      geomType: "punkt",
+      geomDimension: 2.5,
+      estName: "Kivi",
+    },
   },
 
   {
@@ -108,6 +113,11 @@ export const etakPunktobjektid = [
     domainTables: [
       etakPunktobjektidDomains.vajalikkus, etakPunktobjektidDomains.d0103, etakPunktobjektidDomains.pinnavormP_tyyp
     ],
+    headingData: {
+      geomType: "punkt",
+      geomDimension: 2.5,
+      estName: "Pinnavorm punktina",
+    },
   },
 
   {
@@ -156,6 +166,11 @@ export const etakPunktobjektid = [
     domainTables: [
       etakPunktobjektidDomains.vajalikkus,
     ],
+    headingData: {
+      geomType: "punkt",
+      geomDimension: 2.5,
+      estName: "Seisuveekogu punktina",
+    },
   },
 
   {
@@ -184,6 +199,11 @@ export const etakPunktobjektid = [
     domainTables: [
       etakPunktobjektidDomains.vajalikkus,
     ],
+    headingData: {
+      geomType: "punkt",
+      geomDimension: 2.5,
+      estName: "Muu kõlvik punktina",
+    },
   },
 
   {
@@ -212,6 +232,11 @@ export const etakPunktobjektid = [
     domainTables: [
       etakPunktobjektidDomains.vajalikkus,
     ],
+    headingData: {
+      geomType: "punkt",
+      geomDimension: 2.5,
+      estName: "Puittaimestik punktina",
+    },
   },
 
   {
@@ -270,6 +295,11 @@ export const etakPunktobjektid = [
     domainTables: [
       etakPunktobjektidDomains.vajalikkus,
     ],
+    headingData: {
+      geomType: "punkt",
+      geomDimension: 2.5,
+      estName: "Kõrgrajatis",
+    },
   },
 
   {
@@ -288,6 +318,12 @@ export const etakPunktobjektid = [
     domainTables: [
       etakPunktobjektidDomains.vajalikkus,
     ],
+    headingData: {
+      geomType: "punkt",
+      geomDimension: 2.5,
+      estName: "Muu rajatis punktina",
+    },
+    
   },
 
   {
@@ -295,17 +331,46 @@ export const etakPunktobjektid = [
     elements: [
       {
         row: createData(
+          { name: "kood", color: "#FFFFFF" },
+          "lühike täisarv",
+          "0602",
+          "Nähtuse kood ETAK reaalsusmudelis"
+        ),
+        position: 1,
+      },
+
+      {
+        row: createData(
+          { name: "tyyp", color: "#FFFFFF" },
+          "lühike täisarv",
+          "tehnopaigaldis_tyyp",
+          "Tehnopaigaldise tüüp"
+        ),
+        position: 2,
+      },
+
+      {
+        row: createData(
           { name: "korgus", color: "#FFFFFF" },
           "lühike täisarv",
           "",
           "Kaitsealuse üksiku kivi kõrgus täismeetrites"
         ),
-        position: 5,
+        position: 4,
       },
+      {
+        row: otherRegisterSources.ehr_gid,
+        position: 13,
+      }
     ],
     domainTables: [
       etakPunktobjektidDomains.vajalikkus,
     ],
+    headingData: {
+      geomType: "punkt",
+      geomDimension: 2.5,
+      estName: "Tehnopaigaldis",
+    },
   },
 ];
 
