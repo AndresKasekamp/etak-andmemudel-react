@@ -6,9 +6,10 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import Tooltip from "@mui/material/Tooltip";
+import Box from "@mui/material/Box";
 
 import { EtakTableProps2 } from "../types/interfaces.tsx";
-
 
 const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
   return (
@@ -21,7 +22,39 @@ const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
       }}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
-        <img src={imageSrc} alt="Multipoint" width={50} height={50} />
+        <Tooltip
+          title={
+            <span style={{ fontSize: "1.5em" }}>
+              Nähtusklassi geomeetria: punkt
+            </span>
+          }
+          placement="top"
+        >
+          <img src={imageSrc} alt="Multipoint" width={50} height={50} />
+        </Tooltip>
+
+        <Tooltip
+          title={
+            <span style={{ fontSize: "1.5em" }}>
+              Ruumikuju dimensioon: 2.5D
+            </span>
+          }
+          placement="top"
+        >
+          <Box
+            sx={{
+              marginRight: 1,
+              marginLeft: 1,
+              p: 0.5,
+              border: "3px solid black",
+              boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
+              transform: "translateY(-2px)",
+            }}
+          >
+            2.5D
+          </Box>
+        </Tooltip>
+
         <Typography variant="h4" sx={{ marginLeft: 2 }}>
           {tableName}
         </Typography>
