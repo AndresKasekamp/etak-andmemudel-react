@@ -4,12 +4,12 @@ import Container from "@mui/material/Container";
 
 import MainTable from "./components/MainTable.tsx";
 import {
-  etakJoonobjektid,
   etakPunktobjektid,
-  etakPindobjektidMain,
-  etakPindobjektidOverlap,
-  metadata,
-  derivedLayers,
+  // etakJoonobjektid,
+  // etakPindobjektidMain,
+  // etakPindobjektidOverlap,
+  // metadata,
+  // derivedLayers,
 } from "./data/featureClasses.tsx";
 
 function App() {
@@ -46,7 +46,8 @@ function App() {
           <MainTable
             backgroundColor="#C4C1A4"
             objectName="Metaandmed"
-            itemNames={metadata}
+            // itemNames={metadata}
+            itemNames={etakPunktobjektid}
             dataTypeClass="etak"
           />
           <MainTable
@@ -58,7 +59,8 @@ function App() {
           <MainTable
             backgroundColor="#AC87C5"
             objectName="Joonobjektid"
-            itemNames={etakJoonobjektid}
+            // itemNames={etakJoonobjektid}
+            itemNames={etakPunktobjektid}
             dataTypeClass="joonobjekt"
           />
 
@@ -77,13 +79,15 @@ function App() {
             <MainTable
               backgroundColor="#cfcfc4"
               objectName="Põhipindobjektid"
-              itemNames={etakPindobjektidMain}
+              // itemNames={etakPindobjektidMain}
+              itemNames={etakPunktobjektid}
               dataTypeClass="pindobjekt"
             />
             <MainTable
               backgroundColor="#577B8D"
               objectName="Kattuvad pindobjektid"
-              itemNames={etakPindobjektidOverlap}
+              // itemNames={etakPindobjektidOverlap}
+              itemNames={etakPunktobjektid}
               dataTypeClass="pindobjekt"
             />
           </Box>
@@ -91,7 +95,8 @@ function App() {
           <MainTable
             backgroundColor="#A1DD70"
             objectName="Tuletiskihid"
-            itemNames={derivedLayers}
+            // itemNames={derivedLayers}
+            itemNames={etakPunktobjektid}
             dataTypeClass="tuletiskiht"
           />
         </Box>
