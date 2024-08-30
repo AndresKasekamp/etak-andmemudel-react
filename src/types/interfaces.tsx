@@ -57,3 +57,13 @@ export interface TableProps {
   itemNames: FeatureClass[];
   dataTypeClass: string;
 }
+
+
+// Define the structure of the API response
+export interface ObjectCountResponse {
+  totalFeatures: number; // Assuming totalFeatures is a number
+}
+
+export interface ObjectCountProps {
+  url: string
+}

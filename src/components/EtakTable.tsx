@@ -16,6 +16,7 @@ import { jsPDF } from "jspdf"; //or use your library of choice here
 import autoTable from "jspdf-autotable";
 
 import { EtakTableProps2 } from "../types/interfaces.tsx";
+import ObjectCount from "./ObjectCount.tsx";
 
 const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
   const handleExportPDF = () => {
@@ -40,6 +41,8 @@ const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
     // Save the PDF
     doc.save(`${tableName}.pdf`);
   };
+
+  const url = `https://gsavalik.envir.ee/geoserver/wfs?typename=etak:${tableName.toLowerCase()}&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
 
   return (
     <TableContainer
@@ -104,9 +107,10 @@ const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
 
         <Typography sx={{ marginLeft: 2 }}>Andmestik: levituum</Typography>
 
-        <Typography sx={{ marginLeft: 2 }}>
+        {/* <Typography sx={{ marginLeft: 2 }}>
           Objekte nähtusklassis: 103626 (wfs päring?)
-        </Typography>
+        </Typography> */}
+        <ObjectCount url={url}></ObjectCount>
       </div>
 
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">

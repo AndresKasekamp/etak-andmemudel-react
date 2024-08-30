@@ -1,0 +1,39 @@
+import { useEffect, useState } from "react";
+import Typography from "@mui/material/Typography";
+
+import { getObjectCount } from "../utils/wfsRequest.ts";
+import { ObjectCountProps, ObjectCountResponse } from "../types/interfaces.tsx";
+
+// TODO objekte nähtusklassis eraldi objektina arvatavasti
+const ObjectCount = ({ url }: ObjectCountProps) => {
+  const [data, setData] = useState<number | null>(null); // Use number or null
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchDataFromApi = async () => {
+      try {
+        // @ts-ignore
+        const result: ObjectCountResponse = await getObjectCount(url);
+        setData(result["totalFeatures"]); // Adjust based on actual response structure
+        setLoading(false);
+      } catch (err) {
+        setError("Failed to fetch data");
+        setLoading(false);
+      }
+    };
+
+    fetchDataFromApi();
+  }, [url]); // Empty dependency array means this effect runs once when the component mounts
+
+  if (loading) return <Typography>Laen...</Typography>;
+  if (error) return <Typography color="error">{error}</Typography>;
+
+  return (
+    <Typography sx={{ marginLeft: 2 }}>
+      Objekte nähtusklassis: {data !== null ? data : "Unknown"}
+    </Typography>
+  );
+};
+
+export default ObjectCount;
