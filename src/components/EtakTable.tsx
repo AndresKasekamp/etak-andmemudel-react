@@ -107,10 +107,12 @@ const EtakTable = ({ updatedRows, imageSrc, tableName }: EtakTableProps2) => {
 
         <Typography sx={{ marginLeft: 2 }}>Andmestik: levituum</Typography>
 
-        {/* <Typography sx={{ marginLeft: 2 }}>
-          Objekte nähtusklassis: 103626 (wfs päring?)
-        </Typography> */}
-        <ObjectCount url={url}></ObjectCount>
+        <div style={{ display: "flex" }}>
+          <Typography sx={{ marginLeft: 2 }}>
+            Objekte nähtusklassis:&nbsp;
+          </Typography>
+          <ObjectCount url={url}></ObjectCount>
+        </div>
       </div>
 
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
