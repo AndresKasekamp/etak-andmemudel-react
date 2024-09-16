@@ -1,0 +1,1115 @@
+{
+  "groups": {
+    "_default": {
+      "colour": "#fafafa",
+      "vertical_grouping": "0",
+      "name": {
+        "en": "OTHER",
+        "et": "MUU"
+      }
+    },
+    "meta": {
+      "colour": "#ffe2ef",
+      "vertical_grouping": "1",
+      "name": {
+        "en": "Metadata",
+        "et": "Metaandmed"
+      }
+    },
+    "points": {
+      "colour": "#fff3a2",
+      "vertical_grouping": "1",
+      "name": {
+        "et": "Punktobjektid",
+        "en": "Points"
+      }
+    },
+    "lines": {
+      "colour": "#c0f0fd",
+      "vertical_grouping": "2",
+      "name": {
+        "et": "Joonobjektid",
+        "en": "Lines"
+      }
+    },
+    "polygons": {
+      "colour": "#c8ffcb",
+      "vertical_grouping": "3",
+      "name": {
+        "et": "Pindobjektid",
+        "en": "Polygons"
+      }
+    },
+    "land_cover": {
+      "colour": "#e2e5f3",
+      "name": {
+        "et": "Põhipindobjektid",
+        "en": "Land cover"
+      },
+      "parent": "polygons"
+    },
+    "overlapping": {
+      "colour": "#fff3a2",
+      "name": {
+        "et": "Kattuvad pindobjektid",
+        "en": "Overlapping areas"
+      },
+      "parent": "polygons"
+    },
+    "derivatives": {
+      "colour": "#7a7a7a",
+      "vertical_grouping": "2",
+      "name": {
+        "et": "Tuletiskihid"
+      }
+    }
+  },
+  "classes": {
+    "_default": {
+      "description": {
+        "en": "ENEN",
+        "et": "ETET"
+      },
+      "fields": {
+        "_default": {
+          "description": {
+            "et": "MITTE MIDAGI!",
+            "en": "NOTHING TO SEE HERE!"
+          }
+        },
+        "objectid": {
+          "type": "technical",
+          "description": {
+            "en": "Technical identifier",
+            "et": "Tehniline identifikaator"
+          }
+        },
+        "shape": {
+          "type": "technical",
+          "description": {
+            "et": "Objekti ruumikuju",
+            "en": "Feature geometry"
+          }
+        },
+        "shape_Length": {
+          "type": "technical",
+          "description": {
+            "et": "Objekti ruumikuju pikkus või ümbermõõt",
+            "en": "Length or perimeter of the object's geometry"
+          }
+        },
+        "shape_Area": {
+          "type": "technical",
+          "description": {
+            "et": "Objekti ruumikuju pindala",
+            "en": "Area of the objects's geometry"
+          }
+        },
+        "etak_id": {
+          "description": {
+            "et": "ETAK objekti unikaalne identifikaator",
+            "en": "Unique identifier of topographic object"
+          }
+        },
+        "kood": {
+          "description": {
+            "en": "Feature code in ETDB conceptual data model",
+            "et": "Nähtuse kood ETAK reaalsusmudelis"
+          }
+        },
+        "markused": {
+          "description": {
+            "et": "Vabas vormis märkused objekti kohta",
+            "en": "Additional comments"
+          }
+        },
+        "puis": {
+          "description": {
+            "et": "Puittaimestiku olemasolu",
+            "en": "Growth of woody plants in area"
+          }
+        },
+        "vajalik": {
+          "type": "meta",
+          "description": {
+            "et": "Objekti staatus",
+            "en": "Object's status"
+          }
+        },
+        "muutmisaeg": {
+          "type": "meta",
+          "description": {
+            "et": "Operaatori poolt tehtud viimase muutuse aeg",
+            "en": "Time of latest update by operator"
+          }
+        },
+        "geom_muutmisaeg": {
+          "type": "meta",
+          "description": {
+            "et": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg",
+            "en": "Time of latest geometry update by operator"
+          }
+        },
+        "andmeallika_id": {
+          "type": "meta",
+          "description": {
+            "et": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator",
+            "en": "Identifier of the data source of last modification"
+          }
+        },
+        "korgusallika_id": {
+          "type": "meta",
+          "description": {
+            "et": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus",
+            "en": "Identifier of the data source of last height modification"
+          }
+        },
+        "ruumikujuallika_id": {
+          "type": "meta",
+          "description": {
+            "et": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator",
+            "en": "Identifier of the data source of last geometry modification"
+          }
+        },
+        "ads_oid": {
+          "type": "register",
+          "description": {
+            "et": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis",
+            "en": "Identifier of address object in Address Data System information system"
+          }
+        },
+        "ads_lahiaadress": {
+          "type": "register",
+          "description": {
+            "et": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis",
+            "en": "Short address in Address Data System information system"
+          }
+        },
+        "knr_id": {
+          "type": "register",
+          "description": {
+            "et": "Objekti identifikaator Riiklikus kohanimeregistris",
+            "en": "Object identifier in  National Place Names Register"
+          }
+        },
+        "nimetus": {
+          "type": "register",
+          "description": {
+            "et": "Objekti nimetus Riiklikus kohanimeregistris",
+            "en": "Object name in  National Place Names Register"
+          }
+        },
+        "kmr_id": {
+          "type": "register",
+          "description": {
+            "et": "Objekti identifikaator Kultuurimälestiste registris",
+            "en": "Object identifier in National Registry of Cultural Monuments"
+          }
+        },
+        "kkr_kood": {
+          "type": "register",
+          "description": {
+            "et": "Objekti kood Eesti looduse infosüsteemis",
+            "en": "Object code in Estonian Nature Information System"
+          }
+        },
+        "mps_id": {
+          "type": "register",
+          "description": {
+            "et": "Eesvoolu identifikaator Maaparandussüsteemide registris",
+            "en": "Artificial recipient code in Register of Land Improvement Systems"
+          }
+        },
+        "ehr_gid": {
+          "type": "register",
+          "description": {
+            "et": "Ehitise osa geomeetria identifikaator Ehitisregistris",
+            "en": "Identifier of building part geometry in  Register of buildings"
+          }
+        },
+        "kov_id": {
+          "type": "register",
+          "description": {
+            "et": "Kohaliku omavalitsuse andmekogu ruumiobjekti identifikaator",
+            "en": "Identifier of the spatial object in local municipality's database"
+          }
+        },
+        "mark": {
+          "type": "register",
+          "description": {
+            "et": "Objekt on kasutusel navigatioonimärgina",
+            "en": "Used as a navigational aid"
+          }
+        }
+      }
+    },
+    "alusdokument": {
+      "group": "meta",
+      "description": {
+        "et": "Alusdokument"
+      },
+      "fields": {
+        "andmeallikas": {
+          "description": {
+            "et": "Andmeandja nimi"
+          }
+        },
+        "kood": {
+          "description": {
+            "et": "Alusdokumendi identifikaator"
+          }
+        },
+        "korguskood": {
+          "description": {
+            "et": "Korgusallika_id väljal kasutatav viide alusdokumendile"
+          }
+        },
+        "tyyp": {
+          "description": {
+            "et": "Alusdokumendi tüüp"
+          }
+        },
+        "aeg": {
+          "description": {
+            "et": "Alusdokumendi andmekogusse laekumise aeg"
+          }
+        },
+        "markused": {
+          "description": {
+            "et": "Vabas vormis märkused dokumendi kohta"
+          }
+        },
+        "tapsus": {
+          "description": {
+            "et": "Andmete plaaniline täpsus"
+          }
+        },
+        "korgustapsus": {
+          "description": {
+            "et": "Andmete kõrgustäpsus"
+          }
+        },
+        "nimetus": {
+          "description": {
+            "et": "Alusdokumendi nimetus"
+          }
+        }
+      }
+    },
+    "E_101_kivi_p": {
+      "group": "points",
+      "description": {
+        "et": "Kivi",
+        "en": "Boulder"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Kivi tüüp",
+            "en": "Type of boulder"
+          }
+        },
+        "korgus": {
+          "description": {
+            "et": "Kaitsealuse üksiku kivi kõrgus maapinnast [m]",
+            "en": "Relative height of protected standalone boulder [m]"
+          }
+        }
+      }
+    },
+    "E_102_nolv_j": {
+      "group": "lines",
+      "description": {
+        "et": "Nõlv",
+        "en": "Slope"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Nõlva tüüp",
+            "en": "Type of slope"
+          }
+        },
+        "kaldaastang": {
+          "description": {
+            "et": "Objekt on kaldaastang",
+            "en": "Object represents a coastal escarpment"
+          }
+        }
+      }
+    },
+    "E_103_pinnavorm_j": {
+      "group": "lines",
+      "description": {
+        "et": "Pinnavorm joonena",
+        "en": "Landform as line"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Pinnavormi tüüp joonena",
+            "en": "Type of landform as line"
+          }
+        }
+      }
+    },
+    "E_103_pinnavorm_p": {
+      "group": "points",
+      "description": {
+        "et": "Pinnavorm punktina",
+        "en": "Landform as point"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Pinnavormi tüüp punktina",
+            "en": "Type of landform as point"
+          }
+        }
+      }
+    },
+    "E_201_meri_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Meri",
+        "en": "Sea"
+      }
+    },
+    "E_202_seisuveekogu_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Seisuveekogu alana",
+        "en": "Standing water body as area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Seisuveekogu tüüp alana",
+            "en": "Type of standing water body as area"
+          }
+        },
+        "kpo_seos": {
+          "description": {
+            "et": "Seisuveekogu käsitlus",
+            "en": "Treatment of standing water body"
+          }
+        }
+      }
+    },
+    "E_202_seisuveekogu_p": {
+      "group": "points",
+      "description": {
+        "et": "Seisuveekogu punktina",
+        "en": "Standing water body as point"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Seisuveekogu tüüp punktina",
+            "en": "Type of standing water body as point"
+          }
+        }
+      }
+    },
+    "E_203_vooluveekogu_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Vooluveekogu alana",
+        "en": "Watercourse as area"
+      }
+    },
+    "E_203_vooluveekogu_j": {
+      "group": "lines",
+      "description": {
+        "et": "Vooluveekogu telgjoon",
+        "en": "Watercourse centerline"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Vooluveekogu tüüp",
+            "en": "Type of watercourse"
+          }
+        },
+        "telje_tyyp": {
+          "description": {
+            "et": "Vooluveekogu telje iseloom",
+            "en": "Type of watercourse centerline"
+          }
+        },
+        "laius": {
+          "description": {
+            "et": "Vooluveekogu laiusklass",
+            "en": "Width range of watercourse"
+          }
+        },
+        "telje_staatus": {
+          "description": {
+            "et": "Vooluveekogu telje staatus",
+            "en": "Status of watercourse centerline"
+          }
+        }
+      }
+    },
+    "E_204_kaldajoon_j": {
+      "group": "lines",
+      "description": {
+        "et": "Kaldajoon",
+        "en": "Coastline"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Kaldajoone tüüp",
+            "en": "Type of coastline"
+          }
+        },
+        "kalda_veekogu_tyyp": {
+          "description": {
+            "et": "Kaldajoonega piirneva veekogu tüüp",
+            "en": "Type of related water body"
+          }
+        },
+        "halduspiir": {
+          "description": {
+            "et": "Objekt osaleb Eesti maismaakontuuri moodustamisel",
+            "en": "Bounding Estonian landmass"
+          }
+        }
+      }
+    },
+    "E_205_hudrotehniline_rajatis_j": {
+      "group": "lines",
+      "description": {
+        "et": "Hüdrotehniline rajatis",
+        "en": "Hydrotechnical structure"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Hüdrotehnilise rajatise tüüp",
+            "en": "Type of hydrotechnical structure"
+          }
+        }
+      }
+    },
+    "E_206_truup_j": {
+      "group": "lines",
+      "description": {
+        "et": "Truup",
+        "en": "Culvert"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Truubi tüüp",
+            "en": "Type of culvert"
+          }
+        }
+      }
+    },
+    "E_301_muu_kolvik_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Muu kõlvik alana",
+        "en": "Other land use as area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Muu kõlviku tüüp alana",
+            "en": "Type of other land use as area"
+          }
+        }
+      }
+    },
+    "E_301_muu_kolvik_ka": {
+      "group": "overlapping",
+      "description": {
+        "et": "Muu kõlvik kattuva alana",
+        "en": "Other land use as overlapping area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Muu kõlviku tüüp kattuva alana",
+            "en": "Type of other land use as overlapping area"
+          }
+        }
+      }
+    },
+    "E_301_muu_kolvik_p": {
+      "group": "points",
+      "description": {
+        "et": "Muu kõlvik punktina",
+        "en": "Other land use as point"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Muu kõlviku tüüp punktina",
+            "en": "Type of other land use as point"
+          }
+        }
+      }
+    },
+    "E_302_ou_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Õu",
+        "en": "Yard"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Õue tüüp",
+            "en": "Type of yard"
+          }
+        },
+        "kasutus": {
+          "description": {
+            "et": "Tootmisõue erijuht",
+            "en": "Special usage of industrial yard"
+          }
+        }
+      }
+    },
+    "E_303_haritav_maa_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Haritav maa",
+        "en": "Field"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Haritava maa tüüp",
+            "en": "Type of field"
+          }
+        }
+      }
+    },
+    "E_304_lage_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Lage",
+        "en": "Open land"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Lageda tüüp",
+            "en": "Type of open land"
+          }
+        }
+      }
+    },
+    "E_305_puittaimestik_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Puittaimestik alana",
+        "en": "Woody plants as area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Puittaimestiku tüüp alana",
+            "en": "Type of woody plants as area"
+          }
+        }
+      }
+    },
+    "E_305_puittaimestik_j": {
+      "group": "lines",
+      "description": {
+        "et": "Puittaimestik joonena",
+        "en": "Woody plants as line"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Puittaimestiku tüüp joonena",
+            "en": "Type of woody plants as line"
+          }
+        }
+      }
+    },
+    "E_305_puittaimestik_p": {
+      "group": "points",
+      "description": {
+        "et": "Puittaimestik punktina",
+        "en": "Woody plants as point"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Puittaimestiku tüüp punktina",
+            "en": "Type of woody plants as point"
+          }
+        }
+      }
+    },
+    "E_306_margala_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Märgala alana",
+        "en": "Wetland as area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Märgala tüüp alana",
+            "en": "Type of wetland as area"
+          }
+        }
+      }
+    },
+    "E_306_margala_ka": {
+      "group": "overlapping",
+      "description": {
+        "et": "Märgala kattuva alana",
+        "en": "Wetland as overlapping area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Märgala tüüp kattuva alana",
+            "en": "Type of wetland as overlapping area"
+          }
+        }
+      }
+    },
+    "E_307_turbavali_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Turbaväli",
+        "en": "Peat cutting area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Turbavälja tüüp",
+            "en": "Type of peat cutting area"
+          }
+        }
+      }
+    },
+    "E_401_hoone_ka": {
+      "group": "overlapping",
+      "description": {
+        "en": "Building",
+        "et": "Hoone"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Hoone tüüp",
+            "en": "Type of building"
+          }
+        },
+        "korgus_m": {
+          "description": {
+            "en": "Maximal relative height of building [m]",
+            "et": "Hoone maksimaalne kõrgus maapinnast [m]"
+          }
+        }
+      }
+    },
+    "E_402_korgrajatis_p": {
+      "group": "points",
+      "description": {
+        "et": "Kõrgrajatis",
+        "en": "High-rise structure"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Kõrgrajatise tüüp",
+            "en": "Type of high-rise structure"
+          }
+        },
+        "korgus": {
+          "description": {
+            "et": "Kõrgrajatise kõrgus maapinnast [m]",
+            "en": "Relative height of high-rise structure [m]"
+          }
+        },
+        "seos": {
+          "description": {
+            "et": "Kõrgrajatise seos hoonega",
+            "en": "High-rise structure's relation to building"
+          }
+        },
+        "hoone": {
+          "description": {
+            "et": "Seotud hoone identifikaator",
+            "en": "Identifier of related building"
+          }
+        }
+      }
+    },
+    "E_403_muu_rajatis_ka": {
+      "group": "overlapping",
+      "description": {
+        "et": "Muu rajatis kattuva alana",
+        "en": "Other stucture as overlapping area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Muu rajatise tüüp kattuva alana",
+            "en": "Type of other stucture as overlapping area"
+          }
+        }
+      }
+    },
+    "E_403_muu_rajatis_p": {
+      "group": "points",
+      "description": {
+        "et": "Muu rajatis punktina",
+        "en": "Other structure as point"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Muu rajatise tüüp punktina",
+            "en": "Type of other structure as point"
+          }
+        }
+      }
+    },
+    "E_404_maaalune_hoone_ka": {
+      "group": "overlapping",
+      "description": {
+        "et": "Maa-alune hoone",
+        "en": "Underground building"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Maa-aluse hoone tüüp",
+            "en": "Type of underground building"
+          }
+        }
+      }
+    },
+    "E_405_piire_j": {
+      "group": "lines",
+      "description": {
+        "et": "Piire",
+        "en": "Barrier"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Piirde tüüp",
+            "en": "Type of barrier"
+          }
+        },
+        "puittaimed": {
+          "description": {
+            "et": "Puittaimede olemasolu piirdel või selle vahetus läheduses",
+            "en": "Woody plants growing atop or near the barrier"
+          }
+        }
+      }
+    },
+    "E_501_tee_a": {
+      "group": "land_cover",
+      "description": {
+        "et": "Tee alana",
+        "en": "Road as area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Teeala tüüp",
+            "en": "Type of road as area"
+          }
+        }
+      }
+    },
+    "E_501_tee_j": {
+      "group": "lines",
+      "description": {
+        "et": "Tee joonena",
+        "en": "Roas as line"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Tee tüüp joonena",
+            "en": "Type of road as line"
+          }
+        },
+        "laius": {
+          "description": {
+            "et": "Teekatte laius koos sõidukõlbulike teepeenardega [m]",
+            "en": "Width of the road, including hard shoulders [m]"
+          }
+        },
+        "teekate": {
+          "description": {
+            "et": "Tee kattematerjal",
+            "en": "Type of road surface"
+          }
+        },
+        "liiklus": {
+          "description": {
+            "et": "Teel lubatud liikumissuund",
+            "en": "Allowed traffic direction on road"
+          }
+        },
+        "a_tasand": {
+          "description": {
+            "et": "Teelõigu alguspunkti tasand mitmetasandilistel ristmikel",
+            "en": "Level of road link's starting point in interchanges"
+          }
+        },
+        "l_tasand": {
+          "description": {
+            "et": "Teelõigu lõpp-punkti tasand mitmetasandilistel ristmikel",
+            "en": "Level of road link's ending point in interchanges"
+          }
+        },
+        "tahtsus": {
+          "description": {
+            "et": "Tänava tähtsus",
+            "en": "Importance of street"
+          }
+        },
+        "tee": {
+          "type": "register",
+          "description": {
+            "et": "Tee number Teeregistris",
+            "en": "Road number in Road Register"
+          }
+        },
+        "teeosa": {
+          "type": "register",
+          "description": {
+            "et": "Tee loogilise osa kood Teeregistris",
+            "en": "Road section number in Road Register"
+          }
+        },
+        "soidutee": {
+          "type": "register",
+          "description": {
+            "et": "Sõidutee kood Teeregistris",
+            "en": "Carriageway code in Road Register"
+          }
+        },
+        "tee_synon": {
+          "type": "register",
+          "description": {
+            "et": "Samal lõigul asuva teise tee number",
+            "en": "Number of the second road sharing the road link"
+          }
+        },
+        "teeosa_synon": {
+          "type": "register",
+          "description": {
+            "et": "Samal lõigul asuva teise tee teeosa number",
+            "en": "Section number of the second road sharing the road link"
+          }
+        },
+        "soidutee_synon": {
+          "type": "register",
+          "description": {
+            "et": "Samal lõigul asuva teise tee sõidutee kood",
+            "en": "Carriageway code of the second road sharing the road link"
+          }
+        },
+        "tee_synon2": {
+          "type": "register",
+          "description": {
+            "et": "Samal lõigul asuva kolmanda tee number",
+            "en": "Number of the third road sharing the road link"
+          }
+        },
+        "teeosa_synon2": {
+          "type": "register",
+          "description": {
+            "et": "Samal lõigul asuva kolmanda teeosa number",
+            "en": "Section number of the third road sharing the road link"
+          }
+        },
+        "soidutee_synon2": {
+          "type": "register",
+          "description": {
+            "et": "Samal lõigul asuva kolmanda tee sõidutee kood",
+            "en": "Carriageway code of the third road sharing the road link"
+          }
+        },
+        "karto_nimi": {
+          "type": "register",
+          "description": {
+            "et": "Tee (tänava) nimetus kaardile kandmiseks sobivalt lühendatud kujul",
+            "en": "Name of the road (street), shortened for cartographic purposes"
+          }
+        },
+        "ads_nimetus": {
+          "type": "register",
+          "description": {
+            "et": "Liikluspinna nimetus Aadressiandmete süsteemi infosüsteemis",
+            "en": "Thoroughfare name in Address Data System information system"
+          }
+        }
+      }
+    },
+    "E_502_roobastee_j": {
+      "group": "lines",
+      "description": {
+        "et": "Rööbastee",
+        "en": "Rail"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Rööbastee tüüp",
+            "en": "Type of rail"
+          }
+        },
+        "elekter": {
+          "description": {
+            "et": "Rööbastee on sobilik elektrirongidele",
+            "en": "Rail suitable for electric locomotives"
+          }
+        },
+        "tahtsus": {
+          "description": {
+            "et": "Rööbastee lõigu tähtsus",
+            "en": "Importance of rail link"
+          }
+        }
+      }
+    },
+    "E_503_siht_j": {
+      "group": "lines",
+      "description": {
+        "et": "Siht",
+        "en": "Forest aisle"
+      }
+    },
+    "E_505_liikluskorralduslik_rajatis_j": {
+      "group": "lines",
+      "description": {
+        "et": "Liikluskorralduslik rajatis joonena",
+        "en": "Transport infrastructure as line"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Liikluskorraldusliku rajatise tüüp joonena",
+            "en": "Type of transport infrastructure as line"
+          }
+        },
+        "toke": {
+          "description": {
+            "et": "Sõidutakistuse iseloom",
+            "en": "Type of obstruction"
+          }
+        }
+      }
+    },
+    "E_505_liikluskorralduslik_rajatis_ka": {
+      "group": "overlapping",
+      "description": {
+        "et": "Liikluskorralduslik rajatis kattuva alana",
+        "en": "Transport infrastructure as overlapping area"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Liikluskorraldusliku rajatise tüüp kattuva alana",
+            "en": "Type of transport infrastructure as overlapping area"
+          }
+        }
+      }
+    },
+    "E_601_elektriliin_j": {
+      "group": "lines",
+      "description": {
+        "et": "Elektriliin",
+        "en": "Power line"
+      },
+      "fields": {
+        "nimipinge": {
+          "description": {
+            "et": "Elektriliini nimipinge [kV]",
+            "en": "Voltage of power line [kV]"
+          }
+        }
+      }
+    },
+    "E_602_tehnopaigaldis_p": {
+      "group": "points",
+      "description": {
+        "et": "Tehnopaigaldis",
+        "en": "Technical installation"
+      },
+      "fields": {
+        "tyyp": {
+          "description": {
+            "et": "Tehnopaigaldise tüüp",
+            "en": "Type of technical installation"
+          }
+        },
+        "korgus": {
+          "description": {
+            "et": "Tehnopaigaldise kõrgus maapinnast [m]",
+            "en": "Relative height of technical installataion [m]"
+          }
+        }
+      }
+    },
+    "E_603_torujuhe_j": {
+      "group": "lines",
+      "description": {
+        "et": "Torujuhe",
+        "en": "Pipeline"
+      }
+    },
+    "seisuveed_kkr": {
+      "group": "derivatives",
+      "description": {
+        "et": "Seisuvete tervikkujud Eesti looduse infosüsteemis"
+      },
+      "fields": {
+        "kkr_tyyp": {
+          "description": {
+            "et": "Seisuveekogu tüüp"
+          }
+        },
+        "muutmisaeg": {
+          "description": {
+            "et": "Tervikkuju viimase uuendamise aeg"
+          }
+        }
+      }
+    },
+    "vooluveed_kkr": {
+      "group": "derivatives",
+      "description": {
+        "et": "Vooluvete tervikkujud (põhiteljed) Eesti looduse infosüsteemis"
+      },
+      "fields": {
+        "kkr_tyyp": {
+          "description": {
+            "et": "Vooluveekogu tüüp"
+          }
+        },
+        "korguste_vahe": {
+          "description": {
+            "et": "Lähte- ja suudmepunkti kõrguste vahe"
+          }
+        },
+        "muutmisaeg": {
+          "description": {
+            "et": "Tervikkuju viimase uuendamise aeg"
+          }
+        }
+      }
+    }
+  }
+}

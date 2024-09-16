@@ -1,6 +1,7 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import etak_kirjeldus from './data/etak_kirjeldus.json' assert { type: 'json' };
 
 import MainTable from "./components/MainTable.tsx";
 import {
@@ -45,14 +46,15 @@ function App() {
         >
           <MainTable
             backgroundColor="#C4C1A4"
-            objectName="Metaandmed"
+            // objectName="Metaandmed"
+            objectName={etak_kirjeldus.groups.meta.name.et}
             // itemNames={metadata}
             itemNames={etakPunktobjektid}
             dataTypeClass="etak"
           />
           <MainTable
             backgroundColor="#E1ACAC"
-            objectName="Punktobjektid"
+            objectName={etak_kirjeldus.groups.points.name.et}
             itemNames={etakPunktobjektid}
             dataTypeClass="punktobjekt"
           />
