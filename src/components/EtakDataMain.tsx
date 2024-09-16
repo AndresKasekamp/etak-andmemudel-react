@@ -54,13 +54,15 @@ export default function EtakDataMain({
           margin: "auto", // Center the table
           marginTop: 2,
           marginBottom: 2,
+          display: "flex",
+          alignItems: "start",
+          flexWrap: "wrap",
+          justifyContent: "center"
         }}
       >
-        <div style={{ display: "flex", alignItems: "start" }}>
-          {associatedDomains.map((domain, idx) => (
-            <DomainTable key={idx} domain={domain}></DomainTable>
-          ))}
-        </div>
+        {associatedDomains.map((domain, idx) => (
+          <DomainTable key={idx} domain={domain}></DomainTable>
+        ))}
       </TableContainer>
     </div>
   );
