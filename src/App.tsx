@@ -60,7 +60,7 @@ function App() {
           />
           <MainTable
             backgroundColor="#AC87C5"
-            objectName="Joonobjektid"
+            objectName={etak_kirjeldus.groups.lines.name.et}
             // itemNames={etakJoonobjektid}
             itemNames={etakPunktobjektid}
             dataTypeClass="joonobjekt"
@@ -83,19 +83,19 @@ function App() {
               }}
               gutterBottom
             >
-              Pindobjektid
+              {etak_kirjeldus.groups.polygons.name.et}
             </Typography>
 
             <MainTable
               backgroundColor="#cfcfc4"
-              objectName="Põhipindobjektid"
+              objectName={etak_kirjeldus.groups.land_cover.name.et}
               // itemNames={etakPindobjektidMain}
               itemNames={etakPunktobjektid}
               dataTypeClass="pindobjekt"
             />
             <MainTable
               backgroundColor="#577B8D"
-              objectName="Kattuvad pindobjektid"
+              objectName={etak_kirjeldus.groups.overlapping.name.et}
               // itemNames={etakPindobjektidOverlap}
               itemNames={etakPunktobjektid}
               dataTypeClass="pindobjekt"
@@ -104,7 +104,7 @@ function App() {
 
           <MainTable
             backgroundColor="#A1DD70"
-            objectName="Tuletiskihid"
+            objectName={etak_kirjeldus.groups.derivatives.name.et}
             // itemNames={derivedLayers}
             itemNames={etakPunktobjektid}
             dataTypeClass="tuletiskiht"

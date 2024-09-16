@@ -14,24 +14,26 @@ const MainTable = ({
   itemNames,
   dataTypeClass,
 }: TableProps) => {
-  console.log(backgroundColor)
+  console.log(backgroundColor);
   return (
     <List
-    component={Paper}
+      component={Paper}
       sx={{
         backgroundColor: "#F5FAFA",
         borderRadius: "5px",
         m: 1,
-        position: 'relative',
+        position: "relative",
       }}
     >
-
-      <Typography variant="h4" sx={{ color: "#797C7F", paddingLeft: "1rem", paddingRight: "1rem"  }} gutterBottom>
+      <Typography
+        variant="h4"
+        sx={{ color: "#797C7F", paddingLeft: "1rem", paddingRight: "1rem" }}
+        gutterBottom
+      >
         {objectName}
       </Typography>
 
-      <div style= {{border: "1px solid #4F4F4F"}}></div>
-
+      <div style={{ border: "1px solid #4F4F4F" }}></div>
 
       {itemNames.map((item) => (
         <ListItem disablePadding key={item.fcName}>
