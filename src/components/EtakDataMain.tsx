@@ -7,11 +7,14 @@ import { EtakTableProps } from "../types/interfaces.tsx";
 import DomainTable from "./DomainTable.tsx";
 import EtakTable from "./EtakTable.tsx";
 
+import TableContainer from "@mui/material/TableContainer";
+import Paper from "@mui/material/Paper";
+
 export default function EtakDataMain({
   addedRows,
   imageSrc,
   associatedDomains,
-  headingData
+  headingData,
 }: EtakTableProps) {
   const location: Location = useLocation();
 
@@ -29,7 +32,14 @@ export default function EtakDataMain({
   });
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", maxWidth: "100%" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        maxWidth: "100%",
+      }}
+    >
       <EtakTable
         updatedRows={updatedRows}
         imageSrc={imageSrc}
@@ -37,11 +47,21 @@ export default function EtakDataMain({
         headingData={headingData}
       ></EtakTable>
 
-      <div style={{ display: "flex", alignItems: "start" }}>
-        {associatedDomains.map((domain, idx) => (
-          <DomainTable key={idx} domain={domain}></DomainTable>
-        ))}
-      </div>
+      <TableContainer
+        component={Paper}
+        sx={{
+          maxWidth: "xl", // Set a specific max-width
+          margin: "auto", // Center the table
+          marginTop: 2,
+          marginBottom: 2,
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "start" }}>
+          {associatedDomains.map((domain, idx) => (
+            <DomainTable key={idx} domain={domain}></DomainTable>
+          ))}
+        </div>
+      </TableContainer>
     </div>
   );
 }

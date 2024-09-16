@@ -9,14 +9,13 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { DomainTableProps } from "../types/interfaces";
 
-
-
-export default function DomainTable({domain}: DomainTableProps) {
+export default function DomainTable({ domain }: DomainTableProps) {
   return (
     <TableContainer
       component={Paper}
       sx={{
         maxWidth: 400,
+        minWidth: 400,
         margin: 5,
       }}
     >
