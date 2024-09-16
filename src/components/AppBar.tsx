@@ -10,35 +10,36 @@ export default function EtakAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="sticky" sx={{ backgroundColor: "#32774e" }}>
         <Toolbar sx={{ position: "relative" }}>
-          <Typography
+
+        <Box sx={{ mr: "auto", display: "flex", gap: 2 }}>
+        <Typography
             variant="h5"
             noWrap
             component="a"
             href="https://geoportaal.maaamet.ee/est/"
             sx={{
-              mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
-              textDecoration: "none",
             }}
           >
-            MA logo
+            Geoportaal
           </Typography>
 
-          <HomeLink></HomeLink>
-          <Link3D></Link3D>
+          <Typography
+            variant="h4"
+            component="div"
+            sx={{ textAlign: "center"}}
+          >
+            Eesti topograafia andmekogu tuumandmete andmemudel
+          </Typography>
+          </Box>
 
-          <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
-            <Typography
-              variant="h4"
-              component="div"
-              sx={{ textAlign: "center" }}
-            >
-              Eesti topograafia andmekogu tuumandmete andmemudel
-            </Typography>
+          <Box sx={{ ml: "auto", display: "flex", gap: 2 }}>
+            <Link3D></Link3D>
+            <HomeLink></HomeLink>
           </Box>
         </Toolbar>
       </AppBar>
