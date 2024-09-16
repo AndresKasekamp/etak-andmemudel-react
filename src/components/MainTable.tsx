@@ -6,6 +6,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 import { TableProps } from "../types/interfaces";
+import Paper from "@mui/material/Paper";
 
 const MainTable = ({
   backgroundColor,
@@ -15,11 +16,11 @@ const MainTable = ({
 }: TableProps) => {
   return (
     <List
+    component={Paper}
       sx={{
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#F5FAFA",
         borderRadius: "5px",
         m: 1,
-        border: "2px solid #4F4F4F", // Dark grey border
         position: 'relative',
       }}
     >

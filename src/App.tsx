@@ -69,7 +69,7 @@ function App() {
               backgroundColor: "#FFFFFF",
               padding: "1rem",
               borderRadius: "5px",
-              border: "2px solid #4F4F4F", // Dark grey border
+              border: "1px solid #4F4F4F", // Dark grey border
               m: 1,
             }}
           >
