@@ -14,6 +14,7 @@ const MainTable = ({
   itemNames,
   dataTypeClass,
 }: TableProps) => {
+  console.log(backgroundColor)
   return (
     <List
     component={Paper}
