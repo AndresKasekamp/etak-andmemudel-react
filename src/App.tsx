@@ -66,13 +66,21 @@ function App() {
 
           <Box
             sx={{
-              backgroundColor: "#80BCBD",
+              backgroundColor: "#FFFFFF",
               padding: "1rem",
               borderRadius: "5px",
+              border: "2px solid #4F4F4F", // Dark grey border
               m: 1,
             }}
           >
-            <Typography variant="h4" gutterBottom>
+            <Typography
+              variant="h4"
+              sx={{
+                color: "#797C7F",
+
+              }}
+              gutterBottom
+            >
               Pindobjektid
             </Typography>
 

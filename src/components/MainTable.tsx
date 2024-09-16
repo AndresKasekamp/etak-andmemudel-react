@@ -16,20 +16,25 @@ const MainTable = ({
   return (
     <List
       sx={{
-        backgroundColor,
-        padding: "1rem",
+        backgroundColor: "#FFFFFF",
         borderRadius: "5px",
         m: 1,
+        border: "2px solid #4F4F4F", // Dark grey border
+        position: 'relative',
       }}
     >
-      <Typography variant="h4" gutterBottom>
+
+      <Typography variant="h4" sx={{ color: "#797C7F", paddingLeft: "1rem", paddingRight: "1rem"  }} gutterBottom>
         {objectName}
       </Typography>
+
+      <div style= {{border: "1px solid #4F4F4F"}}></div>
+
 
       {itemNames.map((item) => (
         <ListItem disablePadding key={item.fcName}>
           <RouterLink to={`${dataTypeClass}/${item.fcName}`}>
-            <ListItemButton component={Link} sx={{ color: "white" }}>
+            <ListItemButton component={Link} sx={{ color: "#797C7F" }}>
               <ListItemText primary={item.fcName} />
             </ListItemButton>
           </RouterLink>
