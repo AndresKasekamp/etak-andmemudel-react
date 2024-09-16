@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import HomeLink from "./HomeLink";
+import Link3D from "./Link3D";
 
 export default function EtakAppBar() {
   return (
@@ -28,6 +29,7 @@ export default function EtakAppBar() {
           </Typography>
 
           <HomeLink></HomeLink>
+          <Link3D></Link3D>
 
           <Typography
             variant="h4"
