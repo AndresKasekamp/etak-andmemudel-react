@@ -31,17 +31,15 @@ export default function EtakAppBar() {
           <HomeLink></HomeLink>
           <Link3D></Link3D>
 
-          <Typography
-            variant="h4"
-            component="div"
-            sx={{
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
-          >
-            Eesti topograafia andmekogu tuumandmete andmemudel
-          </Typography>
+          <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
+            <Typography
+              variant="h4"
+              component="div"
+              sx={{ textAlign: "center" }}
+            >
+              Eesti topograafia andmekogu tuumandmete andmemudel
+            </Typography>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
