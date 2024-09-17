@@ -1,64 +1,99 @@
 import { Name } from "../types/types";
 import { RowData } from "../types/interfaces";
-import { MainElementColor, EsriElementColor, EtakMetaColor, RegisterColor } from "./colors";
-import etak_kirjeldus from './etak_kirjeldus.json' assert { type: 'json' };
+import {
+  MainElementColor,
+  EsriElementColor,
+  EtakMetaColor,
+  RegisterColor,
+} from "./colors";
+import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
+import LaunchIcon from "@mui/icons-material/Launch";
+import { Link } from "@mui/material";
+import RegisterHyperLink from "../components/RegisterHyperLink";
 
+// TODO type paika saada
 export const createData = (
   name: Name,
   dataType: string,
   domain: string,
-  desc: string
+  desc: any
 ): RowData => {
   return { name, dataType, domain, desc };
 };
 
-
 export const otherShapes = [
   {
     shape_Length: createData(
-      { name: etak_kirjeldus.classes._default.fields.shape_Length.name, color: EsriElementColor },
+      {
+        name: etak_kirjeldus.classes._default.fields.shape_Length.name,
+        color: EsriElementColor,
+      },
       "reaalarv",
       "",
       etak_kirjeldus.classes._default.fields.shape_Length.description.et
     ),
 
     shape_Area: createData(
-      { name: etak_kirjeldus.classes._default.fields.shape_Area.name, color: EsriElementColor },
+      {
+        name: etak_kirjeldus.classes._default.fields.shape_Area.name,
+        color: EsriElementColor,
+      },
       "reaalarv",
       "",
       etak_kirjeldus.classes._default.fields.shape_Area.description.et
     ),
   },
 ];
-
+//
 // TODO välja arvatud sõidutee osa
 export const otherRegisterSources = {
   kmr_id: createData(
-    { name: etak_kirjeldus.classes._default.fields.kmr_id.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.kmr_id.name,
+      color: RegisterColor,
+    },
     "täisarv",
     "",
-    etak_kirjeldus.classes._default.fields.kmr_id.description.et
+    <RegisterHyperLink
+      link={etak_kirjeldus.classes._default.fields.kmr_id.link}
+      desc={etak_kirjeldus.classes._default.fields.kmr_id.description.et}
+    ></RegisterHyperLink>
   ),
 
   kkr_kood: createData(
-    { name: etak_kirjeldus.classes._default.fields.kkr_kood.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.kkr_kood.name,
+      color: RegisterColor,
+    },
     "tekst(30)",
     "",
-    etak_kirjeldus.classes._default.fields.kkr_kood.description.et
+    <RegisterHyperLink
+      link={etak_kirjeldus.classes._default.fields.kkr_kood.link}
+      desc={etak_kirjeldus.classes._default.fields.kkr_kood.description.et}
+    ></RegisterHyperLink>
   ),
 
   nimetus: createData(
-    { name: etak_kirjeldus.classes._default.fields.nimetus.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.nimetus.name,
+      color: RegisterColor,
+    },
     "tekst(255)",
     "",
     etak_kirjeldus.classes._default.fields.nimetus.description.et
   ),
 
   knr_id: createData(
-    { name: etak_kirjeldus.classes._default.fields.knr_id.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.knr_id.name,
+      color: RegisterColor,
+    },
     "täisarv",
     "",
-    etak_kirjeldus.classes._default.fields.knr_id.description.et
+    <RegisterHyperLink
+      link={etak_kirjeldus.classes._default.fields.knr_id.link}
+      desc={etak_kirjeldus.classes._default.fields.knr_id.description.et}
+    ></RegisterHyperLink>
   ),
 
   kpo_seos: createData(
@@ -69,42 +104,69 @@ export const otherRegisterSources = {
   ),
 
   mps_id: createData(
-    { name: etak_kirjeldus.classes._default.fields.mps_id.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.mps_id.name,
+      color: RegisterColor,
+    },
     "tekst(17)",
     "",
-    etak_kirjeldus.classes._default.fields.mps_id.description.et
+    <RegisterHyperLink
+      link={etak_kirjeldus.classes._default.fields.mps_id.link}
+      desc={etak_kirjeldus.classes._default.fields.mps_id.description.et}
+    ></RegisterHyperLink>
   ),
 
   ehr_gid: createData(
-    { name: etak_kirjeldus.classes._default.fields.ehr_gid.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.ehr_gid.name,
+      color: RegisterColor,
+    },
     "tekst(20)",
     "",
-    etak_kirjeldus.classes._default.fields.ehr_gid.description.et
+    <RegisterHyperLink
+      link={etak_kirjeldus.classes._default.fields.ehr_gid.link}
+      desc={etak_kirjeldus.classes._default.fields.ehr_gid.description.et}
+    ></RegisterHyperLink>
   ),
 
   ads_oid: createData(
-    { name: etak_kirjeldus.classes._default.fields.ads_oid.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.ads_oid.name,
+      color: RegisterColor,
+    },
     "tekst(10)",
     "",
-    etak_kirjeldus.classes._default.fields.ads_oid.description.et
+    <RegisterHyperLink
+      link={etak_kirjeldus.classes._default.fields.ads_oid.link}
+      desc={etak_kirjeldus.classes._default.fields.ads_oid.description.et}
+    ></RegisterHyperLink>
   ),
 
   ads_lahiaadress: createData(
-    { name: etak_kirjeldus.classes._default.fields.ads_lahiaadress.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.ads_lahiaadress.name,
+      color: RegisterColor,
+    },
     "tekst(255)",
     "",
     etak_kirjeldus.classes._default.fields.ads_lahiaadress.description.et
   ),
 
   kov_id: createData(
-    { name: etak_kirjeldus.classes._default.fields.kov_id.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.kov_id.name,
+      color: RegisterColor,
+    },
     "täisarv",
     "",
     etak_kirjeldus.classes._default.fields.kov_id.description.et
   ),
 
   mark: createData(
-    { name: etak_kirjeldus.classes._default.fields.mark.name, color: RegisterColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.mark.name,
+      color: RegisterColor,
+    },
     "lühike täisarv",
     "toevaartus",
     etak_kirjeldus.classes._default.fields.mark.description.et
@@ -113,64 +175,94 @@ export const otherRegisterSources = {
 
 export const mainRows = [
   createData(
-    { name: etak_kirjeldus.classes._default.fields.etak_id.name, color: MainElementColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.etak_id.name,
+      color: MainElementColor,
+    },
     "täisarv",
     "",
     etak_kirjeldus.classes._default.fields.etak_id.description.et
   ),
 
   createData(
-    { name: etak_kirjeldus.classes._default.fields.markused.name, color: MainElementColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.markused.name,
+      color: MainElementColor,
+    },
     "tekst(255)",
     "",
     etak_kirjeldus.classes._default.fields.markused.description.et
   ),
 
   createData(
-    { name: etak_kirjeldus.classes._default.fields.objectid.name, color: EsriElementColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.objectid.name,
+      color: EsriElementColor,
+    },
     "täisarv",
     "",
     etak_kirjeldus.classes._default.fields.objectid.description.et
   ),
   createData(
-    { name: etak_kirjeldus.classes._default.fields.shape.name, color: EsriElementColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.shape.name,
+      color: EsriElementColor,
+    },
     "geomeetria",
     "",
     etak_kirjeldus.classes._default.fields.shape.description.et
   ),
 
   createData(
-    { name: etak_kirjeldus.classes._default.fields.muutmisaeg.name, color: EtakMetaColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
+      color: EtakMetaColor,
+    },
     "kuupäev",
     "",
     etak_kirjeldus.classes._default.fields.muutmisaeg.description.et
   ),
   createData(
-    { name: etak_kirjeldus.classes._default.fields.andmeallika_id.name, color: EtakMetaColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.andmeallika_id.name,
+      color: EtakMetaColor,
+    },
     "täisarv",
     "",
     etak_kirjeldus.classes._default.fields.andmeallika_id.description.et
   ),
   createData(
-    { name: etak_kirjeldus.classes._default.fields.korgusallika_id.name, color: EtakMetaColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.korgusallika_id.name,
+      color: EtakMetaColor,
+    },
     "täisarv",
     "",
     etak_kirjeldus.classes._default.fields.korgusallika_id.description.et
   ),
   createData(
-    { name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name, color: EtakMetaColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name,
+      color: EtakMetaColor,
+    },
     "täisarv",
     "",
     etak_kirjeldus.classes._default.fields.ruumikujuallika_id.description.et
   ),
   createData(
-    { name: etak_kirjeldus.classes._default.fields.vajalik.name, color: EtakMetaColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.vajalik.name,
+      color: EtakMetaColor,
+    },
     "lühike täisarv",
     "vajalikkus",
     etak_kirjeldus.classes._default.fields.vajalik.description.et
   ),
   createData(
-    { name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name, color: EtakMetaColor },
+    {
+      name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name,
+      color: EtakMetaColor,
+    },
     "kuupäev",
     "",
     etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description.et
@@ -180,7 +272,10 @@ export const mainRows = [
 export const generateKood = (domain: string) => {
   const koodField = {
     row: createData(
-      { name:  etak_kirjeldus.classes._default.fields.kood.name, color: MainElementColor },
+      {
+        name: etak_kirjeldus.classes._default.fields.kood.name,
+        color: MainElementColor,
+      },
       "lühike täisarv",
       domain,
       etak_kirjeldus.classes._default.fields.kood.description.et
@@ -241,5 +336,3 @@ export const generateHeadingData = (
 
   return heading;
 };
-
-

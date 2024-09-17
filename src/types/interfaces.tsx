@@ -76,3 +76,8 @@ export interface ObjectCountResponse {
 export interface ObjectCountProps {
   url: string;
 }
+
+export interface RegisterHyperLinkProps {
+  link: string;
+  desc: string;
+}

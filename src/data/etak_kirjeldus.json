@@ -187,6 +187,7 @@
         },
         "ads_oid": {
           "name": "ads_oid",
+          "link": "https://xgis.maaamet.ee/adsavalik/",
           "type": "register",
           "description": {
             "et": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis",
@@ -203,6 +204,7 @@
         },
         "knr_id": {
           "name": "knr_id",
+          "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
           "type": "register",
           "description": {
             "et": "Objekti identifikaator Riiklikus kohanimeregistris",
@@ -213,7 +215,7 @@
           "name": "nimetus",
           "type": "register",
           "description": {
-            "et": "Objekti nimetus Riiklikus kohanimeregistris",
+            "et": "Objekti nimetus Riiklikus kohanimeregistris [SIIN ON MIDAGI VALESTI]",
             "en": "Object name in  National Place Names Register"
           }
         },
@@ -228,6 +230,7 @@
         },
         "kkr_kood": {
           "name": "kkr_kood",
+          "link": "https://keskkonnaagentuur.ee/eelis",
           "type": "register",
           "description": {
             "et": "Objekti kood Eesti looduse infosüsteemis",
@@ -236,6 +239,7 @@
         },
         "mps_id": {
           "name": "mps_id",
+          "link": "https://portaal.agri.ee/avalik/#/maaparandus/msr/systeemi-otsing",
           "type": "register",
           "description": {
             "et": "Eesvoolu identifikaator Maaparandussüsteemide registris",
@@ -244,6 +248,7 @@
         },
         "ehr_gid": {
           "name": "ehr_gid",
+          "link": "https://livekluster.ehr.ee/ui/ehr/v1",
           "type": "register",
           "description": {
             "et": "Ehitise osa geomeetria identifikaator Ehitisregistris",
