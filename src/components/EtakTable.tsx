@@ -48,7 +48,10 @@ const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableP
     <TableContainer
       component={Paper}
       sx={{
-        maxWidth: "xl", // Set a specific max-width
+        maxWidth: {
+          xs: "lg",  // For extra small and small screens, max width is "lg"
+          xl: "xl",  // For extra large screens, max width is "xl"
+        }, 
         margin: "auto", // Center the table
         marginTop: 2,
       }}
