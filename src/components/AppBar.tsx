@@ -18,7 +18,7 @@ export default function EtakAppBar() {
             component="a"
             href="https://geoportaal.maaamet.ee/est/"
             sx={{
-              display: { xs: "none", md: "flex" },
+              display: { md: "none", lg: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
