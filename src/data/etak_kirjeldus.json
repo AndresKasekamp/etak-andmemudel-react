@@ -219,6 +219,7 @@
         },
         "kmr_id": {
           "name": "kmr_id",
+          "link": "https://register.muinas.ee/",
           "type": "register",
           "description": {
             "et": "Objekti identifikaator Kultuurimälestiste registris",

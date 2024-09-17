@@ -1,11 +1,14 @@
 // Fields
-export const White = "#FFFFFF";
-export const LavenderBlue = "#DAD0ED";
-export const PastelPink = "#f4c1c1";
-export const PastelGreen = "#C1E1C1";
+export const MainElementColor = "#FFFFFF";
+export const EsriElementColor = "#DAD0ED";
+export const EtakMetaColor = "#f4c1c1";
+export const RegisterColor = "#C1E1C1";
 
 // Table header
-export const SilverGray = "#C7C8CC";
+export const TableHeaderColor = "#C7C8CC";
+
+// Front page table background
+export const FrontPageTableColor = "#F5FAFA"
 
 // AppBar ELB color
-export const ELBColor = "#32774e"
+export const AppBarColor = "#32774e"

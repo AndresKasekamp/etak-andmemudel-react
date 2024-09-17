@@ -18,7 +18,7 @@ import autoTable from "jspdf-autotable";
 import { EtakTableProps2 } from "../types/interfaces.tsx";
 import ObjectCount from "./ObjectCount.tsx";
 
-import { SilverGray } from "../data/colors.ts";
+import { TableHeaderColor } from "../data/colors.ts";
 
 const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableProps2) => {
   const handleExportPDF = () => {
@@ -126,7 +126,7 @@ const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableP
         <TableHead>
           <TableRow
             sx={{
-              backgroundColor: SilverGray,
+              backgroundColor: TableHeaderColor,
             }}
           >
             <TableCell>Välja nimi</TableCell>

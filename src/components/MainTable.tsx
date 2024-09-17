@@ -7,6 +7,7 @@ import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 import { TableProps } from "../types/interfaces";
 import Paper from "@mui/material/Paper";
+import { FrontPageTableColor } from "../data/colors";
 
 const MainTable = ({
   backgroundColor,
@@ -19,7 +20,7 @@ const MainTable = ({
     <List
       component={Paper}
       sx={{
-        backgroundColor: "#F5FAFA",
+        backgroundColor: FrontPageTableColor,
         borderRadius: "5px",
         m: 1,
         position: "relative",
