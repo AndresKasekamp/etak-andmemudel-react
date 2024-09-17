@@ -205,7 +205,7 @@ export const etakPindobjektidOverlap = [
 
 export const metadata = [
   {
-    fcName: "alusdokument",
+    fcName: etak_kirjeldus.classes.alusdokument.description.et,
     elements: [],
   },
 ];

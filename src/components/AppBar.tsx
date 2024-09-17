@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import HomeLink from "./HomeLink";
 import Link3D from "./Link3D";
 import { AppBarColor } from "../data/colors";
+import BasicPopover from "./LastUpdated";
 
 export default function EtakAppBar() {
   return (
@@ -13,7 +14,7 @@ export default function EtakAppBar() {
         <Toolbar sx={{ position: "relative" }}>
 
         <Box sx={{ mr: "auto", display: "flex", gap: 2 }}>
-        <Typography
+        {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -27,7 +28,7 @@ export default function EtakAppBar() {
             }}
           >
             Geoportaal
-          </Typography>
+          </Typography> */}
 
           <Typography
             variant="h4"
@@ -38,8 +39,9 @@ export default function EtakAppBar() {
           </Typography>
           </Box>
 
-          <Box sx={{ ml: "auto", display: "flex", gap: 2 }}>
+          <Box sx={{ ml: "auto", display: "flex", gap: 2, alignItems: 'center' }}>
             <Link3D></Link3D>
+            <BasicPopover></BasicPopover>
             <HomeLink></HomeLink>
           </Box>
         </Toolbar>
