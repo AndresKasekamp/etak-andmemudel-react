@@ -25,8 +25,6 @@ export const etakPunktobjektid = [
       etakPunktobjektidDomains.d0101,
       etakPunktobjektidDomains.kivi_tyyp,
       etakPunktobjektidDomains.vajalikkus,
-      etakPunktobjektidDomains.vajalikkus,
-      etakPunktobjektidDomains.vajalikkus,
     ],
     headingData: generateHeadingData("punkt", "Kivi"),
   },

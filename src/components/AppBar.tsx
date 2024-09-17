@@ -4,11 +4,12 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import HomeLink from "./HomeLink";
 import Link3D from "./Link3D";
+import { ELBColor } from "../data/colors";
 
 export default function EtakAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky" sx={{ backgroundColor: "#32774e" }}>
+      <AppBar position="sticky" sx={{ backgroundColor: ELBColor }}>
         <Toolbar sx={{ position: "relative" }}>
 
         <Box sx={{ mr: "auto", display: "flex", gap: 2 }}>

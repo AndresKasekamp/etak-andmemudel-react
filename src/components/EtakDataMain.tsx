@@ -39,6 +39,7 @@ export default function EtakDataMain({
         alignItems: "center",
         maxWidth: "100%",
       }}
+      
     >
       <EtakTable
         updatedRows={updatedRows}
