@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 
-export default function BasicPopover() {
+export default function LastUpdated() {
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null
   );

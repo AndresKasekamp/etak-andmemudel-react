@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import HomeLink from "./HomeLink";
 import Link3D from "./Link3D";
 import { AppBarColor } from "../data/colors";
-import BasicPopover from "./LastUpdated";
+import LastUpdated from "./LastUpdated";
 
 export default function EtakAppBar() {
   return (
@@ -41,7 +41,7 @@ export default function EtakAppBar() {
 
           <Box sx={{ ml: "auto", display: "flex", gap: 2, alignItems: 'center' }}>
             <Link3D></Link3D>
-            <BasicPopover></BasicPopover>
+            <LastUpdated></LastUpdated>
             <HomeLink></HomeLink>
           </Box>
         </Toolbar>

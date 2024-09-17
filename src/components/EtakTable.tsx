@@ -109,7 +109,7 @@ const EtakTable = ({
           sx={{ marginLeft: "auto", marginRight: 2 }}
           onClick={handleExportPDF}
         >
-          Export to PDF
+          PDF
         </Button>
       </div>
       <div>
