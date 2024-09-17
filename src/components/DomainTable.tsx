@@ -12,6 +12,7 @@ import { DomainTableProps } from "../types/interfaces";
 export default function DomainTable({ domain }: DomainTableProps) {
   return (
     <TableContainer
+      id={domain.name}
       component={Paper}
       sx={{
         maxWidth: 400,

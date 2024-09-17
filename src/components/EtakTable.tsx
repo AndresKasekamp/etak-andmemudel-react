@@ -17,10 +17,16 @@ import autoTable from "jspdf-autotable";
 
 import { EtakTableProps2 } from "../types/interfaces.tsx";
 import ObjectCount from "./ObjectCount.tsx";
+import { HashLink } from 'react-router-hash-link';
 
 import { TableHeaderColor } from "../data/colors.ts";
 
-const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableProps2) => {
+const EtakTable = ({
+  updatedRows,
+  imageSrc,
+  tableName,
+  headingData,
+}: EtakTableProps2) => {
   const handleExportPDF = () => {
     const doc = new jsPDF();
 
@@ -28,6 +34,7 @@ const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableP
     doc.setFontSize(18);
     doc.text(tableName, 14, 22);
 
+    // TODO kuidas pdf lahendada?
     // AutoTable function to generate the table
     autoTable(doc, {
       head: [["Välja nimi", "Andmetüüp", "Domeen", "Kirjeldus"]],
@@ -35,7 +42,7 @@ const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableP
         row.name.name,
         row.dataType,
         row.domain,
-        row.desc,
+        row.desc.desc,
       ]),
       startY: 30,
     });
@@ -51,9 +58,9 @@ const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableP
       component={Paper}
       sx={{
         maxWidth: {
-          xs: "lg",  // For extra small and small screens, max width is "lg"
-          xl: "xl",  // For extra large screens, max width is "xl"
-        }, 
+          xs: "lg", // For extra small and small screens, max width is "lg"
+          xl: "xl", // For extra large screens, max width is "xl"
+        },
         margin: "auto", // Center the table
         marginTop: 2,
       }}
@@ -107,7 +114,7 @@ const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableP
       </div>
       <div>
         <Typography variant="h5" sx={{ marginLeft: 2 }}>
-        {headingData.estName}
+          {headingData.estName}
         </Typography>
 
         <Typography sx={{ marginLeft: 2 }}>Andmestik: levituum</Typography>
@@ -148,8 +155,12 @@ const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableP
                 {row.name.name}
               </TableCell>
               <TableCell>{row.dataType}</TableCell>
-              <TableCell sx={{color: "#ba3f38" }}>{row.domain}</TableCell>
-              <TableCell>{row.desc}</TableCell>
+
+              <TableCell>
+                <HashLink smooth to={`#${row.domain}`}>{row.domain}</HashLink>
+              </TableCell>
+
+              <TableCell>{row.desc.hyperlink ?? row.desc.desc}</TableCell>
             </TableRow>
           ))}
         </TableBody>

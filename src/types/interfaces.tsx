@@ -58,7 +58,12 @@ export interface RowData {
   name: Name;
   dataType: string;
   domain: string;
+  desc: DescRowData;
+}
+
+export interface DescRowData {
   desc: string;
+  hyperlink: JSX.Element | null;
 }
 
 export interface TableProps {

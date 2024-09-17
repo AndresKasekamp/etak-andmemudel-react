@@ -49,6 +49,7 @@ export default function EtakDataMain({
       ></EtakTable>
 
       <TableContainer
+        id="domain"
         component={Paper}
         sx={{
           maxWidth: {

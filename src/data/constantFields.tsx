@@ -1,5 +1,5 @@
 import { Name } from "../types/types";
-import { RowData } from "../types/interfaces";
+import { RowData, DescRowData } from "../types/interfaces";
 import {
   MainElementColor,
   EsriElementColor,
@@ -7,8 +7,6 @@ import {
   RegisterColor,
 } from "./colors";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
-import LaunchIcon from "@mui/icons-material/Launch";
-import { Link } from "@mui/material";
 import RegisterHyperLink from "../components/RegisterHyperLink";
 
 // TODO type paika saada
@@ -16,10 +14,12 @@ export const createData = (
   name: Name,
   dataType: string,
   domain: string,
-  desc: any
+  desc: DescRowData
 ): RowData => {
   return { name, dataType, domain, desc };
 };
+
+// TODO peaks tekkima kaks versiooni string ja jsx?
 
 export const otherShapes = [
   {
@@ -30,7 +30,11 @@ export const otherShapes = [
       },
       "reaalarv",
       "",
-      etak_kirjeldus.classes._default.fields.shape_Length.description.et
+      {
+        desc: etak_kirjeldus.classes._default.fields.shape_Length.description
+          .et,
+        hyperlink: null,
+      }
     ),
 
     shape_Area: createData(
@@ -40,7 +44,10 @@ export const otherShapes = [
       },
       "reaalarv",
       "",
-      etak_kirjeldus.classes._default.fields.shape_Area.description.et
+      {
+        desc: etak_kirjeldus.classes._default.fields.shape_Area.description.et,
+        hyperlink: null,
+      }
     ),
   },
 ];
@@ -54,10 +61,15 @@ export const otherRegisterSources = {
     },
     "täisarv",
     "",
-    <RegisterHyperLink
-      link={etak_kirjeldus.classes._default.fields.kmr_id.link}
-      desc={etak_kirjeldus.classes._default.fields.kmr_id.description.et}
-    ></RegisterHyperLink>
+    {
+      desc: etak_kirjeldus.classes._default.fields.kmr_id.description.et,
+      hyperlink: (
+        <RegisterHyperLink
+          link={etak_kirjeldus.classes._default.fields.kmr_id.link}
+          desc={etak_kirjeldus.classes._default.fields.kmr_id.description.et}
+        ></RegisterHyperLink>
+      ),
+    }
   ),
 
   kkr_kood: createData(
@@ -67,10 +79,15 @@ export const otherRegisterSources = {
     },
     "tekst(30)",
     "",
-    <RegisterHyperLink
-      link={etak_kirjeldus.classes._default.fields.kkr_kood.link}
-      desc={etak_kirjeldus.classes._default.fields.kkr_kood.description.et}
-    ></RegisterHyperLink>
+    {
+      desc: etak_kirjeldus.classes._default.fields.kkr_kood.description.et,
+      hyperlink: (
+        <RegisterHyperLink
+          link={etak_kirjeldus.classes._default.fields.kkr_kood.link}
+          desc={etak_kirjeldus.classes._default.fields.kkr_kood.description.et}
+        ></RegisterHyperLink>
+      ),
+    }
   ),
 
   nimetus: createData(
@@ -80,7 +97,10 @@ export const otherRegisterSources = {
     },
     "tekst(255)",
     "",
-    etak_kirjeldus.classes._default.fields.nimetus.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.nimetus.description.et,
+      hyperlink: null,
+    }
   ),
 
   knr_id: createData(
@@ -90,17 +110,25 @@ export const otherRegisterSources = {
     },
     "täisarv",
     "",
-    <RegisterHyperLink
-      link={etak_kirjeldus.classes._default.fields.knr_id.link}
-      desc={etak_kirjeldus.classes._default.fields.knr_id.description.et}
-    ></RegisterHyperLink>
+    {
+      desc: etak_kirjeldus.classes._default.fields.knr_id.description.et,
+      hyperlink: (
+        <RegisterHyperLink
+          link={etak_kirjeldus.classes._default.fields.knr_id.link}
+          desc={etak_kirjeldus.classes._default.fields.knr_id.description.et}
+        ></RegisterHyperLink>
+      ),
+    }
   ),
 
   kpo_seos: createData(
     { name: "kpo_seos", color: RegisterColor },
     "lühike täisarv",
     "seisuveekogu_kpo",
-    "Seisuveekogu roll KPO ISs"
+    {
+      desc: "Seisuveekogu roll KPO ISs",
+      hyperlink: null,
+    }
   ),
 
   mps_id: createData(
@@ -110,10 +138,15 @@ export const otherRegisterSources = {
     },
     "tekst(17)",
     "",
-    <RegisterHyperLink
-      link={etak_kirjeldus.classes._default.fields.mps_id.link}
-      desc={etak_kirjeldus.classes._default.fields.mps_id.description.et}
-    ></RegisterHyperLink>
+    {
+      desc: etak_kirjeldus.classes._default.fields.mps_id.description.et,
+      hyperlink: (
+        <RegisterHyperLink
+          link={etak_kirjeldus.classes._default.fields.mps_id.link}
+          desc={etak_kirjeldus.classes._default.fields.mps_id.description.et}
+        ></RegisterHyperLink>
+      ),
+    }
   ),
 
   ehr_gid: createData(
@@ -123,10 +156,15 @@ export const otherRegisterSources = {
     },
     "tekst(20)",
     "",
-    <RegisterHyperLink
-      link={etak_kirjeldus.classes._default.fields.ehr_gid.link}
-      desc={etak_kirjeldus.classes._default.fields.ehr_gid.description.et}
-    ></RegisterHyperLink>
+    {
+      desc: etak_kirjeldus.classes._default.fields.ehr_gid.description.et,
+      hyperlink: (
+        <RegisterHyperLink
+          link={etak_kirjeldus.classes._default.fields.ehr_gid.link}
+          desc={etak_kirjeldus.classes._default.fields.ehr_gid.description.et}
+        ></RegisterHyperLink>
+      ),
+    }
   ),
 
   ads_oid: createData(
@@ -136,10 +174,15 @@ export const otherRegisterSources = {
     },
     "tekst(10)",
     "",
-    <RegisterHyperLink
-      link={etak_kirjeldus.classes._default.fields.ads_oid.link}
-      desc={etak_kirjeldus.classes._default.fields.ads_oid.description.et}
-    ></RegisterHyperLink>
+    {
+      desc: etak_kirjeldus.classes._default.fields.ads_oid.description.et,
+      hyperlink: (
+        <RegisterHyperLink
+          link={etak_kirjeldus.classes._default.fields.ads_oid.link}
+          desc={etak_kirjeldus.classes._default.fields.ads_oid.description.et}
+        ></RegisterHyperLink>
+      ),
+    }
   ),
 
   ads_lahiaadress: createData(
@@ -149,7 +192,11 @@ export const otherRegisterSources = {
     },
     "tekst(255)",
     "",
-    etak_kirjeldus.classes._default.fields.ads_lahiaadress.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.ads_lahiaadress.description
+        .et,
+      hyperlink: null,
+    }
   ),
 
   kov_id: createData(
@@ -159,7 +206,10 @@ export const otherRegisterSources = {
     },
     "täisarv",
     "",
-    etak_kirjeldus.classes._default.fields.kov_id.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.kov_id.description.et,
+      hyperlink: null,
+    }
   ),
 
   mark: createData(
@@ -169,7 +219,10 @@ export const otherRegisterSources = {
     },
     "lühike täisarv",
     "toevaartus",
-    etak_kirjeldus.classes._default.fields.mark.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.mark.description.et,
+      hyperlink: null,
+    }
   ),
 };
 
@@ -181,7 +234,10 @@ export const mainRows = [
     },
     "täisarv",
     "",
-    etak_kirjeldus.classes._default.fields.etak_id.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.etak_id.description.et,
+      hyperlink: null,
+    }
   ),
 
   createData(
@@ -191,7 +247,10 @@ export const mainRows = [
     },
     "tekst(255)",
     "",
-    etak_kirjeldus.classes._default.fields.markused.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.markused.description.et,
+      hyperlink: null,
+    }
   ),
 
   createData(
@@ -201,7 +260,10 @@ export const mainRows = [
     },
     "täisarv",
     "",
-    etak_kirjeldus.classes._default.fields.objectid.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.objectid.description.et,
+      hyperlink: null,
+    }
   ),
   createData(
     {
@@ -210,7 +272,10 @@ export const mainRows = [
     },
     "geomeetria",
     "",
-    etak_kirjeldus.classes._default.fields.shape.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.shape.description.et,
+      hyperlink: null,
+    }
   ),
 
   createData(
@@ -220,7 +285,10 @@ export const mainRows = [
     },
     "kuupäev",
     "",
-    etak_kirjeldus.classes._default.fields.muutmisaeg.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.muutmisaeg.description.et,
+      hyperlink: null,
+    }
   ),
   createData(
     {
@@ -229,7 +297,12 @@ export const mainRows = [
     },
     "täisarv",
     "",
-    etak_kirjeldus.classes._default.fields.andmeallika_id.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.andmeallika_id.description
+        .et,
+
+      hyperlink: null,
+    }
   ),
   createData(
     {
@@ -238,7 +311,11 @@ export const mainRows = [
     },
     "täisarv",
     "",
-    etak_kirjeldus.classes._default.fields.korgusallika_id.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.korgusallika_id.description
+        .et,
+      hyperlink: null,
+    }
   ),
   createData(
     {
@@ -247,7 +324,12 @@ export const mainRows = [
     },
     "täisarv",
     "",
-    etak_kirjeldus.classes._default.fields.ruumikujuallika_id.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.ruumikujuallika_id
+        .description.et,
+
+      hyperlink: null,
+    }
   ),
   createData(
     {
@@ -256,7 +338,11 @@ export const mainRows = [
     },
     "lühike täisarv",
     "vajalikkus",
-    etak_kirjeldus.classes._default.fields.vajalik.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.vajalik.description.et,
+
+      hyperlink: null,
+    }
   ),
   createData(
     {
@@ -265,7 +351,11 @@ export const mainRows = [
     },
     "kuupäev",
     "",
-    etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description.et
+    {
+      desc: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description
+        .et,
+      hyperlink: null,
+    }
   ),
 ];
 
@@ -278,7 +368,10 @@ export const generateKood = (domain: string) => {
       },
       "lühike täisarv",
       domain,
-      etak_kirjeldus.classes._default.fields.kood.description.et
+      {
+        desc: etak_kirjeldus.classes._default.fields.kood.description.et,
+        hyperlink: null,
+      }
     ),
     position: 1,
   };
@@ -286,7 +379,7 @@ export const generateKood = (domain: string) => {
   return koodField;
 };
 
-export const generateTyyp = (domain: string, desc: string) => {
+export const generateTyyp = (domain: string, desc: DescRowData) => {
   const tyypField = {
     row: createData(
       { name: "tyyp", color: MainElementColor },
@@ -300,7 +393,7 @@ export const generateTyyp = (domain: string, desc: string) => {
   return tyypField;
 };
 
-export const generateKorgus = (desc: string, position: number) => {
+export const generateKorgus = (desc: DescRowData, position: number) => {
   const korgusField = {
     row: createData(
       { name: "korgus", color: MainElementColor },
