@@ -1,6 +1,7 @@
 import { Name } from "../types/types";
 import { RowData } from "../types/interfaces";
 import { White, LavenderBlue, PastelPink, PastelGreen } from "./colors";
+import etak_kirjeldus from './etak_kirjeldus.json' assert { type: 'json' };
 
 export const createData = (
   name: Name,
@@ -126,7 +127,7 @@ export const mainRows = [
   ),
 
   createData(
-    { name: "objectid", color: LavenderBlue },
+    { name: etak_kirjeldus.classes._default.fields.objectid.name, color: LavenderBlue },
     "täisarv",
     "",
     "Tehniline identifikaator"

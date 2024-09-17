@@ -78,6 +78,7 @@
           }
         },
         "objectid": {
+          "name": "objectid",
           "type": "technical",
           "description": {
             "en": "Technical identifier",
