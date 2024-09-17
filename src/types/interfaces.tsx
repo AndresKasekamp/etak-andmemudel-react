@@ -1,5 +1,6 @@
 import { Name } from "./types";
 
+// TODO loogika üle vaadata
 export interface FeatureClass {
   fcName: string;
   elements: Row[];

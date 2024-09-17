@@ -15,18 +15,18 @@ export const createData = (
 
 export const otherShapes = [
   {
-    "st_area(shape)": createData(
-      { name: "st_area(shape)", color: LavenderBlue },
+    shape_Length: createData(
+      { name: etak_kirjeldus.classes._default.fields.shape_Length.name, color: LavenderBlue },
       "reaalarv",
       "",
-      "Ruumikuju pindala"
+      etak_kirjeldus.classes._default.fields.shape_Length.description.et
     ),
 
-    "st_length(shape)": createData(
-      { name: "st_length(shape)", color: LavenderBlue },
+    shape_Area: createData(
+      { name: etak_kirjeldus.classes._default.fields.shape_Area.name, color: LavenderBlue },
       "reaalarv",
       "",
-      "Ruumikuju pikkus"
+      etak_kirjeldus.classes._default.fields.shape_Area.description.et
     ),
   },
 ];
@@ -34,31 +34,31 @@ export const otherShapes = [
 // TODO välja arvatud sõidutee osa
 export const otherRegisterSources = {
   kmr_id: createData(
-    { name: "kmr_id", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.kmr_id.name, color: PastelGreen },
     "täisarv",
     "",
-    "Objekti identifikaator Kultuurimälestiste riiklikus registris"
+    etak_kirjeldus.classes._default.fields.kmr_id.description.et
   ),
 
   kkr_kood: createData(
-    { name: "kkr_kood", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.kkr_kood.name, color: PastelGreen },
     "tekst(30)",
     "",
-    "Objekti kood Keskkonnaregistris"
+    etak_kirjeldus.classes._default.fields.kkr_kood.description.et
   ),
 
   nimetus: createData(
-    { name: "nimetus", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.nimetus.name, color: PastelGreen },
     "tekst(255)",
     "",
-    "Objekti nimetus Riigi kohanimeregistris"
+    etak_kirjeldus.classes._default.fields.nimetus.description.et
   ),
 
   knr_id: createData(
-    { name: "knr_id", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.knr_id.name, color: PastelGreen },
     "täisarv",
     "",
-    "Objekti identifikaator Riigi kohanimeregistris"
+    etak_kirjeldus.classes._default.fields.knr_id.description.et
   ),
 
   kpo_seos: createData(
@@ -69,121 +69,121 @@ export const otherRegisterSources = {
   ),
 
   mps_id: createData(
-    { name: "mps_id", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.mps_id.name, color: PastelGreen },
     "tekst(17)",
     "",
-    "Objekti kood Maaparandussüsteemide registris"
+    etak_kirjeldus.classes._default.fields.mps_id.description.et
   ),
 
   ehr_gid: createData(
-    { name: "ehr_gid", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.ehr_gid.name, color: PastelGreen },
     "tekst(20)",
     "",
-    "Ehitise osa geomeetria identifikaator Riiklikus ehitisregistris"
+    etak_kirjeldus.classes._default.fields.ehr_gid.description.et
   ),
 
   ads_oid: createData(
-    { name: "ads_oid", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.ads_oid.name, color: PastelGreen },
     "tekst(10)",
     "",
-    "Aadressiobjekti identifikaator Aadressiandmete süsteemis"
+    etak_kirjeldus.classes._default.fields.ads_oid.description.et
   ),
 
   ads_lahiaadress: createData(
-    { name: "ads_lahiaadress", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.ads_lahiaadress.name, color: PastelGreen },
     "tekst(255)",
     "",
-    "Objekti lähiaadress Aadressiandmete süsteemis"
+    etak_kirjeldus.classes._default.fields.ads_lahiaadress.description.et
   ),
 
   kov_id: createData(
-    { name: "kov_id", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.kov_id.name, color: PastelGreen },
     "täisarv",
     "",
-    "Kohaliku omavalitsuse andmekogu ruumiobjekti identifikaator"
+    etak_kirjeldus.classes._default.fields.kov_id.description.et
   ),
 
   mark: createData(
-    { name: "mark", color: PastelGreen },
+    { name: etak_kirjeldus.classes._default.fields.mark.name, color: PastelGreen },
     "lühike täisarv",
     "toevaartus",
-    "Objekt on kasutusel navigatioonimärgina"
+    etak_kirjeldus.classes._default.fields.mark.description.et
   ),
 };
 
 export const mainRows = [
   createData(
-    { name: "etak_id", color: White },
+    { name: etak_kirjeldus.classes._default.fields.etak_id.name, color: White },
     "täisarv",
     "",
-    "ETAK objekti unikaalne identifikaator"
+    etak_kirjeldus.classes._default.fields.etak_id.description.et
   ),
 
   createData(
-    { name: "markused", color: White },
+    { name: etak_kirjeldus.classes._default.fields.markused.name, color: White },
     "tekst(255)",
     "",
-    "Vabas vormis märkused objekti kohta"
+    etak_kirjeldus.classes._default.fields.markused.description.et
   ),
 
   createData(
     { name: etak_kirjeldus.classes._default.fields.objectid.name, color: LavenderBlue },
     "täisarv",
     "",
-    "Tehniline identifikaator"
+    etak_kirjeldus.classes._default.fields.objectid.description.et
   ),
   createData(
-    { name: "shape", color: LavenderBlue },
+    { name: etak_kirjeldus.classes._default.fields.shape.name, color: LavenderBlue },
     "geomeetria",
     "",
-    "Objekti ruumikuju"
+    etak_kirjeldus.classes._default.fields.shape.description.et
   ),
 
   createData(
-    { name: "muutmisaeg", color: PastelPink },
+    { name: etak_kirjeldus.classes._default.fields.muutmisaeg.name, color: PastelPink },
     "kuupäev",
     "",
-    "Operaatori poolt tehtud viimase muutuse aeg"
+    etak_kirjeldus.classes._default.fields.muutmisaeg.description.et
   ),
   createData(
-    { name: "andmeallika_id", color: PastelPink },
+    { name: etak_kirjeldus.classes._default.fields.andmeallika_id.name, color: PastelPink },
     "täisarv",
     "",
-    "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+    etak_kirjeldus.classes._default.fields.andmeallika_id.description.et
   ),
   createData(
-    { name: "korgusallika_id", color: PastelPink },
+    { name: etak_kirjeldus.classes._default.fields.korgusallika_id.name, color: PastelPink },
     "täisarv",
     "",
-    "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+    etak_kirjeldus.classes._default.fields.korgusallika_id.description.et
   ),
   createData(
-    { name: "ruumikujuallika_id", color: PastelPink },
+    { name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name, color: PastelPink },
     "täisarv",
     "",
-    "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+    etak_kirjeldus.classes._default.fields.ruumikujuallika_id.description.et
   ),
   createData(
-    { name: "vajalik", color: PastelPink },
+    { name: etak_kirjeldus.classes._default.fields.vajalik.name, color: PastelPink },
     "lühike täisarv",
     "vajalikkus",
-    "Objekti staatus"
+    etak_kirjeldus.classes._default.fields.vajalik.description.et
   ),
   createData(
-    { name: "geom_muutmisaeg", color: PastelPink },
+    { name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name, color: PastelPink },
     "kuupäev",
     "",
-    "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+    etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description.et
   ),
 ];
 
 export const generateKood = (domain: string) => {
   const koodField = {
     row: createData(
-      { name: "kood", color: White },
+      { name:  etak_kirjeldus.classes._default.fields.kood.name, color: White },
       "lühike täisarv",
       domain,
-      "Nähtuse kood ETAK reaalsusmudelis"
+      etak_kirjeldus.classes._default.fields.kood.description.et
     ),
     position: 1,
   };

@@ -86,6 +86,7 @@
           }
         },
         "shape": {
+          "name": "shape",
           "type": "technical",
           "description": {
             "et": "Objekti ruumikuju",
@@ -93,6 +94,7 @@
           }
         },
         "shape_Length": {
+          "name": "shape_Length",
           "type": "technical",
           "description": {
             "et": "Objekti ruumikuju pikkus või ümbermõõt",
@@ -100,6 +102,7 @@
           }
         },
         "shape_Area": {
+          "name": "shape_Area",
           "type": "technical",
           "description": {
             "et": "Objekti ruumikuju pindala",
@@ -107,30 +110,35 @@
           }
         },
         "etak_id": {
+          "name": "etak_id",
           "description": {
             "et": "ETAK objekti unikaalne identifikaator",
             "en": "Unique identifier of topographic object"
           }
         },
         "kood": {
+          "name": "kood",
           "description": {
             "en": "Feature code in ETDB conceptual data model",
             "et": "Nähtuse kood ETAK reaalsusmudelis"
           }
         },
         "markused": {
+          "name": "markused",
           "description": {
             "et": "Vabas vormis märkused objekti kohta",
             "en": "Additional comments"
           }
         },
         "puis": {
+          "name": "puis",
           "description": {
             "et": "Puittaimestiku olemasolu",
             "en": "Growth of woody plants in area"
           }
         },
         "vajalik": {
+          "name": "vajalik",
           "type": "meta",
           "description": {
             "et": "Objekti staatus",
@@ -138,6 +146,7 @@
           }
         },
         "muutmisaeg": {
+          "name": "muutmisaeg",
           "type": "meta",
           "description": {
             "et": "Operaatori poolt tehtud viimase muutuse aeg",
@@ -145,6 +154,7 @@
           }
         },
         "geom_muutmisaeg": {
+          "name": "geom_muutmisaeg",
           "type": "meta",
           "description": {
             "et": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg",
@@ -152,6 +162,7 @@
           }
         },
         "andmeallika_id": {
+          "name": "andmeallika_id",
           "type": "meta",
           "description": {
             "et": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator",
@@ -159,6 +170,7 @@
           }
         },
         "korgusallika_id": {
+          "name": "korgusallika_id",
           "type": "meta",
           "description": {
             "et": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus",
@@ -166,6 +178,7 @@
           }
         },
         "ruumikujuallika_id": {
+          "name": "ruumikujuallika_id",
           "type": "meta",
           "description": {
             "et": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator",
@@ -173,6 +186,7 @@
           }
         },
         "ads_oid": {
+          "name": "ads_oid",
           "type": "register",
           "description": {
             "et": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis",
@@ -180,6 +194,7 @@
           }
         },
         "ads_lahiaadress": {
+          "name": "ads_lahiaadress",
           "type": "register",
           "description": {
             "et": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis",
@@ -187,6 +202,7 @@
           }
         },
         "knr_id": {
+          "name": "knr_id",
           "type": "register",
           "description": {
             "et": "Objekti identifikaator Riiklikus kohanimeregistris",
@@ -194,6 +210,7 @@
           }
         },
         "nimetus": {
+          "name": "nimetus",
           "type": "register",
           "description": {
             "et": "Objekti nimetus Riiklikus kohanimeregistris",
@@ -201,6 +218,7 @@
           }
         },
         "kmr_id": {
+          "name": "kmr_id",
           "type": "register",
           "description": {
             "et": "Objekti identifikaator Kultuurimälestiste registris",
@@ -208,6 +226,7 @@
           }
         },
         "kkr_kood": {
+          "name": "kkr_kood",
           "type": "register",
           "description": {
             "et": "Objekti kood Eesti looduse infosüsteemis",
@@ -215,6 +234,7 @@
           }
         },
         "mps_id": {
+          "name": "mps_id",
           "type": "register",
           "description": {
             "et": "Eesvoolu identifikaator Maaparandussüsteemide registris",
@@ -222,6 +242,7 @@
           }
         },
         "ehr_gid": {
+          "name": "ehr_gid",
           "type": "register",
           "description": {
             "et": "Ehitise osa geomeetria identifikaator Ehitisregistris",
@@ -229,6 +250,7 @@
           }
         },
         "kov_id": {
+          "name": "kov_id",
           "type": "register",
           "description": {
             "et": "Kohaliku omavalitsuse andmekogu ruumiobjekti identifikaator",
@@ -236,6 +258,7 @@
           }
         },
         "mark": {
+          "name": "mark",
           "type": "register",
           "description": {
             "et": "Objekt on kasutusel navigatioonimärgina",
@@ -298,6 +321,7 @@
       }
     },
     "E_101_kivi_p": {
+      "name": "E_101_kivi_p",
       "group": "points",
       "description": {
         "et": "Kivi",
@@ -319,6 +343,7 @@
       }
     },
     "E_102_nolv_j": {
+      "name": "E_102_nolv_j",
       "group": "lines",
       "description": {
         "et": "Nõlv",
@@ -340,6 +365,7 @@
       }
     },
     "E_103_pinnavorm_j": {
+      "name": "E_103_pinnavorm_j",
       "group": "lines",
       "description": {
         "et": "Pinnavorm joonena",
@@ -355,6 +381,7 @@
       }
     },
     "E_103_pinnavorm_p": {
+      "name": "E_103_pinnavorm_p",
       "group": "points",
       "description": {
         "et": "Pinnavorm punktina",
@@ -370,6 +397,7 @@
       }
     },
     "E_201_meri_a": {
+      "name": "E_201_meri_a",
       "group": "land_cover",
       "description": {
         "et": "Meri",
@@ -377,6 +405,7 @@
       }
     },
     "E_202_seisuveekogu_a": {
+      "name": "E_202_seisuveekogu_a",
       "group": "land_cover",
       "description": {
         "et": "Seisuveekogu alana",
@@ -398,6 +427,7 @@
       }
     },
     "E_202_seisuveekogu_p": {
+      "name": "E_202_seisuveekogu_p",
       "group": "points",
       "description": {
         "et": "Seisuveekogu punktina",
@@ -413,6 +443,7 @@
       }
     },
     "E_203_vooluveekogu_a": {
+      "name": "E_203_vooluveekogu_a",
       "group": "land_cover",
       "description": {
         "et": "Vooluveekogu alana",
@@ -420,6 +451,7 @@
       }
     },
     "E_203_vooluveekogu_j": {
+      "name": "E_203_vooluveekogu_j",
       "group": "lines",
       "description": {
         "et": "Vooluveekogu telgjoon",
@@ -453,6 +485,7 @@
       }
     },
     "E_204_kaldajoon_j": {
+      "name": "E_204_kaldajoon_j",
       "group": "lines",
       "description": {
         "et": "Kaldajoon",
@@ -480,6 +513,7 @@
       }
     },
     "E_205_hudrotehniline_rajatis_j": {
+      "name": "E_205_hudrotehniline_rajatis_j",
       "group": "lines",
       "description": {
         "et": "Hüdrotehniline rajatis",
@@ -495,6 +529,7 @@
       }
     },
     "E_206_truup_j": {
+      "name": "E_206_truup_j",
       "group": "lines",
       "description": {
         "et": "Truup",
@@ -510,6 +545,7 @@
       }
     },
     "E_301_muu_kolvik_a": {
+      "name": "E_301_muu_kolvik_a",
       "group": "land_cover",
       "description": {
         "et": "Muu kõlvik alana",
@@ -525,6 +561,7 @@
       }
     },
     "E_301_muu_kolvik_ka": {
+      "name": "E_301_muu_kolvik_ka",
       "group": "overlapping",
       "description": {
         "et": "Muu kõlvik kattuva alana",
@@ -540,6 +577,7 @@
       }
     },
     "E_301_muu_kolvik_p": {
+      "name": "E_301_muu_kolvik_p",
       "group": "points",
       "description": {
         "et": "Muu kõlvik punktina",
@@ -555,6 +593,7 @@
       }
     },
     "E_302_ou_a": {
+      "name": "E_302_ou_a",
       "group": "land_cover",
       "description": {
         "et": "Õu",
@@ -576,6 +615,7 @@
       }
     },
     "E_303_haritav_maa_a": {
+      "name": "E_303_haritav_maa_a",
       "group": "land_cover",
       "description": {
         "et": "Haritav maa",
@@ -591,6 +631,7 @@
       }
     },
     "E_304_lage_a": {
+      "name": "E_304_lage_a",
       "group": "land_cover",
       "description": {
         "et": "Lage",
@@ -606,6 +647,7 @@
       }
     },
     "E_305_puittaimestik_a": {
+      "name": "E_305_puittaimestik_a",
       "group": "land_cover",
       "description": {
         "et": "Puittaimestik alana",
@@ -621,6 +663,7 @@
       }
     },
     "E_305_puittaimestik_j": {
+      "name": "E_305_puittaimestik_j",
       "group": "lines",
       "description": {
         "et": "Puittaimestik joonena",
@@ -636,6 +679,7 @@
       }
     },
     "E_305_puittaimestik_p": {
+      "name": "E_305_puittaimestik_p",
       "group": "points",
       "description": {
         "et": "Puittaimestik punktina",
@@ -651,6 +695,7 @@
       }
     },
     "E_306_margala_a": {
+      "name": "E_306_margala_a",
       "group": "land_cover",
       "description": {
         "et": "Märgala alana",
@@ -666,6 +711,7 @@
       }
     },
     "E_306_margala_ka": {
+      "name": "E_306_margala_ka",
       "group": "overlapping",
       "description": {
         "et": "Märgala kattuva alana",
@@ -681,6 +727,7 @@
       }
     },
     "E_307_turbavali_a": {
+      "name": "E_307_turbavali_a",
       "group": "land_cover",
       "description": {
         "et": "Turbaväli",
@@ -696,6 +743,7 @@
       }
     },
     "E_401_hoone_ka": {
+      "name": "E_401_hoone_ka",
       "group": "overlapping",
       "description": {
         "en": "Building",
@@ -717,6 +765,7 @@
       }
     },
     "E_402_korgrajatis_p": {
+      "name": "E_402_korgrajatis_p",
       "group": "points",
       "description": {
         "et": "Kõrgrajatis",
@@ -750,6 +799,7 @@
       }
     },
     "E_403_muu_rajatis_ka": {
+      "name": "E_403_muu_rajatis_ka",
       "group": "overlapping",
       "description": {
         "et": "Muu rajatis kattuva alana",
@@ -765,6 +815,7 @@
       }
     },
     "E_403_muu_rajatis_p": {
+      "name": "E_403_muu_rajatis_p",
       "group": "points",
       "description": {
         "et": "Muu rajatis punktina",
@@ -780,6 +831,7 @@
       }
     },
     "E_404_maaalune_hoone_ka": {
+      "name": "E_404_maaalune_hoone_ka",
       "group": "overlapping",
       "description": {
         "et": "Maa-alune hoone",
@@ -795,6 +847,7 @@
       }
     },
     "E_405_piire_j": {
+      "name": "E_405_piire_j",
       "group": "lines",
       "description": {
         "et": "Piire",
@@ -816,6 +869,7 @@
       }
     },
     "E_501_tee_a": {
+      "name": "E_501_tee_a",
       "group": "land_cover",
       "description": {
         "et": "Tee alana",
@@ -831,6 +885,7 @@
       }
     },
     "E_501_tee_j": {
+      "name": "E_501_tee_j",
       "group": "lines",
       "description": {
         "et": "Tee joonena",
@@ -959,6 +1014,7 @@
       }
     },
     "E_502_roobastee_j": {
+      "name": "E_502_roobastee_j",
       "group": "lines",
       "description": {
         "et": "Rööbastee",
@@ -986,6 +1042,7 @@
       }
     },
     "E_503_siht_j": {
+      "name": "E_503_siht_j",
       "group": "lines",
       "description": {
         "et": "Siht",
@@ -993,6 +1050,7 @@
       }
     },
     "E_505_liikluskorralduslik_rajatis_j": {
+      "name": "E_505_liikluskorralduslik_rajatis_j",
       "group": "lines",
       "description": {
         "et": "Liikluskorralduslik rajatis joonena",
@@ -1014,6 +1072,7 @@
       }
     },
     "E_505_liikluskorralduslik_rajatis_ka": {
+      "name": "E_505_liikluskorralduslik_rajatis_ka",
       "group": "overlapping",
       "description": {
         "et": "Liikluskorralduslik rajatis kattuva alana",
@@ -1029,6 +1088,7 @@
       }
     },
     "E_601_elektriliin_j": {
+      "name": "E_601_elektriliin_j",
       "group": "lines",
       "description": {
         "et": "Elektriliin",
@@ -1044,6 +1104,7 @@
       }
     },
     "E_602_tehnopaigaldis_p": {
+      "name": "E_602_tehnopaigaldis_p",
       "group": "points",
       "description": {
         "et": "Tehnopaigaldis",
@@ -1065,6 +1126,7 @@
       }
     },
     "E_603_torujuhe_j": {
+      "name": "E_603_torujuhe_j",
       "group": "lines",
       "description": {
         "et": "Torujuhe",
@@ -1072,6 +1134,7 @@
       }
     },
     "seisuveed_kkr": {
+      "name": "seisuveed_kkr",
       "group": "derivatives",
       "description": {
         "et": "Seisuvete tervikkujud Eesti looduse infosüsteemis"
@@ -1090,6 +1153,7 @@
       }
     },
     "vooluveed_kkr": {
+      "name": "vooluveed_kkr",
       "group": "derivatives",
       "description": {
         "et": "Vooluvete tervikkujud (põhiteljed) Eesti looduse infosüsteemis"

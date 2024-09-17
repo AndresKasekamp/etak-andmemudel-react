@@ -148,7 +148,7 @@ const EtakTable = ({ updatedRows, imageSrc, tableName, headingData }: EtakTableP
                 {row.name.name}
               </TableCell>
               <TableCell>{row.dataType}</TableCell>
-              <TableCell>{row.domain}</TableCell>
+              <TableCell sx={{color: "#ba3f38" }}>{row.domain}</TableCell>
               <TableCell>{row.desc}</TableCell>
             </TableRow>
           ))}

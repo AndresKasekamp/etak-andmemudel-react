@@ -8,14 +8,16 @@ import {
   generateHeadingData,
 } from "./constantFields.tsx";
 import { etakPunktobjektidDomains } from "./domains.tsx";
+import etak_kirjeldus from './etak_kirjeldus.json' assert { type: 'json' };
+
 
 export const etakPunktobjektid = [
   {
-    fcName: "E_101_kivi_p",
+    fcName: etak_kirjeldus.classes.E_101_kivi_p.name,
     elements: [
-      generateKood("0101"),
-      generateTyyp("kivi_tyyp", "Kivi tüüp"),
-      generateKorgus("Kaitsealuse üksiku kivi kõrgus maapinnast [m]", 3),
+      generateKood(etakPunktobjektidDomains.d0101.name),
+      generateTyyp(etakPunktobjektidDomains.kivi_tyyp.name, etak_kirjeldus.classes.E_101_kivi_p.fields.tyyp.description.et),
+      generateKorgus(etak_kirjeldus.classes.E_101_kivi_p.fields.korgus.description.et, 3),
       generateField(otherRegisterSources.kmr_id, 13),
       generateField(otherRegisterSources.kkr_kood, 14),
       generateField(otherRegisterSources.nimetus, 15),
@@ -26,7 +28,7 @@ export const etakPunktobjektid = [
       etakPunktobjektidDomains.kivi_tyyp,
       etakPunktobjektidDomains.vajalikkus,
     ],
-    headingData: generateHeadingData("punkt", "Kivi"),
+    headingData: generateHeadingData("punkt", etak_kirjeldus.classes.E_101_kivi_p.description.et),
   },
 
   {
