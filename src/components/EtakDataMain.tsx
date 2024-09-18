@@ -23,7 +23,8 @@ export default function EtakDataMain({
 
   const tableName = getTableName(location);
 
-  let updatedRows = [...generateDataFields(mainFields)];
+  
+  let updatedRows = [...Object.values(mainFields)];
 
 
   if (tableName === etak_kirjeldus.classes.alusdokument.name) {

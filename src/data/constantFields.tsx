@@ -21,36 +21,60 @@ export const createData = (
 
 // TODO peaks tekkima kaks versiooni string ja jsx?
 
-export const otherShapes = [
-  {
-    shape_Length: createData(
-      {
-        name: etak_kirjeldus.classes._default.fields.shape_Length.name,
-        color: EsriElementColor,
-      },
-      "reaalarv",
-      "",
-      {
-        desc: etak_kirjeldus.classes._default.fields.shape_Length.description
-          .et,
-        hyperlink: null,
-      }
-    ),
+export const otherShapes = {
+  shape_Length: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.shape_Length.name,
+      color: EsriElementColor,
+    },
+    "reaalarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.shape_Length.description.et,
+      hyperlink: null,
+    }
+  ),
 
-    shape_Area: createData(
-      {
-        name: etak_kirjeldus.classes._default.fields.shape_Area.name,
-        color: EsriElementColor,
-      },
-      "reaalarv",
-      "",
-      {
-        desc: etak_kirjeldus.classes._default.fields.shape_Area.description.et,
-        hyperlink: null,
-      }
-    ),
-  },
-];
+  shape_Area: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.shape_Area.name,
+      color: EsriElementColor,
+    },
+    "reaalarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.shape_Area.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  objectid: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.objectid.name,
+      color: EsriElementColor,
+    },
+    "täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.objectid.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  shape: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.shape.name,
+      color: EsriElementColor,
+    },
+    "geomeetria",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.shape.description.et,
+      hyperlink: null,
+    }
+  ),
+};
+
 //
 // TODO välja arvatud sõidutee osa
 export const otherRegisterSources = {
@@ -253,31 +277,8 @@ export const mainFields = {
     }
   ),
 
-  objectid: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.objectid.name,
-      color: EsriElementColor,
-    },
-    "täisarv",
-    "",
-    {
-      desc: etak_kirjeldus.classes._default.fields.objectid.description.et,
-      hyperlink: null,
-    }
-  ),
-
-  shape: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.shape.name,
-      color: EsriElementColor,
-    },
-    "geomeetria",
-    "",
-    {
-      desc: etak_kirjeldus.classes._default.fields.shape.description.et,
-      hyperlink: null,
-    }
-  ),
+  objectid: otherShapes.objectid,
+  shape: otherShapes.shape,
 
   muutmisaeg: createData(
     {
@@ -366,22 +367,19 @@ export const mainFields = {
 };
 
 // TODO ts parandada
-export const generateDataFields = (arr: object) => {
+export const generateDataFields = () => {
   const genFields: any = [];
 
-  if (arr.etak_id) {
-    genFields.push(...Object.values(arr));
-  } else {
-    Object.values(arr).forEach((value, index) => {
-      const gfield = generateField(value, index);
-      genFields.push(gfield);
-    });
-  }
+  const metadataCombined = { ...metadataFields, ...otherShapes };
+
+  // Main field block
+  Object.values(metadataCombined).forEach((value, index) => {
+    const gfield = generateField(value, index);
+    genFields.push(gfield);
+  });
 
   return genFields;
 };
-
-
 
 export const metadataFields = {
   andmeallikas: createData(
@@ -444,7 +442,7 @@ export const metadataFields = {
       color: MainElementColor,
     },
     "lühike täisarv",
-    "",
+    "alusdokument_tyyp",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.tyyp.description.et,
       hyperlink: null,
@@ -483,7 +481,7 @@ export const metadataFields = {
       color: MainElementColor,
     },
     "lühike täisarv",
-    "",
+    "tapsusklass_xy",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.tapsus.description.et,
       hyperlink: null,
@@ -496,7 +494,7 @@ export const metadataFields = {
       color: MainElementColor,
     },
     "lühike täisarv",
-    "",
+    "tapsusklass_z",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.korgustapsus.description
         .et,
@@ -504,19 +502,6 @@ export const metadataFields = {
     }
   ),
 };
-
-// export const generateMetadatFields = () => {
-//   const metadataGenerated: any = [];
-
-//   // Using Object.entries() with forEach to get index, key, and value
-//   Object.values(metadataFields).forEach((value, index) => {
-//     const gfield = generateField(value, index);
-//     // Push values to the array
-//     metadataGenerated.push(gfield);
-//   });
-
-//   return metadataGenerated;
-// };
 
 export const generateKood = (domain: string) => {
   const koodField = {
