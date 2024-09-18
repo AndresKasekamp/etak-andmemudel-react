@@ -3,6 +3,7 @@ import {
   // etakPindobjektidMain,
   // etakPindobjektidOverlap,
   etakPunktobjektid,
+  metadata
 } from "../data/featureClasses";
 import App from "../App";
 import EtakDataMain from "../components/EtakDataMain";
@@ -10,7 +11,7 @@ import { FeatureClass, FeatureClassPath } from "../types/interfaces";
 
 // Image sources
 import pointImageSource from "../assets/multipoint.svg";
-// import polyImageSource from "../assets/polygon-hole-o.svg";
+import polyImageSource from "../assets/polygon-hole-o.svg";
 // import polyLineImageSource from "../assets/polyline-pt.svg";
 // import cubeImageSource from "../assets/cube-3d.svg";
 
@@ -36,6 +37,7 @@ export const paths = () => [
   initPath,
 
   ...featureClassPath(etakPunktobjektid, "punktobjekt", pointImageSource),
+  ...featureClassPath(metadata, "etak", polyImageSource),
   // ...featureClassPath(etakJoonobjektid, "joonobjekt"),
   // ...featureClassPath(etakPindobjektidOverlap, "pindobjekt"),
   // ...featureClassPath(etakPindobjektidMain, "pindobjekt"),

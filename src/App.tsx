@@ -9,7 +9,7 @@ import {
   // etakJoonobjektid,
   // etakPindobjektidMain,
   // etakPindobjektidOverlap,
-  // metadata,
+  metadata,
   // derivedLayers,
 } from "./data/featureClasses.tsx";
 
@@ -46,10 +46,9 @@ function App() {
         >
           <MainTable
             backgroundColor="#C4C1A4"
-            // objectName="Metaandmed"
             objectName={etak_kirjeldus.groups.meta.name.et}
-            // itemNames={metadata}
-            itemNames={etakPunktobjektid}
+            itemNames={metadata}
+            // itemNames={etakPunktobjektid}
             dataTypeClass="etak"
           />
           <MainTable

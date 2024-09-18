@@ -22,6 +22,8 @@ export default function EtakDataMain({
 
   const updatedRows = [...mainRows];
 
+  // TODO alusdokumendile peab tegema erireegli or smth
+
   // Manipulating underlying array
   addedRows.forEach((row) => {
     if (row.position >= 0 && row.position <= updatedRows.length) {

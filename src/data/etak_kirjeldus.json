@@ -215,7 +215,7 @@
           "name": "nimetus",
           "type": "register",
           "description": {
-            "et": "Objekti nimetus Riiklikus kohanimeregistris [SIIN ON MIDAGI VALESTI]",
+            "et": "Objekti nimetus Riiklikus kohanimeregistris [SIIN ON MIDAGI VALESTI vist]",
             "en": "Object name in  National Place Names Register"
           }
         },
@@ -274,52 +274,62 @@
       }
     },
     "alusdokument": {
+      "name": "alusdokument",
       "group": "meta",
       "description": {
         "et": "Alusdokument"
       },
       "fields": {
         "andmeallikas": {
+          "name": "andmeallikas",
           "description": {
             "et": "Andmeandja nimi"
           }
         },
         "kood": {
+          "name": "kood",
           "description": {
             "et": "Alusdokumendi identifikaator"
           }
         },
         "korguskood": {
+          "name": "korguskood",
           "description": {
             "et": "Korgusallika_id väljal kasutatav viide alusdokumendile"
           }
         },
         "tyyp": {
+          "name": "tyyp",
           "description": {
             "et": "Alusdokumendi tüüp"
           }
         },
         "aeg": {
+          "name": "aeg",
           "description": {
             "et": "Alusdokumendi andmekogusse laekumise aeg"
           }
         },
         "markused": {
+          "name": "markused",
           "description": {
             "et": "Vabas vormis märkused dokumendi kohta"
           }
         },
         "tapsus": {
+          "name": "tapsus",
           "description": {
             "et": "Andmete plaaniline täpsus"
           }
         },
         "korgustapsus": {
+          "name": "korgustapsus",
           "description": {
             "et": "Andmete kõrgustäpsus"
           }
         },
         "nimetus": {
+          "name": "nimetus",
           "description": {
             "et": "Alusdokumendi nimetus"
           }

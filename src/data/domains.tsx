@@ -1,3 +1,6 @@
+import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
+
+
 function createDataDomains(kood: number, nimetus: string) {
   return { kood, nimetus };
 }
@@ -54,3 +57,21 @@ export const etakPunktobjektidDomains = {
     elements: [createDataDomains(103, "Pinnavorm")],
   },
 };
+
+
+export const metadataDomains = {
+
+  alusdokument_tyyp: {
+    name: "alusdokument_tyyp",
+    desc: etak_kirjeldus.classes.alusdokument.fields.tyyp.description.et,
+    dataType: "lühike täisarv",
+    elements: [
+      createDataDomains(10, "Maa-ameti aerofoto"),
+      createDataDomains(20, "Ruumiandmekogum"),
+      createDataDomains(30, "Tärkandmekogum"),
+      createDataDomains(40, "Kaardistus"),
+      createDataDomains(60, "Kõrgusmudel"),
+      createDataDomains(999, "Muu"),
+    ],
+  },
+}

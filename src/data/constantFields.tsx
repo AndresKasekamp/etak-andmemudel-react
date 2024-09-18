@@ -359,6 +359,141 @@ export const mainRows = [
   ),
 ];
 
+export const metadataFields = {
+  andmeallikas: createData(
+    {
+      name: etak_kirjeldus.classes.alusdokument.fields.andmeallikas.name,
+      color: MainElementColor,
+    },
+    "tekst(100)",
+    "",
+    {
+      desc: etak_kirjeldus.classes.alusdokument.fields.andmeallikas.description
+        .et,
+      hyperlink: null,
+    }
+  ),
+
+  kood: createData(
+    {
+      name: etak_kirjeldus.classes.alusdokument.fields.kood.name,
+      color: MainElementColor,
+    },
+    "lühike täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes.alusdokument.fields.kood.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  korguskood: createData(
+    {
+      name: etak_kirjeldus.classes.alusdokument.fields.korguskood.name,
+      color: MainElementColor,
+    },
+    "lühike täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes.alusdokument.fields.korguskood.description
+        .et,
+      hyperlink: null,
+    }
+  ),
+
+  nimetus: createData(
+    {
+      name: etak_kirjeldus.classes.alusdokument.fields.nimetus.name,
+      color: MainElementColor,
+    },
+    "tekst(100)",
+    "",
+    {
+      desc: etak_kirjeldus.classes.alusdokument.fields.nimetus.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  tyyp: createData(
+    {
+      name: etak_kirjeldus.classes.alusdokument.fields.tyyp.name,
+      color: MainElementColor,
+    },
+    "lühike täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes.alusdokument.fields.tyyp.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  aeg: createData(
+    {
+      name: etak_kirjeldus.classes.alusdokument.fields.aeg.name,
+      color: MainElementColor,
+    },
+    "kuupäev",
+    "",
+    {
+      desc: etak_kirjeldus.classes.alusdokument.fields.aeg.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  markused: createData(
+    {
+      name: etak_kirjeldus.classes.alusdokument.fields.markused.name,
+      color: MainElementColor,
+    },
+    "tekst(255)",
+    "",
+    {
+      desc: etak_kirjeldus.classes.alusdokument.fields.markused.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  tapsus: createData(
+    {
+      name: etak_kirjeldus.classes.alusdokument.fields.tapsus.name,
+      color: MainElementColor,
+    },
+    "lühike täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes.alusdokument.fields.tapsus.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  korgustapsus: createData(
+    {
+      name: etak_kirjeldus.classes.alusdokument.fields.korgustapsus.name,
+      color: MainElementColor,
+    },
+    "lühike täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes.alusdokument.fields.korgustapsus.description
+        .et,
+      hyperlink: null,
+    }
+  ),
+};
+
+export const generateMetadatFields = () => {
+  const metadataGenerated: any = [];
+
+  // Using Object.entries() with forEach to get index, key, and value
+  Object.values(metadataFields).forEach((value, index) => {
+    const gfield = generateField(value, index);
+    // Push values to the array
+    metadataGenerated.push(gfield);
+  });
+
+  return metadataGenerated;
+};
+
 export const generateKood = (domain: string) => {
   const koodField = {
     row: createData(
@@ -370,6 +505,26 @@ export const generateKood = (domain: string) => {
       domain,
       {
         desc: etak_kirjeldus.classes._default.fields.kood.description.et,
+        hyperlink: null,
+      }
+    ),
+    position: 1,
+  };
+
+  return koodField;
+};
+
+export const generateKoodAlusdokument = () => {
+  const koodField = {
+    row: createData(
+      {
+        name: etak_kirjeldus.classes._default.fields.kood.name,
+        color: MainElementColor,
+      },
+      "lühike täisarv",
+      "",
+      {
+        desc: etak_kirjeldus.classes.alusdokument.fields.kood.description.et,
         hyperlink: null,
       }
     ),
