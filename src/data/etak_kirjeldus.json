@@ -215,7 +215,7 @@
           "name": "nimetus",
           "type": "register",
           "description": {
-            "et": "Objekti nimetus Riiklikus kohanimeregistris [SIIN ON MIDAGI VALESTI vist]",
+            "et": "Objekti nimetus Riiklikus kohanimeregistris",
             "en": "Object name in  National Place Names Register"
           }
         },

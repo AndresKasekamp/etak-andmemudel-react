@@ -46,11 +46,11 @@ export const etakPunktobjektid = [
   },
 
   {
-    fcName: "E_103_pinnavorm_p",
+    fcName: etak_kirjeldus.classes.E_103_pinnavorm_p.name,
     elements: [
-      generateKood("0103"),
-      generateTyyp("pinnavormP_tyyp", {
-        desc: "Pinnavormi tüüp punktina",
+      generateKood(etakPunktobjektidDomains.d0103.name),
+      generateTyyp(etakPunktobjektidDomains.pinnavormP_tyyp.name, {
+        desc: etak_kirjeldus.classes.E_103_pinnavorm_p.fields.tyyp.description.et,
         hyperlink: null,
       }),
       generateField(otherRegisterSources.kmr_id, 12),
@@ -64,7 +64,7 @@ export const etakPunktobjektid = [
       etakPunktobjektidDomains.pinnavormP_tyyp,
     ],
 
-    headingData: generateHeadingData("punkt", "Pinnavorm punktina"),
+    headingData: generateHeadingData("punkt", etak_kirjeldus.classes.E_103_pinnavorm_p.description.et),
   },
 
   {
