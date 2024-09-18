@@ -1,6 +1,6 @@
 import { useLocation, Location } from "react-router-dom";
 
-import {  mainFields, generateDataFields } from "../data/constantFields.tsx";
+import {  mainFields } from "../data/constantFields.tsx";
 import { getTableName } from "../utils/utils.tsx";
 import { EtakTableProps } from "../types/interfaces.tsx";
 
