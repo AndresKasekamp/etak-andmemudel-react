@@ -7,7 +7,7 @@ import {
   RegisterColor,
 } from "./colors";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
-import RegisterHyperLink from "../components/RegisterHyperLink";
+import RegisterHyperLink from "../components/formatHelpers/RegisterHyperLink";
 
 // TODO type paika saada
 export const createData = (
@@ -226,8 +226,8 @@ export const otherRegisterSources = {
   ),
 };
 
-export const mainRows = [
-  createData(
+export const mainFields = {
+  etak_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.etak_id.name,
       color: MainElementColor,
@@ -240,7 +240,7 @@ export const mainRows = [
     }
   ),
 
-  createData(
+  markused: createData(
     {
       name: etak_kirjeldus.classes._default.fields.markused.name,
       color: MainElementColor,
@@ -253,7 +253,7 @@ export const mainRows = [
     }
   ),
 
-  createData(
+  objectid: createData(
     {
       name: etak_kirjeldus.classes._default.fields.objectid.name,
       color: EsriElementColor,
@@ -265,7 +265,8 @@ export const mainRows = [
       hyperlink: null,
     }
   ),
-  createData(
+
+  shape: createData(
     {
       name: etak_kirjeldus.classes._default.fields.shape.name,
       color: EsriElementColor,
@@ -278,7 +279,7 @@ export const mainRows = [
     }
   ),
 
-  createData(
+  muutmisaeg: createData(
     {
       name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
       color: EtakMetaColor,
@@ -290,7 +291,8 @@ export const mainRows = [
       hyperlink: null,
     }
   ),
-  createData(
+
+  andmeallika_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.andmeallika_id.name,
       color: EtakMetaColor,
@@ -304,7 +306,8 @@ export const mainRows = [
       hyperlink: null,
     }
   ),
-  createData(
+
+  korgusallika_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.korgusallika_id.name,
       color: EtakMetaColor,
@@ -317,7 +320,8 @@ export const mainRows = [
       hyperlink: null,
     }
   ),
-  createData(
+
+  ruumikujuallika_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name,
       color: EtakMetaColor,
@@ -331,7 +335,8 @@ export const mainRows = [
       hyperlink: null,
     }
   ),
-  createData(
+
+  vajalik: createData(
     {
       name: etak_kirjeldus.classes._default.fields.vajalik.name,
       color: EtakMetaColor,
@@ -344,7 +349,8 @@ export const mainRows = [
       hyperlink: null,
     }
   ),
-  createData(
+
+  geom_muutmisaeg: createData(
     {
       name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name,
       color: EtakMetaColor,
@@ -357,7 +363,25 @@ export const mainRows = [
       hyperlink: null,
     }
   ),
-];
+};
+
+// TODO ts parandada
+export const generateDataFields = (arr: object) => {
+  const genFields: any = [];
+
+  if (arr.etak_id) {
+    genFields.push(...Object.values(arr));
+  } else {
+    Object.values(arr).forEach((value, index) => {
+      const gfield = generateField(value, index);
+      genFields.push(gfield);
+    });
+  }
+
+  return genFields;
+};
+
+
 
 export const metadataFields = {
   andmeallikas: createData(
@@ -481,18 +505,18 @@ export const metadataFields = {
   ),
 };
 
-export const generateMetadatFields = () => {
-  const metadataGenerated: any = [];
+// export const generateMetadatFields = () => {
+//   const metadataGenerated: any = [];
 
-  // Using Object.entries() with forEach to get index, key, and value
-  Object.values(metadataFields).forEach((value, index) => {
-    const gfield = generateField(value, index);
-    // Push values to the array
-    metadataGenerated.push(gfield);
-  });
+//   // Using Object.entries() with forEach to get index, key, and value
+//   Object.values(metadataFields).forEach((value, index) => {
+//     const gfield = generateField(value, index);
+//     // Push values to the array
+//     metadataGenerated.push(gfield);
+//   });
 
-  return metadataGenerated;
-};
+//   return metadataGenerated;
+// };
 
 export const generateKood = (domain: string) => {
   const koodField = {

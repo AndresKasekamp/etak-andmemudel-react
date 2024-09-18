@@ -1,4 +1,4 @@
-import EtakAppBar from './AppBar';
+import EtakAppBar from './navbar/AppBar';
 import { Outlet } from 'react-router-dom';
 
 const NavBarWrapper = () => {

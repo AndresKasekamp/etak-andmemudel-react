@@ -6,7 +6,9 @@ import {
   generateKorgus,
   generateField,
   generateHeadingData,
-  generateMetadatFields
+  generateDataFields,
+  metadataFields
+  // generateMetadatFields
 } from "./constantFields.tsx";
 import { etakPunktobjektidDomains } from "./domains.tsx";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
@@ -207,7 +209,7 @@ export const etakPindobjektidOverlap = [
 export const metadata = [
   {
     fcName: etak_kirjeldus.classes.alusdokument.name,
-    elements: generateMetadatFields(),
+    elements: generateDataFields(metadataFields),
     domainTables: [
       etakPunktobjektidDomains.d0101,
       etakPunktobjektidDomains.kivi_tyyp,

@@ -4,7 +4,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import HomeLink from "./HomeLink";
 import Link3D from "./Link3D";
-import { AppBarColor } from "../data/colors";
+import { AppBarColor } from "../../data/colors";
 import LastUpdated from "./LastUpdated";
 
 export default function EtakAppBar() {

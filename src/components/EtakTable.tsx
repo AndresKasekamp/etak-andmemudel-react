@@ -16,10 +16,12 @@ import { jsPDF } from "jspdf"; //or use your library of choice here
 import autoTable from "jspdf-autotable";
 
 import { EtakTableProps2 } from "../types/interfaces.tsx";
-import ObjectCount from "./ObjectCount.tsx";
-import { HashLink } from 'react-router-hash-link';
+import ObjectCount from "./formatHelpers/ObjectCount.tsx";
+import { HashLink } from "react-router-hash-link";
 
 import { TableHeaderColor } from "../data/colors.ts";
+
+import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" };
 
 const EtakTable = ({
   updatedRows,
@@ -34,7 +36,6 @@ const EtakTable = ({
     doc.setFontSize(18);
     doc.text(tableName, 14, 22);
 
-    // TODO kuidas pdf lahendada?
     // AutoTable function to generate the table
     autoTable(doc, {
       head: [["Välja nimi", "Andmetüüp", "Domeen", "Kirjeldus"]],
@@ -52,7 +53,6 @@ const EtakTable = ({
   };
 
   const url = `https://gsavalik.envir.ee/geoserver/wfs?typename=etak:${tableName.toLowerCase()}&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
-
   return (
     <TableContainer
       component={Paper}
@@ -117,13 +117,23 @@ const EtakTable = ({
           {headingData.estName}
         </Typography>
 
-        <Typography sx={{ marginLeft: 2 }}>Andmestik: levituum</Typography>
+        <Typography sx={{ marginLeft: 2 }}>
+          {tableName !== etak_kirjeldus.classes.alusdokument.name ? (
+            "Andmestik: levituum"
+          ) : (
+            <br />
+          )}
+        </Typography>
 
         <div style={{ display: "flex" }}>
           <Typography sx={{ marginLeft: 2 }}>
             Objekte nähtusklassis:&nbsp;
           </Typography>
-          <ObjectCount url={url}></ObjectCount>
+          {tableName !== etak_kirjeldus.classes.alusdokument.name ? (
+            <ObjectCount url={url}></ObjectCount>
+          ) : (
+            etak_kirjeldus.classes.alusdokument.count
+          )}
         </div>
       </div>
 
@@ -157,7 +167,9 @@ const EtakTable = ({
               <TableCell>{row.dataType}</TableCell>
 
               <TableCell>
-                <HashLink smooth to={`#${row.domain}`}>{row.domain}</HashLink>
+                <HashLink smooth to={`#${row.domain}`}>
+                  {row.domain}
+                </HashLink>
               </TableCell>
 
               <TableCell>{row.desc.hyperlink ?? row.desc.desc}</TableCell>
