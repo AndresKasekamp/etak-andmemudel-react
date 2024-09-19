@@ -487,8 +487,8 @@ export const generateDataFields = () => {
   const metadataCombined = { ...metadataFields, ...esriCategoryFields };
 
   // Main field block
-  Object.values(metadataCombined).forEach((value, index) => {
-    const gfield = generateField(value, index);
+  Object.values(metadataCombined).forEach((value) => {
+    const gfield = generateField(value);
     genFields.push(gfield);
   });
 
