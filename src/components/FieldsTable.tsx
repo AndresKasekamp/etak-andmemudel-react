@@ -158,7 +158,7 @@ export const FieldsTable = ({
               key={row.name.name}
               sx={{
                 "&:last-child td, &:last-child th": { border: 0 },
-                backgroundColor: row.name.color,
+                backgroundColor: row.name.category,
               }}
             >
               <TableCell component="th" scope="row">

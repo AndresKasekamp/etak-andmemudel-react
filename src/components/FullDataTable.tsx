@@ -1,8 +1,16 @@
 import { useLocation, Location } from "react-router-dom";
 
-import { mainFields } from "../data/constantFields.tsx";
+import {
+  etakMainCategoryFields,
+  esriMetaCategoryFields,
+  esriCategoryFields,
+} from "../data/constantFields.tsx";
 import { getTableName } from "../utils/utils.tsx";
-import { EtakTableProps } from "../interfaces/interfaces.tsx";
+import {
+  EtakTableProps,
+  Elements,
+  HeadingData,
+} from "../interfaces/interfaces.tsx";
 
 import DomainTable from "./domains/DomainTable.tsx";
 import { FieldsTable } from "./FieldsTable.tsx";
@@ -10,8 +18,43 @@ import { FieldsTable } from "./FieldsTable.tsx";
 import TableContainer from "@mui/material/TableContainer";
 import Paper from "@mui/material/Paper";
 
-import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" };
+const generateTableFront = (headingData: HeadingData, addedRows: Elements) => {
+  const { etak, register } = addedRows;
+  const { shape_Length, shape_Area } = esriCategoryFields;
 
+  // Step 1: Gather all fields into arrays
+  const etakFields = Object.values(etakMainCategoryFields);
+  const esriFields = [
+    ...Object.values(esriCategoryFields),
+    ...Object.values(esriMetaCategoryFields),
+  ];
+
+  // Step 2: Add etak and register rows to fields
+  const etakRows = etak.map((row) => row.row);
+  const registerRows = register.map((row) => row.row);
+
+  // Step 3: Combine everything together
+  let updatedRows = [...etakFields, ...etakRows, ...esriFields];
+
+  // Step 4: Filter out non-point shape fields if the geomType is 'punkt'
+  if (headingData.geomType === "punkt") {
+    const notPointShapeFields = [shape_Length.name.name, shape_Area.name.name];
+    updatedRows = updatedRows.filter(
+      (row) => !notPointShapeFields.includes(row.name.name)
+    );
+  }
+
+  // Step 5: Add register rows after filtering
+  updatedRows = [...updatedRows, ...registerRows];
+
+  return updatedRows;
+};
+
+// let updatedRows = [];
+
+// if (tableName === etak_kirjeldus.classes.alusdokument.name) {
+//   updatedRows = [];
+// }
 export const FullDataTable = ({
   addedRows,
   imageSrc,
@@ -22,20 +65,7 @@ export const FullDataTable = ({
 
   const tableName = getTableName(location);
 
-  let updatedRows = [...Object.values(mainFields)];
-
-  if (tableName === etak_kirjeldus.classes.alusdokument.name) {
-    updatedRows = [];
-  }
-
-  // Manipulating underlying array
-  addedRows.forEach((row) => {
-    if (row.position >= 0 && row.position <= updatedRows.length) {
-      updatedRows.splice(row.position, 0, row.row);
-    } else {
-      console.warn(`Invalid position ${row.position} for row insertion.`);
-    }
-  });
+  const updatedRows = generateTableFront(headingData, addedRows);
 
   return (
     <div

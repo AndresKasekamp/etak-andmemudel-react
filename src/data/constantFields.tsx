@@ -1,19 +1,19 @@
 import {
   RowData,
   DescRowData,
-  ElementNameColor,
+  ElementNameCategory,
 } from "../interfaces/interfaces";
 import {
-  MainElementColor,
-  EsriElementColor,
-  EtakMetaColor,
-  RegisterColor,
+  MainCategory,
+  EsriCategory,
+  EtakMetaCategory,
+  RegisterCategory,
 } from "./colors";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 import RegisterHyperLink from "../components/formatHelpers/RegisterHyperLink";
 
 export const createData = (
-  name: ElementNameColor,
+  name: ElementNameCategory,
   dataType: string,
   domain: string,
   desc: DescRowData
@@ -21,11 +21,11 @@ export const createData = (
   return { name, dataType, domain, desc };
 };
 
-export const otherShapes = {
+export const esriCategoryFields = {
   shape_Length: createData(
     {
       name: etak_kirjeldus.classes._default.fields.shape_Length.name,
-      color: EsriElementColor,
+      category: EsriCategory,
     },
     "reaalarv",
     "",
@@ -38,7 +38,7 @@ export const otherShapes = {
   shape_Area: createData(
     {
       name: etak_kirjeldus.classes._default.fields.shape_Area.name,
-      color: EsriElementColor,
+      category: EsriCategory,
     },
     "reaalarv",
     "",
@@ -51,7 +51,7 @@ export const otherShapes = {
   objectid: createData(
     {
       name: etak_kirjeldus.classes._default.fields.objectid.name,
-      color: EsriElementColor,
+      category: EsriCategory,
     },
     "täisarv",
     "",
@@ -64,7 +64,7 @@ export const otherShapes = {
   shape: createData(
     {
       name: etak_kirjeldus.classes._default.fields.shape.name,
-      color: EsriElementColor,
+      category: EsriCategory,
     },
     "geomeetria",
     "",
@@ -81,7 +81,7 @@ export const otherRegisterSources = {
   kmr_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.kmr_id.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "täisarv",
     "",
@@ -99,7 +99,7 @@ export const otherRegisterSources = {
   kkr_kood: createData(
     {
       name: etak_kirjeldus.classes._default.fields.kkr_kood.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "tekst(30)",
     "",
@@ -117,7 +117,7 @@ export const otherRegisterSources = {
   nimetus: createData(
     {
       name: etak_kirjeldus.classes._default.fields.nimetus.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "tekst(255)",
     "",
@@ -130,7 +130,7 @@ export const otherRegisterSources = {
   knr_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.knr_id.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "täisarv",
     "",
@@ -146,7 +146,7 @@ export const otherRegisterSources = {
   ),
 
   kpo_seos: createData(
-    { name: "kpo_seos", color: RegisterColor },
+    { name: "kpo_seos", category: RegisterCategory },
     "lühike täisarv",
     "seisuveekogu_kpo",
     {
@@ -158,7 +158,7 @@ export const otherRegisterSources = {
   mps_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.mps_id.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "tekst(17)",
     "",
@@ -176,7 +176,7 @@ export const otherRegisterSources = {
   ehr_gid: createData(
     {
       name: etak_kirjeldus.classes._default.fields.ehr_gid.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "tekst(20)",
     "",
@@ -194,7 +194,7 @@ export const otherRegisterSources = {
   ads_oid: createData(
     {
       name: etak_kirjeldus.classes._default.fields.ads_oid.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "tekst(10)",
     "",
@@ -212,7 +212,7 @@ export const otherRegisterSources = {
   ads_lahiaadress: createData(
     {
       name: etak_kirjeldus.classes._default.fields.ads_lahiaadress.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "tekst(255)",
     "",
@@ -226,7 +226,7 @@ export const otherRegisterSources = {
   kov_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.kov_id.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "täisarv",
     "",
@@ -239,7 +239,7 @@ export const otherRegisterSources = {
   mark: createData(
     {
       name: etak_kirjeldus.classes._default.fields.mark.name,
-      color: RegisterColor,
+      category: RegisterCategory,
     },
     "lühike täisarv",
     "toevaartus",
@@ -250,11 +250,11 @@ export const otherRegisterSources = {
   ),
 };
 
-export const mainFields = {
+export const etakMainCategoryFields = {
   etak_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.etak_id.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "täisarv",
     "",
@@ -267,7 +267,7 @@ export const mainFields = {
   markused: createData(
     {
       name: etak_kirjeldus.classes._default.fields.markused.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "tekst(255)",
     "",
@@ -276,14 +276,13 @@ export const mainFields = {
       hyperlink: null,
     }
   ),
+}
 
-  objectid: otherShapes.objectid,
-  shape: otherShapes.shape,
-
+export const esriMetaCategoryFields = {
   muutmisaeg: createData(
     {
       name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
-      color: EtakMetaColor,
+      category: EtakMetaCategory,
     },
     "kuupäev",
     "",
@@ -296,7 +295,7 @@ export const mainFields = {
   andmeallika_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.andmeallika_id.name,
-      color: EtakMetaColor,
+      category: EtakMetaCategory,
     },
     "täisarv",
     "",
@@ -311,7 +310,7 @@ export const mainFields = {
   korgusallika_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.korgusallika_id.name,
-      color: EtakMetaColor,
+      category: EtakMetaCategory,
     },
     "täisarv",
     "",
@@ -325,7 +324,7 @@ export const mainFields = {
   ruumikujuallika_id: createData(
     {
       name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name,
-      color: EtakMetaColor,
+      category: EtakMetaCategory,
     },
     "täisarv",
     "",
@@ -340,7 +339,7 @@ export const mainFields = {
   vajalik: createData(
     {
       name: etak_kirjeldus.classes._default.fields.vajalik.name,
-      color: EtakMetaColor,
+      category: EtakMetaCategory,
     },
     "lühike täisarv",
     "vajalikkus",
@@ -354,7 +353,123 @@ export const mainFields = {
   geom_muutmisaeg: createData(
     {
       name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name,
-      color: EtakMetaColor,
+      category: EtakMetaCategory,
+    },
+    "kuupäev",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description
+        .et,
+      hyperlink: null,
+    }
+  ),
+}
+
+export const mainFields = {
+  etak_id: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.etak_id.name,
+      category: MainCategory,
+    },
+    "täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.etak_id.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  markused: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.markused.name,
+      category: MainCategory,
+    },
+    "tekst(255)",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.markused.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  objectid: esriCategoryFields.objectid,
+  shape: esriCategoryFields.shape,
+
+  muutmisaeg: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
+      category: EtakMetaCategory,
+    },
+    "kuupäev",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.muutmisaeg.description.et,
+      hyperlink: null,
+    }
+  ),
+
+  andmeallika_id: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.andmeallika_id.name,
+      category: EtakMetaCategory,
+    },
+    "täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.andmeallika_id.description
+        .et,
+
+      hyperlink: null,
+    }
+  ),
+
+  korgusallika_id: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.korgusallika_id.name,
+      category: EtakMetaCategory,
+    },
+    "täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.korgusallika_id.description
+        .et,
+      hyperlink: null,
+    }
+  ),
+
+  ruumikujuallika_id: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name,
+      category: EtakMetaCategory,
+    },
+    "täisarv",
+    "",
+    {
+      desc: etak_kirjeldus.classes._default.fields.ruumikujuallika_id
+        .description.et,
+
+      hyperlink: null,
+    }
+  ),
+
+  vajalik: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.vajalik.name,
+      category: EtakMetaCategory,
+    },
+    "lühike täisarv",
+    "vajalikkus",
+    {
+      desc: etak_kirjeldus.classes._default.fields.vajalik.description.et,
+
+      hyperlink: null,
+    }
+  ),
+
+  geom_muutmisaeg: createData(
+    {
+      name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name,
+      category: EtakMetaCategory,
     },
     "kuupäev",
     "",
@@ -369,7 +484,7 @@ export const mainFields = {
 export const generateDataFields = () => {
   const genFields: object[] = [];
 
-  const metadataCombined = { ...metadataFields, ...otherShapes };
+  const metadataCombined = { ...metadataFields, ...esriCategoryFields };
 
   // Main field block
   Object.values(metadataCombined).forEach((value, index) => {
@@ -384,7 +499,7 @@ export const metadataFields = {
   andmeallikas: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.andmeallikas.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "tekst(100)",
     "",
@@ -398,7 +513,7 @@ export const metadataFields = {
   kood: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.kood.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "lühike täisarv",
     "",
@@ -411,7 +526,7 @@ export const metadataFields = {
   korguskood: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.korguskood.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "lühike täisarv",
     "",
@@ -425,7 +540,7 @@ export const metadataFields = {
   nimetus: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.nimetus.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "tekst(100)",
     "",
@@ -438,7 +553,7 @@ export const metadataFields = {
   tyyp: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.tyyp.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "lühike täisarv",
     "alusdokument_tyyp",
@@ -451,7 +566,7 @@ export const metadataFields = {
   aeg: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.aeg.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "kuupäev",
     "",
@@ -461,10 +576,11 @@ export const metadataFields = {
     }
   ),
 
+
   markused: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.markused.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "tekst(255)",
     "",
@@ -477,7 +593,7 @@ export const metadataFields = {
   tapsus: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.tapsus.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "lühike täisarv",
     "tapsusklass_xy",
@@ -490,7 +606,7 @@ export const metadataFields = {
   korgustapsus: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.korgustapsus.name,
-      color: MainElementColor,
+      category: MainCategory,
     },
     "lühike täisarv",
     "tapsusklass_z",
@@ -507,7 +623,7 @@ export const generateKood = (domain: string) => {
     row: createData(
       {
         name: etak_kirjeldus.classes._default.fields.kood.name,
-        color: MainElementColor,
+        category: MainCategory,
       },
       "lühike täisarv",
       domain,
@@ -516,18 +632,38 @@ export const generateKood = (domain: string) => {
         hyperlink: null,
       }
     ),
-    position: 1,
+
   };
 
   return koodField;
 };
+
+// export const generateKood = (domain: string) => {
+//   const koodField = {
+//     row: createData(
+//       {
+//         name: etak_kirjeldus.classes._default.fields.kood.name,
+//         category: MainCategory,
+//       },
+//       "lühike täisarv",
+//       domain,
+//       {
+//         desc: etak_kirjeldus.classes._default.fields.kood.description.et,
+//         hyperlink: null,
+//       }
+//     ),
+//     position: 1,
+//   };
+
+//   return koodField;
+// };
 
 export const generateKoodAlusdokument = () => {
   const koodField = {
     row: createData(
       {
         name: etak_kirjeldus.classes._default.fields.kood.name,
-        color: MainElementColor,
+        category: MainCategory,
       },
       "lühike täisarv",
       "",
@@ -545,32 +681,31 @@ export const generateKoodAlusdokument = () => {
 export const generateTyyp = (domain: string, desc: DescRowData) => {
   const tyypField = {
     row: createData(
-      { name: "tyyp", color: MainElementColor },
+      { name: "tyyp", category: MainCategory },
       "lühike täisarv",
       domain,
       desc
     ),
-    position: 2,
+
   };
 
   return tyypField;
 };
 
-export const generateKorgus = (desc: DescRowData, position: number) => {
+export const generateKorgus = (desc: DescRowData) => {
   const korgusField = {
     row: createData(
-      { name: "korgus", color: MainElementColor },
+      { name: "korgus", category: MainCategory },
       "lühike täisarv",
       "",
       desc
-    ),
-    position,
+    )
   };
 
   return korgusField;
 };
 
-export const generateField = (row: RowData, position: number) => {
+export const generateField = (row: RowData, position: number = 0) => {
   const field = {
     row,
     position,

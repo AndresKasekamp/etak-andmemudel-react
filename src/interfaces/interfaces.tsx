@@ -1,10 +1,10 @@
-export interface ElementNameColor {
+export interface ElementNameCategory {
   name: string;
-  color: string;
+  category: string;
 }
 
 export interface RowData {
-  name: ElementNameColor;
+  name: ElementNameCategory;
   dataType: string;
   domain: string;
   desc: DescRowData;
@@ -44,7 +44,7 @@ export interface DomainTableProps {
 }
 
 export interface Row {
-  position: number;
+  // position: number;
   row: RowData;
 }
 
@@ -54,8 +54,13 @@ export interface HeadingData {
   estName: string;
 }
 
+export interface Elements {
+  etak: Row[];
+  register: Row[];
+}
+
 export interface EtakTableProps {
-  addedRows: Row[];
+  addedRows: Elements;
   imageSrc: string;
   associatedDomains: Domain[];
   headingData: HeadingData;
@@ -82,7 +87,7 @@ export interface TableProps {
 
 // Define the structure of the API response
 export interface ObjectCountResponse {
-  totalFeatures: number; 
+  totalFeatures: number;
 }
 
 export interface ObjectCountProps {

@@ -1,8 +1,8 @@
 // Fields
-export const MainElementColor = "#FFFFFF";
-export const EsriElementColor = "#DAD0ED";
-export const EtakMetaColor = "#f4c1c1";
-export const RegisterColor = "#C1E1C1";
+export const MainCategory = "#FFFFFF";
+export const EsriCategory = "#DAD0ED";
+export const EtakMetaCategory = "#f4c1c1";
+export const RegisterCategory = "#C1E1C1";
 
 // Table header
 export const TableHeaderColor = "#C7C8CC";
