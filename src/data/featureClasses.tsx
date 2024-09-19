@@ -1,5 +1,4 @@
 import {
-  createData,
   otherRegisterSources,
   generateKood,
   generateTyyp,
@@ -50,18 +49,24 @@ export const etakPunktobjektid = [
 
   {
     fcName: etak_kirjeldus.classes.E_103_pinnavorm_p.name,
-    elements: [
-      generateKood(etakPunktobjektidDomains.d0103.name),
-      generateTyyp(etakPunktobjektidDomains.pinnavormP_tyyp.name, {
-        desc: etak_kirjeldus.classes.E_103_pinnavorm_p.fields.tyyp.description
-          .et,
-        hyperlink: null,
-      }),
-      generateField(otherRegisterSources.kmr_id, 12),
-      generateField(otherRegisterSources.kkr_kood, 13),
-      generateField(otherRegisterSources.nimetus, 14),
-      generateField(otherRegisterSources.knr_id, 15),
-    ],
+    elements: {
+      etak: [
+        generateKood(etakPunktobjektidDomains.d0103.name),
+
+        generateTyyp(etakPunktobjektidDomains.pinnavormP_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_103_pinnavorm_p.fields.tyyp.description
+            .et,
+          hyperlink: null,
+        }),
+      ],
+      register: [
+        generateField(otherRegisterSources.kmr_id),
+        generateField(otherRegisterSources.kkr_kood),
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+      ],
+    },
+
     domainTables: [
       etakPunktobjektidDomains.vajalikkus,
       etakPunktobjektidDomains.d0103,
@@ -75,126 +80,65 @@ export const etakPunktobjektid = [
   },
 
   {
-    fcName: "E_202_seisuveekogu_p",
-    elements: [
-      generateKood("0202"),
-      generateTyyp("seisuveekogu_tyyp", {
-        desc: "Seisuveekogu tüüp punktina",
-        hyperlink: null,
-      }),
-      generateField(otherRegisterSources.kmr_id, 12),
-      generateField(otherRegisterSources.kkr_kood, 13),
-      generateField(otherRegisterSources.nimetus, 14),
-      generateField(otherRegisterSources.knr_id, 15),
-    ],
-    domainTables: [etakPunktobjektidDomains.vajalikkus],
-    headingData: generateHeadingData("punkt", "Seisuveekogu punktina"),
-  },
+    fcName: etak_kirjeldus.classes.E_202_seisuveekogu_p.name,
+    elements: {
+      etak: [
+        generateKood(etakPunktobjektidDomains.d0202.name),
 
-  {
-    fcName: "E_301_muu_kolvik_p",
-    elements: [
-      generateKood("0301"),
-      generateTyyp("muu_kolvikP_tyyp", {
-        desc: "Muu kõlviku tüüp punktina",
-        hyperlink: null,
-      }),
-    ],
-    domainTables: [etakPunktobjektidDomains.vajalikkus],
-    headingData: generateHeadingData("punkt", "Muu kõlvik punktina"),
-  },
-
-  {
-    fcName: "E_305_puittaimestik_p",
-    elements: [
-      generateKood("0305"),
-      generateTyyp("puittaimestikP_tyyp", {
-        desc: "Puittaimestiku tüüp punktina",
-        hyperlink: null,
-      }),
-    ],
-    domainTables: [etakPunktobjektidDomains.vajalikkus],
-    headingData: generateHeadingData("punkt", "Puittaimestik punktina"),
-  },
-
-  {
-    fcName: "E_402_korgrajatis_p",
-    elements: [
-      generateKood("0402"),
-      generateTyyp("korgrajatis_tyyp", {
-        desc: "Kõrgrajatise tüüp",
-        hyperlink: null,
-      }),
-      generateKorgus({
-        desc: "Kõrgrajatise kõrgus maapinnast [m]",
-        hyperlink: null,
-      }),
-      {
-        row: createData(
-          { name: "seos", category: "#FFFFFF" },
-          "lühike täisarv",
-          "korgrajatis_seos",
-          {
-            desc: "Kõrgrajatise seos hoonega",
-            hyperlink: null,
-          }
-        ),
-        position: 4,
-      },
-
-      {
-        row: createData({ name: "hoone", category: "#FFFFFF" }, "täisarv", "", {
-          desc: "Seotud hoone identifikaator",
-
+        generateTyyp(etakPunktobjektidDomains.seisuveekoguP_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_202_seisuveekogu_p.fields.tyyp
+            .description.et,
           hyperlink: null,
         }),
-        position: 5,
-      },
+      ],
+      register: [
+        generateField(otherRegisterSources.kmr_id),
+        generateField(otherRegisterSources.kkr_kood),
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+      ],
+    },
 
-      generateField(otherRegisterSources.kmr_id, 15),
-      generateField(otherRegisterSources.ehr_gid, 16),
-      generateField(otherRegisterSources.nimetus, 17),
-      generateField(otherRegisterSources.knr_id, 18),
-      generateField(otherRegisterSources.mark, 19),
+    domainTables: [
+      etakPunktobjektidDomains.vajalikkus,
+      etakPunktobjektidDomains.d0103,
+      etakPunktobjektidDomains.pinnavormP_tyyp,
     ],
-    domainTables: [etakPunktobjektidDomains.vajalikkus],
-    headingData: generateHeadingData("punkt", "Kõrgrajatis"),
+
+    headingData: generateHeadingData(
+      "punkt",
+      etak_kirjeldus.classes.E_103_pinnavorm_p.description.et
+    ),
   },
 
   {
-    fcName: "E_403_muu_rajatis_p",
-    elements: [
-      generateKood("0403"),
-      generateTyyp("muu_rajatisP_tyyp", {
-        desc: "Muu rajatise tüüp punktina",
-        hyperlink: null,
-      }),
-      generateField(otherRegisterSources.kmr_id, 12),
-      generateField(otherRegisterSources.ehr_gid, 13),
-      generateField(otherRegisterSources.nimetus, 14),
-      generateField(otherRegisterSources.knr_id, 15),
-      generateField(otherRegisterSources.mark, 16),
-    ],
-    domainTables: [etakPunktobjektidDomains.vajalikkus],
-    headingData: generateHeadingData("punkt", "Muu rajatis punktina"),
-  },
+    fcName: etak_kirjeldus.classes.E_301_muu_kolvik_p.name,
+    elements: {
+      etak: [
+        generateKood(etakPunktobjektidDomains.d0101.name),
+        generateTyyp(etakPunktobjektidDomains.muu_kolvikP_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_301_muu_kolvik_p.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
 
-  {
-    fcName: "E_602_tehnopaigaldis_p",
-    elements: [
-      generateKood("0602"),
-      generateTyyp("tehnopaigaldis_tyyp", {
-        desc: "Tehnopaigaldise tüüp",
-        hyperlink: null,
-      }),
-      generateKorgus({
-        desc: "Tehnopaigaldise kõrgus maapinnast [m]",
-        hyperlink: null,
-      }),
-      generateField(otherRegisterSources.ehr_gid, 13),
+      register: [
+        generateField(otherRegisterSources.kmr_id),
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+      ],
+    },
+
+    domainTables: [
+      etakPunktobjektidDomains.d0301,
+      etakPunktobjektidDomains.kivi_tyyp,
+      etakPunktobjektidDomains.vajalikkus,
     ],
-    domainTables: [etakPunktobjektidDomains.vajalikkus],
-    headingData: generateHeadingData("punkt", "Tehnopaigaldis"),
+    headingData: generateHeadingData(
+      "punkt",
+      etak_kirjeldus.classes.E_301_muu_kolvik_p.description.et
+    ),
   },
 ];
 

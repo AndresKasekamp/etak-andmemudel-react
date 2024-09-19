@@ -1,6 +1,5 @@
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 
-
 function createDataDomains(kood: number, nimetus: string) {
   return { kood, nimetus };
 }
@@ -43,6 +42,23 @@ export const etakPunktobjektidDomains = {
     ],
   },
 
+  seisuveekoguP_tyyp: {
+    name: "seisuveekoguP_tyyp",
+    desc: "Seisuveekogu tüüp punktina",
+    dataType: "lühike täisarv",
+    elements: [createDataDomains(80, "Allikas")],
+  },
+
+  muu_kolvikP_tyyp: {
+    name: "muu_kolvikP_tyyp",
+    desc: "Muu kõlviku tüüp punktina",
+    dataType: "lühike täisarv",
+    elements: [
+      createDataDomains(70, "Üksikhaud"),
+      createDataDomains(80, "Mälestusmärk"),
+    ],
+  },
+
   d0101: {
     name: "0101",
     desc: "Kivi",
@@ -56,11 +72,25 @@ export const etakPunktobjektidDomains = {
     dataType: "lühike täisarv",
     elements: [createDataDomains(103, "Pinnavorm")],
   },
+
+  d0202: {
+    name: "0202",
+    desc: "Pinnvorm",
+    dataType: "lühike täisarv",
+    elements: [createDataDomains(202, "Seisuveekogu")],
+  },
+
+  d0301: {
+    name: "0301",
+    desc: "Muu kõlvik",
+    dataType: "lühike täisarv",
+    elements: [createDataDomains(301, "Muu kõlvik")],
+  },
 };
 
+// TODO general domains d algusega
 
 export const metadataDomains = {
-
   alusdokument_tyyp: {
     name: "alusdokument_tyyp",
     desc: etak_kirjeldus.classes.alusdokument.fields.tyyp.description.et,
@@ -100,7 +130,8 @@ export const metadataDomains = {
 
   tapsusklass_z: {
     name: "tapsusklass_z",
-    desc: etak_kirjeldus.classes.alusdokument.fields.korgustapsus.description.et,
+    desc: etak_kirjeldus.classes.alusdokument.fields.korgustapsus.description
+      .et,
     dataType: "lühike täisarv",
     elements: [
       createDataDomains(0, "Teadmata"),
@@ -115,4 +146,4 @@ export const metadataDomains = {
       createDataDomains(999, "Muu"),
     ],
   },
-}
+};
