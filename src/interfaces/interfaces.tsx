@@ -1,11 +1,20 @@
-import { Name } from "./types";
+export interface ElementNameColor {
+  name: string;
+  color: string;
+}
 
-// TODO loogika üle vaadata
+export interface RowData {
+  name: ElementNameColor;
+  dataType: string;
+  domain: string;
+  desc: DescRowData;
+}
+
 export interface FeatureClass {
   fcName: string;
   elements: Row[];
   domainTables: Domain[];
-  headingData: headingData;
+  headingData: HeadingData;
 }
 // Define types for the parameters and the return value
 export interface FeatureClassPath {
@@ -18,11 +27,16 @@ interface DataDomainElements {
   nimetus: string;
 }
 
-interface Domain {
+export interface Domain {
   name: string;
   dataType: string;
   elements: DataDomainElements[];
   desc: string;
+}
+
+// Define the type for associatedDomains, which is an array of Domain objects
+export interface DomainTableMainProps {
+  associatedDomains: Domain[];
 }
 
 export interface DomainTableProps {
@@ -34,7 +48,7 @@ export interface Row {
   row: RowData;
 }
 
-export interface headingData {
+export interface HeadingData {
   geomType: string;
   geomDimension: number;
   estName: string;
@@ -44,21 +58,14 @@ export interface EtakTableProps {
   addedRows: Row[];
   imageSrc: string;
   associatedDomains: Domain[];
-  headingData: headingData;
+  headingData: HeadingData;
 }
 
 export interface EtakTableProps2 {
   updatedRows: RowData[];
   imageSrc: string;
   tableName: string;
-  headingData: headingData;
-}
-
-export interface RowData {
-  name: Name;
-  dataType: string;
-  domain: string;
-  desc: DescRowData;
+  headingData: HeadingData;
 }
 
 export interface DescRowData {
@@ -75,7 +82,7 @@ export interface TableProps {
 
 // Define the structure of the API response
 export interface ObjectCountResponse {
-  totalFeatures: number; // Assuming totalFeatures is a number
+  totalFeatures: number; 
 }
 
 export interface ObjectCountProps {

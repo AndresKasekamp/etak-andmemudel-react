@@ -15,7 +15,7 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { jsPDF } from "jspdf"; //or use your library of choice here
 import autoTable from "jspdf-autotable";
 
-import { EtakTableProps2 } from "../types/interfaces.tsx";
+import { EtakTableProps2 } from "../interfaces/interfaces.tsx";
 import ObjectCount from "./formatHelpers/ObjectCount.tsx";
 import { HashLink } from "react-router-hash-link";
 

@@ -7,7 +7,7 @@ import {
 } from "../data/featureClasses";
 import App from "../App";
 import { FullDataTable } from "../components/FullDataTable";
-import { FeatureClass, FeatureClassPath } from "../types/interfaces";
+import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
 
 // Image sources
 import pointImageSource from "../assets/multipoint.svg";

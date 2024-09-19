@@ -5,7 +5,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
-import { TableProps } from "../types/interfaces";
+import { TableProps } from "../interfaces/interfaces";
 import Paper from "@mui/material/Paper";
 import { FrontPageTableColor } from "../data/colors";
 

@@ -1,4 +1,4 @@
-import { ObjectCountResponse } from "../types/interfaces";
+import { ObjectCountResponse } from "../interfaces/interfaces";
 
 export async function getObjectCount(url: string): Promise<void> {
   try {

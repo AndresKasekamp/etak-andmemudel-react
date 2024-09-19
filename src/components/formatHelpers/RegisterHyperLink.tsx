@@ -1,6 +1,6 @@
 import { Link } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
-import { RegisterHyperLinkProps } from "../../types/interfaces";
+import { RegisterHyperLinkProps } from "../../interfaces/interfaces";
 
 const RegisterHyperLink = ({ link, desc }: RegisterHyperLinkProps) => {
   return (

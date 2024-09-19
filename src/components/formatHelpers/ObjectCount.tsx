@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 
 import { getObjectCount } from "../../utils/wfsRequest.ts";
-import { ObjectCountProps, ObjectCountResponse } from "../../types/interfaces.tsx";
+import { ObjectCountProps, ObjectCountResponse } from "../../interfaces/interfaces.tsx";
 
 const ObjectCount = ({ url }: ObjectCountProps) => {
   const [data, setData] = useState<number | null>(null); // Use number or null

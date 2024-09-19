@@ -1,5 +1,8 @@
-import { Name } from "../types/types";
-import { RowData, DescRowData } from "../types/interfaces";
+import {
+  RowData,
+  DescRowData,
+  ElementNameColor,
+} from "../interfaces/interfaces";
 import {
   MainElementColor,
   EsriElementColor,
@@ -9,17 +12,14 @@ import {
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 import RegisterHyperLink from "../components/formatHelpers/RegisterHyperLink";
 
-// TODO type paika saada
 export const createData = (
-  name: Name,
+  name: ElementNameColor,
   dataType: string,
   domain: string,
   desc: DescRowData
 ): RowData => {
   return { name, dataType, domain, desc };
 };
-
-// TODO peaks tekkima kaks versiooni string ja jsx?
 
 export const otherShapes = {
   shape_Length: createData(
@@ -366,9 +366,8 @@ export const mainFields = {
   ),
 };
 
-// TODO ts parandada
 export const generateDataFields = () => {
-  const genFields: any = [];
+  const genFields: object[] = [];
 
   const metadataCombined = { ...metadataFields, ...otherShapes };
 

@@ -7,7 +7,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 import Typography from "@mui/material/Typography";
-import { DomainTableProps } from "../../types/interfaces";
+import { DomainTableProps } from "../../interfaces/interfaces";
 
 export default function DomainTable({ domain }: DomainTableProps) {
   return (

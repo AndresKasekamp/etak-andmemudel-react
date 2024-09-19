@@ -2,7 +2,7 @@ import { useLocation, Location } from "react-router-dom";
 
 import { mainFields } from "../data/constantFields.tsx";
 import { getTableName } from "../utils/utils.tsx";
-import { EtakTableProps } from "../types/interfaces.tsx";
+import { EtakTableProps } from "../interfaces/interfaces.tsx";
 
 import DomainTable from "./domains/DomainTable.tsx";
 import { FieldsTable } from "./FieldsTable.tsx";
