@@ -3,10 +3,10 @@ import {
   // etakPindobjektidMain,
   // etakPindobjektidOverlap,
   etakPunktobjektid,
-  metadata
+  metadata,
 } from "../data/featureClasses";
 import App from "../App";
-import EtakDataMain from "../components/EtakDataMain";
+import { FullDataTable } from "../components/FullDataTable";
 import { FeatureClass, FeatureClassPath } from "../types/interfaces";
 
 // Image sources
@@ -27,7 +27,14 @@ const featureClassPath = (
 ): FeatureClassPath[] => {
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `${dataTypeClass}/${fc.fcName}`,
-    element: <EtakDataMain addedRows={fc.elements} imageSrc={image} associatedDomains={fc.domainTables} headingData={fc.headingData} />,
+    element: (
+      <FullDataTable
+        addedRows={fc.elements}
+        imageSrc={image}
+        associatedDomains={fc.domainTables}
+        headingData={fc.headingData}
+      />
+    ),
   }));
 
   return featureclassPaths;

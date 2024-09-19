@@ -23,7 +23,7 @@ import { TableHeaderColor } from "../data/colors.ts";
 
 import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" };
 
-const EtakTable = ({
+export const FieldsTable = ({
   updatedRows,
   imageSrc,
   tableName,
@@ -181,4 +181,4 @@ const EtakTable = ({
   );
 };
 
-export default EtakTable;
+// export default EtakTable;

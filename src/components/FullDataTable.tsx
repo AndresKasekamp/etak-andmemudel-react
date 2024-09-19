@@ -1,31 +1,28 @@
 import { useLocation, Location } from "react-router-dom";
 
-import {  mainFields } from "../data/constantFields.tsx";
+import { mainFields } from "../data/constantFields.tsx";
 import { getTableName } from "../utils/utils.tsx";
 import { EtakTableProps } from "../types/interfaces.tsx";
 
 import DomainTable from "./domains/DomainTable.tsx";
-import EtakTable from "./EtakTable.tsx";
+import { FieldsTable } from "./FieldsTable.tsx";
 
 import TableContainer from "@mui/material/TableContainer";
 import Paper from "@mui/material/Paper";
 
-
 import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" };
 
-export default function EtakDataMain({
+export const FullDataTable = ({
   addedRows,
   imageSrc,
   associatedDomains,
   headingData,
-}: EtakTableProps) {
+}: EtakTableProps) => {
   const location: Location = useLocation();
 
   const tableName = getTableName(location);
 
-  
   let updatedRows = [...Object.values(mainFields)];
-
 
   if (tableName === etak_kirjeldus.classes.alusdokument.name) {
     updatedRows = [];
@@ -49,12 +46,12 @@ export default function EtakDataMain({
         maxWidth: "100%",
       }}
     >
-      <EtakTable
+      <FieldsTable
         updatedRows={updatedRows}
         imageSrc={imageSrc}
         tableName={tableName}
         headingData={headingData}
-      ></EtakTable>
+      ></FieldsTable>
 
       <TableContainer
         id="domain"
@@ -79,4 +76,4 @@ export default function EtakDataMain({
       </TableContainer>
     </div>
   );
-}
+};

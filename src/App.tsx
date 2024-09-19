@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import etak_kirjeldus from './data/etak_kirjeldus.json' assert { type: 'json' };
 
-import MainTable from "./components/MainTable.tsx";
+import {FrontPageIndexTable} from "./components/FrontPageIndexTable.tsx";
 import {
   etakPunktobjektid,
   // etakJoonobjektid,
@@ -44,20 +44,20 @@ function App() {
             },
           }}
         >
-          <MainTable
+          <FrontPageIndexTable
             backgroundColor="#C4C1A4"
             objectName={etak_kirjeldus.groups.meta.name.et}
             itemNames={metadata}
             // itemNames={etakPunktobjektid}
             dataTypeClass="etak"
           />
-          <MainTable
+          <FrontPageIndexTable
             backgroundColor="#E1ACAC"
             objectName={etak_kirjeldus.groups.points.name.et}
             itemNames={etakPunktobjektid}
             dataTypeClass="punktobjekt"
           />
-          <MainTable
+          <FrontPageIndexTable
             backgroundColor="#AC87C5"
             objectName={etak_kirjeldus.groups.lines.name.et}
             // itemNames={etakJoonobjektid}
@@ -85,14 +85,14 @@ function App() {
               {etak_kirjeldus.groups.polygons.name.et}
             </Typography>
 
-            <MainTable
+            <FrontPageIndexTable
               backgroundColor="#cfcfc4"
               objectName={etak_kirjeldus.groups.land_cover.name.et}
               // itemNames={etakPindobjektidMain}
               itemNames={etakPunktobjektid}
               dataTypeClass="pindobjekt"
             />
-            <MainTable
+            <FrontPageIndexTable
               backgroundColor="#577B8D"
               objectName={etak_kirjeldus.groups.overlapping.name.et}
               // itemNames={etakPindobjektidOverlap}
@@ -101,7 +101,7 @@ function App() {
             />
           </Box>
 
-          <MainTable
+          <FrontPageIndexTable
             backgroundColor="#A1DD70"
             objectName={etak_kirjeldus.groups.derivatives.name.et}
             // itemNames={derivedLayers}

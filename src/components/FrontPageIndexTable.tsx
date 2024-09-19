@@ -9,7 +9,7 @@ import { TableProps } from "../types/interfaces";
 import Paper from "@mui/material/Paper";
 import { FrontPageTableColor } from "../data/colors";
 
-const MainTable = ({
+export const FrontPageIndexTable = ({
   backgroundColor,
   objectName,
   itemNames,
@@ -49,4 +49,4 @@ const MainTable = ({
   );
 };
 
-export default MainTable;
+// export default MainTable;
