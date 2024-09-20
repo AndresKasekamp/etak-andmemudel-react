@@ -1,27 +1,15 @@
+import { SHORT_INTEGER } from "./dataTypes";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 
-function createDataDomains(kood: number, nimetus: string) {
+const createDataDomains = (kood: number, nimetus: string) => {
   return { kood, nimetus };
-}
+};
 
 export const etakPunktobjektidDomains = {
-  vajalikkus: {
-    name: "vajalikkus",
-    desc: "Objekt vajab tähelepanu",
-    dataType: "lühike täisarv",
-    elements: [
-      createDataDomains(10, "Vajalik välikontroll"),
-      createDataDomains(20, "Ruumikuju vajab täpsustamist"),
-      createDataDomains(30, "Korras"),
-      createDataDomains(40, "Tärkandmed vajavad täpsustamist"),
-      createDataDomains(50, "Ootab täiendavat alusdokumenti"),
-    ],
-  },
-
   kivi_tyyp: {
     name: "kivi_tyyp",
     desc: "Kivi tüüp",
-    dataType: "lühike täisarv",
+    dataType: SHORT_INTEGER,
     elements: [
       createDataDomains(10, "Üksik kivi"),
       createDataDomains(20, "Kivihunnik"),
@@ -32,7 +20,7 @@ export const etakPunktobjektidDomains = {
   pinnavormP_tyyp: {
     name: "pinnavormP_tyyp",
     desc: "Pinnavormi tüüp punktina",
-    dataType: "lühike täisarv",
+    dataType: SHORT_INTEGER,
     elements: [
       createDataDomains(10, "Auk"),
       createDataDomains(20, "Tehisküngas"),
@@ -45,56 +33,354 @@ export const etakPunktobjektidDomains = {
   seisuveekoguP_tyyp: {
     name: "seisuveekoguP_tyyp",
     desc: "Seisuveekogu tüüp punktina",
-    dataType: "lühike täisarv",
+    dataType: SHORT_INTEGER,
     elements: [createDataDomains(80, "Allikas")],
   },
 
   muu_kolvikP_tyyp: {
     name: "muu_kolvikP_tyyp",
     desc: "Muu kõlviku tüüp punktina",
-    dataType: "lühike täisarv",
+    dataType: SHORT_INTEGER,
     elements: [
       createDataDomains(70, "Üksikhaud"),
       createDataDomains(80, "Mälestusmärk"),
     ],
   },
 
-  d0101: {
-    name: "0101",
-    desc: "Kivi",
-    dataType: "lühike täisarv",
-    elements: [createDataDomains(101, "Kivi")],
+  puittaimestikP_tyyp: {
+    name: "puittaimestikP_tyyp",
+    desc: "Puittaimestiku tüüp punktina",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(50, "Puittaim"),
+      createDataDomains(60, "Harvik"),
+      createDataDomains(70, "Salu"),
+    ],
   },
 
-  d0103: {
-    name: "0103",
-    desc: "Pinnvorm",
-    dataType: "lühike täisarv",
-    elements: [createDataDomains(103, "Pinnavorm")],
+  korgrajatis_tyyp: {
+    name: "korgrajatis_tyyp",
+    desc: "Kõrgrajatise tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Korsten"),
+      createDataDomains(20, "Sidemast"),
+      createDataDomains(30, "Torn"),
+      createDataDomains(40, "Valgusmast"),
+    ],
   },
 
-  d0202: {
-    name: "0202",
-    desc: "Pinnvorm",
-    dataType: "lühike täisarv",
-    elements: [createDataDomains(202, "Seisuveekogu")],
+  korgrajatis_seos: {
+    name: "korgrajatis_seos",
+    desc: "Kõrgrajatise seos hoonega",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Kõrgrajatisel puudub seos hoonega"),
+      createDataDomains(20, "Kõrgrajatis asub hoone peal"),
+      createDataDomains(30, "Kõrgrajatis ja hoone on sama objekt"),
+      createDataDomains(997, "Täitmata"),
+    ],
   },
 
-  d0301: {
-    name: "0301",
-    desc: "Muu kõlvik",
-    dataType: "lühike täisarv",
-    elements: [createDataDomains(301, "Muu kõlvik")],
+  muu_rajatisP_tyyp: {
+    name: "muu_rajatisP_tyyp",
+    desc: "Muu rajatise tüüp punktina",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(999, "Muu"),
+    ],
+  },
+
+  tehnopaigaldis_tyyp: {
+    name: "tehnopaigaldis_tyyp",
+    desc: "Tehnopaigaldise tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Trafo"),
+      createDataDomains(20, "Elektrituulik"),
+      createDataDomains(30, "Mahuti"),
+    ],
+  },
+
+
+};
+
+export const etakJoonobjektidDomains = {
+  hudrotehniline_rajatis_tyyp: {
+    name: "hudrotehniline_rajatis_tyyp",
+    desc: "Hüdrotehnilise rajatise tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(30, "Pais"),
+      createDataDomains(40, "Paadisild"),
+      createDataDomains(50, "Muul"),
+    ],
+  },
+
+  kaldajoon_tyyp: {
+    name: "kaldajoon_tyyp",
+    desc: "Kaldajoone tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Selge"),
+      createDataDomains(20, "Ebamäärane"),
+      createDataDomains(30, "Kindlustatud"),
+      createDataDomains(40, "Mõtteline"),
+    ],
+  },
+
+  kaldajoon_veekogu_tyyp: {
+    name: "kaldajoon_veekogu_tyyp",
+    desc: "Kaldajoonega piirneva veekogu tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Merekallas"),
+      createDataDomains(30, "Seisuveekogu kallas"),
+      createDataDomains(40, "Vooluveekogu kallas"),
+      createDataDomains(50, "Mere ja seisuveekogu vaheline kallas"),
+      createDataDomains(60, "Mere ja vooluveekogu vaheline kallas"),
+      createDataDomains(70, "Seisu- ja vooluveekogu vaheline kallas"),
+      createDataDomains(80, "Saartevaheline kallas"),
+    ],
+  },
+
+  liikluskorralduslik_rajatis_suletus: {
+    name: "liikluskorralduslik_rajatis_suletus",
+    desc: "Sõidutakistuse iseloom",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Püsivalt suletud"),
+      createDataDomains(20, "Avatav"),
+      createDataDomains(997, "Täitmata"),
+      createDataDomains(998, "Ei ole rakendatav"),
+    ],
+  },
+
+  liikluskorralduslik_rajatisJ_tyyp: {
+    name: "liikluskorralduslik_rajatisJ_tyyp",
+    desc: "Liikluskorraldusliku rajatise tüüp joonena",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Ülevedu"),
+      createDataDomains(20, "Sõidutakistus"),
+      createDataDomains(40, "Purre"),
+      createDataDomains(50, "Tunnel"),
+    ],
+  },
+
+  nolv_tyyp: {
+    name: "nolv_tyyp",
+    desc: "Nõlva tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Nõlv"),
+      createDataDomains(20, "Looduslik järsak"),
+      createDataDomains(30, "Tehisjärsak"),
+    ],
+  },
+
+  piire_tyyp: {
+    name: "piire_tyyp",
+    desc: "Piirde tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Piirdeaed"),
+      createDataDomains(20, "Kiviaed"),
+      createDataDomains(30, "Müür"),
+      createDataDomains(40, "Tehissein"),
+    ],
+  },
+
+  pinnavormJ_tyyp: {
+    name: "pinnavormJ_tyyp",
+    desc: "Pinnavormi tüüp joonena",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(30, "Kaitsekraav"),
+      createDataDomains(40, "Vall"),
+      createDataDomains(80, "Juga"),
+    ],
+  },
+
+  puittaimestikJ_tyyp: {
+    name: "puittaimestikJ_tyyp",
+    desc: "Pinnavormi tüüp joonena",
+    dataType: SHORT_INTEGER,
+    elements: [createDataDomains(80, "Puittaimede rida")],
+  },
+
+  roobastee_tahtsus: {
+    name: "roobastee_tahtsus",
+    desc: "Rööbastee tähtsus",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Põhitee"),
+      createDataDomains(20, "Kõrvaltee"),
+      createDataDomains(30, "Harutee"),
+      createDataDomains(997, "Täitmata"),
+      createDataDomains(998, "Ei ole rakendatav"),
+    ],
+  },
+
+  roobastee_tyyp: {
+    name: "roobastee_tyyp",
+    desc: "Rööbastee tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Laiarööpmeline"),
+      createDataDomains(20, "Kitsarööpmeline"),
+      createDataDomains(25, "Normaalrööpmeline"),
+      createDataDomains(30, "Köistee"),
+      createDataDomains(40, "Trammitee"),
+      createDataDomains(50, "Muu"),
+    ],
+  },
+
+  tee_liiklus: {
+    name: "tee_liiklus",
+    desc: "Teel lubatud liikumissuund",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Kahesuunaline"),
+      createDataDomains(20, "Pärisuunaline"),
+      createDataDomains(30, "Vastassuunaline"),
+      createDataDomains(997, "Täitmata"),
+    ],
+  },
+  // TODO mõned sõidutee asjad on puudu
+  tee_soidutee: {
+    name: "tee_soidutee",
+    desc: "Sõidutee kood",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(1, "Parempoolne või ainuke"),
+      createDataDomains(2, "Vasakpoolne"),
+      createDataDomains(997, "Täitmata"),
+    ],
+  },
+
+  truup_tyyp: {
+    name: "truup_tyyp",
+    desc: "Truubi tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Ühendatud"),
+      createDataDomains(20, "Kuiv"),
+    ],
+  },
+
+  vooluveekogu_laius: {
+    name: "vooluveekogu_laius",
+    desc: "Vooluveekogu laiusklass",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Põhitelg"),
+      createDataDomains(20, "Sekundaarne telg"),
+    ],
+  },
+
+  vooluveekogu_telje_tyyp: {
+    name: "vooluveekogu_telje_tyyp",
+    desc: "Vooluveekogu telje iseloom",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Maa-pealne telg"),
+      createDataDomains(20, "Maa-alune telg"),
+      createDataDomains(30, "Mõtteline telg"),
+    ],
+  },
+
+  vooluveekogu_tyyp: {
+    name: "vooluveekogu_tyyp",
+    desc: "Vooluveekogu tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Jõgi"),
+      createDataDomains(20, "Kanal"),
+      createDataDomains(30, "Oja"),
+      createDataDomains(40, "Peakraav"),
+      createDataDomains(50, "Kraav"),
+    ],
   },
 };
 
-// TODO general domains d algusega
+// Function to create a domain object
+const createDomain = (desc: string, code: number) => {
+  const name = "0".concat(code.toString());
+  return {
+    name,
+    desc,
+    dataType: SHORT_INTEGER,
+    elements: [createDataDomains(code, desc)],
+  };
+};
+
+export const sharedDomains = {
+  vajalikkus: {
+    name: "vajalikkus",
+    desc: "Objekt vajab tähelepanu",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Vajalik välikontroll"),
+      createDataDomains(20, "Ruumikuju vajab täpsustamist"),
+      createDataDomains(30, "Korras"),
+      createDataDomains(40, "Tärkandmed vajavad täpsustamist"),
+      createDataDomains(50, "Ootab täiendavat alusdokumenti"),
+    ],
+  },
+
+  toevaartus: {
+    name: "toevaartus",
+    desc: "Tõeväärtustüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Jah"),
+      createDataDomains(20, "Ei"),
+      createDataDomains(997, "Täitmata"),
+      createDataDomains(998, "Ei ole rakendatav"),
+    ],
+  },
+
+  d0101: createDomain("Kivi", 101),
+  d0102: createDomain("Nõlv", 102),
+  d0103: createDomain("Pinnavorm", 103),
+
+  d0201: createDomain("Meri", 201),
+  d0202: createDomain("Seisuveekogu", 202),
+  d0203: createDomain("Vooluveekogu", 203),
+  d0204: createDomain("Kaldajoon", 204),
+  d0205: createDomain("Hüdrotehniline rajatis", 205),
+  d0206: createDomain("Truup", 206),
+
+  d0301: createDomain("Muu kõlvik", 301),
+  d0302: createDomain("Õu", 302),
+  d0303: createDomain("Haritav maa", 303),
+  d0304: createDomain("Lage", 304),
+  d0305: createDomain("Puittaimestik", 305),
+  d0306: createDomain("Märgala", 306),
+  d0307: createDomain("Turbaväli", 307),
+
+  d0401: createDomain("Hoone", 401),
+  d0402: createDomain("Kõrgrajatis", 402),
+  d0403: createDomain("Muu rajatis", 403),
+  d0404: createDomain("Maa-alune hoone", 404),
+  d0405: createDomain("Piire", 405),
+
+  d0501: createDomain("Tee", 501),
+  d0502: createDomain("Rööbastee", 502),
+  d0503: createDomain("Siht", 503),
+  d0505: createDomain("Liikluskorralduslik rajatis", 505),
+
+  d0601: createDomain("Elektriliin", 601),
+  d0602: createDomain("Tehnopaigaldis", 602),
+  d0603: createDomain("Torujuhe", 603),
+};
 
 export const metadataDomains = {
   alusdokument_tyyp: {
     name: "alusdokument_tyyp",
     desc: etak_kirjeldus.classes.alusdokument.fields.tyyp.description.et,
-    dataType: "lühike täisarv",
+    dataType: SHORT_INTEGER,
     elements: [
       createDataDomains(10, "Maa-ameti aerofoto"),
       createDataDomains(20, "Ruumiandmekogum"),
@@ -108,7 +394,7 @@ export const metadataDomains = {
   tapsusklass_xy: {
     name: "tapsusklass_xy",
     desc: etak_kirjeldus.classes.alusdokument.fields.tapsus.description.et,
-    dataType: "lühike täisarv",
+    dataType: SHORT_INTEGER,
     elements: [
       createDataDomains(0, "Teadmata"),
       createDataDomains(10, "10 m"),
@@ -132,7 +418,7 @@ export const metadataDomains = {
     name: "tapsusklass_z",
     desc: etak_kirjeldus.classes.alusdokument.fields.korgustapsus.description
       .et,
-    dataType: "lühike täisarv",
+    dataType: SHORT_INTEGER,
     elements: [
       createDataDomains(0, "Teadmata"),
       createDataDomains(10, "0.1 m"),

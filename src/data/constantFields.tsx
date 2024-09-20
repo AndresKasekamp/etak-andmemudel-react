@@ -11,7 +11,9 @@ import {
 } from "./colors";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 import RegisterHyperLink from "../components/formatHelpers/RegisterHyperLink";
+import { REAL_NUMBER, INTEGER, SHORT_INTEGER, GEOMETRY, DATE, CREATE_TEXT_TYPE } from "./dataTypes";
 
+// TODO create data objektis row, position - postion ära kaotada
 export const createData = (
   name: ElementNameCategory,
   dataType: string,
@@ -27,7 +29,7 @@ export const esriCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.shape_Length.name,
       category: EsriCategory,
     },
-    "reaalarv",
+    REAL_NUMBER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.shape_Length.description.et,
@@ -40,7 +42,7 @@ export const esriCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.shape_Area.name,
       category: EsriCategory,
     },
-    "reaalarv",
+    REAL_NUMBER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.shape_Area.description.et,
@@ -53,7 +55,7 @@ export const esriCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.objectid.name,
       category: EsriCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.objectid.description.et,
@@ -66,7 +68,7 @@ export const esriCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.shape.name,
       category: EsriCategory,
     },
-    "geomeetria",
+    GEOMETRY,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.shape.description.et,
@@ -83,7 +85,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.kmr_id.name,
       category: RegisterCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.kmr_id.description.et,
@@ -101,7 +103,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.kkr_kood.name,
       category: RegisterCategory,
     },
-    "tekst(30)",
+    CREATE_TEXT_TYPE(30),
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.kkr_kood.description.et,
@@ -119,7 +121,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.nimetus.name,
       category: RegisterCategory,
     },
-    "tekst(255)",
+    CREATE_TEXT_TYPE(255),
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.nimetus.description.et,
@@ -132,7 +134,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.knr_id.name,
       category: RegisterCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.knr_id.description.et,
@@ -147,7 +149,7 @@ export const otherRegisterSources = {
 
   kpo_seos: createData(
     { name: "kpo_seos", category: RegisterCategory },
-    "lühike täisarv",
+    SHORT_INTEGER,
     "seisuveekogu_kpo",
     {
       desc: "Seisuveekogu roll KPO ISs",
@@ -160,7 +162,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.mps_id.name,
       category: RegisterCategory,
     },
-    "tekst(17)",
+    CREATE_TEXT_TYPE(17),
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.mps_id.description.et,
@@ -178,7 +180,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.ehr_gid.name,
       category: RegisterCategory,
     },
-    "tekst(20)",
+    CREATE_TEXT_TYPE(20),
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.ehr_gid.description.et,
@@ -196,7 +198,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.ads_oid.name,
       category: RegisterCategory,
     },
-    "tekst(10)",
+    CREATE_TEXT_TYPE(10),
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.ads_oid.description.et,
@@ -214,7 +216,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.ads_lahiaadress.name,
       category: RegisterCategory,
     },
-    "tekst(255)",
+    CREATE_TEXT_TYPE(255),
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.ads_lahiaadress.description
@@ -228,7 +230,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.kov_id.name,
       category: RegisterCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.kov_id.description.et,
@@ -241,7 +243,7 @@ export const otherRegisterSources = {
       name: etak_kirjeldus.classes._default.fields.mark.name,
       category: RegisterCategory,
     },
-    "lühike täisarv",
+    SHORT_INTEGER,
     "toevaartus",
     {
       desc: etak_kirjeldus.classes._default.fields.mark.description.et,
@@ -256,7 +258,7 @@ export const etakMainCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.etak_id.name,
       category: MainCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.etak_id.description.et,
@@ -269,7 +271,7 @@ export const etakMainCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.markused.name,
       category: MainCategory,
     },
-    "tekst(255)",
+    CREATE_TEXT_TYPE(255),
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.markused.description.et,
@@ -284,7 +286,7 @@ export const esriMetaCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
       category: EtakMetaCategory,
     },
-    "kuupäev",
+    DATE,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.muutmisaeg.description.et,
@@ -297,7 +299,7 @@ export const esriMetaCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.andmeallika_id.name,
       category: EtakMetaCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.andmeallika_id.description
@@ -312,7 +314,7 @@ export const esriMetaCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.korgusallika_id.name,
       category: EtakMetaCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.korgusallika_id.description
@@ -326,7 +328,7 @@ export const esriMetaCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name,
       category: EtakMetaCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.ruumikujuallika_id
@@ -341,7 +343,7 @@ export const esriMetaCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.vajalik.name,
       category: EtakMetaCategory,
     },
-    "lühike täisarv",
+    SHORT_INTEGER,
     "vajalikkus",
     {
       desc: etak_kirjeldus.classes._default.fields.vajalik.description.et,
@@ -355,7 +357,7 @@ export const esriMetaCategoryFields = {
       name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name,
       category: EtakMetaCategory,
     },
-    "kuupäev",
+    DATE,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description
@@ -371,7 +373,7 @@ export const mainFields = {
       name: etak_kirjeldus.classes._default.fields.etak_id.name,
       category: MainCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.etak_id.description.et,
@@ -384,7 +386,7 @@ export const mainFields = {
       name: etak_kirjeldus.classes._default.fields.markused.name,
       category: MainCategory,
     },
-    "tekst(255)",
+    CREATE_TEXT_TYPE(255),
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.markused.description.et,
@@ -400,7 +402,7 @@ export const mainFields = {
       name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
       category: EtakMetaCategory,
     },
-    "kuupäev",
+    DATE,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.muutmisaeg.description.et,
@@ -413,7 +415,7 @@ export const mainFields = {
       name: etak_kirjeldus.classes._default.fields.andmeallika_id.name,
       category: EtakMetaCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.andmeallika_id.description
@@ -428,7 +430,7 @@ export const mainFields = {
       name: etak_kirjeldus.classes._default.fields.korgusallika_id.name,
       category: EtakMetaCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.korgusallika_id.description
@@ -442,7 +444,7 @@ export const mainFields = {
       name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name,
       category: EtakMetaCategory,
     },
-    "täisarv",
+    INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.ruumikujuallika_id
@@ -457,7 +459,7 @@ export const mainFields = {
       name: etak_kirjeldus.classes._default.fields.vajalik.name,
       category: EtakMetaCategory,
     },
-    "lühike täisarv",
+    SHORT_INTEGER,
     "vajalikkus",
     {
       desc: etak_kirjeldus.classes._default.fields.vajalik.description.et,
@@ -471,7 +473,7 @@ export const mainFields = {
       name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name,
       category: EtakMetaCategory,
     },
-    "kuupäev",
+    DATE,
     "",
     {
       desc: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description
@@ -501,7 +503,7 @@ export const metadataFields = {
       name: etak_kirjeldus.classes.alusdokument.fields.andmeallikas.name,
       category: MainCategory,
     },
-    "tekst(100)",
+    CREATE_TEXT_TYPE(100),
     "",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.andmeallikas.description
@@ -515,7 +517,7 @@ export const metadataFields = {
       name: etak_kirjeldus.classes.alusdokument.fields.kood.name,
       category: MainCategory,
     },
-    "lühike täisarv",
+    SHORT_INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.kood.description.et,
@@ -528,7 +530,7 @@ export const metadataFields = {
       name: etak_kirjeldus.classes.alusdokument.fields.korguskood.name,
       category: MainCategory,
     },
-    "lühike täisarv",
+    SHORT_INTEGER,
     "",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.korguskood.description
@@ -542,7 +544,7 @@ export const metadataFields = {
       name: etak_kirjeldus.classes.alusdokument.fields.nimetus.name,
       category: MainCategory,
     },
-    "tekst(100)",
+    CREATE_TEXT_TYPE(100),
     "",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.nimetus.description.et,
@@ -555,7 +557,7 @@ export const metadataFields = {
       name: etak_kirjeldus.classes.alusdokument.fields.tyyp.name,
       category: MainCategory,
     },
-    "lühike täisarv",
+    SHORT_INTEGER,
     "alusdokument_tyyp",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.tyyp.description.et,
@@ -568,7 +570,7 @@ export const metadataFields = {
       name: etak_kirjeldus.classes.alusdokument.fields.aeg.name,
       category: MainCategory,
     },
-    "kuupäev",
+    DATE,
     "",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.aeg.description.et,
@@ -582,7 +584,7 @@ export const metadataFields = {
       name: etak_kirjeldus.classes.alusdokument.fields.markused.name,
       category: MainCategory,
     },
-    "tekst(255)",
+    CREATE_TEXT_TYPE(255),
     "",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.markused.description.et,
@@ -595,7 +597,7 @@ export const metadataFields = {
       name: etak_kirjeldus.classes.alusdokument.fields.tapsus.name,
       category: MainCategory,
     },
-    "lühike täisarv",
+    SHORT_INTEGER,
     "tapsusklass_xy",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.tapsus.description.et,
@@ -608,7 +610,7 @@ export const metadataFields = {
       name: etak_kirjeldus.classes.alusdokument.fields.korgustapsus.name,
       category: MainCategory,
     },
-    "lühike täisarv",
+    SHORT_INTEGER,
     "tapsusklass_z",
     {
       desc: etak_kirjeldus.classes.alusdokument.fields.korgustapsus.description
@@ -625,7 +627,7 @@ export const generateKood = (domain: string) => {
         name: etak_kirjeldus.classes._default.fields.kood.name,
         category: MainCategory,
       },
-      "lühike täisarv",
+      SHORT_INTEGER,
       domain,
       {
         desc: etak_kirjeldus.classes._default.fields.kood.description.et,
@@ -665,7 +667,7 @@ export const generateKoodAlusdokument = () => {
         name: etak_kirjeldus.classes._default.fields.kood.name,
         category: MainCategory,
       },
-      "lühike täisarv",
+      SHORT_INTEGER,
       "",
       {
         desc: etak_kirjeldus.classes.alusdokument.fields.kood.description.et,
@@ -682,7 +684,7 @@ export const generateTyyp = (domain: string, desc: DescRowData) => {
   const tyypField = {
     row: createData(
       { name: "tyyp", category: MainCategory },
-      "lühike täisarv",
+      SHORT_INTEGER,
       domain,
       desc
     ),
@@ -696,7 +698,7 @@ export const generateKorgus = (desc: DescRowData) => {
   const korgusField = {
     row: createData(
       { name: "korgus", category: MainCategory },
-      "lühike täisarv",
+      SHORT_INTEGER,
       "",
       desc
     )
