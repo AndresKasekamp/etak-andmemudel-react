@@ -2,6 +2,7 @@ import {
   RowData,
   DescRowData,
   ElementNameCategory,
+  Row
 } from "../interfaces/interfaces";
 import {
   MainCategory,
@@ -11,7 +12,14 @@ import {
 } from "./colors";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 import RegisterHyperLink from "../components/formatHelpers/RegisterHyperLink";
-import { REAL_NUMBER, INTEGER, SHORT_INTEGER, GEOMETRY, DATE, CREATE_TEXT_TYPE } from "./dataTypes";
+import {
+  REAL_NUMBER,
+  INTEGER,
+  SHORT_INTEGER,
+  GEOMETRY,
+  DATE,
+  CREATE_TEXT_TYPE,
+} from "./dataTypes";
 
 // TODO create data objektis row, position - postion ära kaotada
 export const createData = (
@@ -278,7 +286,7 @@ export const etakMainCategoryFields = {
       hyperlink: null,
     }
   ),
-}
+};
 
 export const etakMetaCategoryFields = {
   muutmisaeg: createData(
@@ -365,128 +373,27 @@ export const etakMetaCategoryFields = {
       hyperlink: null,
     }
   ),
-}
+};
 
-// export const mainFields = {
-//   etak_id: createData(
-//     {
-//       name: etak_kirjeldus.classes._default.fields.etak_id.name,
-//       category: MainCategory,
-//     },
-//     INTEGER,
-//     "",
-//     {
-//       desc: etak_kirjeldus.classes._default.fields.etak_id.description.et,
-//       hyperlink: null,
-//     }
-//   ),
-
-//   markused: createData(
-//     {
-//       name: etak_kirjeldus.classes._default.fields.markused.name,
-//       category: MainCategory,
-//     },
-//     CREATE_TEXT_TYPE(255),
-//     "",
-//     {
-//       desc: etak_kirjeldus.classes._default.fields.markused.description.et,
-//       hyperlink: null,
-//     }
-//   ),
-
-//   objectid: esriCategoryFields.objectid,
-//   shape: esriCategoryFields.shape,
-
-//   muutmisaeg: createData(
-//     {
-//       name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
-//       category: EtakMetaCategory,
-//     },
-//     DATE,
-//     "",
-//     {
-//       desc: etak_kirjeldus.classes._default.fields.muutmisaeg.description.et,
-//       hyperlink: null,
-//     }
-//   ),
-
-//   andmeallika_id: createData(
-//     {
-//       name: etak_kirjeldus.classes._default.fields.andmeallika_id.name,
-//       category: EtakMetaCategory,
-//     },
-//     INTEGER,
-//     "",
-//     {
-//       desc: etak_kirjeldus.classes._default.fields.andmeallika_id.description
-//         .et,
-
-//       hyperlink: null,
-//     }
-//   ),
-
-//   korgusallika_id: createData(
-//     {
-//       name: etak_kirjeldus.classes._default.fields.korgusallika_id.name,
-//       category: EtakMetaCategory,
-//     },
-//     INTEGER,
-//     "",
-//     {
-//       desc: etak_kirjeldus.classes._default.fields.korgusallika_id.description
-//         .et,
-//       hyperlink: null,
-//     }
-//   ),
-
-//   ruumikujuallika_id: createData(
-//     {
-//       name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name,
-//       category: EtakMetaCategory,
-//     },
-//     INTEGER,
-//     "",
-//     {
-//       desc: etak_kirjeldus.classes._default.fields.ruumikujuallika_id
-//         .description.et,
-
-//       hyperlink: null,
-//     }
-//   ),
-
-//   vajalik: createData(
-//     {
-//       name: etak_kirjeldus.classes._default.fields.vajalik.name,
-//       category: EtakMetaCategory,
-//     },
-//     SHORT_INTEGER,
-//     "vajalikkus",
-//     {
-//       desc: etak_kirjeldus.classes._default.fields.vajalik.description.et,
-
-//       hyperlink: null,
-//     }
-//   ),
-
-//   geom_muutmisaeg: createData(
-//     {
-//       name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name,
-//       category: EtakMetaCategory,
-//     },
-//     DATE,
-//     "",
-//     {
-//       desc: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description
-//         .et,
-//       hyperlink: null,
-//     }
-//   ),
-// };
-
-export const generateDataFields = () => {
-  const genFields: object[] = [];
+// TODO vb kombineerida, oleneb
+export const generateMetadataFields = () => {
+  const genFields: Row[] = [];
 
   const metadataCombined = { ...metadataFields, ...esriCategoryFields };
+
+  // Main field block
+  Object.values(metadataCombined).forEach((value) => {
+    const gfield = generateField(value);
+    genFields.push(gfield);
+  });
+
+  return genFields;
+};
+
+export const generatedDerivedDataFields = () => {
+  const genFields: Row[] = [];
+
+  const metadataCombined = { ...derivedFields, ...esriCategoryFields };
 
   // Main field block
   Object.values(metadataCombined).forEach((value) => {
@@ -578,7 +485,6 @@ export const metadataFields = {
     }
   ),
 
-
   markused: createData(
     {
       name: etak_kirjeldus.classes.alusdokument.fields.markused.name,
@@ -620,6 +526,47 @@ export const metadataFields = {
   ),
 };
 
+export const derivedFields = {
+  kkr_tyyp: createData(
+    {
+      name: "kkr_tyyp",
+      category: MainCategory,
+    },
+    SHORT_INTEGER,
+    "",
+    {
+      desc: "Vooluveekogu tüüp",
+      hyperlink: null,
+    }
+  ),
+
+  korguste_vahe: createData(
+    {
+      name: "korguste_vahe",
+      category: MainCategory,
+    },
+    REAL_NUMBER,
+    "",
+    {
+      desc: "Lähte- ja suudmepunkti kõrguste vahe",
+      hyperlink: null,
+    }
+  ),
+
+  muutmisaeg: createData(
+    {
+      name: "muutmisaeg",
+      category: MainCategory,
+    },
+    DATE,
+    "",
+    {
+      desc: "Tervikkuju viimase uuendamise aeg",
+      hyperlink: null,
+    }
+  ),
+};
+
 export const generateKood = (domain: string) => {
   const koodField = {
     row: createData(
@@ -634,31 +581,12 @@ export const generateKood = (domain: string) => {
         hyperlink: null,
       }
     ),
-
   };
 
   return koodField;
 };
 
 
-// export const generateKoodAlusdokument = () => {
-//   const koodField = {
-//     row: createData(
-//       {
-//         name: etak_kirjeldus.classes._default.fields.kood.name,
-//         category: MainCategory,
-//       },
-//       SHORT_INTEGER,
-//       "",
-//       {
-//         desc: etak_kirjeldus.classes.alusdokument.fields.kood.description.et,
-//         hyperlink: null,
-//       }
-//     ),
-//   };
-
-//   return koodField;
-// };
 
 export const generateTyyp = (domain: string, desc: DescRowData) => {
   const tyypField = {
@@ -668,7 +596,6 @@ export const generateTyyp = (domain: string, desc: DescRowData) => {
       domain,
       desc
     ),
-
   };
 
   return tyypField;
@@ -681,7 +608,7 @@ export const generateKorgus = (desc: DescRowData) => {
       SHORT_INTEGER,
       "",
       desc
-    )
+    ),
   };
 
   return korgusField;

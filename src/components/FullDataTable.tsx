@@ -49,7 +49,6 @@ const generateTableFront = (headingData: HeadingData, addedRows: Elements) => {
 
   updatedRows = [...updatedRows, ...registerRows];
 
-  console.log("Updated rows: ", updatedRows)
 
   return updatedRows;
 };

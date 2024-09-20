@@ -4,6 +4,7 @@ import {
   // etakPindobjektidOverlap,
   etakPunktobjektid,
   metadata,
+  derivedLayers
 } from "../data/featureClasses";
 import App from "../App";
 import { FullDataTable } from "../components/FullDataTable";
@@ -45,6 +46,7 @@ export const paths = () => [
 
   ...featureClassPath(etakPunktobjektid, "punktobjekt", pointImageSource),
   ...featureClassPath(metadata, "etak", polyImageSource),
+  ...featureClassPath(derivedLayers, "etak", polyImageSource),
   // ...featureClassPath(etakJoonobjektid, "joonobjekt"),
   // ...featureClassPath(etakPindobjektidOverlap, "pindobjekt"),
   // ...featureClassPath(etakPindobjektidMain, "pindobjekt"),

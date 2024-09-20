@@ -10,7 +10,7 @@ import {
   // etakPindobjektidMain,
   // etakPindobjektidOverlap,
   metadata,
-  // derivedLayers,
+  derivedLayers,
 } from "./data/featureClasses.tsx";
 
 function App() {
@@ -45,20 +45,20 @@ function App() {
           }}
         >
           <FrontPageIndexTable
-            backgroundColor="#C4C1A4"
+
             objectName={etak_kirjeldus.groups.meta.name.et}
             itemNames={metadata}
             // itemNames={etakPunktobjektid}
             dataTypeClass="etak"
           />
           <FrontPageIndexTable
-            backgroundColor="#E1ACAC"
+
             objectName={etak_kirjeldus.groups.points.name.et}
             itemNames={etakPunktobjektid}
             dataTypeClass="punktobjekt"
           />
           <FrontPageIndexTable
-            backgroundColor="#AC87C5"
+
             objectName={etak_kirjeldus.groups.lines.name.et}
             // itemNames={etakJoonobjektid}
             itemNames={etakPunktobjektid}
@@ -86,14 +86,14 @@ function App() {
             </Typography>
 
             <FrontPageIndexTable
-              backgroundColor="#cfcfc4"
+
               objectName={etak_kirjeldus.groups.land_cover.name.et}
               // itemNames={etakPindobjektidMain}
               itemNames={etakPunktobjektid}
               dataTypeClass="pindobjekt"
             />
             <FrontPageIndexTable
-              backgroundColor="#577B8D"
+
               objectName={etak_kirjeldus.groups.overlapping.name.et}
               // itemNames={etakPindobjektidOverlap}
               itemNames={etakPunktobjektid}
@@ -102,10 +102,9 @@ function App() {
           </Box>
 
           <FrontPageIndexTable
-            backgroundColor="#A1DD70"
+
             objectName={etak_kirjeldus.groups.derivatives.name.et}
-            // itemNames={derivedLayers}
-            itemNames={etakPunktobjektid}
+            itemNames={derivedLayers}
             dataTypeClass="tuletiskiht"
           />
         </Box>

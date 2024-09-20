@@ -12,7 +12,7 @@ export interface RowData {
 
 export interface FeatureClass {
   fcName: string;
-  elements: Row[];
+  elements: Elements;
   domainTables: Domain[];
   headingData: HeadingData;
 }
@@ -79,7 +79,7 @@ export interface DescRowData {
 }
 
 export interface TableProps {
-  backgroundColor: string;
+
   objectName: string;
   itemNames: FeatureClass[];
   dataTypeClass: string;

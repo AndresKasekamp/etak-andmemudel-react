@@ -5,7 +5,8 @@ import {
   generateKorgus,
   generateField,
   generateHeadingData,
-  generateDataFields,
+  generateMetadataFields,
+  generatedDerivedDataFields,
   createData,
 } from "./constantFields.tsx";
 import {
@@ -15,7 +16,12 @@ import {
 } from "./domains.tsx";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 import { MainCategory } from "./colors.ts";
-import { SHORT_INTEGER, INTEGER, POINT_GEOMETRY, POLY_GEOMETRY } from "./dataTypes.ts";
+import {
+  SHORT_INTEGER,
+  INTEGER,
+  POINT_GEOMETRY,
+  POLY_GEOMETRY,
+} from "./dataTypes.ts";
 
 export const etakPunktobjektid = [
   {
@@ -179,7 +185,6 @@ export const etakPunktobjektid = [
     ),
   },
 
-
   {
     fcName: etak_kirjeldus.classes.E_402_korgrajatis_p.name,
     elements: {
@@ -251,7 +256,7 @@ export const etakPunktobjektid = [
           desc: etak_kirjeldus.classes.E_403_muu_rajatis_p.fields.tyyp
             .description.et,
           hyperlink: null,
-        })
+        }),
       ],
 
       register: [
@@ -284,20 +289,16 @@ export const etakPunktobjektid = [
           desc: etak_kirjeldus.classes.E_602_tehnopaigaldis_p.fields.tyyp
             .description.et,
           hyperlink: null,
-        })
+        }),
       ],
 
-      register: [
-
-        generateField(otherRegisterSources.ehr_gid),
-      ],
+      register: [generateField(otherRegisterSources.ehr_gid)],
     },
 
     domainTables: [
       sharedDomains.d0602,
       etakPunktobjektidDomains.tehnopaigaldis_tyyp,
       sharedDomains.vajalikkus,
-
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
@@ -313,7 +314,10 @@ export const etakPindobjektidOverlap = [];
 export const metadata = [
   {
     fcName: etak_kirjeldus.classes.alusdokument.name,
-    elements: {etak: generateDataFields()},
+    elements: {
+      etak: generateMetadataFields(),
+      register: []
+    },
     domainTables: [
       metadataDomains.alusdokument_tyyp,
       metadataDomains.tapsusklass_xy,
@@ -330,6 +334,19 @@ export const metadata = [
 export const derivedLayers = [
   {
     fcName: "vooluveed_kkr",
-    elements: [],
+    elements: {
+      etak: generatedDerivedDataFields(),
+      register: [
+        generateField(otherRegisterSources.kkr_kood),
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+      ],
+    },
+    domainTables: [],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.alusdokument.description.et,
+      2.5
+    ),
   },
 ];
