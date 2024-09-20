@@ -4,6 +4,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 
+// TODO kuidas saada kätte build kuupäev
+
+
 export default function LastUpdated() {
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null

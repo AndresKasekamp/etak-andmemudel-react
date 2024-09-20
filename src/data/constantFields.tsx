@@ -280,7 +280,7 @@ export const etakMainCategoryFields = {
   ),
 }
 
-export const esriMetaCategoryFields = {
+export const etakMetaCategoryFields = {
   muutmisaeg: createData(
     {
       name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
@@ -367,121 +367,121 @@ export const esriMetaCategoryFields = {
   ),
 }
 
-export const mainFields = {
-  etak_id: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.etak_id.name,
-      category: MainCategory,
-    },
-    INTEGER,
-    "",
-    {
-      desc: etak_kirjeldus.classes._default.fields.etak_id.description.et,
-      hyperlink: null,
-    }
-  ),
+// export const mainFields = {
+//   etak_id: createData(
+//     {
+//       name: etak_kirjeldus.classes._default.fields.etak_id.name,
+//       category: MainCategory,
+//     },
+//     INTEGER,
+//     "",
+//     {
+//       desc: etak_kirjeldus.classes._default.fields.etak_id.description.et,
+//       hyperlink: null,
+//     }
+//   ),
 
-  markused: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.markused.name,
-      category: MainCategory,
-    },
-    CREATE_TEXT_TYPE(255),
-    "",
-    {
-      desc: etak_kirjeldus.classes._default.fields.markused.description.et,
-      hyperlink: null,
-    }
-  ),
+//   markused: createData(
+//     {
+//       name: etak_kirjeldus.classes._default.fields.markused.name,
+//       category: MainCategory,
+//     },
+//     CREATE_TEXT_TYPE(255),
+//     "",
+//     {
+//       desc: etak_kirjeldus.classes._default.fields.markused.description.et,
+//       hyperlink: null,
+//     }
+//   ),
 
-  objectid: esriCategoryFields.objectid,
-  shape: esriCategoryFields.shape,
+//   objectid: esriCategoryFields.objectid,
+//   shape: esriCategoryFields.shape,
 
-  muutmisaeg: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
-      category: EtakMetaCategory,
-    },
-    DATE,
-    "",
-    {
-      desc: etak_kirjeldus.classes._default.fields.muutmisaeg.description.et,
-      hyperlink: null,
-    }
-  ),
+//   muutmisaeg: createData(
+//     {
+//       name: etak_kirjeldus.classes._default.fields.muutmisaeg.name,
+//       category: EtakMetaCategory,
+//     },
+//     DATE,
+//     "",
+//     {
+//       desc: etak_kirjeldus.classes._default.fields.muutmisaeg.description.et,
+//       hyperlink: null,
+//     }
+//   ),
 
-  andmeallika_id: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.andmeallika_id.name,
-      category: EtakMetaCategory,
-    },
-    INTEGER,
-    "",
-    {
-      desc: etak_kirjeldus.classes._default.fields.andmeallika_id.description
-        .et,
+//   andmeallika_id: createData(
+//     {
+//       name: etak_kirjeldus.classes._default.fields.andmeallika_id.name,
+//       category: EtakMetaCategory,
+//     },
+//     INTEGER,
+//     "",
+//     {
+//       desc: etak_kirjeldus.classes._default.fields.andmeallika_id.description
+//         .et,
 
-      hyperlink: null,
-    }
-  ),
+//       hyperlink: null,
+//     }
+//   ),
 
-  korgusallika_id: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.korgusallika_id.name,
-      category: EtakMetaCategory,
-    },
-    INTEGER,
-    "",
-    {
-      desc: etak_kirjeldus.classes._default.fields.korgusallika_id.description
-        .et,
-      hyperlink: null,
-    }
-  ),
+//   korgusallika_id: createData(
+//     {
+//       name: etak_kirjeldus.classes._default.fields.korgusallika_id.name,
+//       category: EtakMetaCategory,
+//     },
+//     INTEGER,
+//     "",
+//     {
+//       desc: etak_kirjeldus.classes._default.fields.korgusallika_id.description
+//         .et,
+//       hyperlink: null,
+//     }
+//   ),
 
-  ruumikujuallika_id: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name,
-      category: EtakMetaCategory,
-    },
-    INTEGER,
-    "",
-    {
-      desc: etak_kirjeldus.classes._default.fields.ruumikujuallika_id
-        .description.et,
+//   ruumikujuallika_id: createData(
+//     {
+//       name: etak_kirjeldus.classes._default.fields.ruumikujuallika_id.name,
+//       category: EtakMetaCategory,
+//     },
+//     INTEGER,
+//     "",
+//     {
+//       desc: etak_kirjeldus.classes._default.fields.ruumikujuallika_id
+//         .description.et,
 
-      hyperlink: null,
-    }
-  ),
+//       hyperlink: null,
+//     }
+//   ),
 
-  vajalik: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.vajalik.name,
-      category: EtakMetaCategory,
-    },
-    SHORT_INTEGER,
-    "vajalikkus",
-    {
-      desc: etak_kirjeldus.classes._default.fields.vajalik.description.et,
+//   vajalik: createData(
+//     {
+//       name: etak_kirjeldus.classes._default.fields.vajalik.name,
+//       category: EtakMetaCategory,
+//     },
+//     SHORT_INTEGER,
+//     "vajalikkus",
+//     {
+//       desc: etak_kirjeldus.classes._default.fields.vajalik.description.et,
 
-      hyperlink: null,
-    }
-  ),
+//       hyperlink: null,
+//     }
+//   ),
 
-  geom_muutmisaeg: createData(
-    {
-      name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name,
-      category: EtakMetaCategory,
-    },
-    DATE,
-    "",
-    {
-      desc: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description
-        .et,
-      hyperlink: null,
-    }
-  ),
-};
+//   geom_muutmisaeg: createData(
+//     {
+//       name: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.name,
+//       category: EtakMetaCategory,
+//     },
+//     DATE,
+//     "",
+//     {
+//       desc: etak_kirjeldus.classes._default.fields.geom_muutmisaeg.description
+//         .et,
+//       hyperlink: null,
+//     }
+//   ),
+// };
 
 export const generateDataFields = () => {
   const genFields: object[] = [];
@@ -640,45 +640,25 @@ export const generateKood = (domain: string) => {
   return koodField;
 };
 
-// export const generateKood = (domain: string) => {
+
+// export const generateKoodAlusdokument = () => {
 //   const koodField = {
 //     row: createData(
 //       {
 //         name: etak_kirjeldus.classes._default.fields.kood.name,
 //         category: MainCategory,
 //       },
-//       "lühike täisarv",
-//       domain,
+//       SHORT_INTEGER,
+//       "",
 //       {
-//         desc: etak_kirjeldus.classes._default.fields.kood.description.et,
+//         desc: etak_kirjeldus.classes.alusdokument.fields.kood.description.et,
 //         hyperlink: null,
 //       }
 //     ),
-//     position: 1,
 //   };
 
 //   return koodField;
 // };
-
-export const generateKoodAlusdokument = () => {
-  const koodField = {
-    row: createData(
-      {
-        name: etak_kirjeldus.classes._default.fields.kood.name,
-        category: MainCategory,
-      },
-      SHORT_INTEGER,
-      "",
-      {
-        desc: etak_kirjeldus.classes.alusdokument.fields.kood.description.et,
-        hyperlink: null,
-      }
-    ),
-    position: 1,
-  };
-
-  return koodField;
-};
 
 export const generateTyyp = (domain: string, desc: DescRowData) => {
   const tyypField = {
@@ -707,10 +687,9 @@ export const generateKorgus = (desc: DescRowData) => {
   return korgusField;
 };
 
-export const generateField = (row: RowData, position: number = 0) => {
+export const generateField = (row: RowData) => {
   const field = {
     row,
-    position,
   };
 
   return field;

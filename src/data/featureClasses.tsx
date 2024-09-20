@@ -15,7 +15,7 @@ import {
 } from "./domains.tsx";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 import { MainCategory } from "./colors.ts";
-import { SHORT_INTEGER, INTEGER, POINT_GEOMETRY } from "./dataTypes.ts";
+import { SHORT_INTEGER, INTEGER, POINT_GEOMETRY, POLY_GEOMETRY } from "./dataTypes.ts";
 
 export const etakPunktobjektid = [
   {
@@ -313,14 +313,14 @@ export const etakPindobjektidOverlap = [];
 export const metadata = [
   {
     fcName: etak_kirjeldus.classes.alusdokument.name,
-    elements: generateDataFields(),
+    elements: {etak: generateDataFields()},
     domainTables: [
       metadataDomains.alusdokument_tyyp,
       metadataDomains.tapsusklass_xy,
       metadataDomains.tapsusklass_z,
     ],
     headingData: generateHeadingData(
-      "pind",
+      POLY_GEOMETRY,
       etak_kirjeldus.classes.alusdokument.description.et,
       2
     ),
