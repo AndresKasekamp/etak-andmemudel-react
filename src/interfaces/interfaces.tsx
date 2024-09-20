@@ -79,7 +79,6 @@ export interface DescRowData {
 }
 
 export interface TableProps {
-
   objectName: string;
   itemNames: FeatureClass[];
   dataTypeClass: string;

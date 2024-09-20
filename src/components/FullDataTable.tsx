@@ -24,8 +24,12 @@ const generateTableFront = (headingData: HeadingData, addedRows: Elements) => {
   // TODO ürita rows lahti saada (enam pole vaja)
   const { etak, register } = addedRows;
   const etakRows = etak.map((row) => row.row);
+  const registerRows = register.map((row) => row.row);
+  // TODO siin on vaja probleeme lahendada skaleeruvusega
   if (headingData.estName === "Alusdokument") {
     return etakRows
+  } else if (headingData.estName === "Vooluvete tervikkujud (põhiteljed) Eesti looduse infosüsteemis") {
+    return [...etakRows, ...registerRows];
   }
   const { shape_Length, shape_Area } = esriCategoryFields;
 
@@ -36,7 +40,6 @@ const generateTableFront = (headingData: HeadingData, addedRows: Elements) => {
   ];
 
   // const etakRows = etak.map((row) => row.row);
-  const registerRows = register.map((row) => row.row);
 
   let updatedRows = [...etakFields, ...etakRows, ...esriFields];
 

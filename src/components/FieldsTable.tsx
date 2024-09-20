@@ -23,6 +23,8 @@ import { TableHeaderColor } from "../data/colors.ts";
 
 import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" };
 
+
+// TODO alusdokument tuletistabel loogika üle vaadata
 export const FieldsTable = ({
   updatedRows,
   imageSrc,
@@ -116,9 +118,10 @@ export const FieldsTable = ({
         <Typography variant="h5" sx={{ marginLeft: 2 }}>
           {headingData.estName}
         </Typography>
+          
 
         <Typography sx={{ marginLeft: 2 }}>
-          {tableName !== etak_kirjeldus.classes.alusdokument.name ? (
+          {![etak_kirjeldus.classes.alusdokument.name, "vooluveed_kkr"].includes(tableName) ? (
             "Andmestik: levituum"
           ) : (
             <br />

@@ -10,12 +10,10 @@ import Paper from "@mui/material/Paper";
 import { FrontPageTableColor } from "../data/colors";
 
 export const FrontPageIndexTable = ({
-
   objectName,
   itemNames,
   dataTypeClass,
 }: TableProps) => {
-
   return (
     <List
       component={Paper}

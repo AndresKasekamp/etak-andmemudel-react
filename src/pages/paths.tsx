@@ -9,6 +9,7 @@ import {
 import App from "../App";
 import { FullDataTable } from "../components/FullDataTable";
 import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
+import { pointPath, metadataPath, derivedPath } from "./groupPaths";
 
 // Image sources
 import pointImageSource from "../assets/multipoint.svg";
@@ -44,9 +45,9 @@ const featureClassPath = (
 export const paths = () => [
   initPath,
 
-  ...featureClassPath(etakPunktobjektid, "punktobjekt", pointImageSource),
-  ...featureClassPath(metadata, "etak", polyImageSource),
-  ...featureClassPath(derivedLayers, "etak", polyImageSource),
+  ...featureClassPath(etakPunktobjektid, pointPath, pointImageSource),
+  ...featureClassPath(metadata, metadataPath, polyImageSource),
+  ...featureClassPath(derivedLayers, derivedPath, polyImageSource),
   // ...featureClassPath(etakJoonobjektid, "joonobjekt"),
   // ...featureClassPath(etakPindobjektidOverlap, "pindobjekt"),
   // ...featureClassPath(etakPindobjektidMain, "pindobjekt"),

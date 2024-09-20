@@ -345,7 +345,7 @@ export const derivedLayers = [
     domainTables: [],
     headingData: generateHeadingData(
       POLY_GEOMETRY,
-      etak_kirjeldus.classes.alusdokument.description.et,
+      "Vooluvete tervikkujud (põhiteljed) Eesti looduse infosüsteemis",
       2.5
     ),
   },

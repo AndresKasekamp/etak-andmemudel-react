@@ -1,9 +1,9 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import etak_kirjeldus from './data/etak_kirjeldus.json' assert { type: 'json' };
+import etak_kirjeldus from "./data/etak_kirjeldus.json" assert { type: "json" };
 
-import {FrontPageIndexTable} from "./components/FrontPageIndexTable.tsx";
+import { FrontPageIndexTable } from "./components/FrontPageIndexTable.tsx";
 import {
   etakPunktobjektid,
   // etakJoonobjektid,
@@ -12,6 +12,13 @@ import {
   metadata,
   derivedLayers,
 } from "./data/featureClasses.tsx";
+import {
+  pointPath,
+  polyPath,
+  linePath,
+  metadataPath,
+  derivedPath,
+} from "./pages/groupPaths.ts";
 
 function App() {
   return (
@@ -45,24 +52,21 @@ function App() {
           }}
         >
           <FrontPageIndexTable
-
             objectName={etak_kirjeldus.groups.meta.name.et}
             itemNames={metadata}
             // itemNames={etakPunktobjektid}
-            dataTypeClass="etak"
+            dataTypeClass={metadataPath}
           />
           <FrontPageIndexTable
-
             objectName={etak_kirjeldus.groups.points.name.et}
             itemNames={etakPunktobjektid}
-            dataTypeClass="punktobjekt"
+            dataTypeClass={pointPath}
           />
           <FrontPageIndexTable
-
             objectName={etak_kirjeldus.groups.lines.name.et}
             // itemNames={etakJoonobjektid}
             itemNames={etakPunktobjektid}
-            dataTypeClass="joonobjekt"
+            dataTypeClass={linePath}
           />
 
           <Box
@@ -78,7 +82,6 @@ function App() {
               variant="h4"
               sx={{
                 color: "#797C7F",
-
               }}
               gutterBottom
             >
@@ -86,26 +89,23 @@ function App() {
             </Typography>
 
             <FrontPageIndexTable
-
               objectName={etak_kirjeldus.groups.land_cover.name.et}
               // itemNames={etakPindobjektidMain}
               itemNames={etakPunktobjektid}
-              dataTypeClass="pindobjekt"
+              dataTypeClass={polyPath}
             />
             <FrontPageIndexTable
-
               objectName={etak_kirjeldus.groups.overlapping.name.et}
               // itemNames={etakPindobjektidOverlap}
               itemNames={etakPunktobjektid}
-              dataTypeClass="pindobjekt"
+              dataTypeClass={polyPath}
             />
           </Box>
 
           <FrontPageIndexTable
-
             objectName={etak_kirjeldus.groups.derivatives.name.et}
             itemNames={derivedLayers}
-            dataTypeClass="tuletiskiht"
+            dataTypeClass={derivedPath}
           />
         </Box>
       </Container>
