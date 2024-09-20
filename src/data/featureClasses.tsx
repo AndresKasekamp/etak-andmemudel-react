@@ -15,7 +15,7 @@ import {
 } from "./domains.tsx";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 import { MainCategory } from "./colors.ts";
-import { SHORT_INTEGER, INTEGER } from "./dataTypes.ts";
+import { SHORT_INTEGER, INTEGER, POINT_GEOMETRY } from "./dataTypes.ts";
 
 export const etakPunktobjektid = [
   {
@@ -49,7 +49,7 @@ export const etakPunktobjektid = [
       sharedDomains.vajalikkus,
     ],
     headingData: generateHeadingData(
-      "punkt",
+      POINT_GEOMETRY,
       etak_kirjeldus.classes.E_101_kivi_p.description.et
     ),
   },
@@ -81,7 +81,7 @@ export const etakPunktobjektid = [
     ],
 
     headingData: generateHeadingData(
-      "punkt",
+      POINT_GEOMETRY,
       etak_kirjeldus.classes.E_103_pinnavorm_p.description.et
     ),
   },
@@ -113,7 +113,7 @@ export const etakPunktobjektid = [
     ],
 
     headingData: generateHeadingData(
-      "punkt",
+      POINT_GEOMETRY,
       etak_kirjeldus.classes.E_202_seisuveekogu_p.description.et
     ),
   },
@@ -143,7 +143,7 @@ export const etakPunktobjektid = [
       sharedDomains.vajalikkus,
     ],
     headingData: generateHeadingData(
-      "punkt",
+      POINT_GEOMETRY,
       etak_kirjeldus.classes.E_301_muu_kolvik_p.description.et
     ),
   },
@@ -174,7 +174,7 @@ export const etakPunktobjektid = [
       sharedDomains.vajalikkus,
     ],
     headingData: generateHeadingData(
-      "punkt",
+      POINT_GEOMETRY,
       etak_kirjeldus.classes.E_305_puittaimestik_p.description.et
     ),
   },
@@ -237,7 +237,7 @@ export const etakPunktobjektid = [
       sharedDomains.toevaartus,
     ],
     headingData: generateHeadingData(
-      "punkt",
+      POINT_GEOMETRY,
       etak_kirjeldus.classes.E_402_korgrajatis_p.description.et
     ),
   },
@@ -270,7 +270,7 @@ export const etakPunktobjektid = [
       sharedDomains.toevaartus,
     ],
     headingData: generateHeadingData(
-      "punkt",
+      POINT_GEOMETRY,
       etak_kirjeldus.classes.E_403_muu_rajatis_p.description.et
     ),
   },
@@ -300,7 +300,7 @@ export const etakPunktobjektid = [
 
     ],
     headingData: generateHeadingData(
-      "punkt",
+      POINT_GEOMETRY,
       etak_kirjeldus.classes.E_602_tehnopaigaldis_p.description.et
     ),
   },
