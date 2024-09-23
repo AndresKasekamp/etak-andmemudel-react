@@ -22,6 +22,11 @@ const initPath = {
   element: <App />,
 };
 
+const all2dPath = {
+  path: "/all/2d",
+  element: <App />,
+};
+
 const featureClassPath = (
   featureclasses: FeatureClass[],
   dataTypeClass: string,
@@ -44,7 +49,7 @@ const featureClassPath = (
 
 export const paths = () => [
   initPath,
-
+  all2dPath,
   ...featureClassPath(etakPunktobjektid, pointPath, pointImageSource),
   ...featureClassPath(metadata, metadataPath, polyImageSource),
   ...featureClassPath(derivedLayers, derivedPath, polyImageSource),

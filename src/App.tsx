@@ -19,6 +19,7 @@ import {
   metadataPath,
   derivedPath,
 } from "./pages/groupPaths.ts";
+import { TablesTogetherLink } from "./components/TablesTogetherLink.tsx";
 
 function App() {
   return (
@@ -26,14 +27,16 @@ function App() {
       <Container maxWidth="xl" sx={{ height: "100vh", mt: 2 }}>
         <Box
           display="flex"
-          flexDirection="column"
-          justifyContent="top"
+          flexDirection="row"
+          justifyContent="space-between" // Spread items apart
           alignItems="center"
           sx={{ textAlign: "center", color: "#32774e" }}
         >
           <Typography variant="h3" gutterBottom>
             Üldvaade
           </Typography>
+
+          <TablesTogetherLink />
         </Box>
 
         <Box
