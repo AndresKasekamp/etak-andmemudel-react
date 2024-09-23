@@ -2,12 +2,18 @@ import * as React from "react";
 import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 
 // TODO kuidas saada kätte build kuupäev
 
-
 export default function LastUpdated() {
+  const currentDate = new Date();
+  const day = String(currentDate.getDate()).padStart(2, "0");
+  const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are zero-indexed
+  const year = currentDate.getFullYear();
+
+  const formattedDate = `${day}.${month}.${year}`;
+
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null
   );
@@ -26,7 +32,10 @@ export default function LastUpdated() {
   return (
     <div>
       <Button aria-describedby={id} onClick={handleClick}>
-        <WorkHistoryIcon fontSize="large" sx={{  color: "white" }}></WorkHistoryIcon>
+        <WorkHistoryIcon
+          fontSize="large"
+          sx={{ color: "white" }}
+        ></WorkHistoryIcon>
       </Button>
       <Popover
         id={id}
@@ -38,7 +47,9 @@ export default function LastUpdated() {
           horizontal: "left",
         }}
       >
-        <Typography sx={{ p: 1 }}>Viimati uuendatud: 17.09.2024</Typography>
+        <Typography sx={{ p: 1 }}>
+          Viimati uuendatud: {formattedDate}
+        </Typography>
       </Popover>
     </div>
   );
