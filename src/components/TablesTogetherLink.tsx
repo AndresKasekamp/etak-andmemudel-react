@@ -10,7 +10,14 @@ export const TablesTogetherLink = () => {
         variant="contained"
         size="large"
         endIcon={<MenuBookIcon />}
-        sx={{ backgroundColor: "#32774E", borderColor: "#32774E" }}
+        sx={{
+          backgroundColor: "#32774E",
+          borderColor: "#32774E",
+          "&:hover": {
+            backgroundColor: "#285f3f", // Darker shade for hover
+            borderColor: "#285f3f",
+          },
+        }}
       >
         Andmed Ühel lehel
       </Button>
