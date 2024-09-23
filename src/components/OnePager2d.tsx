@@ -4,6 +4,7 @@ import { generateTableFront } from "./formatHelpers/generateTableFront.ts";
 import { FieldsTable } from "./FieldsTable.tsx";
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { generateDomainsTogether } from "./formatHelpers/generateTableFront.ts";
+import { ExportAllPDF } from "./formatHelpers/ExportAllPDF.tsx";
 // TODO domeenid on vaja settida ja panna tähestiku vms järjekorda
 
 export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
@@ -21,6 +22,8 @@ export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
         maxWidth: "100%",
       }}
     >
+      <ExportAllPDF allTablesAndDomains={allTablesAndDomains} />
+      
       {allTablesAndDomains.map((ad, idx) => (
         <FieldsTable
           key={idx}

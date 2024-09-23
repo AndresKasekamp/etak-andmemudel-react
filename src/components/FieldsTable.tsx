@@ -28,7 +28,7 @@ import { getTableName } from "../utils/utils.tsx";
 
 // TODO alusdokument tuletistabel loogika üle vaadata
 export const FieldsTable = ({
-  rows: updatedRows,
+  rows,
   name,
   group,
   headingData,
@@ -43,7 +43,7 @@ export const FieldsTable = ({
     // AutoTable function to generate the table
     autoTable(doc, {
       head: [["Välja nimi", "Andmetüüp", "Domeen", "Kirjeldus"]],
-      body: updatedRows.map((row) => [
+      body: rows.map((row) => [
         row.name.name,
         row.dataType,
         row.domain,
@@ -51,6 +51,8 @@ export const FieldsTable = ({
       ]),
       startY: 30,
     });
+
+
 
     // Save the PDF
     doc.save(`${name}.pdf`);
@@ -174,7 +176,7 @@ export const FieldsTable = ({
           </TableRow>
         </TableHead>
         <TableBody>
-          {updatedRows.map((row) => (
+          {rows.map((row) => (
             <TableRow
               key={row.name.name}
               sx={{
