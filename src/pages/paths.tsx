@@ -11,15 +11,8 @@ import { FullDataTable } from "../components/FullDataTable";
 import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
 import { pointPath, metadataPath, derivedPath } from "./groupPaths";
 import { OnePager2d } from "../components/OnePager2d";
-// Image sources
-import pointImageSource from "../assets/multipoint.svg";
-import polyImageSource from "../assets/polygon-hole-o.svg";
-// import polyLineImageSource from "../assets/polyline-pt.svg";
-// import cubeImageSource from "../assets/cube-3d.svg";
 
-const allDataTogether = [...etakPunktobjektid];
-
-const generateAllDataTogether = () => {};
+const allDataTogether = [...etakPunktobjektid, ...metadata, ...derivedLayers];
 
 const initPath = {
   path: "/",

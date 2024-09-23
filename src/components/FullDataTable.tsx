@@ -15,7 +15,6 @@ export const FullDataTable = ({
 }: MainTableProps) => {
 
   const updatedRows = generateTableFront(headingData, rows);
-
   return (
     <div
       style={{
@@ -30,7 +29,7 @@ export const FullDataTable = ({
         name={name}
         headingData={headingData}
       ></FieldsTable>
-
+      {/* {fullPageDesign ? null : <DomainTableMain domains={domains}></DomainTableMain>} */}
       <DomainTableMain domains={domains}></DomainTableMain>
     </div>
   );

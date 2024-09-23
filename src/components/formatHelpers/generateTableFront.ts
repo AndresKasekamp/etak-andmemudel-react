@@ -3,7 +3,7 @@ import {
   etakMetaCategoryFields,
   esriCategoryFields,
 } from "../../data/constantFields.tsx";
-import { Elements, HeadingData } from "../../interfaces/interfaces.tsx";
+import { Elements, HeadingData, FeatureClass } from "../../interfaces/interfaces.tsx";
 
 import { POINT_GEOMETRY } from "../../data/dataTypes.ts";
 
@@ -44,3 +44,15 @@ export const generateTableFront = (
 
   return updatedRows;
 };
+
+export const generateDomainsTogether = ( allTablesAndDomains: FeatureClass[]) => {
+    // Manipulating domains into singular
+    const domainsMergedSet = new Set(
+      allTablesAndDomains.map((obj) => obj.domainTables).flat()
+    );
+  
+    const domainsMerged = [...domainsMergedSet];
+    domainsMerged.sort((a, b) => a.name.localeCompare(b.name));
+
+    return domainsMerged
+}
