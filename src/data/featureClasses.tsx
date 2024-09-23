@@ -26,6 +26,7 @@ import {
 // import { pointImageSource } from "./imageSources.tsx";
 
 import pointImageSource from "../assets/multipoint.svg"
+import polyImageSource from "../assets/polygon-hole-o.svg";
 
 export const etakPunktobjektid = [
   {
@@ -338,7 +339,7 @@ export const metadata = [
     headingData: generateHeadingData(
       POLY_GEOMETRY,
       etak_kirjeldus.classes.alusdokument.description.et,
-      pointImageSource,
+      polyImageSource,
       2
     ),
   },
@@ -359,7 +360,7 @@ export const derivedLayers = [
     headingData: generateHeadingData(
       POLY_GEOMETRY,
       "Vooluvete tervikkujud (põhiteljed) Eesti looduse infosüsteemis",
-      pointImageSource,
+      polyImageSource,
       2.5
     ),
   },
