@@ -22,6 +22,9 @@ import { HashLink } from "react-router-hash-link";
 import { TableHeaderColor } from "../data/colors.ts";
 
 import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" };
+import { DetailViewLink } from "./DetailViewLink.tsx";
+import { useLocation, Location } from "react-router-dom";
+import { getTableName } from "../utils/utils.tsx";
 
 // TODO alusdokument tuletistabel loogika üle vaadata
 export const FieldsTable = ({
@@ -53,6 +56,11 @@ export const FieldsTable = ({
   };
 
   const url = `https://gsavalik.envir.ee/geoserver/wfs?typename=etak:${name.toLowerCase()}&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
+
+  const location: Location = useLocation();
+
+  const pathName = getTableName(location);
+
   return (
     <TableContainer
       component={Paper}
@@ -74,7 +82,12 @@ export const FieldsTable = ({
           }
           placement="top"
         >
-          <img src={headingData.image} alt="Multipoint" width={50} height={50} />
+          <img
+            src={headingData.image}
+            alt="Multipoint"
+            width={50}
+            height={50}
+          />
         </Tooltip>
 
         <Tooltip
@@ -141,7 +154,11 @@ export const FieldsTable = ({
       </div>
 
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        <caption>ETAK käesolevate *andmete* lühiselgitus lorem ipsum</caption>
+        {pathName === "2d" ? (
+          <caption>
+            <DetailViewLink />
+          </caption>
+        ) : null}
 
         <TableHead>
           <TableRow

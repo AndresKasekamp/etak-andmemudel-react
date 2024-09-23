@@ -1,15 +1,18 @@
-import ViewStreamIcon from '@mui/icons-material/ViewStream';
+import PageviewIcon from '@mui/icons-material/Pageview';
+
 import { Button } from "@mui/material";
 
 import { Link } from "react-router-dom";
 
-export const TablesTogetherLink = () => {
+// TODO vaja on tabeli nimi, conditional kas tegu on all/2d või mitte
+
+export const DetailViewLink = () => {
   return (
-    <Link to="/all/2d">
+    <Link to="/">
       <Button
         variant="contained"
-        size="large"
-        startIcon={<ViewStreamIcon />}
+        size="medium"
+        startIcon={<PageviewIcon />}
         sx={{
           backgroundColor: "#32774E",
           borderColor: "#32774E",
@@ -19,7 +22,7 @@ export const TablesTogetherLink = () => {
           },
         }}
       >
-        Andmed Ühel lehel
+        Detailvaade
       </Button>
     </Link>
   );

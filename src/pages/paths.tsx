@@ -12,7 +12,7 @@ import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
 import { pointPath, metadataPath, derivedPath } from "./groupPaths";
 import { OnePager2d } from "../components/OnePager2d";
 
-const allDataTogether = [...etakPunktobjektid, ...metadata, ...derivedLayers];
+const allDataTogether = [...metadata, ...etakPunktobjektid, ...derivedLayers];
 
 const initPath = {
   path: "/",
