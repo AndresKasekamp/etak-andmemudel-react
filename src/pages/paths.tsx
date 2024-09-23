@@ -26,7 +26,6 @@ const all2dPath = {
 const featureClassPath = (
   featureclasses: FeatureClass[]
 ): FeatureClassPath[] => {
-  console.log("ETAK Punktobjektid", featureclasses);
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `${fc.groupName}/${fc.fcName}`,
     element: (

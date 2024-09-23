@@ -62,7 +62,6 @@ export const FieldsTable = ({
 
   const pathName = getTableName(location);
 
-  console.log("Group fieldstable", group)
   return (
     <TableContainer
       component={Paper}
