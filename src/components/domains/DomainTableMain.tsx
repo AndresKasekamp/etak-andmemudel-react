@@ -4,7 +4,7 @@ import DomainTable from "./DomainTable";
 import { DomainTableMainProps } from "../../interfaces/interfaces";
 
 export const DomainTableMain: React.FC<DomainTableMainProps> = ({
-  associatedDomains,
+  domains,
 }) => {
   return (
     <TableContainer
@@ -24,7 +24,7 @@ export const DomainTableMain: React.FC<DomainTableMainProps> = ({
         justifyContent: "center",
       }}
     >
-      {associatedDomains.map((domain, idx) => (
+      {domains.map((domain, idx) => (
         <DomainTable key={idx} domain={domain}></DomainTable>
       ))}
     </TableContainer>

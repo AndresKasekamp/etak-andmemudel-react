@@ -36,7 +36,7 @@ export interface Domain {
 
 // Define the type for associatedDomains, which is an array of Domain objects
 export interface DomainTableMainProps {
-  associatedDomains: Domain[];
+  domains: Domain[];
 }
 
 export interface DomainTableProps {
@@ -59,17 +59,22 @@ export interface Elements {
   register: Row[];
 }
 
-export interface EtakTableProps {
-  addedRows: Elements;
-  imageSrc: string;
-  associatedDomains: Domain[];
+export interface AllTablesAndDomains {
+  allTablesAndDomains: FeatureClass[];
+}
+
+export interface MainTableProps {
+  name: string;
+  rows: Elements;
+  image: string;
+  domains: Domain[];
   headingData: HeadingData;
 }
 
-export interface EtakTableProps2 {
-  updatedRows: RowData[];
-  imageSrc: string;
-  tableName: string;
+export interface FieldsTableProps {
+  rows: RowData[];
+  image: string;
+  name: string;
   headingData: HeadingData;
 }
 

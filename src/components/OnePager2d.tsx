@@ -1,8 +1,16 @@
+import { AllTablesAndDomains } from "../interfaces/interfaces.tsx";
 
-
-// TODO arvatavasti fields table söödad sisse konstruktorist kõik listid koos (alusdokument ja tuletiskihid ka korralikult)
-export const OnePager2d = () => {
-  return (
-    <div>OnePager2d</div>
-  )
-}
+import { FullDataTable } from "./FullDataTable.tsx";
+import { pointImageSource } from "../data/imageSources.tsx";
+export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
+  console.log("ALL TABLES AND DOMAINS", allTablesAndDomains);
+  return allTablesAndDomains.map((ad, idx) => (
+    <FullDataTable
+      key={idx}
+      rows={ad.elements}
+      image={pointImageSource}
+      domains={ad.domainTables}
+      headingData={ad.headingData}
+    ></FullDataTable>
+  ));
+};

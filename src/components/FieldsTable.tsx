@@ -15,7 +15,7 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { jsPDF } from "jspdf"; //or use your library of choice here
 import autoTable from "jspdf-autotable";
 
-import { EtakTableProps2 } from "../interfaces/interfaces.tsx";
+import { FieldsTableProps } from "../interfaces/interfaces.tsx";
 import ObjectCount from "./formatHelpers/ObjectCount.tsx";
 import { HashLink } from "react-router-hash-link";
 
@@ -25,11 +25,11 @@ import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" }
 
 // TODO alusdokument tuletistabel loogika üle vaadata
 export const FieldsTable = ({
-  updatedRows,
-  imageSrc,
-  tableName,
+  rows: updatedRows,
+  image: imageSrc,
+  name: tableName,
   headingData,
-}: EtakTableProps2) => {
+}: FieldsTableProps) => {
   const handleExportPDF = () => {
     const doc = new jsPDF();
 

@@ -10,12 +10,19 @@ import App from "../App";
 import { FullDataTable } from "../components/FullDataTable";
 import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
 import { pointPath, metadataPath, derivedPath } from "./groupPaths";
-
+import { OnePager2d } from "../components/OnePager2d";
 // Image sources
 import pointImageSource from "../assets/multipoint.svg";
 import polyImageSource from "../assets/polygon-hole-o.svg";
 // import polyLineImageSource from "../assets/polyline-pt.svg";
 // import cubeImageSource from "../assets/cube-3d.svg";
+
+const allDataTogether = [...etakPunktobjektid];
+
+const generateAllDataTogether = () => {
+
+}
+
 
 const initPath = {
   path: "/",
@@ -24,7 +31,7 @@ const initPath = {
 
 const all2dPath = {
   path: "/all/2d",
-  element: <App />,
+  element: <OnePager2d allTablesAndDomains={allDataTogether} />,
 };
 
 const featureClassPath = (
@@ -32,13 +39,16 @@ const featureClassPath = (
   dataTypeClass: string,
   image: string
 ): FeatureClassPath[] => {
+
+  console.log("ETAK Punktobjektid", featureclasses)
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `${dataTypeClass}/${fc.fcName}`,
     element: (
       <FullDataTable
-        addedRows={fc.elements}
-        imageSrc={image}
-        associatedDomains={fc.domainTables}
+        name={fc.fcName}
+        rows={fc.elements}
+        image={image}
+        domains={fc.domainTables}
         headingData={fc.headingData}
       />
     ),

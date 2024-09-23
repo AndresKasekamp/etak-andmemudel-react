@@ -1,7 +1,5 @@
-import { useLocation, Location } from "react-router-dom";
 
-import { getTableName } from "../utils/utils.tsx";
-import { EtakTableProps } from "../interfaces/interfaces.tsx";
+import { MainTableProps } from "../interfaces/interfaces.tsx";
 
 import { FieldsTable } from "./FieldsTable.tsx";
 
@@ -10,16 +8,14 @@ import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { generateTableFront } from "./formatHelpers/generateTableFront.ts";
 
 export const FullDataTable = ({
-  addedRows,
-  imageSrc,
-  associatedDomains,
+  name,
+  rows,
+  image,
+  domains,
   headingData,
-}: EtakTableProps) => {
-  const location: Location = useLocation();
+}: MainTableProps) => {
 
-  const tableName = getTableName(location);
-
-  const updatedRows = generateTableFront(headingData, addedRows);
+  const updatedRows = generateTableFront(headingData, rows);
 
   return (
     <div
@@ -31,13 +27,13 @@ export const FullDataTable = ({
       }}
     >
       <FieldsTable
-        updatedRows={updatedRows}
-        imageSrc={imageSrc}
-        tableName={tableName}
+        rows={updatedRows}
+        image={image}
+        name={name}
         headingData={headingData}
       ></FieldsTable>
 
-      <DomainTableMain associatedDomains={associatedDomains}></DomainTableMain>
+      <DomainTableMain domains={domains}></DomainTableMain>
     </div>
   );
 };
