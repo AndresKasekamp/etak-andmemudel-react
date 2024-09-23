@@ -23,6 +23,10 @@ import {
   POLY_GEOMETRY,
 } from "./dataTypes.ts";
 
+// import { pointImageSource } from "./imageSources.tsx";
+
+import pointImageSource from "../assets/multipoint.svg"
+
 export const etakPunktobjektid = [
   {
     fcName: etak_kirjeldus.classes.E_101_kivi_p.name,
@@ -56,7 +60,8 @@ export const etakPunktobjektid = [
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
-      etak_kirjeldus.classes.E_101_kivi_p.description.et
+      etak_kirjeldus.classes.E_101_kivi_p.description.et,
+      pointImageSource
     ),
   },
 
@@ -88,7 +93,8 @@ export const etakPunktobjektid = [
 
     headingData: generateHeadingData(
       POINT_GEOMETRY,
-      etak_kirjeldus.classes.E_103_pinnavorm_p.description.et
+      etak_kirjeldus.classes.E_103_pinnavorm_p.description.et,
+      pointImageSource
     ),
   },
 
@@ -120,7 +126,8 @@ export const etakPunktobjektid = [
 
     headingData: generateHeadingData(
       POINT_GEOMETRY,
-      etak_kirjeldus.classes.E_202_seisuveekogu_p.description.et
+      etak_kirjeldus.classes.E_202_seisuveekogu_p.description.et,
+      pointImageSource
     ),
   },
 
@@ -150,7 +157,8 @@ export const etakPunktobjektid = [
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
-      etak_kirjeldus.classes.E_301_muu_kolvik_p.description.et
+      etak_kirjeldus.classes.E_301_muu_kolvik_p.description.et,
+      pointImageSource
     ),
   },
 
@@ -181,7 +189,8 @@ export const etakPunktobjektid = [
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
-      etak_kirjeldus.classes.E_305_puittaimestik_p.description.et
+      etak_kirjeldus.classes.E_305_puittaimestik_p.description.et,
+      pointImageSource
     ),
   },
 
@@ -243,7 +252,8 @@ export const etakPunktobjektid = [
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
-      etak_kirjeldus.classes.E_402_korgrajatis_p.description.et
+      etak_kirjeldus.classes.E_402_korgrajatis_p.description.et,
+      pointImageSource
     ),
   },
 
@@ -276,7 +286,8 @@ export const etakPunktobjektid = [
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
-      etak_kirjeldus.classes.E_403_muu_rajatis_p.description.et
+      etak_kirjeldus.classes.E_403_muu_rajatis_p.description.et,
+      pointImageSource
     ),
   },
 
@@ -302,7 +313,8 @@ export const etakPunktobjektid = [
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
-      etak_kirjeldus.classes.E_602_tehnopaigaldis_p.description.et
+      etak_kirjeldus.classes.E_602_tehnopaigaldis_p.description.et,
+      pointImageSource
     ),
   },
 ];
@@ -326,6 +338,7 @@ export const metadata = [
     headingData: generateHeadingData(
       POLY_GEOMETRY,
       etak_kirjeldus.classes.alusdokument.description.et,
+      pointImageSource,
       2
     ),
   },
@@ -346,6 +359,7 @@ export const derivedLayers = [
     headingData: generateHeadingData(
       POLY_GEOMETRY,
       "Vooluvete tervikkujud (põhiteljed) Eesti looduse infosüsteemis",
+      pointImageSource,
       2.5
     ),
   },

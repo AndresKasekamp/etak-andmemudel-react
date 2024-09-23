@@ -4,7 +4,7 @@ import {
   // etakPindobjektidOverlap,
   etakPunktobjektid,
   metadata,
-  derivedLayers
+  derivedLayers,
 } from "../data/featureClasses";
 import App from "../App";
 import { FullDataTable } from "../components/FullDataTable";
@@ -19,10 +19,7 @@ import polyImageSource from "../assets/polygon-hole-o.svg";
 
 const allDataTogether = [...etakPunktobjektid];
 
-const generateAllDataTogether = () => {
-
-}
-
+const generateAllDataTogether = () => {};
 
 const initPath = {
   path: "/",
@@ -36,18 +33,15 @@ const all2dPath = {
 
 const featureClassPath = (
   featureclasses: FeatureClass[],
-  dataTypeClass: string,
-  image: string
+  dataTypeClass: string
 ): FeatureClassPath[] => {
-
-  console.log("ETAK Punktobjektid", featureclasses)
+  console.log("ETAK Punktobjektid", featureclasses);
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `${dataTypeClass}/${fc.fcName}`,
     element: (
       <FullDataTable
         name={fc.fcName}
         rows={fc.elements}
-        image={image}
         domains={fc.domainTables}
         headingData={fc.headingData}
       />
@@ -60,9 +54,9 @@ const featureClassPath = (
 export const paths = () => [
   initPath,
   all2dPath,
-  ...featureClassPath(etakPunktobjektid, pointPath, pointImageSource),
-  ...featureClassPath(metadata, metadataPath, polyImageSource),
-  ...featureClassPath(derivedLayers, derivedPath, polyImageSource),
+  ...featureClassPath(etakPunktobjektid, pointPath),
+  ...featureClassPath(metadata, metadataPath),
+  ...featureClassPath(derivedLayers, derivedPath),
   // ...featureClassPath(etakJoonobjektid, "joonobjekt"),
   // ...featureClassPath(etakPindobjektidOverlap, "pindobjekt"),
   // ...featureClassPath(etakPindobjektidMain, "pindobjekt"),

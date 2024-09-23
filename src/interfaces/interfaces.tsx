@@ -51,6 +51,7 @@ export interface Row {
 export interface HeadingData {
   geomType: string;
   geomDimension: number;
+  image: string;
   estName: string;
 }
 
@@ -66,14 +67,14 @@ export interface AllTablesAndDomains {
 export interface MainTableProps {
   name: string;
   rows: Elements;
-  image: string;
+
   domains: Domain[];
   headingData: HeadingData;
 }
 
 export interface FieldsTableProps {
   rows: RowData[];
-  image: string;
+
   name: string;
   headingData: HeadingData;
 }

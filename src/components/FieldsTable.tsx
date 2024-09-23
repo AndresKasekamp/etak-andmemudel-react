@@ -26,8 +26,7 @@ import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" }
 // TODO alusdokument tuletistabel loogika üle vaadata
 export const FieldsTable = ({
   rows: updatedRows,
-  image: imageSrc,
-  name: tableName,
+  name,
   headingData,
 }: FieldsTableProps) => {
   const handleExportPDF = () => {
@@ -35,7 +34,7 @@ export const FieldsTable = ({
 
     // Add the title or any other header elements
     doc.setFontSize(18);
-    doc.text(tableName, 14, 22);
+    doc.text(name, 14, 22);
 
     // AutoTable function to generate the table
     autoTable(doc, {
@@ -50,10 +49,10 @@ export const FieldsTable = ({
     });
 
     // Save the PDF
-    doc.save(`${tableName}.pdf`);
+    doc.save(`${name}.pdf`);
   };
 
-  const url = `https://gsavalik.envir.ee/geoserver/wfs?typename=etak:${tableName.toLowerCase()}&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
+  const url = `https://gsavalik.envir.ee/geoserver/wfs?typename=etak:${name.toLowerCase()}&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
   return (
     <TableContainer
       component={Paper}
@@ -75,7 +74,7 @@ export const FieldsTable = ({
           }
           placement="top"
         >
-          <img src={imageSrc} alt="Multipoint" width={50} height={50} />
+          <img src={headingData.image} alt="Multipoint" width={50} height={50} />
         </Tooltip>
 
         <Tooltip
@@ -100,7 +99,7 @@ export const FieldsTable = ({
         </Tooltip>
 
         <Typography variant="h4" sx={{ marginLeft: 2 }}>
-          {tableName}
+          {name}
         </Typography>
 
         <Button
@@ -122,7 +121,7 @@ export const FieldsTable = ({
           {![
             etak_kirjeldus.classes.alusdokument.name,
             "vooluveed_kkr",
-          ].includes(tableName) ? (
+          ].includes(name) ? (
             "Andmestik: levituum"
           ) : (
             <br />
@@ -133,7 +132,7 @@ export const FieldsTable = ({
           <Typography sx={{ marginLeft: 2 }}>
             Objekte nähtusklassis:&nbsp;
           </Typography>
-          {tableName !== etak_kirjeldus.classes.alusdokument.name ? (
+          {name !== etak_kirjeldus.classes.alusdokument.name ? (
             <ObjectCount url={url}></ObjectCount>
           ) : (
             etak_kirjeldus.classes.alusdokument.count

@@ -10,7 +10,6 @@ import { generateTableFront } from "./formatHelpers/generateTableFront.ts";
 export const FullDataTable = ({
   name,
   rows,
-  image,
   domains,
   headingData,
 }: MainTableProps) => {
@@ -28,7 +27,6 @@ export const FullDataTable = ({
     >
       <FieldsTable
         rows={updatedRows}
-        image={image}
         name={name}
         headingData={headingData}
       ></FieldsTable>

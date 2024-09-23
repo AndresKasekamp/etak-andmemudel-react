@@ -625,11 +625,13 @@ export const generateField = (row: RowData) => {
 export const generateHeadingData = (
   geomType: string,
   estName: string,
+  image: string,
   geomDimension: number = 2.5
 ) => {
   const heading = {
     geomType,
     geomDimension,
+    image,
     estName,
   };
 
