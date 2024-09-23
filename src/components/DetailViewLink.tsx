@@ -1,14 +1,13 @@
-import PageviewIcon from '@mui/icons-material/Pageview';
+import PageviewIcon from "@mui/icons-material/Pageview";
 
 import { Button } from "@mui/material";
 
 import { Link } from "react-router-dom";
+import { DetailViewLinkProps } from "../interfaces/interfaces";
 
-// TODO vaja on tabeli nimi, conditional kas tegu on all/2d või mitte
-
-export const DetailViewLink = () => {
+export const DetailViewLink = ({ group, table }: DetailViewLinkProps) => {
   return (
-    <Link to="/">
+    <Link to={`/${group}/${table}`}>
       <Button
         variant="contained"
         size="medium"

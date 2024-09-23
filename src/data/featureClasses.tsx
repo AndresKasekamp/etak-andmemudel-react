@@ -27,10 +27,12 @@ import {
 
 import pointImageSource from "../assets/multipoint.svg"
 import polyImageSource from "../assets/polygon-hole-o.svg";
+import { pointPath, metadataPath, derivedPath } from "../pages/groupPaths.ts";
 
 export const etakPunktobjektid = [
   {
     fcName: etak_kirjeldus.classes.E_101_kivi_p.name,
+    groupName: pointPath,
     elements: {
       etak: [
         generateKood(sharedDomains.d0101.name),
@@ -68,6 +70,7 @@ export const etakPunktobjektid = [
 
   {
     fcName: etak_kirjeldus.classes.E_103_pinnavorm_p.name,
+    groupName: pointPath,
     elements: {
       etak: [
         generateKood(sharedDomains.d0103.name),
@@ -101,6 +104,7 @@ export const etakPunktobjektid = [
 
   {
     fcName: etak_kirjeldus.classes.E_202_seisuveekogu_p.name,
+    groupName: pointPath,
     elements: {
       etak: [
         generateKood(sharedDomains.d0202.name),
@@ -134,6 +138,7 @@ export const etakPunktobjektid = [
 
   {
     fcName: etak_kirjeldus.classes.E_301_muu_kolvik_p.name,
+    groupName: pointPath,
     elements: {
       etak: [
         generateKood(sharedDomains.d0301.name),
@@ -165,6 +170,7 @@ export const etakPunktobjektid = [
 
   {
     fcName: etak_kirjeldus.classes.E_305_puittaimestik_p.name,
+    groupName: pointPath,
     elements: {
       etak: [
         generateKood(sharedDomains.d0305.name),
@@ -197,6 +203,7 @@ export const etakPunktobjektid = [
 
   {
     fcName: etak_kirjeldus.classes.E_402_korgrajatis_p.name,
+    groupName: pointPath,
     elements: {
       etak: [
         generateKood(sharedDomains.d0402.name),
@@ -260,6 +267,7 @@ export const etakPunktobjektid = [
 
   {
     fcName: etak_kirjeldus.classes.E_403_muu_rajatis_p.name,
+    groupName: pointPath,
     elements: {
       etak: [
         generateKood(sharedDomains.d0403.name),
@@ -294,6 +302,7 @@ export const etakPunktobjektid = [
 
   {
     fcName: etak_kirjeldus.classes.E_602_tehnopaigaldis_p.name,
+    groupName: pointPath,
     elements: {
       etak: [
         generateKood(sharedDomains.d0602.name),
@@ -327,6 +336,7 @@ export const etakPindobjektidOverlap = [];
 export const metadata = [
   {
     fcName: etak_kirjeldus.classes.alusdokument.name,
+    groupName: metadataPath,
     elements: {
       etak: generateMetadataFields(),
       register: []
@@ -348,6 +358,7 @@ export const metadata = [
 export const derivedLayers = [
   {
     fcName: "vooluveed_kkr",
+    groupName: derivedPath,
     elements: {
       etak: generatedDerivedDataFields(),
       register: [

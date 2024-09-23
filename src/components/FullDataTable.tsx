@@ -9,6 +9,7 @@ import { generateTableFront } from "./formatHelpers/generateTableFront.ts";
 
 export const FullDataTable = ({
   name,
+  group,
   rows,
   domains,
   headingData,
@@ -27,6 +28,7 @@ export const FullDataTable = ({
       <FieldsTable
         rows={updatedRows}
         name={name}
+        group={group}
         headingData={headingData}
       ></FieldsTable>
       {/* {fullPageDesign ? null : <DomainTableMain domains={domains}></DomainTableMain>} */}

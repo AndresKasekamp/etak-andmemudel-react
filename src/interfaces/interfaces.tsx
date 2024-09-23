@@ -12,13 +12,13 @@ export interface RowData {
 
 export interface FeatureClass {
   fcName: string;
+  groupName: string,
   elements: Elements;
   domainTables: Domain[];
   headingData: HeadingData;
 }
 // Define types for the parameters and the return value
 export interface FeatureClassPath {
-  path: string;
   element: React.ReactElement;
 }
 
@@ -67,14 +67,14 @@ export interface AllTablesAndDomains {
 export interface MainTableProps {
   name: string;
   rows: Elements;
-
+  group: string,
   domains: Domain[];
   headingData: HeadingData;
 }
 
 export interface FieldsTableProps {
   rows: RowData[];
-
+  group: string,
   name: string;
   headingData: HeadingData;
 }
@@ -102,4 +102,9 @@ export interface ObjectCountProps {
 export interface RegisterHyperLinkProps {
   link: string;
   desc: string;
+}
+
+export interface DetailViewLinkProps {
+  group: string;
+  table: string;
 }

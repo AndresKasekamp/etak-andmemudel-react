@@ -9,7 +9,6 @@ import {
 import App from "../App";
 import { FullDataTable } from "../components/FullDataTable";
 import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
-import { pointPath, metadataPath, derivedPath } from "./groupPaths";
 import { OnePager2d } from "../components/OnePager2d";
 
 const allDataTogether = [...metadata, ...etakPunktobjektid, ...derivedLayers];
@@ -25,15 +24,15 @@ const all2dPath = {
 };
 
 const featureClassPath = (
-  featureclasses: FeatureClass[],
-  dataTypeClass: string
+  featureclasses: FeatureClass[]
 ): FeatureClassPath[] => {
   console.log("ETAK Punktobjektid", featureclasses);
   const featureclassPaths = featureclasses.map((fc) => ({
-    path: `${dataTypeClass}/${fc.fcName}`,
+    path: `${fc.groupName}/${fc.fcName}`,
     element: (
       <FullDataTable
         name={fc.fcName}
+        group={fc.groupName}
         rows={fc.elements}
         domains={fc.domainTables}
         headingData={fc.headingData}
@@ -47,9 +46,9 @@ const featureClassPath = (
 export const paths = () => [
   initPath,
   all2dPath,
-  ...featureClassPath(etakPunktobjektid, pointPath),
-  ...featureClassPath(metadata, metadataPath),
-  ...featureClassPath(derivedLayers, derivedPath),
+  ...featureClassPath(etakPunktobjektid),
+  ...featureClassPath(metadata),
+  ...featureClassPath(derivedLayers),
   // ...featureClassPath(etakJoonobjektid, "joonobjekt"),
   // ...featureClassPath(etakPindobjektidOverlap, "pindobjekt"),
   // ...featureClassPath(etakPindobjektidMain, "pindobjekt"),

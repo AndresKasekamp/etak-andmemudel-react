@@ -25,6 +25,7 @@ export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
         <FieldsTable
           key={idx}
           name={ad.fcName}
+          group={ad.groupName}
           rows={generateTableFront(ad.headingData, ad.elements)}
           headingData={ad.headingData}
         ></FieldsTable>

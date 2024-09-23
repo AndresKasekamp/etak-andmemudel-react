@@ -30,6 +30,7 @@ import { getTableName } from "../utils/utils.tsx";
 export const FieldsTable = ({
   rows: updatedRows,
   name,
+  group,
   headingData,
 }: FieldsTableProps) => {
   const handleExportPDF = () => {
@@ -61,6 +62,7 @@ export const FieldsTable = ({
 
   const pathName = getTableName(location);
 
+  console.log("Group fieldstable", group)
   return (
     <TableContainer
       component={Paper}
@@ -156,7 +158,7 @@ export const FieldsTable = ({
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         {pathName === "2d" ? (
           <caption>
-            <DetailViewLink />
+            <DetailViewLink group={group} table={name} />
           </caption>
         ) : null}
 
