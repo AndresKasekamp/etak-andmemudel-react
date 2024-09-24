@@ -6,7 +6,12 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { generateTableFront } from "./generateTableFront";
 import { AllTablesAndDomains } from "../../interfaces/interfaces";
 
-export const ExportAllPDF = ( { allTablesAndDomains }: AllTablesAndDomains ) => {
+
+// TODO viimane leht jääb tühjaks praegu selle lahendusega
+export const ExportAllPDF = ({
+  allTablesAndDomains,
+  domainsMerged,
+}: AllTablesAndDomains) => {
   const handleExportPDF = () => {
     const doc = new jsPDF();
 
@@ -14,8 +19,7 @@ export const ExportAllPDF = ( { allTablesAndDomains }: AllTablesAndDomains ) => 
     doc.setFontSize(18);
 
     allTablesAndDomains.map((rows) => {
-
-      const cleanRows = generateTableFront(rows.headingData, rows.elements)
+      const cleanRows = generateTableFront(rows.headingData, rows.elements);
       doc.text(rows.fcName, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {
@@ -32,6 +36,18 @@ export const ExportAllPDF = ( { allTablesAndDomains }: AllTablesAndDomains ) => 
       doc.addPage();
     });
 
+    domainsMerged.map((domain) => {
+      doc.text(domain.name, 14, 22);
+      // AutoTable function to generate the table
+      autoTable(doc, {
+        head: [["Kood", "Nimetus"]],
+        body: domain.elements.map((row) => [row.kood, row.nimetus]),
+        startY: 30,
+      });
+
+      doc.addPage();
+    });
+
     // Save the PDF
     doc.save("etak-andmemudel-koos.pdf");
   };
@@ -41,7 +57,7 @@ export const ExportAllPDF = ( { allTablesAndDomains }: AllTablesAndDomains ) => 
       variant="contained"
       color="primary"
       startIcon={<FileDownloadIcon />}
-      sx={{marginTop: 1}}
+      sx={{ marginTop: 1 }}
       onClick={handleExportPDF}
     >
       Lae alla kõik tabelid

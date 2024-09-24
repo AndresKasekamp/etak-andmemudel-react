@@ -22,7 +22,7 @@ export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
         maxWidth: "100%",
       }}
     >
-      <ExportAllPDF allTablesAndDomains={allTablesAndDomains} />
+      <ExportAllPDF allTablesAndDomains={allTablesAndDomains} domainsMerged={domainsMerged} />
 
       {allTablesAndDomains.map((ad, idx) => (
         <FieldsTable
