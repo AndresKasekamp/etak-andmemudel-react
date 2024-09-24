@@ -65,6 +65,10 @@ export interface AllTablesAndDomains {
   domainsMerged: Domain[];
 }
 
+export interface AllTablesAndDomains1 {
+  allTablesAndDomains: FeatureClass[];
+}
+
 export interface MainTableProps {
   name: string;
   rows: Elements;

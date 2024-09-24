@@ -1,4 +1,4 @@
-import { AllTablesAndDomains } from "../interfaces/interfaces.tsx";
+import { AllTablesAndDomains1 } from "../interfaces/interfaces.tsx";
 
 import { generateTableFront } from "./formatHelpers/generateTableFront.ts";
 import { FieldsTable } from "./FieldsTable.tsx";
@@ -7,7 +7,7 @@ import { generateDomainsTogether } from "./formatHelpers/generateTableFront.ts";
 import { ExportAllPDF } from "./formatHelpers/ExportAllPDF.tsx";
 // TODO domeenid on vaja settida ja panna tähestiku vms järjekorda
 
-export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
+export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains1) => {
   console.log(allTablesAndDomains);
 
   // Manipulating domains into singular
@@ -22,7 +22,10 @@ export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
         maxWidth: "100%",
       }}
     >
-      <ExportAllPDF allTablesAndDomains={allTablesAndDomains} domainsMerged={domainsMerged} />
+      <ExportAllPDF
+        allTablesAndDomains={allTablesAndDomains}
+        domainsMerged={domainsMerged}
+      />
 
       {allTablesAndDomains.map((ad, idx) => (
         <FieldsTable
