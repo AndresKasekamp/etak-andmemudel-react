@@ -33,7 +33,7 @@ export const ExportAllPDF = ( { allTablesAndDomains }: AllTablesAndDomains ) => 
     });
 
     // Save the PDF
-    doc.save("etak-koos.pdf");
+    doc.save("etak-andmemudel-koos.pdf");
   };
 
   return (
