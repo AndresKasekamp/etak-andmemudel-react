@@ -32,15 +32,15 @@ export const FieldsTable = ({
   name,
   group,
   headingData,
+  domains,
 }: FieldsTableProps) => {
   const handleExportPDF = () => {
     const doc = new jsPDF();
 
-    // Add the title or any other header elements
     doc.setFontSize(18);
     doc.text(name, 14, 22);
 
-    // AutoTable function to generate the table
+    // AutoTable function to generate the main table logic
     autoTable(doc, {
       head: [["Välja nimi", "Andmetüüp", "Domeen", "Kirjeldus"]],
       body: rows.map((row) => [
@@ -52,7 +52,17 @@ export const FieldsTable = ({
       startY: 30,
     });
 
-
+    // Domain added to pdf
+    domains.map((domain) => {
+      doc.addPage();
+      doc.text(domain.name, 14, 22);
+      // AutoTable function to generate the table
+      autoTable(doc, {
+        head: [["Kood", "Nimetus"]],
+        body: domain.elements.map((row) => [row.kood, row.nimetus]),
+        startY: 30,
+      });
+    });
 
     // Save the PDF
     doc.save(`${name}.pdf`);

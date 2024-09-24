@@ -30,8 +30,8 @@ export const FullDataTable = ({
         name={name}
         group={group}
         headingData={headingData}
+        domains={domains}
       ></FieldsTable>
-      {/* {fullPageDesign ? null : <DomainTableMain domains={domains}></DomainTableMain>} */}
       <DomainTableMain domains={domains}></DomainTableMain>
     </div>
   );

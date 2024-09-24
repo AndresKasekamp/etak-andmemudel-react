@@ -77,6 +77,7 @@ export interface FieldsTableProps {
   group: string,
   name: string;
   headingData: HeadingData;
+  domains: Domain[];
 }
 
 export interface DescRowData {
