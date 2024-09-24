@@ -26,7 +26,6 @@ import { DetailViewLink } from "./DetailViewLink.tsx";
 import { useLocation, Location } from "react-router-dom";
 import { getTableName } from "../utils/utils.tsx";
 
-// TODO alusdokument tuletistabel loogika üle vaadata
 export const FieldsTable = ({
   rows,
   name,

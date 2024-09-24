@@ -126,7 +126,7 @@ export const etakPunktobjektid = [
     domainTables: [
       sharedDomains.vajalikkus,
       sharedDomains.d0202,
-      etakPunktobjektidDomains.pinnavormP_tyyp,
+      etakPunktobjektidDomains.seisuveekoguP_tyyp,
     ],
 
     headingData: generateHeadingData(

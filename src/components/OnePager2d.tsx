@@ -23,7 +23,7 @@ export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
       }}
     >
       <ExportAllPDF allTablesAndDomains={allTablesAndDomains} />
-      
+
       {allTablesAndDomains.map((ad, idx) => (
         <FieldsTable
           key={idx}
@@ -31,6 +31,7 @@ export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
           group={ad.groupName}
           rows={generateTableFront(ad.headingData, ad.elements)}
           headingData={ad.headingData}
+          domains={ad.domainTables.sort((a, b) => a.name.localeCompare(b.name))}
         ></FieldsTable>
       ))}
       <DomainTableMain domains={domainsMerged}></DomainTableMain>

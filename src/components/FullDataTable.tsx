@@ -1,4 +1,3 @@
-
 import { MainTableProps } from "../interfaces/interfaces.tsx";
 
 import { FieldsTable } from "./FieldsTable.tsx";
@@ -14,8 +13,10 @@ export const FullDataTable = ({
   domains,
   headingData,
 }: MainTableProps) => {
-
+  // Formatting domains and rows
+  domains.sort((a, b) => a.name.localeCompare(b.name));
   const updatedRows = generateTableFront(headingData, rows);
+
   return (
     <div
       style={{
