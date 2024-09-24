@@ -28,7 +28,7 @@ function App() {
         <Box
           display="flex"
           flexDirection="row"
-          justifyContent="space-between" // Spread items apart
+          justifyContent="space-between"
           alignItems="center"
           sx={{ textAlign: "center", color: "#32774e" }}
         >

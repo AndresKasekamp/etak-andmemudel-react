@@ -41,7 +41,7 @@ export const ExportAllPDF = ( { allTablesAndDomains }: AllTablesAndDomains ) => 
       variant="contained"
       color="primary"
       startIcon={<FileDownloadIcon />}
-      sx={{marginTop: "5px"}}
+      sx={{marginTop: 1}}
       onClick={handleExportPDF}
     >
       Lae alla kõik tabelid

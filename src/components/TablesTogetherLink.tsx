@@ -1,9 +1,12 @@
-import ViewStreamIcon from '@mui/icons-material/ViewStream';
+import ViewStreamIcon from "@mui/icons-material/ViewStream";
 import { Button } from "@mui/material";
 
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "@mui/material";
 
 export const TablesTogetherLink = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   return (
     <Link to="/all/2d">
       <Button
@@ -19,7 +22,7 @@ export const TablesTogetherLink = () => {
           },
         }}
       >
-        Andmed Ühel lehel
+        {isMobile ? "" : "Andmed Ühel lehel"}
       </Button>
     </Link>
   );
