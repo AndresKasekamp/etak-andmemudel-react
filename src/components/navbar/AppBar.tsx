@@ -6,8 +6,12 @@ import HomeLink from "./HomeLink";
 import Link3D from "./Link3D";
 import { AppBarColor } from "../../data/colors";
 import LastUpdated from "./LastUpdated";
+import { useMediaQuery } from '@mui/material';
 
 export default function EtakAppBar() {
+
+  const isMobile = useMediaQuery('(max-width:600px)');
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="sticky" sx={{ backgroundColor: AppBarColor }}>
@@ -35,7 +39,7 @@ export default function EtakAppBar() {
             component="div"
             sx={{ textAlign: "center"}}
           >
-            Eesti topograafia andmekogu tuumandmete andmemudel
+            {isMobile ? 'ETAK' : 'Eesti topograafia andmekogu tuumandmete andmemudel'}
           </Typography>
           </Box>
 
