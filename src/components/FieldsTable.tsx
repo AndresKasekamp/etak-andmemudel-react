@@ -25,6 +25,7 @@ import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" }
 import { DetailViewLink } from "./DetailViewLink.tsx";
 import { useLocation, Location } from "react-router-dom";
 import { getTableName } from "../utils/utils.tsx";
+import { generateWfsUrl } from "../utils/wfsRequest.ts";
 
 export const FieldsTable = ({
   rows,
@@ -67,7 +68,16 @@ export const FieldsTable = ({
     doc.save(`${name}.pdf`);
   };
 
-  const url = `https://gsavalik.envir.ee/geoserver/wfs?typename=etak:${name.toLowerCase()}&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
+  const getFeatureCount = () => {
+    switch (name) {
+      case etak_kirjeldus.classes.alusdokument.name:
+        return etak_kirjeldus.classes.alusdokument.count
+      case etak_kirjeldus.classes.vooluveed_kkr.name:
+        return <ObjectCount url={generateWfsUrl(name, true)}></ObjectCount>
+      default:
+        return <ObjectCount url={generateWfsUrl(name)}></ObjectCount>
+    }
+  }
 
   const location: Location = useLocation();
 
@@ -157,11 +167,7 @@ export const FieldsTable = ({
           <Typography sx={{ marginLeft: 2 }}>
             Objekte nähtusklassis:&nbsp;
           </Typography>
-          {name !== etak_kirjeldus.classes.alusdokument.name ? (
-            <ObjectCount url={url}></ObjectCount>
-          ) : (
-            etak_kirjeldus.classes.alusdokument.count
-          )}
+          {getFeatureCount()}
         </div>
       </div>
 

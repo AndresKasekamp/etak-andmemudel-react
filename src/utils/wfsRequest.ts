@@ -1,6 +1,19 @@
 import { ObjectCountResponse } from "../interfaces/interfaces";
 
-export async function getObjectCount(url: string): Promise<void> {
+// TODO tuletiskihtidega on vaja natuke erinevalt lahendada
+export const generateWfsUrl = (
+  name: string,
+  derived: boolean = false
+): string => {
+  if (derived) {
+    return `https://gsavalik.envir.ee/geoserver/etak_tuletis/wfs?typename=etak_tuletis:eelis_tervikvooluveed_pohiteljed&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
+  }
+  return `https://gsavalik.envir.ee/geoserver/wfs?typename=etak:${name.toLowerCase()}&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
+};
+
+export async function getObjectCount(
+  url: string
+): Promise<ObjectCountResponse> {
   try {
     // Perform the API request
     const response = await fetch(url);
@@ -13,10 +26,11 @@ export async function getObjectCount(url: string): Promise<void> {
     // Parse the response as JSON
     const data: ObjectCountResponse = await response.json();
 
-    // @ts-ignore
     return data;
   } catch (error) {
     // Handle errors, such as network issues or JSON parsing errors
-    console.error("Error fetching data:", error);
+    console.error("Failed to fetch data:", error);
+
+    throw error;
   }
 }
