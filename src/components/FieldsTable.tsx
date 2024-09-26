@@ -136,6 +136,7 @@ export const FieldsTable = ({
         >
           <Box
             sx={{
+              marginLeft: 1,
               marginRight: 1,
               p: 0.5,
               border: "3px solid black",
@@ -147,7 +148,7 @@ export const FieldsTable = ({
           </Box>
         </Tooltip>
 
-        <Typography variant="h4" sx={{ marginLeft: 2, marginRight: 1 }}>
+        <Typography variant="h4" sx={{ marginRight: 1 }}>
           {name}
         </Typography>
 

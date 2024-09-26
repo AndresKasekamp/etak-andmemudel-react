@@ -6,7 +6,7 @@ import etak_kirjeldus from "./data/etak_kirjeldus.json" assert { type: "json" };
 import { FrontPageIndexTable } from "./components/FrontPageIndexTable.tsx";
 import {
   etakPunktobjektid,
-  // etakJoonobjektid,
+  etakJoonobjektid,
   // etakPindobjektidMain,
   // etakPindobjektidOverlap,
   metadata,
@@ -67,8 +67,7 @@ function App() {
           />
           <FrontPageIndexTable
             objectName={etak_kirjeldus.groups.lines.name.et}
-            // itemNames={etakJoonobjektid}
-            itemNames={etakPunktobjektid}
+            itemNames={etakJoonobjektid}
             dataTypeClass={linePath}
           />
 

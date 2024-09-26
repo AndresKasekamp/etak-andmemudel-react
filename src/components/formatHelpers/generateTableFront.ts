@@ -3,9 +3,13 @@ import {
   etakMetaCategoryFields,
   esriCategoryFields,
 } from "../../data/constantFields.tsx";
-import { Elements, HeadingData, FeatureClass } from "../../interfaces/interfaces.tsx";
+import {
+  Elements,
+  HeadingData,
+  FeatureClass,
+} from "../../interfaces/interfaces.tsx";
 
-import { POINT_GEOMETRY } from "../../data/dataTypes.ts";
+import { POINT_GEOMETRY, LINE_GEOMETRY } from "../../data/dataTypes.ts";
 
 export const generateTableFront = (
   headingData: HeadingData,
@@ -14,7 +18,7 @@ export const generateTableFront = (
   const { etak, register } = addedRows;
   const etakRows = etak.map((row) => row.row);
   const registerRows = register.map((row) => row.row);
-  // TODO siin on vaja probleeme lahendada skaleeruvusega
+  // TODO siin on vaja probleeme lahendada skaleeruvusega (esimene blokk)
   if (headingData.estName === "Alusdokument") {
     return etakRows;
   } else if (
@@ -33,10 +37,16 @@ export const generateTableFront = (
 
   let updatedRows = [...etakFields, ...etakRows, ...esriFields];
 
+  // TODO siin on vaja probleeme lahendada skaleeruvusega (teine blokk)
   if (headingData.geomType === POINT_GEOMETRY) {
     const notPointShapeFields = [shape_Length.name.name, shape_Area.name.name];
     updatedRows = updatedRows.filter(
       (row) => !notPointShapeFields.includes(row.name.name)
+    );
+  } else if (headingData.geomType === LINE_GEOMETRY) {
+    const notJoonShapeFields = [shape_Area.name.name];
+    updatedRows = updatedRows.filter(
+      (row) => !notJoonShapeFields.includes(row.name.name)
     );
   }
 
@@ -45,14 +55,16 @@ export const generateTableFront = (
   return updatedRows;
 };
 
-export const generateDomainsTogether = ( allTablesAndDomains: FeatureClass[]) => {
-    // Manipulating domains into singular
-    const domainsMergedSet = new Set(
-      allTablesAndDomains.map((obj) => obj.domainTables).flat()
-    );
-  
-    const domainsMerged = [...domainsMergedSet];
-    domainsMerged.sort((a, b) => a.name.localeCompare(b.name));
+export const generateDomainsTogether = (
+  allTablesAndDomains: FeatureClass[]
+) => {
+  // Manipulating domains into singular
+  const domainsMergedSet = new Set(
+    allTablesAndDomains.map((obj) => obj.domainTables).flat()
+  );
 
-    return domainsMerged
-}
+  const domainsMerged = [...domainsMergedSet];
+  domainsMerged.sort((a, b) => a.name.localeCompare(b.name));
+
+  return domainsMerged;
+};

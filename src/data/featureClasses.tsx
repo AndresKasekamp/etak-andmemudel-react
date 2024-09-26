@@ -11,6 +11,7 @@ import {
 } from "./constantFields.tsx";
 import {
   etakPunktobjektidDomains,
+  etakJoonobjektidDomains,
   metadataDomains,
   sharedDomains,
 } from "./domains.tsx";
@@ -21,13 +22,21 @@ import {
   INTEGER,
   POINT_GEOMETRY,
   POLY_GEOMETRY,
+  LINE_GEOMETRY
 } from "./dataTypes.ts";
 
 // import { pointImageSource } from "./imageSources.tsx";
 
-import pointImageSource from "../assets/multipoint.svg"
+import pointImageSource from "../assets/multipoint.svg";
 import polyImageSource from "../assets/polygon-hole-o.svg";
-import { pointPath, metadataPath, derivedPath } from "../pages/groupPaths.ts";
+import lineImageSource from "../assets/polyline-pt.svg";
+
+import {
+  pointPath,
+  metadataPath,
+  derivedPath,
+  linePath,
+} from "../pages/groupPaths.ts";
 
 export const etakPunktobjektid = [
   {
@@ -329,7 +338,51 @@ export const etakPunktobjektid = [
   },
 ];
 
-export const etakJoonobjektid = [];
+export const etakJoonobjektid = [
+  {
+    fcName: etak_kirjeldus.classes.E_102_nolv_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0102.name),
+        generateTyyp(etakJoonobjektidDomains.nolv_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_102_nolv_j.fields.tyyp.description.et,
+          hyperlink: null,
+        }),
+
+        {
+          row: createData(
+            { name: "kaldaastang", category: MainCategory },
+            SHORT_INTEGER,
+            sharedDomains.toevaartus.name,
+            {
+              desc: etak_kirjeldus.classes.E_102_nolv_j.fields.kaldaastang
+                .description.et,
+              hyperlink: null,
+            }
+          ),
+        },
+      ],
+
+      register: [
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0102,
+      etakJoonobjektidDomains.nolv_tyyp,
+      sharedDomains.vajalikkus,
+      sharedDomains.toevaartus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_102_nolv_j.description.et,
+      lineImageSource
+    ),
+  },
+];
 
 export const etakPindobjektidOverlap = [];
 
@@ -339,7 +392,7 @@ export const metadata = [
     groupName: metadataPath,
     elements: {
       etak: generateMetadataFields(),
-      register: []
+      register: [],
     },
     domainTables: [
       metadataDomains.alusdokument_tyyp,
