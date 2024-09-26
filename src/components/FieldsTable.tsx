@@ -71,13 +71,27 @@ export const FieldsTable = ({
   const getFeatureCount = () => {
     switch (name) {
       case etak_kirjeldus.classes.alusdokument.name:
-        return etak_kirjeldus.classes.alusdokument.count
+        return etak_kirjeldus.classes.alusdokument.count;
       case etak_kirjeldus.classes.vooluveed_kkr.name:
-        return <ObjectCount url={generateWfsUrl(name, true)}></ObjectCount>
+        return <ObjectCount url={generateWfsUrl(name, true)}></ObjectCount>;
       default:
-        return <ObjectCount url={generateWfsUrl(name)}></ObjectCount>
+        return <ObjectCount url={generateWfsUrl(name)}></ObjectCount>;
     }
-  }
+  };
+
+  const isLevituum = () => {
+    const nonLevituum = [
+      etak_kirjeldus.classes.alusdokument.name,
+      etak_kirjeldus.classes.vooluveed_kkr.name,
+      etak_kirjeldus.classes.seisuveed_kkr,
+    ];
+
+    if (nonLevituum.includes(name)) {
+      return <br />;
+    }
+
+    return "Andmestik: levituum";
+  };
 
   const location: Location = useLocation();
 
@@ -152,16 +166,7 @@ export const FieldsTable = ({
           {headingData.estName}
         </Typography>
 
-        <Typography sx={{ marginLeft: 2 }}>
-          {![
-            etak_kirjeldus.classes.alusdokument.name,
-            "vooluveed_kkr",
-          ].includes(name) ? (
-            "Andmestik: levituum"
-          ) : (
-            <br />
-          )}
-        </Typography>
+        <Typography sx={{ marginLeft: 2 }}>{isLevituum()}</Typography>
 
         <div style={{ display: "flex" }}>
           <Typography sx={{ marginLeft: 2 }}>
