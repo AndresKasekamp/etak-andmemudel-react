@@ -7,7 +7,7 @@ import { FrontPageIndexTable } from "./components/FrontPageIndexTable.tsx";
 import {
   etakPunktobjektid,
   etakJoonobjektid,
-  // etakPindobjektidMain,
+  etakPindobjektidMain,
   etakPindobjektidOverlap,
   metadata,
   derivedLayers,
@@ -59,7 +59,6 @@ function App() {
           <FrontPageIndexTable
             objectName={etak_kirjeldus.groups.meta.name.et}
             itemNames={metadata}
-            // itemNames={etakPunktobjektid}
             dataTypeClass={metadataPath}
           />
           <FrontPageIndexTable
@@ -94,8 +93,7 @@ function App() {
 
             <FrontPageIndexTable
               objectName={etak_kirjeldus.groups.land_cover.name.et}
-              // itemNames={etakPindobjektidMain}
-              itemNames={etakPunktobjektid}
+              itemNames={etakPindobjektidMain}
               dataTypeClass={polyPath}
             />
             <FrontPageIndexTable

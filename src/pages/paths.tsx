@@ -1,6 +1,6 @@
 import {
   etakJoonobjektid,
-  // etakPindobjektidMain,
+  etakPindobjektidMain,
   etakPindobjektidOverlap,
   etakPunktobjektid,
   metadata,
@@ -17,6 +17,7 @@ const allDataTogether = [
   ...etakPunktobjektid,
   ...etakJoonobjektid,
   ...etakPindobjektidOverlap,
+  ...etakPindobjektidMain,
   ...derivedLayers,
 ];
 
@@ -55,6 +56,7 @@ export const paths = () => [
   ...featureClassPath(etakPunktobjektid),
   ...featureClassPath(etakJoonobjektid),
   ...featureClassPath(etakPindobjektidOverlap),
+  ...featureClassPath(etakPindobjektidMain),
   ...featureClassPath(metadata),
   ...featureClassPath(derivedLayers),
 

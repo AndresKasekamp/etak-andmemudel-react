@@ -13,11 +13,12 @@ import {
 import {
   etakPunktobjektidDomains,
   etakPindobjektidOverlapDomains,
+  etakPindobjektidMainDomains,
   etakJoonobjektidDomains,
   metadataDomains,
   sharedDomains,
 } from "./domains.tsx";
-import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
+
 import { MainCategory } from "./colors.ts";
 import {
   SHORT_INTEGER,
@@ -26,8 +27,6 @@ import {
   POLY_GEOMETRY,
   LINE_GEOMETRY,
 } from "./dataTypes.ts";
-
-// import { pointImageSource } from "./imageSources.tsx";
 
 import pointImageSource from "../assets/multipoint.svg";
 import polyImageSource from "../assets/polygon-hole-o.svg";
@@ -40,6 +39,8 @@ import {
   linePath,
   polyPath,
 } from "../pages/groupPaths.ts";
+
+import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 
 export const etakPunktobjektid = [
   {
@@ -989,18 +990,21 @@ export const etakPindobjektidOverlap = [
     elements: {
       etak: [
         generateKood(sharedDomains.d0505.name),
-        generateTyyp(etakPindobjektidOverlapDomains.liikluskorralduslik_rajatisKA_tyyp.name, {
-          desc: etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_ka.fields.tyyp
-            .description.et,
-          hyperlink: null,
-        }),
+        generateTyyp(
+          etakPindobjektidOverlapDomains.liikluskorralduslik_rajatisKA_tyyp
+            .name,
+          {
+            desc: etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_ka
+              .fields.tyyp.description.et,
+            hyperlink: null,
+          }
+        ),
       ],
 
       register: [
         generateField(otherRegisterSources.kmr_id),
         generateField(otherRegisterSources.knr_id),
         generateField(otherRegisterSources.nimetus),
-
       ],
     },
 
@@ -1011,7 +1015,339 @@ export const etakPindobjektidOverlap = [
     ],
     headingData: generateHeadingData(
       POLY_GEOMETRY,
-      etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_ka.description.et,
+      etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_ka.description
+        .et,
+      polyImageSource
+    ),
+  },
+];
+
+export const etakPindobjektidMain = [
+  {
+    fcName: etak_kirjeldus.classes.E_201_meri_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [generateKood(sharedDomains.d0201.name)],
+
+      register: [],
+    },
+
+    domainTables: [sharedDomains.d0201, sharedDomains.vajalikkus],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_201_meri_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_202_seisuveekogu_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0202.name),
+        generateTyyp(etakPindobjektidMainDomains.seisuveekogu_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_202_seisuveekogu_a.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+
+        {
+          row: createData(
+            { name: "kpo_seos", category: MainCategory },
+            SHORT_INTEGER,
+            etakPindobjektidMainDomains.seisuveekogu_kpo.name,
+            {
+              desc: "Seisuveekogu käsitlus",
+              hyperlink: null,
+            }
+          ),
+        },
+      ],
+
+      register: [
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+        generateField(otherRegisterSources.kkr_kood),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0202,
+      sharedDomains.vajalikkus,
+      etakPindobjektidMainDomains.seisuveekogu_tyyp,
+      etakPindobjektidMainDomains.seisuveekogu_kpo,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_202_seisuveekogu_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_203_vooluveekogu_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [generateKood(sharedDomains.d0203.name)],
+
+      register: [
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+        generateField(otherRegisterSources.kkr_kood),
+        generateField(otherRegisterSources.mps_id),
+      ],
+    },
+
+    domainTables: [sharedDomains.d0203, sharedDomains.vajalikkus],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_203_vooluveekogu_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_301_muu_kolvik_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0301.name),
+        generateTyyp(etakPindobjektidMainDomains.muu_kolvikA_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_301_muu_kolvik_a.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0301,
+      sharedDomains.vajalikkus,
+      etakPindobjektidMainDomains.muu_kolvikA_tyyp,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_301_muu_kolvik_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_302_ou_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0302.name),
+        generateTyyp(etakPindobjektidMainDomains.ou_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_302_ou_a.fields.tyyp.description.et,
+          hyperlink: null,
+        }),
+
+        {
+          row: createData(
+            { name: "kasutus", category: MainCategory },
+            SHORT_INTEGER,
+            etakPindobjektidMainDomains.ou_kasutus.name,
+            {
+              desc: "Tootmisõue erijuht",
+              hyperlink: null,
+            }
+          ),
+        },
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0302,
+      sharedDomains.vajalikkus,
+      etakPindobjektidMainDomains.ou_tyyp,
+      etakPindobjektidMainDomains.ou_kasutus,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_302_ou_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_303_haritav_maa_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0303.name),
+        generateTyyp(etakPindobjektidMainDomains.haritav_maa_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_303_haritav_maa_a.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+
+        generateToevaartus("puis", {
+          desc: "Puittaimestiku olemasolu",
+          hyperlink: null,
+        }),
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0303,
+      sharedDomains.vajalikkus,
+      sharedDomains.toevaartus,
+      etakPindobjektidMainDomains.haritav_maa_tyyp,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_303_haritav_maa_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_304_lage_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0304.name),
+        generateTyyp(etakPindobjektidMainDomains.lage_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_304_lage_a.fields.tyyp.description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0304,
+      sharedDomains.vajalikkus,
+      etakPindobjektidMainDomains.lage_tyyp,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_304_lage_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_305_puittaimestik_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0305.name),
+        generateTyyp(etakPindobjektidMainDomains.puittaimestikA_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_305_puittaimestik_a.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0305,
+      sharedDomains.vajalikkus,
+      etakPindobjektidMainDomains.puittaimestikA_tyyp,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_305_puittaimestik_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_306_margala_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0306.name),
+        generateTyyp(etakPindobjektidMainDomains.margalaA_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_306_margala_a.fields.tyyp.description
+            .et,
+          hyperlink: null,
+        }),
+        generateToevaartus("puis", {
+          desc: "Puittaimestiku olemasolu",
+          hyperlink: null,
+        }),
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0306,
+      sharedDomains.vajalikkus,
+      sharedDomains.toevaartus,
+      etakPindobjektidMainDomains.margalaA_tyyp,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_306_margala_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_307_turbavali_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0307.name),
+        generateTyyp(etakPindobjektidMainDomains.turbavali_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_307_turbavali_a.fields.tyyp.description
+            .et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0307,
+      sharedDomains.vajalikkus,
+      etakPindobjektidMainDomains.turbavali_tyyp,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_307_turbavali_a.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_501_tee_a.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0501.name),
+        generateTyyp(etakPindobjektidMainDomains.teeA_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_501_tee_a.fields.tyyp.description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0501,
+      sharedDomains.vajalikkus,
+      etakPindobjektidMainDomains.teeA_tyyp,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_501_tee_a.description.et,
       polyImageSource
     ),
   },
