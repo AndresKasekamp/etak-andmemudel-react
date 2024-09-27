@@ -5,6 +5,17 @@ const createDataDomains = (kood: number, nimetus: string) => {
   return { kood, nimetus };
 };
 
+// Function to create a domain object
+const createDomain = (desc: string, code: number) => {
+  const name = "0".concat(code.toString());
+  return {
+    name,
+    desc,
+    dataType: SHORT_INTEGER,
+    elements: [createDataDomains(code, desc)],
+  };
+};
+
 export const etakPunktobjektidDomains = {
   kivi_tyyp: {
     name: "kivi_tyyp",
@@ -86,9 +97,7 @@ export const etakPunktobjektidDomains = {
     name: "muu_rajatisP_tyyp",
     desc: "Muu rajatise tüüp punktina",
     dataType: SHORT_INTEGER,
-    elements: [
-      createDataDomains(999, "Muu"),
-    ],
+    elements: [createDataDomains(999, "Muu")],
   },
 
   tehnopaigaldis_tyyp: {
@@ -101,8 +110,6 @@ export const etakPunktobjektidDomains = {
       createDataDomains(30, "Mahuti"),
     ],
   },
-
-
 };
 
 export const etakJoonobjektidDomains = {
@@ -304,15 +311,214 @@ export const etakJoonobjektidDomains = {
   },
 };
 
-// Function to create a domain object
-const createDomain = (desc: string, code: number) => {
-  const name = "0".concat(code.toString());
-  return {
-    name,
-    desc,
+export const etakPindobjektidOverlapDomains = {
+  muu_kolvikKA_tyyp: {
+    name: "muu_kolvikKA_tyyp",
+    desc: "Muu kõlviku tüüp kattuva alana",
     dataType: SHORT_INTEGER,
-    elements: [createDataDomains(code, desc)],
-  };
+    elements: [
+      createDataDomains(30, "Kalmistu"),
+      createDataDomains(40, "Lennuväli"),
+      createDataDomains(50, "Sadam"),
+      createDataDomains(60, "Spordikompleks"),
+      createDataDomains(90, "Prügila"),
+      createDataDomains(100, "Karjäär"),
+    ],
+  },
+
+  margalaKA_tyyp: {
+    name: "margalaKA_tyyp",
+    desc: "Märgala tüüp kattuva alana",
+    dataType: SHORT_INTEGER,
+    elements: [createDataDomains(50, "Roostik")],
+  },
+
+  hoone_tyyp: {
+    name: "hoone_tyyp",
+    desc: "Hoone tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Elu- või ühiskondlik hoone"),
+      createDataDomains(20, "Kõrval- või tootmishoone"),
+      createDataDomains(30, "Vundament"),
+      createDataDomains(40, "Vare"),
+      createDataDomains(50, "Ehitatav hoone"),
+    ],
+  },
+
+  muu_rajatisKA_tyyp: {
+    name: "muu_rajatisKA_tyyp",
+    desc: "Muu rajatise tüüp kattuva alana",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Kasvuhoone"),
+      createDataDomains(20, "Katusealune"),
+      createDataDomains(999, "Muu"),
+    ],
+  },
+
+  maaalune_hoone_tyyp: {
+    name: "maaalune_hoone_tyyp",
+    desc: "Maa-aluse hoone tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Kelder"),
+      createDataDomains(20, "Garaaž"),
+      createDataDomains(999, "Muu"),
+    ],
+  },
+
+  liikluskorralduslik_rajatisKA_tyyp: {
+    name: "liikluskorralduslik_rajatisKA_tyyp",
+    desc: "Liikluskorraldusliku rajatise tüüp kattuva alana",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(30, "Sild"),
+      createDataDomains(60, "Autotunnel"),
+    ],
+  },
+};
+
+export const etakPindobjektidMainDomains = {
+  seisuveekogu_tyyp: {
+    name: "seisuveekogu_tyyp",
+    desc: "Seisuveekogu tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Järv"),
+      createDataDomains(20, "Paisjärv"),
+      createDataDomains(30, "Tehisjärv"),
+      createDataDomains(40, "Laugas"),
+      createDataDomains(50, "Biotiik"),
+      createDataDomains(60, "Tiik"),
+      createDataDomains(90, "Paadikanal"),
+      createDataDomains(997, "Täitmata"),
+      createDataDomains(999, "Muu"),
+    ],
+  },
+
+  seisuveekogu_kpo: {
+    name: "seisuveekogu_kpo",
+    desc: "Seisuveekogu roll KPO ISs",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Keskkonnaregistri seisuveekogu"),
+      createDataDomains(
+        20,
+        "Seisuveekogu, mida läbib Keskkonnaregistri vooluveekogu"
+      ),
+      createDataDomains(
+        30,
+        "Seisuveekogu, mis ei ole seotud Keskkonnaregistriga"
+      ),
+    ],
+  },
+
+  muu_kolvikA_tyyp: {
+    name: "muu_kolvikA_tyyp",
+    desc: "Muu kõlviku tüüp alana",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Haljasala"),
+      createDataDomains(20, "Jäätmaa"),
+    ],
+  },
+
+  ou_tyyp: {
+    name: "ou_tyyp",
+    desc: "Õue tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Eraõu"),
+      createDataDomains(20, "Tootmisõu"),
+    ],
+  },
+
+  ou_kasutus: {
+    name: "ou_kasutus",
+    desc: "Tootmisõue erijuht",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Alajaam"),
+      createDataDomains(20, "Tsisternladu"),
+      createDataDomains(30, "Ilmajaam"),
+      createDataDomains(40, "Antennirajatis"),
+      createDataDomains(50, "Päikesepark"),
+      createDataDomains(997, "Täitmata"),
+      createDataDomains(998, "Ei ole rakendatav"),
+      createDataDomains(999, "Muu"),
+    ],
+  },
+
+  haritav_maa_tyyp: {
+    name: "haritav_maa_tyyp",
+    desc: "Haritava maa tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Põld"),
+      createDataDomains(20, "Aianduslik maa"),
+    ],
+  },
+
+  lage_tyyp: {
+    name: "lage_tyyp",
+    desc: "Lageda tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Rohumaa"),
+      createDataDomains(20, "Liivane ala"),
+      createDataDomains(30, "Muu lage"),
+      createDataDomains(40, "Klibune ala"),
+    ],
+  },
+
+  puittaimestikA_tyyp: {
+    name: "puittaimestikA_tyyp",
+    desc: "Puittaimestiku tüüp alana",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Mets"),
+      createDataDomains(30, "Põõsastik"),
+    ],
+  },
+
+  margalaA_tyyp: {
+    name: "margalaA_tyyp",
+    desc: "Märgala tüüp alana",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Madalsoo"),
+      createDataDomains(20, "Raba"),
+      createDataDomains(30, "Õõtsik"),
+      createDataDomains(40, "Soovik"),
+    ],
+  },
+
+  turbavali_tyyp: {
+    name: "turbavali_tyyp",
+    desc: "Turbavälja tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Turbaväli"),
+      createDataDomains(20, "Mahajäetud turbaväli"),
+    ],
+  },
+
+  teeA_tyyp: {
+    name: "teeA_tyyp",
+    desc: "Teeala tüüp",
+    dataType: SHORT_INTEGER,
+    elements: [
+      createDataDomains(10, "Liiklusala"),
+      createDataDomains(20, "Parkla"),
+      createDataDomains(30, "Bussijaam"),
+      createDataDomains(40, "Lennurada"),
+      createDataDomains(50, "Sport"),
+      createDataDomains(60, "Jalakäijate ala"),
+      createDataDomains(997, "Täitmata"),
+      createDataDomains(999, "Muu"),
+    ],
+  },
 };
 
 export const sharedDomains = {

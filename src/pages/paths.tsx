@@ -1,7 +1,7 @@
 import {
   etakJoonobjektid,
   // etakPindobjektidMain,
-  // etakPindobjektidOverlap,
+  etakPindobjektidOverlap,
   etakPunktobjektid,
   metadata,
   derivedLayers,
@@ -11,11 +11,13 @@ import { FullDataTable } from "../components/FullDataTable";
 import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
 import { OnePager2d } from "../components/OnePager2d";
 
+// TODO koodi alusel järjestada ümber
 const allDataTogether = [
   ...metadata,
   ...etakPunktobjektid,
-  ...derivedLayers,
   ...etakJoonobjektid,
+  ...etakPindobjektidOverlap,
+  ...derivedLayers,
 ];
 
 const initPath = {
@@ -52,9 +54,8 @@ export const paths = () => [
   all2dPath,
   ...featureClassPath(etakPunktobjektid),
   ...featureClassPath(etakJoonobjektid),
+  ...featureClassPath(etakPindobjektidOverlap),
   ...featureClassPath(metadata),
   ...featureClassPath(derivedLayers),
-  // ...featureClassPath(etakJoonobjektid, "joonobjekt"),
-  // ...featureClassPath(etakPindobjektidOverlap, "pindobjekt"),
-  // ...featureClassPath(etakPindobjektidMain, "pindobjekt"),
+
 ];

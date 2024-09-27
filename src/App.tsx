@@ -8,7 +8,7 @@ import {
   etakPunktobjektid,
   etakJoonobjektid,
   // etakPindobjektidMain,
-  // etakPindobjektidOverlap,
+  etakPindobjektidOverlap,
   metadata,
   derivedLayers,
 } from "./data/featureClasses.tsx";
@@ -20,6 +20,8 @@ import {
   derivedPath,
 } from "./pages/groupPaths.ts";
 import { TablesTogetherLink } from "./components/TablesTogetherLink.tsx";
+
+// TODO uut lehte avades peaks olema automaatselt üles skrollitud
 
 function App() {
   return (
@@ -98,8 +100,7 @@ function App() {
             />
             <FrontPageIndexTable
               objectName={etak_kirjeldus.groups.overlapping.name.et}
-              // itemNames={etakPindobjektidOverlap}
-              itemNames={etakPunktobjektid}
+              itemNames={etakPindobjektidOverlap}
               dataTypeClass={polyPath}
             />
           </Box>

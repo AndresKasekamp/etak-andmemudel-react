@@ -12,6 +12,7 @@ import {
 } from "./constantFields.tsx";
 import {
   etakPunktobjektidDomains,
+  etakPindobjektidOverlapDomains,
   etakJoonobjektidDomains,
   metadataDomains,
   sharedDomains,
@@ -37,6 +38,7 @@ import {
   metadataPath,
   derivedPath,
   linePath,
+  polyPath,
 } from "../pages/groupPaths.ts";
 
 export const etakPunktobjektid = [
@@ -771,7 +773,249 @@ export const etakJoonobjektid = [
   },
 ];
 
-export const etakPindobjektidOverlap = [];
+export const etakPindobjektidOverlap = [
+  {
+    fcName: etak_kirjeldus.classes.E_301_muu_kolvik_ka.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0301.name),
+        generateTyyp(etakPindobjektidOverlapDomains.muu_kolvikKA_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_301_muu_kolvik_ka.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+        generateField(otherRegisterSources.kmr_id),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0301,
+      etakPindobjektidOverlapDomains.muu_kolvikKA_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_301_muu_kolvik_ka.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_306_margala_ka.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0306.name),
+        generateTyyp(etakPindobjektidOverlapDomains.margalaKA_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_306_margala_ka.fields.tyyp.description
+            .et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+        generateField(otherRegisterSources.kmr_id),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0306,
+      etakPindobjektidOverlapDomains.margalaKA_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_306_margala_ka.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_401_hoone_ka.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0401.name),
+        generateTyyp(etakPindobjektidOverlapDomains.hoone_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_401_hoone_ka.fields.tyyp.description
+            .et,
+          hyperlink: null,
+        }),
+
+        {
+          row: createData(
+            { name: "korgus_m", category: MainCategory },
+            SHORT_INTEGER,
+            "",
+            {
+              desc: "Hoone maksimaalne kõrgus maapinnast [m]",
+              hyperlink: null,
+            }
+          ),
+        },
+      ],
+
+      register: [
+        generateField(otherRegisterSources.ehr_gid),
+        generateField(otherRegisterSources.ads_oid),
+        generateField(otherRegisterSources.ads_lahiaadress),
+        generateField(otherRegisterSources.kov_id),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0401,
+      etakPindobjektidOverlapDomains.hoone_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_401_hoone_ka.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_403_muu_rajatis_ka.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0403.name),
+        generateTyyp(etakPindobjektidOverlapDomains.muu_rajatisKA_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_403_muu_rajatis_ka.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [
+        generateField(otherRegisterSources.ehr_gid),
+
+        generateField(otherRegisterSources.kov_id),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0403,
+      etakPindobjektidOverlapDomains.muu_rajatisKA_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_403_muu_rajatis_ka.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_404_maaalune_hoone_ka.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0404.name),
+        generateTyyp(etakPindobjektidOverlapDomains.maaalune_hoone_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_404_maaalune_hoone_ka.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [
+        generateField(otherRegisterSources.ehr_gid),
+        generateField(otherRegisterSources.ads_oid),
+        generateField(otherRegisterSources.ads_lahiaadress),
+
+        generateField(otherRegisterSources.kov_id),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0404,
+      etakPindobjektidOverlapDomains.maaalune_hoone_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_404_maaalune_hoone_ka.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_404_maaalune_hoone_ka.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0404.name),
+        generateTyyp(etakPindobjektidOverlapDomains.maaalune_hoone_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_404_maaalune_hoone_ka.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [
+        generateField(otherRegisterSources.ehr_gid),
+        generateField(otherRegisterSources.ads_oid),
+        generateField(otherRegisterSources.ads_lahiaadress),
+
+        generateField(otherRegisterSources.kov_id),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0404,
+      etakPindobjektidOverlapDomains.maaalune_hoone_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_404_maaalune_hoone_ka.description.et,
+      polyImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_ka.name,
+    groupName: polyPath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0505.name),
+        generateTyyp(etakPindobjektidOverlapDomains.liikluskorralduslik_rajatisKA_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_ka.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [
+        generateField(otherRegisterSources.kmr_id),
+        generateField(otherRegisterSources.knr_id),
+        generateField(otherRegisterSources.nimetus),
+
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0505,
+      etakPindobjektidOverlapDomains.liikluskorralduslik_rajatisKA_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      POLY_GEOMETRY,
+      etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_ka.description.et,
+      polyImageSource
+    ),
+  },
+];
 
 export const metadata = [
   {
