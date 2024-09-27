@@ -8,6 +8,7 @@ import {
   generateMetadataFields,
   generatedDerivedDataFields,
   createData,
+  generateToevaartus,
 } from "./constantFields.tsx";
 import {
   etakPunktobjektidDomains,
@@ -22,7 +23,7 @@ import {
   INTEGER,
   POINT_GEOMETRY,
   POLY_GEOMETRY,
-  LINE_GEOMETRY
+  LINE_GEOMETRY,
 } from "./dataTypes.ts";
 
 // import { pointImageSource } from "./imageSources.tsx";
@@ -350,18 +351,11 @@ export const etakJoonobjektid = [
           hyperlink: null,
         }),
 
-        {
-          row: createData(
-            { name: "kaldaastang", category: MainCategory },
-            SHORT_INTEGER,
-            sharedDomains.toevaartus.name,
-            {
-              desc: etak_kirjeldus.classes.E_102_nolv_j.fields.kaldaastang
-                .description.et,
-              hyperlink: null,
-            }
-          ),
-        },
+        generateToevaartus("kaldaastang", {
+          desc: etak_kirjeldus.classes.E_102_nolv_j.fields.kaldaastang
+            .description.et,
+          hyperlink: null,
+        }),
       ],
 
       register: [
@@ -379,6 +373,399 @@ export const etakJoonobjektid = [
     headingData: generateHeadingData(
       LINE_GEOMETRY,
       etak_kirjeldus.classes.E_102_nolv_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_103_pinnavorm_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0103.name),
+        generateTyyp(etakJoonobjektidDomains.pinnavormJ_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_103_pinnavorm_j.fields.tyyp.description
+            .et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0103,
+      etakJoonobjektidDomains.pinnavormJ_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_103_pinnavorm_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  // TODO see on veits puudulik (liiga palju asju)
+  {
+    fcName: etak_kirjeldus.classes.E_203_vooluveekogu_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0203.name),
+        generateTyyp(etakJoonobjektidDomains.vooluveekogu_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_203_vooluveekogu_j.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [
+        generateField(otherRegisterSources.nimetus),
+        generateField(otherRegisterSources.knr_id),
+        generateField(otherRegisterSources.kkr_kood),
+        generateField(otherRegisterSources.mps_id),
+      ],
+    },
+
+    domainTables: [
+      sharedDomains.d0203,
+      etakJoonobjektidDomains.vooluveekogu_tyyp,
+      etakJoonobjektidDomains.vooluveekogu_telje_tyyp,
+      etakJoonobjektidDomains.vooluveekogu_laius,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_203_vooluveekogu_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  // TODO roobastee_tahtsus on puudu
+  {
+    fcName: etak_kirjeldus.classes.E_204_kaldajoon_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0204.name),
+        generateTyyp(etakJoonobjektidDomains.kaldajoon_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_204_kaldajoon_j.fields.tyyp.description
+            .et,
+          hyperlink: null,
+        }),
+
+        generateToevaartus("halduspiir", {
+          desc: etak_kirjeldus.classes.E_204_kaldajoon_j.fields.halduspiir
+            .description.et,
+          hyperlink: null,
+        }),
+
+        {
+          row: createData(
+            { name: "kalda_veekogu_tyyp", category: MainCategory },
+            SHORT_INTEGER,
+            etakJoonobjektidDomains.kaldajoon_veekogu_tyyp.name,
+            {
+              desc: "Kaldajoonega piirneva veekogu tüüp",
+              hyperlink: null,
+            }
+          ),
+        },
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0204,
+      etakJoonobjektidDomains.kaldajoon_tyyp,
+      etakJoonobjektidDomains.kaldajoon_veekogu_tyyp,
+      sharedDomains.vajalikkus,
+      sharedDomains.toevaartus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_204_kaldajoon_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_205_hudrotehniline_rajatis_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0205.name),
+        generateTyyp(etakJoonobjektidDomains.hudrotehniline_rajatis_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_205_hudrotehniline_rajatis_j.fields
+            .tyyp.description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0205,
+      etakJoonobjektidDomains.hudrotehniline_rajatis_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_205_hudrotehniline_rajatis_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_206_truup_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0206.name),
+        generateTyyp(etakJoonobjektidDomains.truup_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_206_truup_j.fields.tyyp.description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0206,
+      etakJoonobjektidDomains.truup_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_206_truup_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_305_puittaimestik_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0305.name),
+        generateTyyp(etakJoonobjektidDomains.puittaimestikJ_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_305_puittaimestik_j.fields.tyyp
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [generateField(otherRegisterSources.kmr_id)],
+    },
+
+    domainTables: [
+      sharedDomains.d0305,
+      etakJoonobjektidDomains.puittaimestikJ_tyyp,
+      sharedDomains.vajalikkus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_305_puittaimestik_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_405_piire_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0405.name),
+        generateTyyp(etakJoonobjektidDomains.piire_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_405_piire_j.fields.tyyp.description.et,
+          hyperlink: null,
+        }),
+
+        generateToevaartus("puittaimed", {
+          desc: etak_kirjeldus.classes.E_405_piire_j.fields.puittaimed
+            .description.et,
+          hyperlink: null,
+        }),
+      ],
+
+      register: [generateField(otherRegisterSources.kmr_id)],
+    },
+
+    domainTables: [
+      sharedDomains.d0405,
+      etakJoonobjektidDomains.piire_tyyp,
+      sharedDomains.vajalikkus,
+      sharedDomains.toevaartus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_405_piire_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  // TODO E_501_tee_j on praegu liiga raske
+  {
+    fcName: etak_kirjeldus.classes.E_502_roobastee_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0502.name),
+        generateTyyp(etakJoonobjektidDomains.roobastee_tyyp.name, {
+          desc: etak_kirjeldus.classes.E_502_roobastee_j.fields.tyyp.description
+            .et,
+          hyperlink: null,
+        }),
+
+        generateToevaartus("elekter", {
+          desc: etak_kirjeldus.classes.E_502_roobastee_j.fields.elekter
+            .description.et,
+          hyperlink: null,
+        }),
+
+        {
+          row: createData(
+            { name: "tahtsus", category: MainCategory },
+            SHORT_INTEGER,
+            etakJoonobjektidDomains.roobastee_tahtsus.name,
+            {
+              desc: etak_kirjeldus.classes.E_502_roobastee_j.fields.tahtsus
+                .description.et,
+              hyperlink: null,
+            }
+          ),
+        },
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0502,
+      etakJoonobjektidDomains.roobastee_tyyp,
+      etakJoonobjektidDomains.roobastee_tahtsus,
+      sharedDomains.vajalikkus,
+      sharedDomains.toevaartus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_502_roobastee_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_503_siht_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [generateKood(sharedDomains.d0503.name)],
+
+      register: [],
+    },
+
+    domainTables: [sharedDomains.d0502, sharedDomains.vajalikkus],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_503_siht_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0505.name),
+
+        generateTyyp(
+          etakJoonobjektidDomains.liikluskorralduslik_rajatisJ_tyyp.name,
+          {
+            desc: etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_j
+              .fields.tyyp.description.et,
+            hyperlink: null,
+          }
+        ),
+
+        {
+          row: createData(
+            { name: "toke", category: MainCategory },
+            SHORT_INTEGER,
+            etakJoonobjektidDomains.liikluskorralduslik_rajatis_suletus.name,
+            {
+              desc: "Sõidutakistuse iseloom",
+              hyperlink: null,
+            }
+          ),
+        },
+      ],
+
+      register: [],
+    },
+
+    domainTables: [
+      sharedDomains.d0505,
+      sharedDomains.vajalikkus,
+      etakJoonobjektidDomains.liikluskorralduslik_rajatisJ_tyyp,
+      etakJoonobjektidDomains.liikluskorralduslik_rajatis_suletus,
+    ],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_505_liikluskorralduslik_rajatis_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_601_elektriliin_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [
+        generateKood(sharedDomains.d0601.name),
+
+        {
+          row: createData(
+            { name: "nimpinge", category: MainCategory },
+            SHORT_INTEGER,
+            "",
+            {
+              desc: "Elektriliini nimipinge [kV]",
+              hyperlink: null,
+            }
+          ),
+        },
+      ],
+
+      register: [generateField(otherRegisterSources.ehr_gid)],
+    },
+
+    domainTables: [sharedDomains.d0601, sharedDomains.vajalikkus],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_601_elektriliin_j.description.et,
+      lineImageSource
+    ),
+  },
+
+  {
+    fcName: etak_kirjeldus.classes.E_603_torujuhe_j.name,
+    groupName: linePath,
+    elements: {
+      etak: [generateKood(sharedDomains.d0603.name)],
+
+      register: [generateField(otherRegisterSources.ehr_gid)],
+    },
+
+    domainTables: [sharedDomains.d0603, sharedDomains.vajalikkus],
+    headingData: generateHeadingData(
+      LINE_GEOMETRY,
+      etak_kirjeldus.classes.E_603_torujuhe_j.description.et,
       lineImageSource
     ),
   },

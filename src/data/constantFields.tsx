@@ -21,6 +21,8 @@ import {
   CREATE_TEXT_TYPE,
 } from "./dataTypes";
 
+import { sharedDomains } from "./domains";
+
 // TODO create data objektis row, position - postion ära kaotada
 export const createData = (
   name: ElementNameCategory,
@@ -621,6 +623,19 @@ export const generateField = (row: RowData) => {
 
   return field;
 };
+
+export const generateToevaartus = (name: string, desc: DescRowData) => {
+  const toevaartusField = {
+    row: createData(
+      { name, category: MainCategory },
+      SHORT_INTEGER,
+      sharedDomains.toevaartus.name,
+      desc
+    ),
+  };
+
+  return toevaartusField;
+}
 
 export const generateHeadingData = (
   geomType: string,
