@@ -1,5 +1,11 @@
 {
   "name": "etak-andmemudel-react",
+  "homepage": "https://etak-andmemudel-react.vercel.app",
+  "description": "ETD data model front-end written in React",
+  "license": "MIT",
+  "author": "Andres Kasekamp <andres.kasekamp@maaamet.ee> (https://www.linkedin.com/in/andres-kasekamp-a226b2198/)",
+  "repository": "github:AndresKasekamp/etak-andmemudel-react",
+  "keywords": ["ETAK", "ETD", "Estonian Land Board", "Maa-amet"],
   "private": true,
   "version": "0.1.0",
   "type": "module",
