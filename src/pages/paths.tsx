@@ -11,16 +11,6 @@ import { FullDataTable } from "../components/FullDataTable";
 import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
 import { OnePager2d } from "../components/OnePager2d";
 
-// TODO koodi alusel järjestada ümber
-// const allDataTogether = [
-//   ...metadata,
-//   ...etakPunktobjektid,
-//   ...etakJoonobjektid,
-//   ...etakPindobjektidOverlap,
-//   ...etakPindobjektidMain,
-//   ...derivedLayers,
-// ];
-
 const generateAllDataMerge = () => {
   const allDataTogether = [
     ...metadata,
@@ -29,12 +19,10 @@ const generateAllDataMerge = () => {
     ...etakPindobjektidOverlap,
     ...etakPindobjektidMain,
     ...derivedLayers,
-  ]
+  ];
 
   return allDataTogether.sort((a, b) => a.fcName.localeCompare(b.fcName));
-
-
-}
+};
 
 const initPath = {
   path: "/",
@@ -74,5 +62,4 @@ export const paths = () => [
   ...featureClassPath(etakPindobjektidMain),
   ...featureClassPath(metadata),
   ...featureClassPath(derivedLayers),
-
 ];
