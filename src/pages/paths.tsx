@@ -1,12 +1,4 @@
-import {
-  etakJoonobjektid,
-  etakPindobjektidMain,
-  etakPindobjektidOverlap,
-  etakPunktobjektid,
-  metadata,
-  derivedLayers,
-  generateFeatureClass,
-} from "../data/featureClasses";
+import { generateFeatureClass } from "../data/featureClasses";
 import App from "../App";
 import { FullDataTable } from "../components/FullDataTable";
 import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
@@ -14,13 +6,15 @@ import { OnePager2d } from "../components/OnePager2d";
 
 const generateAllDataMerge = () => {
   const allDataTogether = [
-    ...metadata,
-    ...etakPunktobjektid,
-    ...etakJoonobjektid,
-    ...etakPindobjektidOverlap,
-    ...etakPindobjektidMain,
-    ...derivedLayers,
+    // ...metadata,
+    ...generateFeatureClass().punktobjektid,
+    ...generateFeatureClass().joonobjektid,
+    ...generateFeatureClass().pindobjektidOverlap,
+    ...generateFeatureClass().pindobjektid,
+    // ...derivedLayers,
   ];
+
+  console.log(allDataTogether);
 
   return allDataTogether.sort((a, b) => a.fcName.localeCompare(b.fcName));
 };
@@ -61,6 +55,6 @@ export const paths = () => [
   ...featureClassPath(generateFeatureClass().joonobjektid),
   ...featureClassPath(generateFeatureClass().pindobjektidOverlap),
   ...featureClassPath(generateFeatureClass().pindobjektid),
-  ...featureClassPath(metadata),
-  ...featureClassPath(derivedLayers),
+  // ...featureClassPath(metadata),
+  // ...featureClassPath(derivedLayers),
 ];

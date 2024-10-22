@@ -1,18 +1,9 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import etak_kirjeldus from "./data/etak_kirjeldus.json" assert { type: "json" };
 
 import { FrontPageIndexTable } from "./components/FrontPageIndexTable.tsx";
-import {
-  etakPunktobjektid,
-  etakJoonobjektid,
-  etakPindobjektidMain,
-  etakPindobjektidOverlap,
-  metadata,
-  derivedLayers,
-  generateFeatureClass
-} from "./data/featureClasses.tsx";
+import { generateFeatureClass } from "./data/featureClasses.tsx";
 import {
   pointPath,
   polyPath,
@@ -59,7 +50,7 @@ function App() {
         >
           <FrontPageIndexTable
             objectName="Metaandmed"
-            itemNames={metadata}
+            itemNames={generateFeatureClass().punktobjektid}
             dataTypeClass={metadataPath}
           />
           <FrontPageIndexTable
@@ -106,7 +97,7 @@ function App() {
 
           <FrontPageIndexTable
             objectName="Tuletiskihid"
-            itemNames={derivedLayers}
+            itemNames={generateFeatureClass().punktobjektid}
             dataTypeClass={derivedPath}
           />
         </Box>

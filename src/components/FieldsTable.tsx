@@ -29,6 +29,8 @@ import { generateWfsUrl } from "../utils/wfsRequest.ts";
 
 import { dataTypes, bgColor } from "./formatHelpers/translate.ts";
 
+import RegisterHyperLink from "./formatHelpers/RegisterHyperLink.tsx";
+
 export const FieldsTable = ({
   rows,
   name,
@@ -218,7 +220,16 @@ export const FieldsTable = ({
                 </HashLink>
               </TableCell>
 
-              <TableCell>{row.desc}</TableCell>
+              <TableCell>
+                {row.link ? (
+                  <RegisterHyperLink
+                    link={row.link}
+                    desc={row.desc}
+                  ></RegisterHyperLink>
+                ) : (
+                  row.desc
+                )}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

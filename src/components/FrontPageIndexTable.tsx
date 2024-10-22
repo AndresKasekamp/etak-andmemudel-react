@@ -46,5 +46,3 @@ export const FrontPageIndexTable = ({
     </List>
   );
 };
-
-// export default MainTable;

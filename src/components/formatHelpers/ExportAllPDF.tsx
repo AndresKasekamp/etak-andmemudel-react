@@ -3,10 +3,9 @@ import autoTable from "jspdf-autotable";
 
 import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import { generateTableFront } from "./generateTableFront";
 import { AllTablesAndDomains } from "../../interfaces/interfaces";
 
-
+// TODO uue lahendusega on asjad teisti printides
 // TODO viimane leht jääb tühjaks praegu selle lahendusega
 export const ExportAllPDF = ({
   allTablesAndDomains,
@@ -19,12 +18,12 @@ export const ExportAllPDF = ({
     doc.setFontSize(18);
 
     allTablesAndDomains.map((rows) => {
-      const cleanRows = generateTableFront(rows.headingData, rows.elements);
+      // const cleanRows = generateTableFront(rows.headingData, rows.elements);
       doc.text(rows.fcName, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {
         head: [["Välja nimi", "Andmetüüp", "Domeen", "Kirjeldus"]],
-        body: cleanRows.map((row) => [
+        body: rows.elements.map((row) => [
           row.name.name,
           row.dataType,
           row.domain,

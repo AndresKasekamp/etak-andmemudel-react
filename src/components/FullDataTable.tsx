@@ -1,12 +1,7 @@
 import { MainTableProps } from "../interfaces/interfaces.tsx";
-
 import { FieldsTable } from "./FieldsTable.tsx";
-
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";
-
-import { generateTableFront } from "./formatHelpers/generateTableFront.ts";
-
-import { generateFeatureClass } from "../data/featureClasses.tsx";
+import { sortElements } from "./formatHelpers/sortElements.ts";
 
 export const FullDataTable = ({
   name,
@@ -18,13 +13,6 @@ export const FullDataTable = ({
   // Formatting domains and rows
   domains.sort((a, b) => a.name.localeCompare(b.name));
 
-  const orderOfRows = ["general", "technical", "meta", "register"];
-
-  // Custom comparator function
-  rows.sort((a, b) => {
-    return orderOfRows.indexOf(a.meta_type) - orderOfRows.indexOf(b.meta_type);
-  });
-
   return (
     <div
       style={{
@@ -35,7 +23,7 @@ export const FullDataTable = ({
       }}
     >
       <FieldsTable
-        rows={rows}
+        rows={sortElements(rows)}
         name={name}
         group={group}
         headingData={headingData}

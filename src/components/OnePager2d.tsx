@@ -1,14 +1,15 @@
 import { AllTablesAndDomains1 } from "../interfaces/interfaces.tsx";
 
-import { generateTableFront } from "./formatHelpers/generateTableFront.ts";
 import { FieldsTable } from "./FieldsTable.tsx";
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { generateDomainsTogether } from "./formatHelpers/generateTableFront.ts";
 import { ExportAllPDF } from "./formatHelpers/ExportAllPDF.tsx";
+
+import { sortElements } from "./formatHelpers/sortElements.ts";
 // TODO domeenid on vaja settida ja panna tähestiku vms järjekorda
 
 export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains1) => {
-  console.log(allTablesAndDomains);
+  console.log("All tables and domains", allTablesAndDomains);
 
   // Manipulating domains into singular
   const domainsMerged = generateDomainsTogether(allTablesAndDomains);
@@ -28,11 +29,13 @@ export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains1) => {
       />
 
       {allTablesAndDomains.map((ad, idx) => (
+        // Custom comparator function
+
         <FieldsTable
           key={idx}
           name={ad.fcName}
           group={ad.groupName}
-          rows={generateTableFront(ad.headingData, ad.elements)}
+          rows={sortElements(ad.elements)}
           headingData={ad.headingData}
           domains={ad.domainTables.sort((a, b) => a.name.localeCompare(b.name))}
         ></FieldsTable>

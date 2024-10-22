@@ -2,7 +2,6 @@ import {
   SHORT_INTEGER,
   INTEGER,
   DATE,
-  REAL_NUMBER,
   GEOMETRY,
 } from "../../data/dataTypes";
 

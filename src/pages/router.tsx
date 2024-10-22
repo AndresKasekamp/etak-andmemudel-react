@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
     element: <NavBarWrapper />,
     children: [
       ...paths(),
-      { path: "*", element: <NotFoundPage /> } // This catches all unmatched routes
+      { path: "*", element: <NotFoundPage /> }, // This catches all unmatched routes
     ],
   },
 ]);
