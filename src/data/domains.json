@@ -1,0 +1,735 @@
+[
+    {
+        "name": "0203",
+        "desc": "Vooluveekogu",
+        "coded_values": {
+            "203": "Vooluveekogu"
+        }
+    },
+    {
+        "name": "0201",
+        "desc": "Meri",
+        "coded_values": {
+            "201": "Meri"
+        }
+    },
+    {
+        "name": "0101",
+        "desc": "Kivi",
+        "coded_values": {
+            "101": "Kivi"
+        }
+    },
+    {
+        "name": "seisuveekogu_kpo",
+        "desc": "Seisuveekogu roll KPO ISs",
+        "coded_values": {
+            "10": "Keskkonnaregistri seisuveekogu",
+            "20": "Seisuveekogu, mida läbib Keskkonnaregistri vooluveekogu",
+            "30": "Seisuveekogu, mis ei ole seotud Keskkonnaregistriga"
+        }
+    },
+    {
+        "name": "kivi_tyyp",
+        "desc": "Kivi tüüp",
+        "coded_values": {
+            "10": "Üksik kivi",
+            "20": "Kivihunnik",
+            "30": "Kivine ala"
+        }
+    },
+    {
+        "name": "vajalikkus",
+        "desc": "Objekt vajab tähelepanu",
+        "coded_values": {
+            "30": "Korras",
+            "10": "Vajalik välikontroll",
+            "20": "Ruumikuju vajab täpsustamist",
+            "40": "Tärkandmed vajavad täpsustamist",
+            "50": "Ootab täiendavat alusdokumenti"
+        }
+    },
+    {
+        "name": "0102",
+        "desc": "Nõlv",
+        "coded_values": {
+            "102": "Nõlv"
+        }
+    },
+    {
+        "name": "piire_tyyp",
+        "desc": "Piirde tüüp",
+        "coded_values": {
+            "10": "Piirdeaed",
+            "20": "Kiviaed",
+            "30": "Müür",
+            "40": "Tehissein"
+        }
+    },
+    {
+        "name": "pinnavormJ_tyyp",
+        "desc": "Pinnavormi tüüp joonena",
+        "coded_values": {
+            "80": "Juga",
+            "30": "Kaitsekraav",
+            "40": "Vall"
+        }
+    },
+    {
+        "name": "nolv_tyyp",
+        "desc": "Nõlva tüüp",
+        "coded_values": {
+            "20": "Looduslik järsak",
+            "10": "Nõlv",
+            "30": "Tehisjärsak"
+        }
+    },
+    {
+        "name": "0103",
+        "desc": "Pinnavorm",
+        "coded_values": {
+            "103": "Pinnavorm"
+        }
+    },
+    {
+        "name": "turbavali_tyyp",
+        "desc": "Turbavälja tüüp",
+        "coded_values": {
+            "10": "Turbaväli",
+            "20": "Mahajäetud turbaväli"
+        }
+    },
+    {
+        "name": "0501",
+        "desc": "Tee",
+        "coded_values": {
+            "501": "Tee"
+        }
+    },
+    {
+        "name": "0204",
+        "desc": "Kaldajoon",
+        "coded_values": {
+            "204": "Kaldajoon"
+        }
+    },
+    {
+        "name": "vooluveekogu_tyyp",
+        "desc": "Vooluveekogu tüüp",
+        "coded_values": {
+            "10": "Jõgi",
+            "20": "Kanal",
+            "30": "Oja",
+            "40": "Peakraav",
+            "50": "Kraav"
+        }
+    },
+    {
+        "name": "toevaartus",
+        "desc": "Tõeväärtustüüp",
+        "coded_values": {
+            "998": "Ei ole rakendatav",
+            "10": "Jah",
+            "20": "Ei",
+            "997": "Täitmata"
+        }
+    },
+    {
+        "name": "pinnavormP_tyyp",
+        "desc": "Pinnavormi tüüp punktina",
+        "coded_values": {
+            "50": "Koobas",
+            "70": "Kärestik",
+            "10": "Auk",
+            "20": "Tehisküngas",
+            "60": "Ebatasane ala"
+        }
+    },
+    {
+        "name": "0202",
+        "desc": "Seisuveekogu",
+        "coded_values": {
+            "202": "Seisuveekogu"
+        }
+    },
+    {
+        "name": "seisuveekogu_tyyp",
+        "desc": "Seisuveekogu tüüp",
+        "coded_values": {
+            "10": "Järv",
+            "20": "Paisjärv",
+            "30": "Tehisjärv",
+            "40": "Laugas",
+            "50": "Biotiik",
+            "60": "Tiik",
+            "997": "Täitmata",
+            "999": "Muu",
+            "90": "Paadikanal"
+        }
+    },
+    {
+        "name": "0303",
+        "desc": "Haritav maa",
+        "coded_values": {
+            "303": "Haritav maa"
+        }
+    },
+    {
+        "name": "0402",
+        "desc": "Kõrgrajatis",
+        "coded_values": {
+            "402": "Kõrgrajatis"
+        }
+    },
+    {
+        "name": "seisuveekoguP_tyyp",
+        "desc": "Seisuveekogu tüüp punktina",
+        "coded_values": {
+            "80": "Allikas"
+        }
+    },
+    {
+        "name": "vooluveekogu_telje_tyyp",
+        "desc": "Vooluveekogu telje iseloom",
+        "coded_values": {
+            "10": "Maa-pealne telg",
+            "20": "Maa-alune telg",
+            "30": "Mõtteline telg"
+        }
+    },
+    {
+        "name": "vooluveekogu_laius",
+        "desc": "Vooluveekogu laiusklass",
+        "coded_values": {
+            "10": "1-2 m",
+            "20": "2-4 m",
+            "30": "4-6 m",
+            "40": "6-8 m",
+            "50": "Telg",
+            "997": "Täitmata",
+            "60": "Torus"
+        }
+    },
+    {
+        "name": "tee_liiklus",
+        "desc": "Teel lubatud liikumissuund",
+        "coded_values": {
+            "10": "Kahesuunaline",
+            "20": "Pärisuunaline",
+            "30": "Vastassuunaline",
+            "997": "Täitmata"
+        }
+    },
+    {
+        "name": "vooluveekogu_staatus",
+        "desc": "Vooluveekogu telje staatus",
+        "coded_values": {
+            "10": "Põhitelg",
+            "20": "Sekundaarne telg"
+        }
+    },
+    {
+        "name": "ou_kasutus",
+        "desc": "Tootmisõue erijuht",
+        "coded_values": {
+            "10": "Alajaam",
+            "20": "Tsisternladu",
+            "30": "Ilmajaam",
+            "40": "Antennirajatis",
+            "997": "Täitmata",
+            "999": "Muu",
+            "998": "Ei ole rakendatav",
+            "50": "Päikesepark"
+        }
+    },
+    {
+        "name": "kaldajoon_tyyp",
+        "desc": "Kaldajoone tüüp",
+        "coded_values": {
+            "10": "Selge",
+            "20": "Ebamäärane",
+            "30": "Kindlustatud",
+            "40": "Mõtteline"
+        }
+    },
+    {
+        "name": "0206",
+        "desc": "Truup",
+        "coded_values": {
+            "206": "Truup"
+        }
+    },
+    {
+        "name": "kaldajoon_veekogu_tyyp",
+        "desc": "Kaldajoonega piirneva veekogu tüüp",
+        "coded_values": {
+            "10": "Merekallas",
+            "30": "Seisuveekogu kallas",
+            "40": "Vooluveekogu kallas",
+            "50": "Mere ja seisuveekogu vaheline kallas",
+            "60": "Mere ja vooluveekogu vaheline kallas",
+            "70": "Seisu- ja vooluveekogu vaheline kallas",
+            "80": "Saartevaheline kallas"
+        }
+    },
+    {
+        "name": "0205",
+        "desc": "Hüdrotehniline rajatis",
+        "coded_values": {
+            "205": "Hüdrotehniline rajatis"
+        }
+    },
+    {
+        "name": "hudrotehniline_rajatis_tyyp",
+        "desc": "Hüdrotehnilise rajatise tüüp",
+        "coded_values": {
+            "30": "Pais",
+            "40": "Paadisild",
+            "50": "Muul"
+        }
+    },
+    {
+        "name": "tee_soidutee",
+        "desc": "Sõidutee kood",
+        "coded_values": {
+            "997": "Täitmata",
+            "1": "Parempoolne või ainuke",
+            "2": "Vasakpoolne"
+        }
+    },
+    {
+        "name": "haritav_maa_tyyp",
+        "desc": "Haritava maa tüüp",
+        "coded_values": {
+            "10": "Põld",
+            "20": "Aianduslik maa"
+        }
+    },
+    {
+        "name": "truup_tyyp",
+        "desc": "Truubi tüüp",
+        "coded_values": {
+            "10": "Ühendatud",
+            "20": "Kuiv"
+        }
+    },
+    {
+        "name": "0301",
+        "desc": "Muu kõlvik",
+        "coded_values": {
+            "301": "Muu kõlvik"
+        }
+    },
+    {
+        "name": "margalaA_tyyp",
+        "desc": "Märgala tüüp alana",
+        "coded_values": {
+            "10": "Madalsoo",
+            "20": "Raba",
+            "40": "Soovik",
+            "30": "Õõtsik"
+        }
+    },
+    {
+        "name": "0302",
+        "desc": "Õu",
+        "coded_values": {
+            "302": "Õu"
+        }
+    },
+    {
+        "name": "muu_kolvikA_tyyp",
+        "desc": "Muu kõlviku tüüp alana",
+        "coded_values": {
+            "10": "Haljasala",
+            "20": "Jäätmaa"
+        }
+    },
+    {
+        "name": "muu_kolvikKA_tyyp",
+        "desc": "Muu kõlviku tüüp kattuva alana",
+        "coded_values": {
+            "40": "Lennuväli",
+            "50": "Sadam",
+            "60": "Spordikompleks",
+            "30": "Kalmistu",
+            "90": "Prügila",
+            "100": "Karjäär"
+        }
+    },
+    {
+        "name": "muu_kolvikP_tyyp",
+        "desc": "Muu kõlviku tüüp punktina",
+        "coded_values": {
+            "70": "Üksikhaud",
+            "80": "Mälestusmärk"
+        }
+    },
+    {
+        "name": "ou_tyyp",
+        "desc": "Õue tüüp",
+        "coded_values": {
+            "10": "Eraõu",
+            "20": "Tootmisõu"
+        }
+    },
+    {
+        "name": "0307",
+        "desc": "Turbaväli",
+        "coded_values": {
+            "307": "Turbaväli"
+        }
+    },
+    {
+        "name": "0304",
+        "desc": "Lage",
+        "coded_values": {
+            "304": "Lage"
+        }
+    },
+    {
+        "name": "lage_tyyp",
+        "desc": "Lageda tüüp",
+        "coded_values": {
+            "10": "Rohumaa",
+            "20": "Liivane ala",
+            "30": "Muu lage",
+            "40": "Klibune ala"
+        }
+    },
+    {
+        "name": "0505",
+        "desc": "Liikluskorralduslik rajatis",
+        "coded_values": {
+            "505": "Liikluskorralduslik rajatis"
+        }
+    },
+    {
+        "name": "0305",
+        "desc": "Puittaimestik",
+        "coded_values": {
+            "305": "Puittaimestik"
+        }
+    },
+    {
+        "name": "teeA_tyyp",
+        "desc": "Teeala tüüp",
+        "coded_values": {
+            "10": "Liiklusala",
+            "20": "Parkla",
+            "30": "Bussijaam",
+            "40": "Lennurada",
+            "50": "Sport",
+            "60": "Jalakäijate ala",
+            "997": "Täitmata",
+            "999": "Muu"
+        }
+    },
+    {
+        "name": "puittaimestikA_tyyp",
+        "desc": "Puittaimestiku tüüp alana",
+        "coded_values": {
+            "10": "Mets",
+            "30": "Põõsastik"
+        }
+    },
+    {
+        "name": "maaalune_hoone_tyyp",
+        "desc": "Maa-aluse hoone tüüp",
+        "coded_values": {
+            "10": "Kelder",
+            "999": "Muu",
+            "20": "Garaaž"
+        }
+    },
+    {
+        "name": "puittaimestikJ_tyyp",
+        "desc": "Puittaimestiku tüüp joonena",
+        "coded_values": {
+            "80": "Puittaimede rida"
+        }
+    },
+    {
+        "name": "puittaimestikP_tyyp",
+        "desc": "Puittaimestiku tüüp punktina",
+        "coded_values": {
+            "50": "Puittaim",
+            "60": "Harvik",
+            "70": "Salu"
+        }
+    },
+    {
+        "name": "0306",
+        "desc": "Märgala",
+        "coded_values": {
+            "306": "Märgala"
+        }
+    },
+    {
+        "name": "margalaKA_tyyp",
+        "desc": "Märgala tüüp kattuva alana",
+        "coded_values": {
+            "50": "Roostik"
+        }
+    },
+    {
+        "name": "0401",
+        "desc": "Hoone",
+        "coded_values": {
+            "401": "Hoone"
+        }
+    },
+    {
+        "name": "hoone_tyyp",
+        "desc": "Hoone tüüp",
+        "coded_values": {
+            "10": "Elu- või ühiskondlik hoone",
+            "20": "Kõrval- või tootmishoone",
+            "30": "Vundament",
+            "40": "Vare",
+            "50": "Ehitatav hoone"
+        }
+    },
+    {
+        "name": "tee_teekate",
+        "desc": "Tee kattematerjal",
+        "coded_values": {
+            "40": "Pinnas",
+            "997": "Täitmata",
+            "999": "Muu",
+            "10": "Püsikate",
+            "20": "Kruuskate",
+            "30": "Kivikate",
+            "50": "Puit"
+        }
+    },
+    {
+        "name": "korgrajatis_tyyp",
+        "desc": "Kõrgrajatise tüüp",
+        "coded_values": {
+            "10": "Korsten",
+            "20": "Sidemast",
+            "30": "Torn",
+            "40": "Valgusmast"
+        }
+    },
+    {
+        "name": "muu_rajatisKA_tyyp",
+        "desc": "Muu rajatise tüüp kattuva alana",
+        "coded_values": {
+            "10": "Kasvuhoone",
+            "20": "Katusealune",
+            "999": "Muu"
+        }
+    },
+    {
+        "name": "korgrajatis_seos",
+        "desc": "Kõrgrajatise seos hoonega",
+        "coded_values": {
+            "30": "Kõrgrajatis ja hoone on sama objekt",
+            "997": "Täitmata",
+            "10": "Kõrgrajatisel puudub seos hoonega",
+            "20": "Kõrgrajatis asub hoone peal"
+        }
+    },
+    {
+        "name": "0403",
+        "desc": "Muu rajatis",
+        "coded_values": {
+            "403": "Muu rajatis"
+        }
+    },
+    {
+        "name": "muu_rajatisP_tyyp",
+        "desc": "Muu rajatise tüüp punktina",
+        "coded_values": {
+            "999": "Muu"
+        }
+    },
+    {
+        "name": "0404",
+        "desc": "Maa-alune hoone",
+        "coded_values": {
+            "404": "Maa-alune hoone"
+        }
+    },
+    {
+        "name": "0405",
+        "desc": "Piire",
+        "coded_values": {
+            "405": "Piire"
+        }
+    },
+    {
+        "name": "tee_tyyp",
+        "desc": "Tee tüüp",
+        "coded_values": {
+            "10": "Põhimaantee",
+            "20": "Tugimaantee",
+            "30": "Kõrvalmaantee",
+            "50": "Tänav",
+            "60": "Muu tee",
+            "70": "Rada",
+            "40": "Ramp või ühendustee",
+            "45": "Muu riigimaantee",
+            "80": "Kergliiklustee"
+        }
+    },
+    {
+        "name": "tee_tahtsus",
+        "desc": "Tänava tähtsus",
+        "coded_values": {
+            "10": "Põhitänav",
+            "20": "Jaotustänav",
+            "30": "Kõrvaltänav",
+            "40": "Kvartalisisene tänav",
+            "50": "Jalgtänav",
+            "997": "Täitmata",
+            "35": "Väiketänav"
+        }
+    },
+    {
+        "name": "0502",
+        "desc": "Rööbastee",
+        "coded_values": {
+            "502": "Rööbastee"
+        }
+    },
+    {
+        "name": "roobastee_tyyp",
+        "desc": "Rööbastee tüüp",
+        "coded_values": {
+            "10": "Laiarööpmeline",
+            "20": "Kitsarööpmeline",
+            "40": "Trammitee",
+            "50": "Muu",
+            "30": "Köistee",
+            "25": "Normaalrööpmeline"
+        }
+    },
+    {
+        "name": "roobastee_tahtsus",
+        "desc": "Rööbastee tähtsus",
+        "coded_values": {
+            "10": "Põhitee",
+            "20": "Kõrvaltee",
+            "30": "Harutee",
+            "997": "Täitmata",
+            "998": "Ei ole rakendatav"
+        }
+    },
+    {
+        "name": "0503",
+        "desc": "Siht",
+        "coded_values": {
+            "503": "Siht"
+        }
+    },
+    {
+        "name": "liikluskorralduslik_rajatisKA_tyyp",
+        "desc": "Liikluskorraldusliku rajatise tüüp kattuva alana",
+        "coded_values": {
+            "30": "Sild",
+            "60": "Autotunnel"
+        }
+    },
+    {
+        "name": "liikluskorralduslik_rajatisJ_tyyp",
+        "desc": "Liikluskorraldusliku rajatise tüüp joonena",
+        "coded_values": {
+            "10": "Ülevedu",
+            "20": "Sõidutakistus",
+            "40": "Purre",
+            "50": "Tunnel"
+        }
+    },
+    {
+        "name": "liikluskorralduslik_rajatis_suletus",
+        "desc": "Sõidutakistuse iseloom",
+        "coded_values": {
+            "10": "Püsivalt suletud",
+            "20": "Avatav",
+            "997": "Täitmata",
+            "998": "Ei ole rakendatav"
+        }
+    },
+    {
+        "name": "0601",
+        "desc": "Elektriliin",
+        "coded_values": {
+            "601": "Elektriliin"
+        }
+    },
+    {
+        "name": "0602",
+        "desc": "Tehnopaigaldis",
+        "coded_values": {
+            "602": "Tehnopaigaldis"
+        }
+    },
+    {
+        "name": "tehnopaigaldis_tyyp",
+        "desc": "Tehnopaigaldise tüüp",
+        "coded_values": {
+            "10": "Trafo",
+            "20": "Elektrituulik",
+            "30": "Mahuti"
+        }
+    },
+    {
+        "name": "0603",
+        "desc": "Torujuhe",
+        "coded_values": {
+            "603": "Torujuhe"
+        }
+    },
+    {
+        "name": "alusdokument_tyyp",
+        "desc": "Alusdokumendi tüüp",
+        "coded_values": {
+            "20": "Ruumiandmekogum",
+            "30": "Tärkandmekogum",
+            "40": "Kaardistus",
+            "60": "Kõrgusmudel",
+            "999": "Muu",
+            "10": "Maa-ameti aerofoto"
+        }
+    },
+    {
+        "name": "tapsusklass_xy",
+        "desc": "Andmete plaaniline täpsus",
+        "coded_values": {
+            "10": "10 m",
+            "20": "4 m",
+            "30": "2 m",
+            "40": "1 m",
+            "50": "0.75 m",
+            "60": "0.5 m",
+            "70": "0.35 m",
+            "80": "0.1 m",
+            "800": "Eesti Põhikaart",
+            "8": "25 m",
+            "0": "Teadmata",
+            "997": "Täitmata",
+            "999": "Muu",
+            "75": "0.25 m",
+            "998": "Ei ole rakendatav"
+        }
+    },
+    {
+        "name": "tapsusklass_z",
+        "desc": "Andmete kõrgustäpsus",
+        "coded_values": {
+            "10": "0.1 m",
+            "20": "0.5 m",
+            "30": "1 m",
+            "40": "2.5 m",
+            "50": "5 m",
+            "60": "10 m",
+            "0": "Teadmata",
+            "997": "Täitmata",
+            "999": "Muu",
+            "998": "Ei ole rakendatav"
+        }
+    }
+]

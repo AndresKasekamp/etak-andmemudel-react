@@ -13,8 +13,8 @@ export default function EtakAppBar() {
   const isMobile = useMediaQuery('(max-width:600px)');
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky" sx={{ backgroundColor: AppBarColor }}>
+    <Box sx={{ flexGrow: 1, mb: 10 }}>
+      <AppBar sx={{ backgroundColor: AppBarColor }}>
         <Toolbar sx={{ position: "relative" }}>
 
         <Box sx={{ mr: "auto", display: "flex", gap: 2 }}>
