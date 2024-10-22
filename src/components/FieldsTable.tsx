@@ -27,6 +27,8 @@ import { useLocation, Location } from "react-router-dom";
 import { getTableName } from "../utils/utils.tsx";
 import { generateWfsUrl } from "../utils/wfsRequest.ts";
 
+import { dataTypes, bgColor } from "./formatHelpers/translate.ts";
+
 export const FieldsTable = ({
   rows,
   name,
@@ -199,16 +201,16 @@ export const FieldsTable = ({
         <TableBody>
           {rows.map((row) => (
             <TableRow
-              key={row.name.name}
+              key={row.name}
               sx={{
                 "&:last-child td, &:last-child th": { border: 0 },
-                backgroundColor: row.name.category,
+                backgroundColor: bgColor[row.meta_type],
               }}
             >
               <TableCell component="th" scope="row">
-                {row.name.name}
+                {row.name}
               </TableCell>
-              <TableCell>{row.dataType}</TableCell>
+              <TableCell>{dataTypes[row.type]}</TableCell>
 
               <TableCell>
                 <HashLink smooth to={`#${row.domain}`}>
@@ -216,7 +218,7 @@ export const FieldsTable = ({
                 </HashLink>
               </TableCell>
 
-              <TableCell>{row.desc.hyperlink ?? row.desc.desc}</TableCell>
+              <TableCell>{row.desc}</TableCell>
             </TableRow>
           ))}
         </TableBody>

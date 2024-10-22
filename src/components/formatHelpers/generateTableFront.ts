@@ -11,6 +11,8 @@ import {
 
 import { POINT_GEOMETRY, LINE_GEOMETRY } from "../../data/dataTypes.ts";
 
+
+// TODO kogu seda jama pole ilmselt vaja, kui fieldist lugemist tööle saan
 export const generateTableFront = (
   headingData: HeadingData,
   addedRows: Elements

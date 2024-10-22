@@ -6,6 +6,8 @@ import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 
 import { generateTableFront } from "./formatHelpers/generateTableFront.ts";
 
+import { generateFeatureClass } from "../data/featureClasses.tsx";
+
 export const FullDataTable = ({
   name,
   group,
@@ -15,7 +17,13 @@ export const FullDataTable = ({
 }: MainTableProps) => {
   // Formatting domains and rows
   domains.sort((a, b) => a.name.localeCompare(b.name));
-  const updatedRows = generateTableFront(headingData, rows);
+
+  const orderOfRows = ["general", "technical", "meta", "register"];
+
+  // Custom comparator function
+  rows.sort((a, b) => {
+    return orderOfRows.indexOf(a.meta_type) - orderOfRows.indexOf(b.meta_type);
+  });
 
   return (
     <div
@@ -27,7 +35,7 @@ export const FullDataTable = ({
       }}
     >
       <FieldsTable
-        rows={updatedRows}
+        rows={rows}
         name={name}
         group={group}
         headingData={headingData}

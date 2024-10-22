@@ -41,35 +41,134 @@ import {
 } from "../pages/groupPaths.ts";
 
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
+import feature_classes from "./fields.json" assert { type: "json" };
 
 import { domainFinder } from "./domains.tsx";
 
+
+
+const tmpFeatureClassFinder = (name: string) => {
+  return feature_classes.find((fc) => fc.name === name);
+};
+
+export const generateFeatureClass = () => {
+  const allFeatureClasses = {
+    punktobjektid: [],
+    joonobjektid: [],
+    pindobjektidOverlap: [],
+    pindobjektid: [],
+  };
+
+  const GEOMETRY_MAP = {
+    p: {
+      group: "punktobjekt",
+      type: POINT_GEOMETRY,
+      dimension: 2.5,
+      image: pointImageSource,
+    },
+    j: {
+      group: "joonobjekt",
+      type: LINE_GEOMETRY,
+      dimension: 2.5,
+      image: lineImageSource,
+    },
+    a: {
+      group: "pindobjekt",
+      type: POLY_GEOMETRY,
+      dimension: 2.5,
+      image: polyImageSource,
+    },
+    ka: {
+      group: "pindobjekt",
+      type: POLY_GEOMETRY,
+      dimension: 2.5,
+      image: polyImageSource,
+    },
+  };
+
+  const determineFeatureClass = (name) => {
+    const suffix = name.substring(name.lastIndexOf("_") + 1);
+    return GEOMETRY_MAP[suffix] || GEOMETRY_MAP["a"]; // Default to polygon if not found
+  };
+
+  const createFC = ({ name, fields, desc }) => {
+    const { group, type, dimension, image } = determineFeatureClass(name);
+    return {
+      fcName: name,
+      groupName: group,
+      elements: fields,
+      domainTables: getDomains(fields),
+      headingData: {
+        geomType: type,
+        geomDimension: dimension,
+        image,
+        estName: desc,
+      },
+    };
+  };
+
+  const getDomains = (fields) => {
+    return fields
+      .filter((field) => field.domain)
+      .map((field) => domainFinder(field.domain));
+  };
+
+  feature_classes.forEach((fc) => {
+    const fcObj = createFC(fc);
+    const fcType = fcObj.fcName.substring(fcObj.fcName.lastIndexOf("_") + 1);
+
+    switch (fcType) {
+      case "p":
+        allFeatureClasses.punktobjektid.push(fcObj);
+        break;
+      case "j":
+        allFeatureClasses.joonobjektid.push(fcObj);
+        break;
+      case "a":
+        allFeatureClasses.pindobjektid.push(fcObj);
+        break;
+      case "ka":
+        allFeatureClasses.pindobjektidOverlap.push(fcObj);
+        break;
+    }
+  });
+
+  console.log(allFeatureClasses.punktobjektid);
+  return allFeatureClasses;
+};
+
+
+// TODO kas domeenitabelite genereerimine võiks olla määratud vastavalt sellele, millised domeenid on määratud väljadel?
 export const etakPunktobjektid = [
   {
-    fcName: etak_kirjeldus.classes.E_101_kivi_p.name,
+    fcName: tmpFeatureClassFinder("E_101_kivi_p").name,
+    // fcName: etak_kirjeldus.classes.E_101_kivi_p.name,
     groupName: pointPath,
-    elements: {
-      etak: [
-        generateKood(sharedDomains.d0101.name),
-        generateTyyp(etakPunktobjektidDomains.kivi_tyyp.name, {
-          desc: etak_kirjeldus.classes.E_101_kivi_p.fields.tyyp.description.et,
-          hyperlink: null,
-        }),
+    elements: tmpFeatureClassFinder("E_101_kivi_p").fields,
+    //// elements: {
+    ////   etak: [],
+    ////   register: []
+    //   // etak: [
+    //   //   generateKood(sharedDomains.d0101.name),
+    //   //   generateTyyp(etakPunktobjektidDomains.kivi_tyyp.name, {
+    //   //     desc: etak_kirjeldus.classes.E_101_kivi_p.fields.tyyp.description.et,
+    //   //     hyperlink: null,
+    //   //   }),
 
-        generateKorgus({
-          desc: etak_kirjeldus.classes.E_101_kivi_p.fields.korgus.description
-            .et,
-          hyperlink: null,
-        }),
-      ],
+    //   //   generateKorgus({
+    //   //     desc: etak_kirjeldus.classes.E_101_kivi_p.fields.korgus.description
+    //   //       .et,
+    //   //     hyperlink: null,
+    //   //   }),
+    //   // ],
 
-      register: [
-        generateField(otherRegisterSources.kmr_id),
-        generateField(otherRegisterSources.kkr_kood),
-        generateField(otherRegisterSources.nimetus),
-        generateField(otherRegisterSources.knr_id),
-      ],
-    },
+    //   // register: [
+    //   //   generateField(otherRegisterSources.kmr_id),
+    //   //   generateField(otherRegisterSources.kkr_kood),
+    //   //   generateField(otherRegisterSources.nimetus),
+    //   //   generateField(otherRegisterSources.knr_id),
+    //   // ],
+    // },
 
     domainTables: [
       domainFinder("0101"),

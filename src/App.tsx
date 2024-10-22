@@ -11,6 +11,7 @@ import {
   etakPindobjektidOverlap,
   metadata,
   derivedLayers,
+  generateFeatureClass
 } from "./data/featureClasses.tsx";
 import {
   pointPath,
@@ -57,18 +58,18 @@ function App() {
           }}
         >
           <FrontPageIndexTable
-            objectName={etak_kirjeldus.groups.meta.name.et}
+            objectName="Metaandmed"
             itemNames={metadata}
             dataTypeClass={metadataPath}
           />
           <FrontPageIndexTable
-            objectName={etak_kirjeldus.groups.points.name.et}
-            itemNames={etakPunktobjektid}
+            objectName="Punktobjektid"
+            itemNames={generateFeatureClass().punktobjektid}
             dataTypeClass={pointPath}
           />
           <FrontPageIndexTable
-            objectName={etak_kirjeldus.groups.lines.name.et}
-            itemNames={etakJoonobjektid}
+            objectName="Joonobjektid"
+            itemNames={generateFeatureClass().joonobjektid}
             dataTypeClass={linePath}
           />
 
@@ -88,23 +89,23 @@ function App() {
               }}
               gutterBottom
             >
-              {etak_kirjeldus.groups.polygons.name.et}
+              Pindobjektid
             </Typography>
 
             <FrontPageIndexTable
-              objectName={etak_kirjeldus.groups.land_cover.name.et}
-              itemNames={etakPindobjektidMain}
+              objectName="Põhipindobjektid"
+              itemNames={generateFeatureClass().pindobjektid}
               dataTypeClass={polyPath}
             />
             <FrontPageIndexTable
-              objectName={etak_kirjeldus.groups.overlapping.name.et}
-              itemNames={etakPindobjektidOverlap}
+              objectName="Kattuvad pindobjektid"
+              itemNames={generateFeatureClass().pindobjektidOverlap}
               dataTypeClass={polyPath}
             />
           </Box>
 
           <FrontPageIndexTable
-            objectName={etak_kirjeldus.groups.derivatives.name.et}
+            objectName="Tuletiskihid"
             itemNames={derivedLayers}
             dataTypeClass={derivedPath}
           />
