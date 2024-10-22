@@ -1,5 +1,12 @@
 import { SHORT_INTEGER } from "./dataTypes";
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
+import domains from "./domains.json" assert { type: "json" };
+
+export const domainFinder = (name: string) => {
+  let domainObj =  domains.find((domain) => domain.name === name);
+  // domainObj.dataType = SHORT_INTEGER
+  return domainObj
+};
 
 const createDataDomains = (kood: number, nimetus: string) => {
   return { kood, nimetus };

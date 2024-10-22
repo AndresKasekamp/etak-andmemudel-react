@@ -9,6 +9,8 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { DomainTableProps } from "../../interfaces/interfaces";
 
+import { SHORT_INTEGER } from "../../data/dataTypes";
+
 export default function DomainTable({ domain }: DomainTableProps) {
   return (
     <TableContainer
@@ -31,7 +33,7 @@ export default function DomainTable({ domain }: DomainTableProps) {
         <Typography sx={{ marginLeft: 2 }}>Kirjeldus: {domain.desc}</Typography>
 
         <Typography sx={{ marginLeft: 2, marginBottom: 1 }}>
-          Andmetüüp: {domain.dataType}
+          Andmetüüp: {SHORT_INTEGER}
         </Typography>
       </div>
       <Table sx={{ minWidth: 350 }} size="small" aria-label="a dense table">
@@ -46,16 +48,16 @@ export default function DomainTable({ domain }: DomainTableProps) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {domain.elements.map((row) => (
+          {Object.entries(domain.coded_values).map(([key, value]) => (
             <TableRow
-              key={row.kood}
+              key={key}
               sx={{
                 "&:last-child td, &:last-child th": { border: 0 },
                 backgroundColor: "#fde0e0",
               }}
             >
-              <TableCell align="right">{row.kood}</TableCell>
-              <TableCell>{row.nimetus}</TableCell>
+              <TableCell align="right">{key}</TableCell>
+              <TableCell>{value}</TableCell>
             </TableRow>
           ))}
         </TableBody>

@@ -1,0 +1,5172 @@
+[
+    {
+        "name": "E_101_kivi_p",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0101",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "kivi_tyyp",
+                "desc": "Kivi tüüp"
+            },
+            {
+                "name": "korgus",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kaitsealuse üksiku kivi kõrgus maapinnast [m]"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
+                "domain": "",
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            }
+        ],
+        "desc": "Kivi"
+    },
+    {
+        "name": "E_102_nolv_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0102",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "nolv_tyyp",
+                "desc": "Nõlva tüüp"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "kaldaastang",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "toevaartus",
+                "desc": "Objekt on kaldaastang"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Nõlv"
+    },
+    {
+        "name": "E_103_pinnavorm_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0103",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "pinnavormJ_tyyp",
+                "desc": "Pinnavormi tüüp joonena"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Pinnavorm joonena"
+    },
+    {
+        "name": "E_103_pinnavorm_p",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0103",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "pinnavormP_tyyp",
+                "desc": "Pinnavormi tüüp punktina"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
+                "domain": "",
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            }
+        ],
+        "desc": "Pinnavorm punktina"
+    },
+    {
+        "name": "E_201_meri_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0201",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Meri"
+    },
+    {
+        "name": "E_202_seisuveekogu_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0202",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "seisuveekogu_tyyp",
+                "desc": "Seisuveekogu tüüp alana"
+            },
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
+                "domain": "",
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "kpo_seos",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "seisuveekogu_kpo",
+                "desc": "Seisuveekogu käsitlus"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Seisuveekogu alana"
+    },
+    {
+        "name": "E_202_seisuveekogu_p",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0202",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "seisuveekoguP_tyyp",
+                "desc": "Seisuveekogu tüüp punktina"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
+                "domain": "",
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            }
+        ],
+        "desc": "Seisuveekogu punktina"
+    },
+    {
+        "name": "E_203_vooluveekogu_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0203",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
+                "domain": "",
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "mps_id",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://portaal.agri.ee/avalik/#/maaparandus/msr/systeemi-otsing",
+                "domain": "",
+                "desc": "Eesvoolu identifikaator Maaparandussüsteemide registris"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Vooluveekogu alana"
+    },
+    {
+        "name": "E_203_vooluveekogu_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0203",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "vooluveekogu_tyyp",
+                "desc": "Vooluveekogu tüüp"
+            },
+            {
+                "name": "telje_tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "vooluveekogu_telje_tyyp",
+                "desc": "Vooluveekogu telje iseloom"
+            },
+            {
+                "name": "laius",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "vooluveekogu_laius",
+                "desc": "Vooluveekogu laiusklass"
+            },
+            {
+                "name": "telje_staatus",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "vooluveekogu_staatus",
+                "desc": "Vooluveekogu telje staatus"
+            },
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
+                "domain": "",
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "mps_id",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://portaal.agri.ee/avalik/#/maaparandus/msr/systeemi-otsing",
+                "domain": "",
+                "desc": "Eesvoolu identifikaator Maaparandussüsteemide registris"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Vooluveekogu telgjoon"
+    },
+    {
+        "name": "E_204_kaldajoon_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0204",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "kaldajoon_tyyp",
+                "desc": "Kaldajoone tüüp"
+            },
+            {
+                "name": "kalda_veekogu_tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "kaldajoon_veekogu_tyyp",
+                "desc": "Kaldajoonega piirneva veekogu tüüp"
+            },
+            {
+                "name": "halduspiir",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "toevaartus",
+                "desc": "Objekt osaleb Eesti maismaakontuuri moodustamisel"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Kaldajoon"
+    },
+    {
+        "name": "E_205_hudrotehniline_rajatis_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0205",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "hudrotehniline_rajatis_tyyp",
+                "desc": "Hüdrotehnilise rajatise tüüp"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Hüdrotehniline rajatis"
+    },
+    {
+        "name": "E_206_truup_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0206",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "truup_tyyp",
+                "desc": "Truubi tüüp"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Truup"
+    },
+    {
+        "name": "E_301_muu_kolvik_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0301",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "muu_kolvikA_tyyp",
+                "desc": "Muu kõlviku tüüp alana"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Muu kõlvik alana"
+    },
+    {
+        "name": "E_301_muu_kolvik_ka",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0301",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "muu_kolvikKA_tyyp",
+                "desc": "Muu kõlviku tüüp kattuva alana"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Muu kõlvik kattuva alana"
+    },
+    {
+        "name": "E_301_muu_kolvik_p",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0301",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "muu_kolvikP_tyyp",
+                "desc": "Muu kõlviku tüüp punktina"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            }
+        ],
+        "desc": "Muu kõlvik punktina"
+    },
+    {
+        "name": "E_302_ou_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0302",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "ou_tyyp",
+                "desc": "Õue tüüp"
+            },
+            {
+                "name": "kasutus",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "ou_kasutus",
+                "desc": "Tootmisõue erijuht"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Õu"
+    },
+    {
+        "name": "E_303_haritav_maa_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0303",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "haritav_maa_tyyp",
+                "desc": "Haritava maa tüüp"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "puis",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "toevaartus",
+                "desc": "Puittaimestiku olemasolu"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Haritav maa"
+    },
+    {
+        "name": "E_304_lage_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0304",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "lage_tyyp",
+                "desc": "Lageda tüüp"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Lage"
+    },
+    {
+        "name": "E_305_puittaimestik_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0305",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "puittaimestikA_tyyp",
+                "desc": "Puittaimestiku tüüp alana"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Puittaimestik alana"
+    },
+    {
+        "name": "E_305_puittaimestik_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0305",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "puittaimestikJ_tyyp",
+                "desc": "Puittaimestiku tüüp joonena"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Puittaimestik joonena"
+    },
+    {
+        "name": "E_305_puittaimestik_p",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0305",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "puittaimestikP_tyyp",
+                "desc": "Puittaimestiku tüüp punktina"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
+                "domain": "",
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            }
+        ],
+        "desc": "Puittaimestik punktina"
+    },
+    {
+        "name": "E_306_margala_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0306",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "margalaA_tyyp",
+                "desc": "Märgala tüüp alana"
+            },
+            {
+                "name": "puis",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "toevaartus",
+                "desc": "Puittaimestiku olemasolu"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Märgala alana"
+    },
+    {
+        "name": "E_306_margala_ka",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0306",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "margalaKA_tyyp",
+                "desc": "Märgala tüüp kattuva alana"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Märgala kattuva alana"
+    },
+    {
+        "name": "E_307_turbavali_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0307",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "turbavali_tyyp",
+                "desc": "Turbavälja tüüp"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Turbaväli"
+    },
+    {
+        "name": "E_401_hoone_ka",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0401",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "hoone_tyyp",
+                "desc": "Hoone tüüp"
+            },
+            {
+                "name": "ehr_gid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://livekluster.ehr.ee/ui/ehr/v1",
+                "domain": "",
+                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+            },
+            {
+                "name": "ads_oid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://xgis.maaamet.ee/adsavalik/",
+                "domain": "",
+                "desc": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis"
+            },
+            {
+                "name": "ads_lahiaadress",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "kov_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Kohaliku omavalitsuse andmekogu ruumiobjekti identifikaator"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "korgus_m",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Hoone maksimaalne kõrgus maapinnast [m]"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Hoone"
+    },
+    {
+        "name": "E_402_korgrajatis_p",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0402",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "korgrajatis_tyyp",
+                "desc": "Kõrgrajatise tüüp"
+            },
+            {
+                "name": "korgus",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kõrgrajatise kõrgus maapinnast [m]"
+            },
+            {
+                "name": "seos",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "korgrajatis_seos",
+                "desc": "Kõrgrajatise seos hoonega"
+            },
+            {
+                "name": "hoone",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Seotud hoone identifikaator"
+            },
+            {
+                "name": "mark",
+                "type": "SmallInteger",
+                "meta_type": "register",
+                "link": null,
+                "domain": "toevaartus",
+                "desc": "Objekt on kasutusel navigatioonimärgina"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "ehr_gid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://livekluster.ehr.ee/ui/ehr/v1",
+                "domain": "",
+                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            }
+        ],
+        "desc": "Kõrgrajatis"
+    },
+    {
+        "name": "E_403_muu_rajatis_ka",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0403",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "muu_rajatisKA_tyyp",
+                "desc": "Muu rajatise tüüp kattuva alana"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "ehr_gid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://livekluster.ehr.ee/ui/ehr/v1",
+                "domain": "",
+                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "kov_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Kohaliku omavalitsuse andmekogu ruumiobjekti identifikaator"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Muu rajatis kattuva alana"
+    },
+    {
+        "name": "E_403_muu_rajatis_p",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0403",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "muu_rajatisP_tyyp",
+                "desc": "Muu rajatise tüüp punktina"
+            },
+            {
+                "name": "mark",
+                "type": "SmallInteger",
+                "meta_type": "register",
+                "link": null,
+                "domain": "toevaartus",
+                "desc": "Objekt on kasutusel navigatioonimärgina"
+            },
+            {
+                "name": "ehr_gid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://livekluster.ehr.ee/ui/ehr/v1",
+                "domain": "",
+                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            }
+        ],
+        "desc": "Muu rajatis punktina"
+    },
+    {
+        "name": "E_404_maaalune_hoone_ka",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0404",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "maaalune_hoone_tyyp",
+                "desc": "Maa-aluse hoone tüüp"
+            },
+            {
+                "name": "ehr_gid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://livekluster.ehr.ee/ui/ehr/v1",
+                "domain": "",
+                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "ads_oid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://xgis.maaamet.ee/adsavalik/",
+                "domain": "",
+                "desc": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis"
+            },
+            {
+                "name": "ads_lahiaadress",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "kov_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Kohaliku omavalitsuse andmekogu ruumiobjekti identifikaator"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Maa-alune hoone"
+    },
+    {
+        "name": "E_405_piire_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0405",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "piire_tyyp",
+                "desc": "Piirde tüüp"
+            },
+            {
+                "name": "puittaimed",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "toevaartus",
+                "desc": "Puittaimede olemasolu piirdel või selle vahetus läheduses"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Piire"
+    },
+    {
+        "name": "E_501_tee_a",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0501",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "teeA_tyyp",
+                "desc": "Teeala tüüp"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Tee alana"
+    },
+    {
+        "name": "E_501_tee_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0501",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tee_tyyp",
+                "desc": "Tee tüüp joonena"
+            },
+            {
+                "name": "laius",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Teekatte laius koos sõidukõlbulike teepeenardega [m]"
+            },
+            {
+                "name": "teekate",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tee_teekate",
+                "desc": "Tee kattematerjal"
+            },
+            {
+                "name": "liiklus",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tee_liiklus",
+                "desc": "Teel lubatud liikumissuund"
+            },
+            {
+                "name": "tee",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Tee number Teeregistris"
+            },
+            {
+                "name": "teeosa",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Tee loogilise osa kood Teeregistris"
+            },
+            {
+                "name": "soidutee",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tee_soidutee",
+                "desc": "Sõidutee kood Teeregistris"
+            },
+            {
+                "name": "tee_synon",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Samal lõigul asuva teise tee number"
+            },
+            {
+                "name": "teeosa_synon",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Samal lõigul asuva teise tee teeosa number"
+            },
+            {
+                "name": "soidutee_synon",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tee_soidutee",
+                "desc": "Samal lõigul asuva teise tee sõidutee kood"
+            },
+            {
+                "name": "tee_synon2",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Samal lõigul asuva kolmanda tee number"
+            },
+            {
+                "name": "teeosa_synon2",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Samal lõigul asuva kolmanda teeosa number"
+            },
+            {
+                "name": "soidutee_synon2",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tee_soidutee",
+                "desc": "Samal lõigul asuva kolmanda tee sõidutee kood"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "a_tasand",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Teelõigu alguspunkti tasand mitmetasandilistel ristmikel"
+            },
+            {
+                "name": "l_tasand",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Teelõigu lõpp-punkti tasand mitmetasandilistel ristmikel"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "ads_oid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://xgis.maaamet.ee/adsavalik/",
+                "domain": "",
+                "desc": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis"
+            },
+            {
+                "name": "ads_nimetus",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Liikluspinna nimetus Aadressiandmete süsteemi infosüsteemis"
+            },
+            {
+                "name": "karto_nimi",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Tee (tänava) nimetus kaardile kandmiseks sobivalt lühendatud kujul"
+            },
+            {
+                "name": "tahtsus",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tee_tahtsus",
+                "desc": "Tänava tähtsus"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Tee joonena"
+    },
+    {
+        "name": "E_502_roobastee_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0502",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "roobastee_tyyp",
+                "desc": "Rööbastee tüüp"
+            },
+            {
+                "name": "elekter",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "toevaartus",
+                "desc": "Rööbastee on sobilik elektrirongidele"
+            },
+            {
+                "name": "tahtsus",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "roobastee_tahtsus",
+                "desc": "Rööbastee lõigu tähtsus"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Rööbastee"
+    },
+    {
+        "name": "E_503_siht_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0503",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Siht"
+    },
+    {
+        "name": "E_505_liikluskorralduslik_rajatis_ka",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0505",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "liikluskorralduslik_rajatisKA_tyyp",
+                "desc": "Liikluskorraldusliku rajatise tüüp kattuva alana"
+            },
+            {
+                "name": "kmr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://register.muinas.ee/",
+                "domain": "",
+                "desc": "Objekti identifikaator Kultuurimälestiste registris"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "domain": "",
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            }
+        ],
+        "desc": "Liikluskorralduslik rajatis kattuva alana"
+    },
+    {
+        "name": "E_505_liikluskorralduslik_rajatis_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0505",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "liikluskorralduslik_rajatisJ_tyyp",
+                "desc": "Liikluskorraldusliku rajatise tüüp joonena"
+            },
+            {
+                "name": "toke",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "liikluskorralduslik_rajatis_suletus",
+                "desc": "Sõidutakistuse iseloom"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Liikluskorralduslik rajatis joonena"
+    },
+    {
+        "name": "E_601_elektriliin_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0601",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "nimipinge",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Elektriliini nimipinge [kV]"
+            },
+            {
+                "name": "ehr_gid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://livekluster.ehr.ee/ui/ehr/v1",
+                "domain": "",
+                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Elektriliin"
+    },
+    {
+        "name": "E_602_tehnopaigaldis_p",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0602",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "tyyp",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tehnopaigaldis_tyyp",
+                "desc": "Tehnopaigaldise tüüp"
+            },
+            {
+                "name": "ehr_gid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://livekluster.ehr.ee/ui/ehr/v1",
+                "domain": "",
+                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "korgus",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Tehnopaigaldise kõrgus maapinnast [m]"
+            }
+        ],
+        "desc": "Tehnopaigaldis"
+    },
+    {
+        "name": "E_603_torujuhe_j",
+        "fields": [
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "andmeallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti andmete muutmist põhjustanud alusdokumendi identifikaator"
+            },
+            {
+                "name": "korgusallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi identifikaator, mille järgi on omistatud objekti kõrgus"
+            },
+            {
+                "name": "ruumikujuallika_id",
+                "type": "Integer",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Ruumikuju muutmise aluseks olnud alusdokumendi identifikaator"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "ETAK objekti unikaalne identifikaator"
+            },
+            {
+                "name": "kood",
+                "type": "SmallInteger",
+                "meta_type": "general",
+                "link": null,
+                "domain": "0603",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "ehr_gid",
+                "type": "String",
+                "meta_type": "register",
+                "link": "https://livekluster.ehr.ee/ui/ehr/v1",
+                "domain": "",
+                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "vajalik",
+                "type": "SmallInteger",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "vajalikkus",
+                "desc": "Objekti staatus"
+            },
+            {
+                "name": "geom_muutmisaeg",
+                "type": "Date",
+                "meta_type": "meta",
+                "link": null,
+                "domain": "",
+                "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Double",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            }
+        ],
+        "desc": "Torujuhe"
+    }
+]

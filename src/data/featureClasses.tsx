@@ -42,6 +42,8 @@ import {
 
 import etak_kirjeldus from "./etak_kirjeldus.json" assert { type: "json" };
 
+import { domainFinder } from "./domains.tsx";
+
 export const etakPunktobjektid = [
   {
     fcName: etak_kirjeldus.classes.E_101_kivi_p.name,
@@ -70,9 +72,9 @@ export const etakPunktobjektid = [
     },
 
     domainTables: [
-      sharedDomains.d0101,
-      etakPunktobjektidDomains.kivi_tyyp,
-      sharedDomains.vajalikkus,
+      domainFinder("0101"),
+      domainFinder("kivi_tyyp"),
+      domainFinder("vajalikkus"),
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
@@ -103,9 +105,9 @@ export const etakPunktobjektid = [
     },
 
     domainTables: [
-      sharedDomains.vajalikkus,
-      sharedDomains.d0103,
-      etakPunktobjektidDomains.pinnavormP_tyyp,
+      domainFinder("0103"),
+      domainFinder("pinnavormP_tyyp"),
+      domainFinder("vajalikkus"),
     ],
 
     headingData: generateHeadingData(
@@ -137,9 +139,9 @@ export const etakPunktobjektid = [
     },
 
     domainTables: [
-      sharedDomains.vajalikkus,
-      sharedDomains.d0202,
-      etakPunktobjektidDomains.seisuveekoguP_tyyp,
+      domainFinder("0202"),
+      domainFinder("vajalikkus"),
+      domainFinder("seisuveekoguP_tyyp"),
     ],
 
     headingData: generateHeadingData(
@@ -170,9 +172,9 @@ export const etakPunktobjektid = [
     },
 
     domainTables: [
-      sharedDomains.d0301,
-      etakPunktobjektidDomains.kivi_tyyp,
-      sharedDomains.vajalikkus,
+      domainFinder("0301"),
+      domainFinder("kivi_tyyp"),
+      domainFinder("vajalikkus"),
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
@@ -203,9 +205,9 @@ export const etakPunktobjektid = [
     },
 
     domainTables: [
-      sharedDomains.d0305,
-      etakPunktobjektidDomains.puittaimestikP_tyyp,
-      sharedDomains.vajalikkus,
+      domainFinder("0305"),
+      domainFinder("puittaimestikP_tyyp"),
+      domainFinder("vajalikkus"),
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
@@ -265,11 +267,11 @@ export const etakPunktobjektid = [
     },
 
     domainTables: [
-      sharedDomains.d0402,
-      etakPunktobjektidDomains.korgrajatis_tyyp,
-      etakPunktobjektidDomains.korgrajatis_seos,
-      sharedDomains.vajalikkus,
-      sharedDomains.toevaartus,
+      domainFinder("0402"),
+      domainFinder("korgrajatis_tyyp"),
+      domainFinder("korgrajatis_seos"),
+      domainFinder("vajalikkus"),
+      domainFinder("toevaartus"),
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
@@ -301,10 +303,10 @@ export const etakPunktobjektid = [
     },
 
     domainTables: [
-      sharedDomains.d0403,
-      etakPunktobjektidDomains.muu_rajatisP_tyyp,
-      sharedDomains.vajalikkus,
-      sharedDomains.toevaartus,
+      domainFinder("0403"),
+      domainFinder("muu_rajatisP_tyyp"),
+      domainFinder("vajalikkus"),
+      domainFinder("toevaartus"),
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
@@ -330,9 +332,9 @@ export const etakPunktobjektid = [
     },
 
     domainTables: [
-      sharedDomains.d0602,
-      etakPunktobjektidDomains.tehnopaigaldis_tyyp,
-      sharedDomains.vajalikkus,
+      domainFinder("0602"),
+      domainFinder("tehnopaigaldis_tyyp"),
+      domainFinder("vajalikkus"),
     ],
     headingData: generateHeadingData(
       POINT_GEOMETRY,
