@@ -5,12 +5,12 @@ import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { generateDomainsTogether } from "./formatHelpers/generateTableFront.ts";
 import { ExportAllPDF } from "./formatHelpers/ExportAllPDF.tsx";
 
+import { AllTablesAndDomains2 } from "../interfaces/interfaces2.tsx";
+
 import { sortElements } from "./formatHelpers/sortElements.ts";
 // TODO domeenid on vaja settida ja panna tähestiku vms järjekorda
 
-export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains1) => {
-  console.log("All tables and domains", allTablesAndDomains);
-
+export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains2) => {
   // Manipulating domains into singular
   const domainsMerged = generateDomainsTogether(allTablesAndDomains);
 
@@ -33,11 +33,13 @@ export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains1) => {
 
         <FieldsTable
           key={idx}
-          name={ad.fcName}
-          group={ad.groupName}
-          rows={sortElements(ad.elements)}
+          fcName={ad.fcName}
+          groupName={ad.groupName}
+          elements={sortElements(ad.elements)}
           headingData={ad.headingData}
-          domains={ad.domainTables.sort((a, b) => a.name.localeCompare(b.name))}
+          domainTables={ad.domainTables.sort((a, b) =>
+            a.name.localeCompare(b.name)
+          )}
         ></FieldsTable>
       ))}
       <DomainTableMain domains={domainsMerged}></DomainTableMain>

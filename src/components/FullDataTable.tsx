@@ -1,17 +1,17 @@
-import { MainTableProps } from "../interfaces/interfaces.tsx";
 import { FieldsTable } from "./FieldsTable.tsx";
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { sortElements } from "./formatHelpers/sortElements.ts";
+import { FeatureClassOutput } from "../interfaces/interfaces2.tsx";
 
 export const FullDataTable = ({
-  name,
-  group,
-  rows,
-  domains,
+  fcName,
+  groupName,
+  elements,
+  domainTables,
   headingData,
-}: MainTableProps) => {
+}: FeatureClassOutput) => {
   // Formatting domains and rows
-  domains.sort((a, b) => a.name.localeCompare(b.name));
+  domainTables.sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div
@@ -23,13 +23,13 @@ export const FullDataTable = ({
       }}
     >
       <FieldsTable
-        rows={sortElements(rows)}
-        name={name}
-        group={group}
+        elements={sortElements(elements)}
+        fcName={fcName}
+        groupName={groupName}
         headingData={headingData}
-        domains={domains}
+        domainTables={domainTables}
       ></FieldsTable>
-      <DomainTableMain domains={domains}></DomainTableMain>
+      <DomainTableMain domains={domainTables}></DomainTableMain>
     </div>
   );
 };

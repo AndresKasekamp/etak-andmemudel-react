@@ -11,6 +11,8 @@ import { DomainTableProps } from "../../interfaces/interfaces";
 
 import { SHORT_INTEGER } from "../../data/dataTypes";
 
+
+// TODO domeeni tüübid on vaja paika saada täpselt
 export default function DomainTable({ domain }: DomainTableProps) {
   return (
     <TableContainer

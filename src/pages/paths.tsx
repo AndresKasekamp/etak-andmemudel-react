@@ -4,6 +4,8 @@ import { FullDataTable } from "../components/FullDataTable";
 import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
 import { OnePager2d } from "../components/OnePager2d";
 
+import { FeatureClassOutput } from "../interfaces/interfaces2";
+
 const generateAllDataMerge = () => {
   const allDataTogether = [
     // ...metadata,
@@ -30,16 +32,16 @@ const all2dPath = {
 };
 
 const featureClassPath = (
-  featureclasses: FeatureClass[]
+  featureclasses: FeatureClassOutput[]
 ): FeatureClassPath[] => {
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `${fc.groupName}/${fc.fcName}`,
     element: (
       <FullDataTable
-        name={fc.fcName}
-        group={fc.groupName}
-        rows={fc.elements}
-        domains={fc.domainTables}
+        fcName={fc.fcName}
+        groupName={fc.groupName}
+        elements={fc.elements}
+        domainTables={fc.domainTables}
         headingData={fc.headingData}
       />
     ),

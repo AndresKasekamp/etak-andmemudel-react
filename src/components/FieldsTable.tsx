@@ -15,7 +15,6 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { jsPDF } from "jspdf"; //or use your library of choice here
 import autoTable from "jspdf-autotable";
 
-import { FieldsTableProps } from "../interfaces/interfaces.tsx";
 import ObjectCount from "./formatHelpers/ObjectCount.tsx";
 import { HashLink } from "react-router-hash-link";
 
@@ -28,58 +27,57 @@ import { getTableName } from "../utils/utils.tsx";
 import { generateWfsUrl } from "../utils/wfsRequest.ts";
 
 import { dataTypes, bgColor } from "./formatHelpers/translate.ts";
+import { FeatureClassOutput } from "../interfaces/interfaces2.tsx";
 
 import RegisterHyperLink from "./formatHelpers/RegisterHyperLink.tsx";
 
+import { CategoryKey, DataTypeKey } from "./formatHelpers/translate.ts";
+
 export const FieldsTable = ({
-  rows,
-  name,
-  group,
+  elements,
+  fcName,
+  groupName,
   headingData,
-  domains,
-}: FieldsTableProps) => {
+  domainTables,
+}: FeatureClassOutput) => {
   const handleExportPDF = () => {
     const doc = new jsPDF();
 
     doc.setFontSize(18);
-    doc.text(name, 14, 22);
+    doc.text(fcName, 14, 22);
 
     // AutoTable function to generate the main table logic
     autoTable(doc, {
       head: [["Välja nimi", "Andmetüüp", "Domeen", "Kirjeldus"]],
-      body: rows.map((row) => [
-        row.name.name,
-        row.dataType,
-        row.domain,
-        row.desc.desc,
-      ]),
+      body: elements.map((row) => [row.name, row.type, row.domain, row.desc]),
       startY: 30,
     });
 
+    // TODO siin on kindlalt bug sees (domeeni kood/nimetus enam ei pea paika)
     // Domain added to pdf
-    domains.map((domain) => {
+    domainTables.map((domain) => {
       doc.addPage();
       doc.text(domain.name, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {
         head: [["Kood", "Nimetus"]],
-        body: domain.elements.map((row) => [row.kood, row.nimetus]),
+        body: domain.coded_values.map((row) => [row.kood, row.nimetus]),
         startY: 30,
       });
     });
 
     // Save the PDF
-    doc.save(`${name}.pdf`);
+    doc.save(`${fcName}.pdf`);
   };
 
   const getFeatureCount = () => {
-    switch (name) {
+    switch (fcName) {
       case etak_kirjeldus.classes.alusdokument.name:
         return etak_kirjeldus.classes.alusdokument.count;
       case etak_kirjeldus.classes.vooluveed_kkr.name:
-        return <ObjectCount url={generateWfsUrl(name, true)}></ObjectCount>;
+        return <ObjectCount url={generateWfsUrl(fcName, true)}></ObjectCount>;
       default:
-        return <ObjectCount url={generateWfsUrl(name)}></ObjectCount>;
+        return <ObjectCount url={generateWfsUrl(fcName)}></ObjectCount>;
     }
   };
 
@@ -90,7 +88,7 @@ export const FieldsTable = ({
       etak_kirjeldus.classes.seisuveed_kkr,
     ];
 
-    if (nonLevituum.includes(name)) {
+    if (nonLevituum.includes(fcName)) {
       return <br />;
     }
 
@@ -153,7 +151,7 @@ export const FieldsTable = ({
         </Tooltip>
 
         <Typography variant="h4" sx={{ marginRight: 1 }}>
-          {name}
+          {fcName}
         </Typography>
 
         <Button
@@ -184,7 +182,7 @@ export const FieldsTable = ({
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         {pathName === "2d" ? (
           <caption>
-            <DetailViewLink group={group} table={name} />
+            <DetailViewLink group={groupName} table={fcName} />
           </caption>
         ) : null}
 
@@ -201,18 +199,18 @@ export const FieldsTable = ({
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {elements.map((row) => (
             <TableRow
               key={row.name}
               sx={{
                 "&:last-child td, &:last-child th": { border: 0 },
-                backgroundColor: bgColor[row.meta_type],
+                backgroundColor: bgColor[row.meta_type as CategoryKey],
               }}
             >
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell>{dataTypes[row.type]}</TableCell>
+              <TableCell>{dataTypes[row.type as DataTypeKey]}</TableCell>
 
               <TableCell>
                 <HashLink smooth to={`#${row.domain}`}>

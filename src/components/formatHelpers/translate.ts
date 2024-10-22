@@ -12,7 +12,10 @@ import {
   RegisterCategory,
 } from "../../data/colors";
 
-export const dataTypes = {
+export type DataTypeKey = "OID" | "Geometry" | "Date" | "Integer" | "SmallInteger" | "String";
+type DataTypeValue = typeof INTEGER | typeof GEOMETRY | typeof DATE | typeof SHORT_INTEGER | string;
+
+export const dataTypes: Record<DataTypeKey, DataTypeValue> = {
   OID: INTEGER,
   Geometry: GEOMETRY,
   Date: DATE,
@@ -21,7 +24,10 @@ export const dataTypes = {
   String: "tekst", // TODO seal on pärast veel mingi sulgudes reegeld ()
 };
 
-export const bgColor = {
+export type CategoryKey = "technical" | "meta" | "general" | "register";
+type CategoryValue = typeof EsriCategory | typeof EtakMetaCategory | typeof MainCategory | typeof RegisterCategory;
+
+export const bgColor: Record<CategoryKey, CategoryValue> = {
   technical: EsriCategory,
   meta: EtakMetaCategory,
   general: MainCategory,

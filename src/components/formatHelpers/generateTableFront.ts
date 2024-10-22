@@ -1,9 +1,7 @@
-import { FeatureClass } from "../../interfaces/interfaces.tsx";
-
-// TODO kogu seda jama pole ilmselt vaja, kui fieldist lugemist tööle saan
+import { FeatureClassOutput } from "../../interfaces/interfaces2.tsx";
 
 export const generateDomainsTogether = (
-  allTablesAndDomains: FeatureClass[]
+  allTablesAndDomains: FeatureClassOutput[]
 ) => {
   // Manipulating domains into singular
   const domainsMergedSet = new Set(
