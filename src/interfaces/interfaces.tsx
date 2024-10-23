@@ -1,5 +1,3 @@
-
-
 interface HeadingData {
   geomType: string;
   geomDimension: number;
@@ -50,11 +48,11 @@ export interface FeatureClasses {
   pindobjektid: FeatureClassOutput[];
 }
 
-export interface AllTablesAndDomains2 {
+export interface AllTablesAndDomains {
   allTablesAndDomains: FeatureClassOutput[];
 }
 
-export interface DomainTableMainProps2 {
+export interface DomainTableMainProps {
   domains: DomainTable[];
 }
 
@@ -79,8 +77,18 @@ export interface ObjectCountProps {
   url: string;
 }
 
-
 export interface DetailViewLinkProps {
   group: string;
   table: string;
+}
+
+export interface RegisterHyperLinkProps {
+  link: string;
+  desc: string;
+}
+
+export interface TableProps {
+  objectName: string;
+  itemNames: FeatureClassOutput[];
+  dataTypeClass: string;
 }

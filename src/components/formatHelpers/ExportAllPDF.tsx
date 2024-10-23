@@ -33,7 +33,7 @@ export const ExportAllPDF = ({
       doc.addPage();
     });
 
-    domainsMerged.map((domain) => {
+    domainsMerged.map((domain, index) => {
       doc.text(domain.name, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {
@@ -45,7 +45,10 @@ export const ExportAllPDF = ({
         startY: 30,
       });
 
-      doc.addPage();
+      // Only add a new page if it's not the last domain
+      if (index < domainsMerged.length - 1) {
+        doc.addPage();
+      }
     });
 
     // Save the PDF

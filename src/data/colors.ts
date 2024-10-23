@@ -8,7 +8,7 @@ export const RegisterCategory = "#C1E1C1";
 export const TableHeaderColor = "#C7C8CC";
 
 // Front page table background
-export const FrontPageTableColor = "#F5FAFA"
+export const FrontPageTableColor = "#F5FAFA";
 
 // AppBar ELB color
-export const AppBarColor = "#32774e"
+export const AppBarColor = "#32774e";

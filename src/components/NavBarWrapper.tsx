@@ -1,5 +1,5 @@
-import EtakAppBar from './navbar/AppBar';
-import { Outlet } from 'react-router-dom';
+import EtakAppBar from "./navbar/AppBar";
+import { Outlet } from "react-router-dom";
 
 const NavBarWrapper = () => {
   return (
@@ -8,6 +8,6 @@ const NavBarWrapper = () => {
       <Outlet />
     </div>
   );
-}
+};
 
-export default NavBarWrapper
+export default NavBarWrapper;

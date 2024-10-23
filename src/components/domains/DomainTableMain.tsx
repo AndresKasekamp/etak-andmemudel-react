@@ -2,9 +2,8 @@ import TableContainer from "@mui/material/TableContainer";
 import Paper from "@mui/material/Paper";
 import DomainTable from "./DomainTable";
 import { DomainTableMainProps } from "../../interfaces/interfaces";
-import { DomainTableMainProps2 } from "../../interfaces/interfaces";
 
-export const DomainTableMain: React.FC<DomainTableMainProps2> = ({
+export const DomainTableMain: React.FC<DomainTableMainProps> = ({
   domains,
 }) => {
   return (

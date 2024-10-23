@@ -1,4 +1,3 @@
-
 import domains from "./domains.json" assert { type: "json" };
 
 import { DomainTable } from "../interfaces/interfaces";
@@ -13,5 +12,3 @@ export const domainFinder = (name: string): DomainTable => {
   // @ts-ignore
   return foundDomain;
 };
-
-

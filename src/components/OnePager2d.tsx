@@ -1,15 +1,14 @@
-
 import { FieldsTable } from "./FieldsTable.tsx";
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { generateDomainsTogether } from "./formatHelpers/generateTableFront.ts";
 import { ExportAllPDF } from "./formatHelpers/ExportAllPDF.tsx";
 
-import { AllTablesAndDomains2 } from "../interfaces/interfaces.tsx";
+import { AllTablesAndDomains } from "../interfaces/interfaces.tsx";
 
 import { sortElements } from "./formatHelpers/sortElements.ts";
-// TODO domeenid on vaja settida ja panna tähestiku vms järjekorda
 
-export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains2) => {
+
+export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
   // Manipulating domains into singular
   const domainsMerged = generateDomainsTogether(allTablesAndDomains);
 
