@@ -61,7 +61,11 @@ export const FieldsTable = ({
       // AutoTable function to generate the table
       autoTable(doc, {
         head: [["Kood", "Nimetus"]],
-        body: domain.coded_values.map((row) => [row.kood, row.nimetus]),
+        //body: domain.coded_values.map((row) => [row.kood, row.nimetus]),
+        body: Object.entries(domain.coded_values).map(([key, value]) => [
+          key,
+          value,
+        ]),
         startY: 30,
       });
     });

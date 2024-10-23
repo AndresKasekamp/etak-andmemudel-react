@@ -7,13 +7,12 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 import Typography from "@mui/material/Typography";
-import { DomainTableProps } from "../../interfaces/interfaces";
 
 import { SHORT_INTEGER } from "../../data/dataTypes";
 
+import { DomainTableProps2 } from "../../interfaces/interfaces2";
 
-// TODO domeeni tüübid on vaja paika saada täpselt
-export default function DomainTable({ domain }: DomainTableProps) {
+export default function DomainTable({ domain }: DomainTableProps2) {
   return (
     <TableContainer
       id={domain.name}

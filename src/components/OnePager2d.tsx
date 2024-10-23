@@ -1,4 +1,3 @@
-import { AllTablesAndDomains1 } from "../interfaces/interfaces.tsx";
 
 import { FieldsTable } from "./FieldsTable.tsx";
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";

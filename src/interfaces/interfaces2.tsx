@@ -53,3 +53,7 @@ export interface AllTablesAndDomains2 {
 export interface DomainTableMainProps2 {
   domains: DomainTable[];
 }
+
+export interface DomainTableProps2 {
+  domain: DomainTable;
+}
