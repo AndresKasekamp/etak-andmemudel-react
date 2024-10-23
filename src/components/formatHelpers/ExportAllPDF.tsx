@@ -5,8 +5,7 @@ import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { AllTablesAndDomainsMerge } from "../../interfaces/interfaces2";
 
-// TODO uue lahendusega on asjad teisti printides
-// TODO viimane leht jääb tühjaks praegu selle lahendusega
+// TODO viimase lehe probleem lahendada
 export const ExportAllPDF = ({
   allTablesAndDomains,
   domainsMerged,
@@ -18,7 +17,6 @@ export const ExportAllPDF = ({
     doc.setFontSize(18);
 
     allTablesAndDomains.map((rows) => {
-      // const cleanRows = generateTableFront(rows.headingData, rows.elements);
       doc.text(rows.fcName, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {

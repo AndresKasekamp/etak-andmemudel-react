@@ -1,9 +1,4 @@
-import {
-  SHORT_INTEGER,
-  INTEGER,
-  DATE,
-  GEOMETRY,
-} from "../../data/dataTypes";
+import { SHORT_INTEGER, INTEGER, DATE, GEOMETRY } from "../../data/dataTypes";
 
 import {
   MainCategory,
@@ -12,8 +7,19 @@ import {
   RegisterCategory,
 } from "../../data/colors";
 
-export type DataTypeKey = "OID" | "Geometry" | "Date" | "Integer" | "SmallInteger" | "String";
-type DataTypeValue = typeof INTEGER | typeof GEOMETRY | typeof DATE | typeof SHORT_INTEGER | string;
+export type DataTypeKey =
+  | "OID"
+  | "Geometry"
+  | "Date"
+  | "Integer"
+  | "SmallInteger"
+  | "String";
+export type DataTypeValue =
+  | typeof INTEGER
+  | typeof GEOMETRY
+  | typeof DATE
+  | typeof SHORT_INTEGER
+  | string;
 
 export const dataTypes: Record<DataTypeKey, DataTypeValue> = {
   OID: INTEGER,
@@ -25,7 +31,11 @@ export const dataTypes: Record<DataTypeKey, DataTypeValue> = {
 };
 
 export type CategoryKey = "technical" | "meta" | "general" | "register";
-type CategoryValue = typeof EsriCategory | typeof EtakMetaCategory | typeof MainCategory | typeof RegisterCategory;
+export type CategoryValue =
+  | typeof EsriCategory
+  | typeof EtakMetaCategory
+  | typeof MainCategory
+  | typeof RegisterCategory;
 
 export const bgColor: Record<CategoryKey, CategoryValue> = {
   technical: EsriCategory,

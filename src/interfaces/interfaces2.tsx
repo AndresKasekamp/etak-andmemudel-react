@@ -1,7 +1,5 @@
 import { HeadingData } from "./interfaces";
-// Type Definitions
 
-// TODO siin on suur osa puudu
 export interface Field {
   name: string;
   domain: string;
@@ -44,7 +42,6 @@ export interface FeatureClasses {
   pindobjektidOverlap: FeatureClassOutput[];
   pindobjektid: FeatureClassOutput[];
 }
-
 
 export interface AllTablesAndDomains2 {
   allTablesAndDomains: FeatureClassOutput[];
