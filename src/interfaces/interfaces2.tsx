@@ -57,3 +57,8 @@ export interface DomainTableMainProps2 {
 export interface DomainTableProps2 {
   domain: DomainTable;
 }
+
+export interface AllTablesAndDomainsMerge {
+  allTablesAndDomains: FeatureClassOutput[];
+  domainsMerged: DomainTable[];
+}

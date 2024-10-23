@@ -53,7 +53,6 @@ export const FieldsTable = ({
       startY: 30,
     });
 
-    // TODO siin on kindlalt bug sees (domeeni kood/nimetus enam ei pea paika)
     // Domain added to pdf
     domainTables.map((domain) => {
       doc.addPage();

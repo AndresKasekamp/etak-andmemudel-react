@@ -3,14 +3,14 @@ import autoTable from "jspdf-autotable";
 
 import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import { AllTablesAndDomains } from "../../interfaces/interfaces";
+import { AllTablesAndDomainsMerge } from "../../interfaces/interfaces2";
 
 // TODO uue lahendusega on asjad teisti printides
 // TODO viimane leht jääb tühjaks praegu selle lahendusega
 export const ExportAllPDF = ({
   allTablesAndDomains,
   domainsMerged,
-}: AllTablesAndDomains) => {
+}: AllTablesAndDomainsMerge) => {
   const handleExportPDF = () => {
     const doc = new jsPDF();
 
@@ -24,10 +24,10 @@ export const ExportAllPDF = ({
       autoTable(doc, {
         head: [["Välja nimi", "Andmetüüp", "Domeen", "Kirjeldus"]],
         body: rows.elements.map((row) => [
-          row.name.name,
-          row.dataType,
+          row.name,
+          row.type,
           row.domain,
-          row.desc.desc,
+          row.desc,
         ]),
         startY: 30,
       });
@@ -40,7 +40,10 @@ export const ExportAllPDF = ({
       // AutoTable function to generate the table
       autoTable(doc, {
         head: [["Kood", "Nimetus"]],
-        body: domain.elements.map((row) => [row.kood, row.nimetus]),
+        body: Object.entries(domain.coded_values).map(([key, value]) => [
+          key,
+          value,
+        ]),
         startY: 30,
       });
 
