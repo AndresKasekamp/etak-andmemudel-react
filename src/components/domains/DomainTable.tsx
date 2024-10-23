@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 
 import { SHORT_INTEGER } from "../../data/dataTypes";
 
-import { DomainTableProps2 } from "../../interfaces/interfaces2";
+import { DomainTableProps2 } from "../../interfaces/interfaces";
 
 export default function DomainTable({ domain }: DomainTableProps2) {
   return (

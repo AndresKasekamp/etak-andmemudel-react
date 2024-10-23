@@ -4,7 +4,7 @@ import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { generateDomainsTogether } from "./formatHelpers/generateTableFront.ts";
 import { ExportAllPDF } from "./formatHelpers/ExportAllPDF.tsx";
 
-import { AllTablesAndDomains2 } from "../interfaces/interfaces2.tsx";
+import { AllTablesAndDomains2 } from "../interfaces/interfaces.tsx";
 
 import { sortElements } from "./formatHelpers/sortElements.ts";
 // TODO domeenid on vaja settida ja panna tähestiku vms järjekorda

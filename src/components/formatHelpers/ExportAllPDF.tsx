@@ -3,7 +3,7 @@ import autoTable from "jspdf-autotable";
 
 import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import { AllTablesAndDomainsMerge } from "../../interfaces/interfaces2";
+import { AllTablesAndDomainsMerge } from "../../interfaces/interfaces";
 
 // TODO viimase lehe probleem lahendada
 export const ExportAllPDF = ({

@@ -1,7 +1,7 @@
 import { FieldsTable } from "./FieldsTable.tsx";
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { sortElements } from "./formatHelpers/sortElements.ts";
-import { FeatureClassOutput } from "../interfaces/interfaces2.tsx";
+import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
 
 export const FullDataTable = ({
   fcName,

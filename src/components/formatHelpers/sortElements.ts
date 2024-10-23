@@ -1,5 +1,5 @@
 import { orderOfRows } from "../../data/constantFields";
-import { Field } from "../../interfaces/interfaces2";
+import { Field } from "../../interfaces/interfaces";
 
 export const sortElements = (elements: Field[]): Field[] => {
   const sortedElements = elements.sort((a, b) => {

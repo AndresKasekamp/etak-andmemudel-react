@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 
 import { getObjectCount } from "../../utils/wfsRequest.ts";
+
 import {
-  ObjectCountProps,
   ObjectCountResponse,
+  ObjectCountProps,
 } from "../../interfaces/interfaces.tsx";
 
 const ObjectCount = ({ url }: ObjectCountProps) => {

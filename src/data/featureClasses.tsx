@@ -17,7 +17,7 @@ import {
   FeatureClassOutput,
   Field,
   DomainTable,
-} from "../interfaces/interfaces2.tsx";
+} from "../interfaces/interfaces.tsx";
 
 export const generateFeatureClass = (): FeatureClasses => {
   const allFeatureClasses: FeatureClasses = {

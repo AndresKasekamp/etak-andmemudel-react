@@ -1,10 +1,10 @@
 import { generateFeatureClass } from "../data/featureClasses";
 import App from "../App";
 import { FullDataTable } from "../components/FullDataTable";
-import { FeatureClass, FeatureClassPath } from "../interfaces/interfaces";
 import { OnePager2d } from "../components/OnePager2d";
+import { FeatureClassPath } from "../interfaces/interfaces";
 
-import { FeatureClassOutput } from "../interfaces/interfaces2";
+import { FeatureClassOutput } from "../interfaces/interfaces";
 
 const generateAllDataMerge = () => {
   const allDataTogether = [

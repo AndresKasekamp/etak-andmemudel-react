@@ -1,4 +1,4 @@
-import { FeatureClassOutput } from "../../interfaces/interfaces2.tsx";
+import { FeatureClassOutput } from "../../interfaces/interfaces.tsx";
 
 export const generateDomainsTogether = (
   allTablesAndDomains: FeatureClassOutput[]

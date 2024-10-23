@@ -27,7 +27,7 @@ import { getTableName } from "../utils/utils.tsx";
 import { generateWfsUrl } from "../utils/wfsRequest.ts";
 
 import { dataTypes, bgColor } from "./formatHelpers/translate.ts";
-import { FeatureClassOutput } from "../interfaces/interfaces2.tsx";
+import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
 
 import RegisterHyperLink from "./formatHelpers/RegisterHyperLink.tsx";
 
