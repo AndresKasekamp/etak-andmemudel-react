@@ -16,8 +16,6 @@ const generateAllDataMerge = () => {
     // ...derivedLayers,
   ];
 
-  console.log(allDataTogether);
-
   return allDataTogether.sort((a, b) => a.fcName.localeCompare(b.fcName));
 };
 
