@@ -20,7 +20,6 @@ import { HashLink } from "react-router-hash-link";
 
 import { TableHeaderColor } from "../data/colors.ts";
 
-import etak_kirjeldus from "../data/etak_kirjeldus.json" assert { type: "json" };
 import { DetailViewLink } from "./DetailViewLink.tsx";
 import { useLocation, Location } from "react-router-dom";
 import { getTableName } from "../utils/utils.tsx";
@@ -75,9 +74,9 @@ export const FieldsTable = ({
 
   const getFeatureCount = () => {
     switch (fcName) {
-      case etak_kirjeldus.classes.alusdokument.name:
-        return etak_kirjeldus.classes.alusdokument.count;
-      case etak_kirjeldus.classes.vooluveed_kkr.name:
+      case "Alusdokument":
+        return 100;
+      case "Vooluveed":
         return <ObjectCount url={generateWfsUrl(fcName, true)}></ObjectCount>;
       default:
         return <ObjectCount url={generateWfsUrl(fcName)}></ObjectCount>;
@@ -86,9 +85,9 @@ export const FieldsTable = ({
 
   const isLevituum = () => {
     const nonLevituum = [
-      etak_kirjeldus.classes.alusdokument.name,
-      etak_kirjeldus.classes.vooluveed_kkr.name,
-      etak_kirjeldus.classes.seisuveed_kkr,
+      "Alusdokument",
+      "Vooluveed",
+      "Seisuveed",
     ];
 
     if (nonLevituum.includes(fcName)) {

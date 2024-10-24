@@ -1,4 +1,4 @@
-import { SHORT_INTEGER, INTEGER, DATE, GEOMETRY } from "../../data/dataTypes";
+import { SHORT_INTEGER, INTEGER, DATE, GEOMETRY, REAL_NUMBER } from "../../data/dataTypes";
 
 import {
   MainCategory,
@@ -10,23 +10,26 @@ import {
 export type DataTypeKey =
   | "OID"
   | "Geometry"
-  | "Date"
+  | "DateTime"
   | "Integer"
   | "SmallInteger"
+  | "Real"
   | "String";
 export type DataTypeValue =
   | typeof INTEGER
   | typeof GEOMETRY
   | typeof DATE
   | typeof SHORT_INTEGER
+  | typeof REAL_NUMBER
   | string;
 
 export const dataTypes: Record<DataTypeKey, DataTypeValue> = {
   OID: INTEGER,
   Geometry: GEOMETRY,
-  Date: DATE,
+  DateTime: DATE,
   Integer: INTEGER,
-  SmallInteger: SHORT_INTEGER,
+  SmallInteger: REAL_NUMBER,
+  Real: SHORT_INTEGER,
   String: "tekst", // TODO seal on pärast veel mingi sulgudes reegeld ()
 };
 

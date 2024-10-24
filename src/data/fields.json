@@ -3,24 +3,8 @@
         "name": "E_101_kivi_p",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -60,7 +44,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0101",
@@ -68,7 +52,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "kivi_tyyp",
@@ -76,7 +60,7 @@
             },
             {
                 "name": "korgus",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -124,7 +108,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -132,11 +116,27 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Kivi"
@@ -145,24 +145,8 @@
         "name": "E_102_nolv_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -202,7 +186,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0102",
@@ -210,7 +194,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "nolv_tyyp",
@@ -242,7 +226,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -250,7 +234,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -258,7 +242,7 @@
             },
             {
                 "name": "kaldaastang",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "toevaartus",
@@ -266,11 +250,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Nõlv"
@@ -279,24 +279,8 @@
         "name": "E_103_pinnavorm_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -336,7 +320,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0103",
@@ -344,7 +328,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "pinnavormJ_tyyp",
@@ -376,7 +360,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -384,7 +368,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -392,11 +376,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Pinnavorm joonena"
@@ -405,24 +405,8 @@
         "name": "E_103_pinnavorm_p",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -462,7 +446,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0103",
@@ -470,7 +454,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "pinnavormP_tyyp",
@@ -510,7 +494,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -526,11 +510,27 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Pinnavorm punktina"
@@ -539,24 +539,8 @@
         "name": "E_201_meri_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -596,7 +580,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0201",
@@ -612,7 +596,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -620,7 +604,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -628,7 +612,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -636,11 +620,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Meri"
@@ -649,24 +649,8 @@
         "name": "E_202_seisuveekogu_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -706,7 +690,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0202",
@@ -714,7 +698,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "seisuveekogu_tyyp",
@@ -754,7 +738,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -762,7 +746,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -770,7 +754,7 @@
             },
             {
                 "name": "kpo_seos",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "seisuveekogu_kpo",
@@ -778,7 +762,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -786,11 +770,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Seisuveekogu alana"
@@ -799,24 +799,8 @@
         "name": "E_202_seisuveekogu_p",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -856,7 +840,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0202",
@@ -864,7 +848,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "seisuveekoguP_tyyp",
@@ -912,7 +896,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -920,11 +904,27 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Seisuveekogu punktina"
@@ -933,24 +933,8 @@
         "name": "E_203_vooluveekogu_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -990,7 +974,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0203",
@@ -1030,7 +1014,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -1038,7 +1022,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1054,7 +1038,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -1062,11 +1046,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Vooluveekogu alana"
@@ -1075,24 +1075,8 @@
         "name": "E_203_vooluveekogu_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1132,7 +1116,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0203",
@@ -1140,7 +1124,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "vooluveekogu_tyyp",
@@ -1148,7 +1132,7 @@
             },
             {
                 "name": "telje_tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "vooluveekogu_telje_tyyp",
@@ -1156,7 +1140,7 @@
             },
             {
                 "name": "laius",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "vooluveekogu_laius",
@@ -1164,7 +1148,7 @@
             },
             {
                 "name": "telje_staatus",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "vooluveekogu_staatus",
@@ -1204,7 +1188,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -1220,7 +1204,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1228,11 +1212,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Vooluveekogu telgjoon"
@@ -1241,24 +1241,8 @@
         "name": "E_204_kaldajoon_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1298,7 +1282,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0204",
@@ -1306,7 +1290,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "kaldajoon_tyyp",
@@ -1314,7 +1298,7 @@
             },
             {
                 "name": "kalda_veekogu_tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "kaldajoon_veekogu_tyyp",
@@ -1322,7 +1306,7 @@
             },
             {
                 "name": "halduspiir",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "toevaartus",
@@ -1338,7 +1322,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -1346,7 +1330,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1354,11 +1338,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Kaldajoon"
@@ -1367,24 +1367,8 @@
         "name": "E_205_hudrotehniline_rajatis_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1424,7 +1408,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0205",
@@ -1432,7 +1416,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "hudrotehniline_rajatis_tyyp",
@@ -1448,7 +1432,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -1456,7 +1440,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1464,11 +1448,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Hüdrotehniline rajatis"
@@ -1477,24 +1477,8 @@
         "name": "E_206_truup_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1534,7 +1518,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0206",
@@ -1542,7 +1526,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "truup_tyyp",
@@ -1558,7 +1542,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -1566,7 +1550,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1574,11 +1558,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Truup"
@@ -1587,24 +1587,8 @@
         "name": "E_301_muu_kolvik_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1644,7 +1628,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0301",
@@ -1652,7 +1636,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "muu_kolvikA_tyyp",
@@ -1668,7 +1652,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -1676,7 +1660,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1684,7 +1668,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -1692,11 +1676,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Muu kõlvik alana"
@@ -1705,24 +1705,8 @@
         "name": "E_301_muu_kolvik_ka",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1762,7 +1746,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0301",
@@ -1770,7 +1754,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "muu_kolvikKA_tyyp",
@@ -1810,7 +1794,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -1818,7 +1802,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1826,7 +1810,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -1834,11 +1818,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Muu kõlvik kattuva alana"
@@ -1847,24 +1847,8 @@
         "name": "E_301_muu_kolvik_p",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1904,7 +1888,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0301",
@@ -1912,7 +1896,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "muu_kolvikP_tyyp",
@@ -1936,7 +1920,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -1944,7 +1928,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -1965,6 +1949,22 @@
                 "link": null,
                 "domain": "",
                 "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Muu kõlvik punktina"
@@ -1973,24 +1973,8 @@
         "name": "E_302_ou_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2030,7 +2014,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0302",
@@ -2038,7 +2022,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "ou_tyyp",
@@ -2046,7 +2030,7 @@
             },
             {
                 "name": "kasutus",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "ou_kasutus",
@@ -2062,7 +2046,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -2070,7 +2054,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2078,7 +2062,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -2086,11 +2070,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Õu"
@@ -2099,24 +2099,8 @@
         "name": "E_303_haritav_maa_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2156,7 +2140,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0303",
@@ -2164,7 +2148,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "haritav_maa_tyyp",
@@ -2180,7 +2164,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -2188,7 +2172,7 @@
             },
             {
                 "name": "puis",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "toevaartus",
@@ -2196,7 +2180,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2204,7 +2188,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -2212,11 +2196,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Haritav maa"
@@ -2225,24 +2225,8 @@
         "name": "E_304_lage_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2282,7 +2266,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0304",
@@ -2290,7 +2274,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "lage_tyyp",
@@ -2306,7 +2290,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -2314,7 +2298,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2322,7 +2306,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -2330,11 +2314,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Lage"
@@ -2343,24 +2343,8 @@
         "name": "E_305_puittaimestik_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2400,7 +2384,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0305",
@@ -2408,7 +2392,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "puittaimestikA_tyyp",
@@ -2424,7 +2408,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -2432,7 +2416,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2440,7 +2424,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -2448,11 +2432,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Puittaimestik alana"
@@ -2461,24 +2461,8 @@
         "name": "E_305_puittaimestik_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2518,7 +2502,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0305",
@@ -2526,7 +2510,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "puittaimestikJ_tyyp",
@@ -2542,7 +2526,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -2550,7 +2534,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2566,11 +2550,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Puittaimestik joonena"
@@ -2579,24 +2579,8 @@
         "name": "E_305_puittaimestik_p",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2636,7 +2620,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0305",
@@ -2644,7 +2628,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "puittaimestikP_tyyp",
@@ -2692,7 +2676,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -2700,11 +2684,27 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Puittaimestik punktina"
@@ -2713,24 +2713,8 @@
         "name": "E_306_margala_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2770,7 +2754,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0306",
@@ -2778,7 +2762,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "margalaA_tyyp",
@@ -2786,7 +2770,7 @@
             },
             {
                 "name": "puis",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "toevaartus",
@@ -2802,7 +2786,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -2810,7 +2794,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2818,7 +2802,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -2826,11 +2810,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Märgala alana"
@@ -2839,24 +2839,8 @@
         "name": "E_306_margala_ka",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2896,7 +2880,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0306",
@@ -2904,7 +2888,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "margalaKA_tyyp",
@@ -2920,7 +2904,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -2928,7 +2912,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -2936,7 +2920,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -2944,11 +2928,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Märgala kattuva alana"
@@ -2957,24 +2957,8 @@
         "name": "E_307_turbavali_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3014,7 +2998,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0307",
@@ -3022,7 +3006,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "turbavali_tyyp",
@@ -3038,7 +3022,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -3046,7 +3030,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3054,7 +3038,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -3062,11 +3046,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Turbaväli"
@@ -3075,24 +3075,8 @@
         "name": "E_401_hoone_ka",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3132,7 +3116,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0401",
@@ -3140,7 +3124,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "hoone_tyyp",
@@ -3180,7 +3164,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -3196,7 +3180,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3204,7 +3188,7 @@
             },
             {
                 "name": "korgus_m",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -3212,7 +3196,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -3220,11 +3204,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Hoone"
@@ -3233,24 +3233,8 @@
         "name": "E_402_korgrajatis_p",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3290,7 +3274,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0402",
@@ -3298,7 +3282,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "korgrajatis_tyyp",
@@ -3306,7 +3290,7 @@
             },
             {
                 "name": "korgus",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -3314,7 +3298,7 @@
             },
             {
                 "name": "seos",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "korgrajatis_seos",
@@ -3330,7 +3314,7 @@
             },
             {
                 "name": "mark",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "register",
                 "link": null,
                 "domain": "toevaartus",
@@ -3378,7 +3362,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -3386,11 +3370,27 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Kõrgrajatis"
@@ -3399,24 +3399,8 @@
         "name": "E_403_muu_rajatis_ka",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3456,7 +3440,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0403",
@@ -3464,7 +3448,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "muu_rajatisKA_tyyp",
@@ -3488,7 +3472,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -3504,7 +3488,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3512,7 +3496,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -3520,11 +3504,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Muu rajatis kattuva alana"
@@ -3533,24 +3533,8 @@
         "name": "E_403_muu_rajatis_p",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3590,7 +3574,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0403",
@@ -3598,7 +3582,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "muu_rajatisP_tyyp",
@@ -3606,7 +3590,7 @@
             },
             {
                 "name": "mark",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "register",
                 "link": null,
                 "domain": "toevaartus",
@@ -3654,7 +3638,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -3662,11 +3646,27 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase ruumikuju muutuse aeg"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Muu rajatis punktina"
@@ -3675,24 +3675,8 @@
         "name": "E_404_maaalune_hoone_ka",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3732,7 +3716,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0404",
@@ -3740,7 +3724,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "maaalune_hoone_tyyp",
@@ -3780,7 +3764,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -3796,7 +3780,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3804,7 +3788,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -3812,11 +3796,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Maa-alune hoone"
@@ -3825,24 +3825,8 @@
         "name": "E_405_piire_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3882,7 +3866,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0405",
@@ -3890,7 +3874,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "piire_tyyp",
@@ -3898,7 +3882,7 @@
             },
             {
                 "name": "puittaimed",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "toevaartus",
@@ -3914,7 +3898,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -3922,7 +3906,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -3938,11 +3922,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Piire"
@@ -3951,24 +3951,8 @@
         "name": "E_501_tee_a",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4008,7 +3992,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0501",
@@ -4024,7 +4008,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -4032,7 +4016,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4040,7 +4024,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "teeA_tyyp",
@@ -4048,7 +4032,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -4056,11 +4040,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Tee alana"
@@ -4069,24 +4069,8 @@
         "name": "E_501_tee_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4126,7 +4110,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0501",
@@ -4134,7 +4118,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "tee_tyyp",
@@ -4142,7 +4126,7 @@
             },
             {
                 "name": "laius",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -4150,7 +4134,7 @@
             },
             {
                 "name": "teekate",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "tee_teekate",
@@ -4158,7 +4142,7 @@
             },
             {
                 "name": "liiklus",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "tee_liiklus",
@@ -4174,7 +4158,7 @@
             },
             {
                 "name": "teeosa",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -4182,7 +4166,7 @@
             },
             {
                 "name": "soidutee",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "tee_soidutee",
@@ -4198,7 +4182,7 @@
             },
             {
                 "name": "teeosa_synon",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -4206,7 +4190,7 @@
             },
             {
                 "name": "soidutee_synon",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "tee_soidutee",
@@ -4222,7 +4206,7 @@
             },
             {
                 "name": "teeosa_synon2",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -4230,7 +4214,7 @@
             },
             {
                 "name": "soidutee_synon2",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "tee_soidutee",
@@ -4246,7 +4230,7 @@
             },
             {
                 "name": "a_tasand",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -4254,7 +4238,7 @@
             },
             {
                 "name": "l_tasand",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -4294,7 +4278,7 @@
             },
             {
                 "name": "tahtsus",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "tee_tahtsus",
@@ -4310,7 +4294,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -4318,7 +4302,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4326,11 +4310,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Tee joonena"
@@ -4339,24 +4339,8 @@
         "name": "E_502_roobastee_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4396,7 +4380,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0502",
@@ -4404,7 +4388,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "roobastee_tyyp",
@@ -4412,7 +4396,7 @@
             },
             {
                 "name": "elekter",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "toevaartus",
@@ -4420,7 +4404,7 @@
             },
             {
                 "name": "tahtsus",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "roobastee_tahtsus",
@@ -4436,7 +4420,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -4444,7 +4428,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4452,11 +4436,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Rööbastee"
@@ -4465,24 +4465,8 @@
         "name": "E_503_siht_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4522,7 +4506,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0503",
@@ -4538,7 +4522,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -4546,7 +4530,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4554,11 +4538,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Siht"
@@ -4567,24 +4567,8 @@
         "name": "E_505_liikluskorralduslik_rajatis_ka",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4624,7 +4608,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0505",
@@ -4632,7 +4616,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "liikluskorralduslik_rajatisKA_tyyp",
@@ -4672,7 +4656,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -4680,7 +4664,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4688,7 +4672,7 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
@@ -4696,11 +4680,27 @@
             },
             {
                 "name": "shape_Area",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Liikluskorralduslik rajatis kattuva alana"
@@ -4709,24 +4709,8 @@
         "name": "E_505_liikluskorralduslik_rajatis_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4766,7 +4750,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0505",
@@ -4774,7 +4758,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "liikluskorralduslik_rajatisJ_tyyp",
@@ -4782,7 +4766,7 @@
             },
             {
                 "name": "toke",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "liikluskorralduslik_rajatis_suletus",
@@ -4798,7 +4782,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -4806,7 +4790,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4814,11 +4798,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Liikluskorralduslik rajatis joonena"
@@ -4827,24 +4827,8 @@
         "name": "E_601_elektriliin_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4884,7 +4868,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0601",
@@ -4892,7 +4876,7 @@
             },
             {
                 "name": "nimipinge",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -4916,7 +4900,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -4924,7 +4908,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -4932,11 +4916,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Elektriliin"
@@ -4945,24 +4945,8 @@
         "name": "E_602_tehnopaigaldis_p",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -5002,7 +4986,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0602",
@@ -5010,7 +4994,7 @@
             },
             {
                 "name": "tyyp",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "tehnopaigaldis_tyyp",
@@ -5034,7 +5018,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -5042,7 +5026,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -5050,11 +5034,27 @@
             },
             {
                 "name": "korgus",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
                 "desc": "Tehnopaigaldise kõrgus maapinnast [m]"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Tehnopaigaldis"
@@ -5063,24 +5063,8 @@
         "name": "E_603_torujuhe_j",
         "fields": [
             {
-                "name": "OBJECTID",
-                "type": "OID",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Tehniline identifikaator"
-            },
-            {
-                "name": "shape",
-                "type": "Geometry",
-                "meta_type": "technical",
-                "link": null,
-                "domain": "",
-                "desc": "Objekti ruumikuju"
-            },
-            {
                 "name": "muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -5120,7 +5104,7 @@
             },
             {
                 "name": "kood",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "general",
                 "link": null,
                 "domain": "0603",
@@ -5144,7 +5128,7 @@
             },
             {
                 "name": "vajalik",
-                "type": "SmallInteger",
+                "type": "Integer",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "vajalikkus",
@@ -5152,7 +5136,7 @@
             },
             {
                 "name": "geom_muutmisaeg",
-                "type": "Date",
+                "type": "DateTime",
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
@@ -5160,11 +5144,27 @@
             },
             {
                 "name": "shape_Length",
-                "type": "Double",
+                "type": "Real",
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
                 "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
         "desc": "Torujuhe"
