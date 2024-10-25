@@ -12,6 +12,10 @@
 
 Genereerib ETAK andmemudelile front-endi. Kasutab back-endi abil loodud JSON faile. Näitena on jsonid kaasa pandud, mida ei uuendata. Installides läbi npmi kasutab Vite serverit, Docker kasutab nginx-i.
 
+Kaks võimalust käivitamiseks:
+
+- npm (ja node)
+- Docker
 
 # Installation
 
