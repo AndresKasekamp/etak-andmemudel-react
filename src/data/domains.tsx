@@ -1,4 +1,4 @@
-import domains from "../api/domains.json" assert { type: "json" };
+import domains from "../api/levituum/domains.json" assert { type: "json" };
 
 import { DomainTable } from "../interfaces/interfaces";
 

@@ -6,7 +6,7 @@ import lineImageSource from "../assets/polyline-pt.svg";
 
 import { pointPath, linePath, polyPath } from "../pages/groupPaths.ts";
 
-import feature_classes from "../api/fields.json" assert { type: "json" };
+import feature_classes from "../api/levituum/fields.json" assert { type: "json" };
 
 import { domainFinder } from "./domains.tsx";
 
