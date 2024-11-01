@@ -28,7 +28,7 @@ npm --version
 1) Clone repo from GitLab to local directory:
 
 ```bash
-git clone https://gitlab.sise.envir.ee/Andres.Kasekamp/etak-andmemudel-frontend.git
+git clone https://gitlab.sise.envir.ee/etak/andmemudel-v2/etak-andmemudel-frontend.git
 ```
 
 2) Go to project directory:

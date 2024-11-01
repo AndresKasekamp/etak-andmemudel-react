@@ -4,11 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-# ARG VITE_APP_BACKEND_ADDRESS
-
-# ENV VITE_APP_BACKEND_ADDRESS $VITE_APP_BACKEND_ADDRESS
-
-RUN npm install
+RUN npm ci && npm cache clean --force
 
 RUN npm run build
 
