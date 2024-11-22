@@ -1,0 +1,574 @@
+[
+    {
+        "name": "etak_eesvoolud_mps",
+        "fields": [
+            {
+                "name": "mps_id",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "DateTime",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "pikkus_etak",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "riigi_ev",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ms_kood",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ehitise_kood",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ev_osa",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            }
+        ],
+        "desc": "Kirjeldus"
+    },
+    {
+        "name": "etak_hooned_ehr",
+        "fields": [
+            {
+                "name": "muutmisaeg",
+                "type": "DateTime",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "etak_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ehr_gid",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "kood",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "tyyp",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ads_oid",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ads_lahiaadress",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "korgus_m",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "esmane_kasutus",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "max_korruste_arv",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "min_korruste_arv",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ehitisalune_pind",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "korgus",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ehitisalune_maap_pind",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "kaos_kood_peamine",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "kaos_nimetus_peamine",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "kaos_kood",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "kaos_nimetus",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "seisund",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "energiaklass",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "suletud_netopind",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "taisaadress",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ehr_url",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            }
+        ],
+        "desc": "Kirjeldus"
+    },
+    {
+        "name": "etak_saared",
+        "fields": [
+            {
+                "name": "saar_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "veekogu_tyyp",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "veekogu_nimetus",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "veekogu_kkr_kood",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "veekogu_knr_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "DateTime",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "pindala",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "ymbermoot",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            }
+        ],
+        "desc": "Kirjeldus"
+    },
+    {
+        "name": "etak_seisuveed_eelis",
+        "fields": [
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "kkr_tyyp",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "DateTime",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            }
+        ],
+        "desc": "Kirjeldus"
+    },
+    {
+        "name": "etak_vooluveed_eelis",
+        "fields": [
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "kkr_tyyp",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "korguste_vahe",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "DateTime",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            }
+        ],
+        "desc": "Kirjeldus"
+    },
+    {
+        "name": "etak_voooluveed_sekundaartelgedega_eelis",
+        "fields": [
+            {
+                "name": "kkr_kood",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "kkr_tyyp",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "knr_id",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "algus_x",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "algus_y",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "algus_z",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "lopp_x",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "lopp_y",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "lopp_z",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "muutmisaeg",
+                "type": "DateTime",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "algus_z_dtm",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            },
+            {
+                "name": "lopp_z_dtm",
+                "type": "Real",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Kirjeldus"
+            }
+        ],
+        "desc": "Kirjeldus"
+    }
+]

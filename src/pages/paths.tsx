@@ -8,12 +8,12 @@ import { FeatureClassOutput } from "../interfaces/interfaces";
 
 const generateAllDataMerge = () => {
   const allDataTogether = [
-    // ...metadata,
+    ...generateFeatureClass().metaandmed,
     ...generateFeatureClass().punktobjektid,
     ...generateFeatureClass().joonobjektid,
     ...generateFeatureClass().pindobjektidOverlap,
     ...generateFeatureClass().pindobjektid,
-    // ...derivedLayers,
+    // ...generateFeatureClass().tuletiskihid,
   ];
 
   return allDataTogether.sort((a, b) => a.fcName.localeCompare(b.fcName));
@@ -55,6 +55,6 @@ export const paths = () => [
   ...featureClassPath(generateFeatureClass().joonobjektid),
   ...featureClassPath(generateFeatureClass().pindobjektidOverlap),
   ...featureClassPath(generateFeatureClass().pindobjektid),
-  // ...featureClassPath(metadata),
-  // ...featureClassPath(derivedLayers),
+  ...featureClassPath(generateFeatureClass().metaandmed),
+  ...featureClassPath(generateFeatureClass().tuletiskihid),
 ];

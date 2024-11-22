@@ -50,7 +50,7 @@ function App() {
         >
           <FrontPageIndexTable
             objectName="Metaandmed"
-            itemNames={generateFeatureClass().punktobjektid}
+            itemNames={generateFeatureClass().metaandmed}
             dataTypeClass={metadataPath}
           />
           <FrontPageIndexTable
@@ -97,7 +97,7 @@ function App() {
 
           <FrontPageIndexTable
             objectName="Tuletiskihid"
-            itemNames={generateFeatureClass().punktobjektid}
+            itemNames={generateFeatureClass().tuletiskihid}
             dataTypeClass={derivedPath}
           />
         </Box>

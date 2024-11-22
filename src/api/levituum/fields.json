@@ -5168,5 +5168,115 @@
             }
         ],
         "desc": "Torujuhe"
+    },
+    {
+        "name": "alusdokument",
+        "fields": [
+            {
+                "name": "andmeallikas",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Andmeandja nimi"
+            },
+            {
+                "name": "kood",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+            },
+            {
+                "name": "korguskood",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Korgusallika_id väljal kasutatav viide alusdokumendile"
+            },
+            {
+                "name": "nimetus",
+                "type": "String",
+                "meta_type": "register",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+            },
+            {
+                "name": "tyyp",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "alusdokument_tyyp",
+                "desc": "Alusdokumendi tüüp"
+            },
+            {
+                "name": "aeg",
+                "type": "DateTime",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Alusdokumendi andmekogusse laekumise aeg"
+            },
+            {
+                "name": "markused",
+                "type": "String",
+                "meta_type": "general",
+                "link": null,
+                "domain": "",
+                "desc": "Vabas vormis märkused objekti kohta"
+            },
+            {
+                "name": "tapsus",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tapsusklass_xy",
+                "desc": "Andmete plaaniline täpsus"
+            },
+            {
+                "name": "korgustapsus",
+                "type": "Integer",
+                "meta_type": "general",
+                "link": null,
+                "domain": "tapsusklass_z",
+                "desc": "Andmete kõrgustäpsus"
+            },
+            {
+                "name": "shape_Length",
+                "type": "Real",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+            },
+            {
+                "name": "shape_Area",
+                "type": "Real",
+                "meta_type": "technical",
+                "link": null,
+                "domain": "",
+                "desc": "Objekti ruumikuju pindala"
+            },
+            {
+                "name": "shape",
+                "type": "Geometry",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Objekti ruumikuju"
+            },
+            {
+                "name": "OBJECTID",
+                "type": "OID",
+                "meta_type": "technical",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
+            }
+        ],
+        "desc": "Alusdokument"
     }
 ]

@@ -42,10 +42,12 @@ export interface FeatureClassOutput {
 }
 
 export interface FeatureClasses {
+  metaandmed: FeatureClassOutput[];
   punktobjektid: FeatureClassOutput[];
   joonobjektid: FeatureClassOutput[];
   pindobjektidOverlap: FeatureClassOutput[];
   pindobjektid: FeatureClassOutput[];
+  tuletiskihid: FeatureClassOutput[];
 }
 
 export interface AllTablesAndDomains {
