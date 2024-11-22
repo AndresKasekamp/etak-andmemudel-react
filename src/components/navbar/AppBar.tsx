@@ -4,6 +4,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import HomeLink from "./HomeLink";
 import Link3D from "./Link3D";
+import LinkDerivatives from "./LinkDerivatives";
 import { AppBarColor } from "../../data/colors";
 import LastUpdated from "./LastUpdated";
 import { useMediaQuery } from '@mui/material';
@@ -44,6 +45,7 @@ export default function EtakAppBar() {
           </Box>
 
           <Box sx={{ ml: "auto", display: "flex", gap: 2, alignItems: 'center' }}>
+            <LinkDerivatives></LinkDerivatives>
             <Link3D></Link3D>
             <LastUpdated></LastUpdated>
             <HomeLink></HomeLink>

@@ -9,7 +9,6 @@ import {
   polyPath,
   linePath,
   metadataPath,
-  derivedPath,
 } from "./pages/groupPaths.ts";
 import { TablesTogetherLink } from "./components/TablesTogetherLink.tsx";
 
@@ -95,11 +94,7 @@ function App() {
             />
           </Box>
 
-          <FrontPageIndexTable
-            objectName="Tuletiskihid"
-            itemNames={generateFeatureClass().tuletiskihid}
-            dataTypeClass={derivedPath}
-          />
+
         </Box>
       </Container>
     </>

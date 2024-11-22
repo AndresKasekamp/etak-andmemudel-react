@@ -48,6 +48,7 @@ export interface FeatureClasses {
   pindobjektidOverlap: FeatureClassOutput[];
   pindobjektid: FeatureClassOutput[];
   tuletiskihid: FeatureClassOutput[];
+  kolmD: FeatureClassOutput[];
 }
 
 export interface AllTablesAndDomains {

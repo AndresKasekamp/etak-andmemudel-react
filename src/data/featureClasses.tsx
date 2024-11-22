@@ -3,6 +3,7 @@ import { POINT_GEOMETRY, POLY_GEOMETRY, LINE_GEOMETRY } from "./dataTypes.ts";
 import pointImageSource from "../assets/multipoint.svg";
 import polyImageSource from "../assets/polygon-hole-o.svg";
 import lineImageSource from "../assets/polyline-pt.svg";
+import threeDImageSource from "../assets/cube-3d-2.svg";
 
 import {
   pointPath,
@@ -10,10 +11,12 @@ import {
   polyPath,
   metadataPath,
   derivedPath,
+  threeDPath,
 } from "../pages/groupPaths.ts";
 
 import feature_classes from "../api/levituum/fields.json" assert { type: "json" };
 import feature_classes_tuletiskihid from "../api/tuletiskihid/fields.json" assert { type: "json" };
+import feature_classes_3d from "../api/3D/fields.json" assert { type: "json" };
 
 import { domainFinder } from "./domains.tsx";
 
@@ -34,6 +37,7 @@ export const generateFeatureClass = (): FeatureClasses => {
     pindobjektidOverlap: [],
     pindobjektid: [],
     tuletiskihid: [],
+    kolmD: []
   };
 
   const GEOMETRY_MAP: Record<string, GeometryInfo> = {
@@ -73,11 +77,23 @@ export const generateFeatureClass = (): FeatureClasses => {
       dimension: 2.5,
       image: polyImageSource,
     },
+    kolmD: {
+      group: threeDPath,
+      type: POLY_GEOMETRY,
+      dimension: 3,
+      image: threeDImageSource,
+    },
   };
 
+  // TODO seda loogikat tasuks üle vaadata
   const determineFeatureClass = (name: string): GeometryInfo => {
     const suffix = name.substring(name.lastIndexOf("_") + 1);
-    return GEOMETRY_MAP[suffix] || GEOMETRY_MAP["etak"]; // Default to tuletiskiht if not found
+    if (GEOMETRY_MAP[suffix] === undefined) {
+      // Second search (for now)
+      const suffix = name.substring(0, name.indexOf("_"));
+      return GEOMETRY_MAP[suffix] || GEOMETRY_MAP["kolmD"];
+    }
+    return GEOMETRY_MAP[suffix];
   };
 
   const createFc = ({
@@ -133,11 +149,19 @@ export const generateFeatureClass = (): FeatureClasses => {
     const fcObj = createFc(fc);
     const fcType = fcObj.fcName.substring(0, fcObj.fcName.indexOf("_"));
 
+    // TODO kuidas eristada tuletiskihtide tüüpe?
     switch (fcType) {
       case "etak":
         allFeatureClasses.tuletiskihid.push(fcObj);
         break;
     }
+  });
+
+  feature_classes_3d.forEach((fc) => {
+    const fcObj = createFc(fc);
+
+    allFeatureClasses.kolmD.push(fcObj);
+
   });
 
   return allFeatureClasses;
