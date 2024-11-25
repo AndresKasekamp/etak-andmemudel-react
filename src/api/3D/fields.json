@@ -93,7 +93,8 @@
         ],
         "count": 912954,
         "desc": "LOD1 hooned",
-        "geom_type": "3D TIN"
+        "geom_type": "3D TIN",
+        "group": "3D"
     },
     {
         "name": "hooned_lod2",
@@ -197,7 +198,8 @@
         ],
         "count": 842443,
         "desc": "LOD2 hooned",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "3D"
     },
     {
         "name": "kasvuhooned_lod1",
@@ -261,7 +263,8 @@
         ],
         "count": 3908,
         "desc": "Kasvuhooned LOD1",
-        "geom_type": "3D TIN"
+        "geom_type": "3D TIN",
+        "group": "3D"
     },
     {
         "name": "katusealused_lod1",
@@ -325,7 +328,8 @@
         ],
         "count": 42075,
         "desc": "Katusealused LOD1/2",
-        "geom_type": "3D TIN"
+        "geom_type": "3D TIN",
+        "group": "3D"
     },
     {
         "name": "liikluskorralduslikud_rajatised_lod1",
@@ -405,7 +409,8 @@
         ],
         "count": 2598,
         "desc": "Liikluskorralduslikud rajatised LOD1",
-        "geom_type": "3D TIN"
+        "geom_type": "3D TIN",
+        "group": "3D"
     },
     {
         "name": "yksikpuud_keskpunkt",
@@ -469,7 +474,8 @@
         ],
         "count": 6996048,
         "desc": "Üksikpuud keskpunkt",
-        "geom_type": "Point"
+        "geom_type": "Point",
+        "group": "3D"
     },
     {
         "name": "yksikpuud_puukroon",
@@ -541,6 +547,7 @@
         ],
         "count": 6996048,
         "desc": "Üksikpuud puukroon",
-        "geom_type": "Multi Polygon"
+        "geom_type": "Multi Polygon",
+        "group": "3D"
     }
 ]

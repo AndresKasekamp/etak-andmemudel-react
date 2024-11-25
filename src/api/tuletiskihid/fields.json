@@ -13,7 +13,7 @@
             {
                 "name": "muutmisaeg",
                 "type": "DateTime",
-                "meta_type": "general",
+                "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase muutuse aeg"
@@ -61,7 +61,7 @@
             {
                 "name": "id",
                 "type": "OID",
-                "meta_type": "general",
+                "meta_type": "technical",
                 "link": "",
                 "domain": "",
                 "desc": "Tehniline identifikaator"
@@ -69,7 +69,8 @@
         ],
         "count": 14602,
         "desc": "Kirjeldus",
-        "geom_type": "Multi Line String"
+        "geom_type": "Multi Line String",
+        "group": "derivatives"
     },
     {
         "name": "etak_hooned_ehr",
@@ -77,7 +78,7 @@
             {
                 "name": "muutmisaeg",
                 "type": "DateTime",
-                "meta_type": "general",
+                "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase muutuse aeg"
@@ -277,7 +278,7 @@
             {
                 "name": "id",
                 "type": "OID",
-                "meta_type": "general",
+                "meta_type": "technical",
                 "link": "",
                 "domain": "",
                 "desc": "Tehniline identifikaator"
@@ -285,7 +286,8 @@
         ],
         "count": 922089,
         "desc": "Kirjeldus",
-        "geom_type": "Polygon"
+        "geom_type": "Polygon",
+        "group": "derivatives"
     },
     {
         "name": "etak_saared",
@@ -357,7 +359,7 @@
             {
                 "name": "muutmisaeg",
                 "type": "DateTime",
-                "meta_type": "general",
+                "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase muutuse aeg"
@@ -381,7 +383,7 @@
             {
                 "name": "id",
                 "type": "OID",
-                "meta_type": "general",
+                "meta_type": "technical",
                 "link": "",
                 "domain": "",
                 "desc": "Tehniline identifikaator"
@@ -389,7 +391,8 @@
         ],
         "count": 7904,
         "desc": "Kirjeldus",
-        "geom_type": "Polygon"
+        "geom_type": "Polygon",
+        "group": "derivatives"
     },
     {
         "name": "etak_seisuveed_eelis",
@@ -429,7 +432,7 @@
             {
                 "name": "muutmisaeg",
                 "type": "DateTime",
-                "meta_type": "general",
+                "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase muutuse aeg"
@@ -437,7 +440,7 @@
             {
                 "name": "id",
                 "type": "OID",
-                "meta_type": "general",
+                "meta_type": "technical",
                 "link": "",
                 "domain": "",
                 "desc": "Tehniline identifikaator"
@@ -445,7 +448,8 @@
         ],
         "count": 2880,
         "desc": "Kirjeldus",
-        "geom_type": "Polygon"
+        "geom_type": "Polygon",
+        "group": "derivatives"
     },
     {
         "name": "etak_vooluveed_eelis",
@@ -493,7 +497,7 @@
             {
                 "name": "muutmisaeg",
                 "type": "DateTime",
-                "meta_type": "general",
+                "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase muutuse aeg"
@@ -501,7 +505,7 @@
             {
                 "name": "id",
                 "type": "OID",
-                "meta_type": "general",
+                "meta_type": "technical",
                 "link": "",
                 "domain": "",
                 "desc": "Tehniline identifikaator"
@@ -509,7 +513,8 @@
         ],
         "count": 3777,
         "desc": "Kirjeldus",
-        "geom_type": "Line String"
+        "geom_type": "Line String",
+        "group": "derivatives"
     },
     {
         "name": "etak_vooluveed_sekundaartelgedega_eelis",
@@ -597,7 +602,7 @@
             {
                 "name": "muutmisaeg",
                 "type": "DateTime",
-                "meta_type": "general",
+                "meta_type": "meta",
                 "link": null,
                 "domain": "",
                 "desc": "Operaatori poolt tehtud viimase muutuse aeg"
@@ -621,7 +626,7 @@
             {
                 "name": "id",
                 "type": "OID",
-                "meta_type": "general",
+                "meta_type": "technical",
                 "link": "",
                 "domain": "",
                 "desc": "Tehniline identifikaator"
@@ -629,6 +634,7 @@
         ],
         "count": 22554,
         "desc": "Kirjeldus",
-        "geom_type": "Line String"
+        "geom_type": "Line String",
+        "group": "derivatives"
     }
 ]

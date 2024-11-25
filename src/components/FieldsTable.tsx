@@ -73,29 +73,30 @@ export const FieldsTable = ({
   };
 
   const getFeatureCount = () => {
-    console.log("fcname", groupName)
     switch (groupName) {
       case "Alusdokument":
         return 100;
       case "tuletiskiht":
-        return <ObjectCount url={generateWfsUrl(fcName, true)} hardcodedCount={headingData.count}></ObjectCount>;
+        return (
+          <ObjectCount
+            url={generateWfsUrl(fcName, true)}
+            hardcodedCount={headingData.count}
+          ></ObjectCount>
+        );
       default:
-        return <ObjectCount url={generateWfsUrl(fcName)} hardcodedCount={headingData.count}></ObjectCount>;
+        return (
+          <ObjectCount
+            url={generateWfsUrl(fcName)}
+            hardcodedCount={headingData.count}
+          ></ObjectCount>
+        );
     }
   };
 
   const isLevituum = () => {
-    const nonLevituum = [
-      "Alusdokument",
-      "Vooluveed",
-      "Seisuveed",
-    ];
-
-    if (nonLevituum.includes(fcName)) {
-      return <br />;
-    }
-
-    return "Andmestik: levituum";
+    console.log("3d", groupName)
+    const validGroups = ["tuletiskiht", "3d"];
+    return `Andmestik: ${validGroups.includes(groupName) ? groupName : "levituum"}`;
   };
 
   const location: Location = useLocation();

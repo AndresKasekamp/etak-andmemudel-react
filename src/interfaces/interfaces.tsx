@@ -17,6 +17,7 @@ export interface Field {
 
 export interface FeatureClassInput {
   name: string;
+  group: string;
   fields: Field[];
   desc: string;
   count: number;
@@ -108,4 +109,4 @@ export interface GeomTypeInfo {
 }
 
 // Use a union type for the keys (valid geometry types)
-export type GeomTypeKey = "Multi Line String" | "Line String" | "Polygon";
+export type GeomTypeKey = "Multi Line String" | "Line String" | "Polygon" | "3D Point" | "3D Multi Line String" | "3D Multi Polygon" | "Multi Polygon" | "3D TIN" | "Point";

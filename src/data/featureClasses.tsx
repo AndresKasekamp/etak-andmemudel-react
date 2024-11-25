@@ -1,35 +1,18 @@
-import { POINT_GEOMETRY, POLY_GEOMETRY, LINE_GEOMETRY } from "./dataTypes.ts";
-
-import pointImageSource from "../assets/multipoint.svg";
-import polyImageSource from "../assets/polygon-hole-o.svg";
-import lineImageSource from "../assets/polyline-pt.svg";
-import threeDImageSource from "../assets/cube-3d-2.svg";
-
-import {
-  pointPath,
-  linePath,
-  polyPath,
-  metadataPath,
-  derivedPath,
-  threeDPath,
-} from "../pages/groupPaths.ts";
-
 import feature_classes from "../api/levituum/fields.json" assert { type: "json" };
 import feature_classes_tuletiskihid from "../api/tuletiskihid/fields.json" assert { type: "json" };
 import feature_classes_3d from "../api/3D/fields.json" assert { type: "json" };
 
-import { domainFinder } from "./domains.tsx";
+import { domainFinderForLevituum, domainFinderFor3D } from "./domains.tsx";
 
 import {
   FeatureClasses,
-  GeometryInfo,
   FeatureClassInput,
   FeatureClassOutput,
   Field,
   DomainTable,
 } from "../interfaces/interfaces.tsx";
 
-import { GeomTypes, } from "./dataTypes.ts";
+import { GeomTypes, GroupNames } from "./dataTypes.ts";
 // TODO kolmD -> threeD
 
 export const generateFeatureClass = (): FeatureClasses => {
@@ -40,99 +23,22 @@ export const generateFeatureClass = (): FeatureClasses => {
     pindobjektidOverlap: [],
     pindobjektid: [],
     tuletiskihid: [],
-    kolmD: []
+    kolmD: [],
   };
 
-  const GEOMETRY_MAP: Record<string, GeometryInfo> = {
-    alusdokument: {
-      group: metadataPath,
-      type: POLY_GEOMETRY,
-      dimension: 2,
-      image: polyImageSource,
-    },
-    p: {
-      group: pointPath,
-      type: POINT_GEOMETRY,
-      dimension: 2.5,
-      image: pointImageSource,
-    },
-    j: {
-      group: linePath,
-      type: LINE_GEOMETRY,
-      dimension: 2.5,
-      image: lineImageSource,
-    },
-    a: {
-      group: polyPath,
-      type: POLY_GEOMETRY,
-      dimension: 2.5,
-      image: polyImageSource,
-    },
-    ka: {
-      group: polyPath,
-      type: POLY_GEOMETRY,
-      dimension: 2.5,
-      image: polyImageSource,
-    },
-    etak: {
-      group: derivedPath,
-      type: POLY_GEOMETRY,
-      dimension: 2,
-      image: polyImageSource,
-    },
-    kolmD: {
-      group: threeDPath,
-      type: POLY_GEOMETRY,
-      dimension: 3,
-      image: threeDImageSource,
-    },
-  };
-
-  // TODO seda loogikat tasuks üle vaadata
-  const determineFeatureClass = (name: string): GeometryInfo => {
-    const suffix = name.substring(name.lastIndexOf("_") + 1);
-    if (GEOMETRY_MAP[suffix] === undefined) {
-      // Second search (for now)
-      const suffix = name.substring(0, name.indexOf("_"));
-      return GEOMETRY_MAP[suffix] || GEOMETRY_MAP["kolmD"];
-    }
-    return GEOMETRY_MAP[suffix];
-  };
-
-  const createFcLevituum = ({
+  const createFeatureClass = ({
     name,
-    fields,
-    desc,
-  }: FeatureClassInput): FeatureClassOutput => {
-    const { group, type, dimension, image } = determineFeatureClass(name);
-    return {
-      fcName: name,
-      groupName: group,
-      elements: fields,
-      domainTables: getDomains(fields),
-      headingData: {
-        geomType: type,
-        geomDimension: dimension,
-        image,
-        estName: desc,
-        count: 100
-      },
-    };
-  };
-
-  const createFcTuletiskiht = ({
-    name,
+    group,
     fields,
     desc,
     count,
-    geom_type
+    geom_type,
   }: FeatureClassInput): FeatureClassOutput => {
-    const { group } = determineFeatureClass(name);
     return {
       fcName: name,
-      groupName: group,
+      groupName: GroupNames[group],
       elements: fields,
-      domainTables: getDomains(fields),
+      domainTables: getDomains(fields, group),
       headingData: {
         // @ts-ignore
         geomType: GeomTypes[geom_type].geom_type,
@@ -146,52 +52,49 @@ export const generateFeatureClass = (): FeatureClasses => {
     };
   };
 
-  const getDomains = (fields: Field[]): DomainTable[] => {
-    return fields.flatMap((field) =>
-      field.domain ? [domainFinder(field.domain)] : []
-    );
+  const getDomains = (fields: Field[], group: string): DomainTable[] => {
+    if (group !== "3D") {
+      return fields.flatMap((field) =>
+        field.domain ? [domainFinderForLevituum(field.domain)] : []
+      );
+    } else {
+      return fields.flatMap((field) =>
+        field.domain ? [domainFinderFor3D(field.domain)] : []
+      );
+    }
   };
 
   feature_classes.forEach((fc) => {
-    const fcObj = createFcLevituum(fc);
-    const fcType = fcObj.fcName.substring(fcObj.fcName.lastIndexOf("_") + 1);
+    const fcObj = createFeatureClass(fc);
 
-    switch (fcType) {
-      case "alusdokument":
+    switch (fc.group) {
+      case "meta":
         allFeatureClasses.metaandmed.push(fcObj);
         break;
-      case "p":
+      case "points":
         allFeatureClasses.punktobjektid.push(fcObj);
         break;
-      case "j":
+      case "lines":
         allFeatureClasses.joonobjektid.push(fcObj);
         break;
-      case "a":
+      case "land_cover":
         allFeatureClasses.pindobjektid.push(fcObj);
         break;
-      case "ka":
+      case "overlapping":
         allFeatureClasses.pindobjektidOverlap.push(fcObj);
         break;
     }
   });
 
   feature_classes_tuletiskihid.forEach((fc) => {
-    const fcObj = createFcTuletiskiht(fc);
-    const fcType = fcObj.fcName.substring(0, fcObj.fcName.indexOf("_"));
-
-    // TODO kuidas eristada tuletiskihtide tüüpe?
-    switch (fcType) {
-      case "etak":
-        allFeatureClasses.tuletiskihid.push(fcObj);
-        break;
-    }
+    const fcObj = createFeatureClass(fc);
+    allFeatureClasses.tuletiskihid.push(fcObj);
   });
 
   feature_classes_3d.forEach((fc) => {
-    const fcObj = createFcLevituum(fc);
+    const fcObj = createFeatureClass(fc);
 
     allFeatureClasses.kolmD.push(fcObj);
-
   });
 
   return allFeatureClasses;

@@ -141,7 +141,8 @@
         ],
         "count": 103486,
         "desc": "Kivi",
-        "geom_type": "3D Point"
+        "geom_type": "3D Point",
+        "group": "points"
     },
     {
         "name": "E_102_nolv_j",
@@ -277,7 +278,8 @@
         ],
         "count": 21406,
         "desc": "Nõlv",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_103_pinnavorm_j",
@@ -405,7 +407,8 @@
         ],
         "count": 9155,
         "desc": "Pinnavorm joonena",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_103_pinnavorm_p",
@@ -541,7 +544,8 @@
         ],
         "count": 24882,
         "desc": "Pinnavorm punktina",
-        "geom_type": "3D Point"
+        "geom_type": "3D Point",
+        "group": "points"
     },
     {
         "name": "E_201_meri_a",
@@ -653,7 +657,8 @@
         ],
         "count": 476,
         "desc": "Meri",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_202_seisuveekogu_a",
@@ -805,7 +810,8 @@
         ],
         "count": 120404,
         "desc": "Seisuveekogu alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_202_seisuveekogu_p",
@@ -941,7 +947,8 @@
         ],
         "count": 1866,
         "desc": "Seisuveekogu punktina",
-        "geom_type": "3D Point"
+        "geom_type": "3D Point",
+        "group": "points"
     },
     {
         "name": "E_203_vooluveekogu_a",
@@ -1085,7 +1092,8 @@
         ],
         "count": 6493,
         "desc": "Vooluveekogu alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_203_vooluveekogu_j",
@@ -1253,7 +1261,8 @@
         ],
         "count": 966802,
         "desc": "Vooluveekogu telgjoon",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_204_kaldajoon_j",
@@ -1381,7 +1390,8 @@
         ],
         "count": 144741,
         "desc": "Kaldajoon",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_205_hudrotehniline_rajatis_j",
@@ -1493,7 +1503,8 @@
         ],
         "count": 1642,
         "desc": "Hüdrotehniline rajatis",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_206_truup_j",
@@ -1605,7 +1616,8 @@
         ],
         "count": 196609,
         "desc": "Truup",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_301_muu_kolvik_a",
@@ -1725,7 +1737,8 @@
         ],
         "count": 30979,
         "desc": "Muu kõlvik alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_301_muu_kolvik_ka",
@@ -1869,7 +1882,8 @@
         ],
         "count": 2132,
         "desc": "Muu kõlvik kattuva alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "overlapping"
     },
     {
         "name": "E_301_muu_kolvik_p",
@@ -1997,7 +2011,8 @@
         ],
         "count": 1569,
         "desc": "Muu kõlvik punktina",
-        "geom_type": "3D Point"
+        "geom_type": "3D Point",
+        "group": "points"
     },
     {
         "name": "E_302_ou_a",
@@ -2125,7 +2140,8 @@
         ],
         "count": 118680,
         "desc": "Õu",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_303_haritav_maa_a",
@@ -2253,7 +2269,8 @@
         ],
         "count": 56981,
         "desc": "Haritav maa",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_304_lage_a",
@@ -2373,7 +2390,8 @@
         ],
         "count": 297785,
         "desc": "Lage",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_305_puittaimestik_a",
@@ -2493,7 +2511,8 @@
         ],
         "count": 158882,
         "desc": "Puittaimestik alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_305_puittaimestik_j",
@@ -2613,7 +2632,8 @@
         ],
         "count": 210770,
         "desc": "Puittaimestik joonena",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_305_puittaimestik_p",
@@ -2749,7 +2769,8 @@
         ],
         "count": 509235,
         "desc": "Puittaimestik punktina",
-        "geom_type": "3D Point"
+        "geom_type": "3D Point",
+        "group": "points"
     },
     {
         "name": "E_306_margala_a",
@@ -2877,7 +2898,8 @@
         ],
         "count": 55071,
         "desc": "Märgala alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_306_margala_ka",
@@ -2997,7 +3019,8 @@
         ],
         "count": 2799,
         "desc": "Märgala kattuva alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "overlapping"
     },
     {
         "name": "E_307_turbavali_a",
@@ -3117,7 +3140,8 @@
         ],
         "count": 403,
         "desc": "Turbaväli",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_401_hoone_ka",
@@ -3277,7 +3301,8 @@
         ],
         "count": 917841,
         "desc": "Hoone",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "overlapping"
     },
     {
         "name": "E_402_korgrajatis_p",
@@ -3445,7 +3470,8 @@
         ],
         "count": 3429,
         "desc": "Kõrgrajatis",
-        "geom_type": "3D Point"
+        "geom_type": "3D Point",
+        "group": "points"
     },
     {
         "name": "E_403_muu_rajatis_ka",
@@ -3581,7 +3607,8 @@
         ],
         "count": 53905,
         "desc": "Muu rajatis kattuva alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "overlapping"
     },
     {
         "name": "E_403_muu_rajatis_p",
@@ -3725,7 +3752,8 @@
         ],
         "count": 1691,
         "desc": "Muu rajatis punktina",
-        "geom_type": "3D Point"
+        "geom_type": "3D Point",
+        "group": "points"
     },
     {
         "name": "E_404_maaalune_hoone_ka",
@@ -3877,7 +3905,8 @@
         ],
         "count": 6509,
         "desc": "Maa-alune hoone",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "overlapping"
     },
     {
         "name": "E_405_piire_j",
@@ -4005,7 +4034,8 @@
         ],
         "count": 91487,
         "desc": "Piire",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_501_tee_a",
@@ -4125,7 +4155,8 @@
         ],
         "count": 15388,
         "desc": "Tee alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "land_cover"
     },
     {
         "name": "E_501_tee_j",
@@ -4397,7 +4428,8 @@
         ],
         "count": 676863,
         "desc": "Tee joonena",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_502_roobastee_j",
@@ -4525,7 +4557,8 @@
         ],
         "count": 4182,
         "desc": "Rööbastee",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_503_siht_j",
@@ -4629,7 +4662,8 @@
         ],
         "count": 64364,
         "desc": "Siht",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_505_liikluskorralduslik_rajatis_ka",
@@ -4773,7 +4807,8 @@
         ],
         "count": 2611,
         "desc": "Liikluskorralduslik rajatis kattuva alana",
-        "geom_type": "3D Multi Polygon"
+        "geom_type": "3D Multi Polygon",
+        "group": "overlapping"
     },
     {
         "name": "E_505_liikluskorralduslik_rajatis_j",
@@ -4893,7 +4928,8 @@
         ],
         "count": 14567,
         "desc": "Liikluskorralduslik rajatis joonena",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_601_elektriliin_j",
@@ -5013,7 +5049,8 @@
         ],
         "count": 16885,
         "desc": "Elektriliin",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "E_602_tehnopaigaldis_p",
@@ -5133,7 +5170,8 @@
         ],
         "count": 19756,
         "desc": "Tehnopaigaldis",
-        "geom_type": "3D Point"
+        "geom_type": "3D Point",
+        "group": "points"
     },
     {
         "name": "E_603_torujuhe_j",
@@ -5245,7 +5283,8 @@
         ],
         "count": 752,
         "desc": "Torujuhe",
-        "geom_type": "3D Multi Line String"
+        "geom_type": "3D Multi Line String",
+        "group": "lines"
     },
     {
         "name": "alusdokument",
@@ -5357,6 +5396,7 @@
         ],
         "count": 227,
         "desc": "Alusdokument",
-        "geom_type": "Multi Polygon"
+        "geom_type": "Multi Polygon",
+        "group": "meta"
     }
 ]

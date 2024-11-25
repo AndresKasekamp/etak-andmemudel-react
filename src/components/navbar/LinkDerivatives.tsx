@@ -3,7 +3,7 @@ import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 
 const LinkDerivatives = () => {
   return (
-    <Link to="/tuletiskihid">
+    <Link to="/tuletiskihid" title="Tuletiskihid">
       <PublishedWithChangesIcon fontSize="large" sx={{ color: "white" }} />
     </Link>
   );
