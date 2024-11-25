@@ -12,7 +12,6 @@ import {
 } from "./pages/groupPaths.ts";
 import { TablesTogetherLink } from "./components/TablesTogetherLink.tsx";
 
-// TODO uut lehte avades peaks olema automaatselt üles skrollitud
 
 function App() {
   return (
@@ -29,7 +28,7 @@ function App() {
             Üldvaade
           </Typography>
 
-          <TablesTogetherLink />
+          <TablesTogetherLink route="/levituum/all" />
         </Box>
 
         <Box

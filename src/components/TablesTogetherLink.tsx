@@ -4,16 +4,20 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
 
-export const TablesTogetherLink = () => {
+import { TablesTogetherLinkProps } from "../interfaces/interfaces";
+
+export const TablesTogetherLink = ({ route }: TablesTogetherLinkProps) => {
   const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
-    <Link to="/all/2d">
+    <Link to={route}>
       <Button
         variant="contained"
         size="large"
         startIcon={<ViewStreamIcon />}
         sx={{
+          ml: 2,
+          mb: 2,
           backgroundColor: "#32774E",
           borderColor: "#32774E",
           "&:hover": {

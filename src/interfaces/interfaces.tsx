@@ -52,7 +52,7 @@ export interface FeatureClasses {
   pindobjektidOverlap: FeatureClassOutput[];
   pindobjektid: FeatureClassOutput[];
   tuletiskihid: FeatureClassOutput[];
-  kolmD: FeatureClassOutput[];
+  threeD: FeatureClassOutput[];
 }
 
 export interface AllTablesAndDomains {
@@ -93,6 +93,10 @@ export interface DetailViewLinkProps {
 export interface RegisterHyperLinkProps {
   link: string;
   desc: string;
+}
+
+export interface TablesTogetherLinkProps {
+  route: string;
 }
 
 export interface TableProps {

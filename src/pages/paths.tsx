@@ -1,24 +1,27 @@
 import { generateFeatureClass } from "../data/featureClasses";
 import App from "../App";
 import { FullDataTable } from "../components/FullDataTable";
-import { OnePager2d } from "../components/OnePager2d";
+import { OnePagerForData } from "../components/OnePager2d";
 import { FeatureClassPath } from "../interfaces/interfaces";
 
 import { FeatureClassOutput } from "../interfaces/interfaces";
 import Derivatives from "./Derivatives";
 import ThreeD from "./ThreeD";
 
-const generateAllDataMerge = () => {
-  const allDataTogether = [
-    ...generateFeatureClass().metaandmed,
-    ...generateFeatureClass().punktobjektid,
-    ...generateFeatureClass().joonobjektid,
-    ...generateFeatureClass().pindobjektidOverlap,
-    ...generateFeatureClass().pindobjektid,
-    // ...generateFeatureClass().tuletiskihid,
-  ];
+const allLevituumDataTogether = [
+  ...generateFeatureClass().metaandmed,
+  ...generateFeatureClass().punktobjektid,
+  ...generateFeatureClass().joonobjektid,
+  ...generateFeatureClass().pindobjektidOverlap,
+  ...generateFeatureClass().pindobjektid,
+];
 
-  return allDataTogether.sort((a, b) => a.fcName.localeCompare(b.fcName));
+const allTuletiskihidTogether = [...generateFeatureClass().tuletiskihid];
+
+const all3dTogether = [...generateFeatureClass().threeD];
+
+const generateAllDataMerge = (combinedData: FeatureClassOutput[]) => {
+  return combinedData.sort((a, b) => a.fcName.localeCompare(b.fcName));
 };
 
 const initPath = {
@@ -26,9 +29,31 @@ const initPath = {
   element: <App />,
 };
 
-const all2dPath = {
-  path: "/all/2d",
-  element: <OnePager2d allTablesAndDomains={generateAllDataMerge()} />,
+const allLevituumPath = {
+  path: "/levituum/all",
+  element: (
+    <OnePagerForData
+      allTablesAndDomains={generateAllDataMerge(allLevituumDataTogether)}
+    />
+  ),
+};
+
+const allDerivativePath = {
+  path: "/tuletiskihid/all",
+  element: (
+    <OnePagerForData
+      allTablesAndDomains={generateAllDataMerge(allTuletiskihidTogether)}
+    />
+  ),
+};
+
+const all3DPath = {
+  path: "/3d/all",
+  element: (
+    <OnePagerForData
+      allTablesAndDomains={generateAllDataMerge(all3dTogether)}
+    />
+  ),
 };
 
 const derivativePath = {
@@ -60,8 +85,7 @@ const featureClassPath = (
   return featureclassPaths;
 };
 
-// TODO tuletiskihtide tüübid on ka vaja välja selgitada
-const featureClassPath2 = (
+const featureClassTuletiskiht = (
   featureclasses: FeatureClassOutput[]
 ): FeatureClassPath[] => {
   const featureclassPaths = featureclasses.map((fc) => ({
@@ -80,7 +104,7 @@ const featureClassPath2 = (
   return featureclassPaths;
 };
 
-const featureClassPath3 = (
+const featureClassPath3D = (
   featureclasses: FeatureClassOutput[]
 ): FeatureClassPath[] => {
   const featureclassPaths = featureclasses.map((fc) => ({
@@ -101,7 +125,9 @@ const featureClassPath3 = (
 
 export const paths = () => [
   initPath,
-  all2dPath,
+  allLevituumPath,
+  allDerivativePath,
+  all3DPath,
   derivativePath,
   threeDPath,
   ...featureClassPath(generateFeatureClass().punktobjektid),
@@ -109,6 +135,6 @@ export const paths = () => [
   ...featureClassPath(generateFeatureClass().pindobjektidOverlap),
   ...featureClassPath(generateFeatureClass().pindobjektid),
   ...featureClassPath(generateFeatureClass().metaandmed),
-  ...featureClassPath2(generateFeatureClass().tuletiskihid),
-  ...featureClassPath3(generateFeatureClass().kolmD),
+  ...featureClassTuletiskiht(generateFeatureClass().tuletiskihid),
+  ...featureClassPath3D(generateFeatureClass().threeD),
 ];

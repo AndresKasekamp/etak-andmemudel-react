@@ -13,7 +13,6 @@ import {
 } from "../interfaces/interfaces.tsx";
 
 import { GeomTypes, GroupNames } from "./dataTypes.ts";
-// TODO kolmD -> threeD
 
 export const generateFeatureClass = (): FeatureClasses => {
   const allFeatureClasses: FeatureClasses = {
@@ -23,7 +22,7 @@ export const generateFeatureClass = (): FeatureClasses => {
     pindobjektidOverlap: [],
     pindobjektid: [],
     tuletiskihid: [],
-    kolmD: [],
+    threeD: [],
   };
 
   const createFeatureClass = ({
@@ -94,7 +93,7 @@ export const generateFeatureClass = (): FeatureClasses => {
   feature_classes_3d.forEach((fc) => {
     const fcObj = createFeatureClass(fc);
 
-    allFeatureClasses.kolmD.push(fcObj);
+    allFeatureClasses.threeD.push(fcObj);
   });
 
   return allFeatureClasses;

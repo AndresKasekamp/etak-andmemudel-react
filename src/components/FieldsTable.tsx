@@ -94,9 +94,10 @@ export const FieldsTable = ({
   };
 
   const isLevituum = () => {
-    console.log("3d", groupName)
     const validGroups = ["tuletiskiht", "3d"];
-    return `Andmestik: ${validGroups.includes(groupName) ? groupName : "levituum"}`;
+    return `Andmestik: ${
+      validGroups.includes(groupName) ? groupName : "levituum"
+    }`;
   };
 
   const location: Location = useLocation();

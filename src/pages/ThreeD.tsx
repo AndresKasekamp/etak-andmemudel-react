@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import { FrontPageIndexTable } from "../components/FrontPageIndexTable.tsx";
 import { generateFeatureClass } from "../data/featureClasses.tsx";
 import { threeDPath } from "./groupPaths.ts";
+import { TablesTogetherLink } from "../components/TablesTogetherLink.tsx";
 
 function ThreeD() {
   return (
@@ -20,6 +21,9 @@ function ThreeD() {
           <Typography variant="h3" gutterBottom>
             3D kihid
           </Typography>
+
+          <TablesTogetherLink route="/3d/all" />
+
         </Box>
 
         <Box
@@ -39,7 +43,7 @@ function ThreeD() {
         >
           <FrontPageIndexTable
             objectName="3D kihid"
-            itemNames={generateFeatureClass().kolmD}
+            itemNames={generateFeatureClass().threeD}
             dataTypeClass={threeDPath}
           />
         </Box>

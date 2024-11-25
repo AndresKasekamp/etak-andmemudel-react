@@ -8,7 +8,7 @@ import { AllTablesAndDomains } from "../interfaces/interfaces.tsx";
 import { sortElements } from "./formatHelpers/sortElements.ts";
 
 
-export const OnePager2d = ({ allTablesAndDomains }: AllTablesAndDomains) => {
+export const OnePagerForData = ({ allTablesAndDomains }: AllTablesAndDomains) => {
   // Manipulating domains into singular
   const domainsMerged = generateDomainsTogether(allTablesAndDomains);
 

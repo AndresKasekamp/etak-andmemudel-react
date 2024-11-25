@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
+import AltRouteIcon from "@mui/icons-material/AltRoute";
 
 const LinkDerivatives = () => {
   return (
     <Link to="/tuletiskihid" title="Tuletiskihid">
-      <PublishedWithChangesIcon fontSize="large" sx={{ color: "white" }} />
+      <AltRouteIcon fontSize="large" sx={{ color: "white" }} />
     </Link>
   );
 };

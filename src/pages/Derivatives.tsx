@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import { FrontPageIndexTable } from "../components/FrontPageIndexTable.tsx";
 import { generateFeatureClass } from "../data/featureClasses.tsx";
 import { derivedPath } from "./groupPaths.ts";
+import { TablesTogetherLink } from "../components/TablesTogetherLink.tsx";
 
 function Derivatives() {
   return (
@@ -20,6 +21,7 @@ function Derivatives() {
           <Typography variant="h3" gutterBottom>
             Tuletiskihid
           </Typography>
+          <TablesTogetherLink route="/tuletiskihid/all" />
         </Box>
 
         <Box

@@ -10,6 +10,8 @@ export const ExportAllPDF = ({
   allTablesAndDomains,
   domainsMerged,
 }: AllTablesAndDomainsMerge) => {
+  console.log("all tables and domains", allTablesAndDomains);
+
   const handleExportPDF = () => {
     const doc = new jsPDF();
 
@@ -51,8 +53,19 @@ export const ExportAllPDF = ({
       }
     });
 
-    // Save the PDF
-    doc.save("etak-andmemudel-koos.pdf");
+    const groupName = allTablesAndDomains[0].groupName;
+
+    switch (groupName) {
+      case "3d":
+        doc.save("etak-3d-koos.pdf");
+        break;
+      case "tuletiskiht":
+        doc.save("etak-tuletiskiht-koos.pdf");
+        break;
+      default:
+        doc.save("etak-andmemudel-koos.pdf");
+        break;
+    }
   };
 
   return (
