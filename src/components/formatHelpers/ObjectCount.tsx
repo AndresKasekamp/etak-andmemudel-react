@@ -11,6 +11,7 @@ import {
 const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
   const [data, setData] = useState<number | null>(null); // Use number or null
   const [loading, setLoading] = useState<boolean>(true);
+  // @ts-ignore
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
