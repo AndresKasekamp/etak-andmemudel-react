@@ -29,6 +29,9 @@ import {
   DomainTable,
 } from "../interfaces/interfaces.tsx";
 
+import { GeomTypes, } from "./dataTypes.ts";
+// TODO kolmD -> threeD
+
 export const generateFeatureClass = (): FeatureClasses => {
   const allFeatureClasses: FeatureClasses = {
     metaandmed: [],
@@ -74,7 +77,7 @@ export const generateFeatureClass = (): FeatureClasses => {
     etak: {
       group: derivedPath,
       type: POLY_GEOMETRY,
-      dimension: 2.5,
+      dimension: 2,
       image: polyImageSource,
     },
     kolmD: {
@@ -96,7 +99,7 @@ export const generateFeatureClass = (): FeatureClasses => {
     return GEOMETRY_MAP[suffix];
   };
 
-  const createFc = ({
+  const createFcLevituum = ({
     name,
     fields,
     desc,
@@ -112,6 +115,33 @@ export const generateFeatureClass = (): FeatureClasses => {
         geomDimension: dimension,
         image,
         estName: desc,
+        count: 100
+      },
+    };
+  };
+
+  const createFcTuletiskiht = ({
+    name,
+    fields,
+    desc,
+    count,
+    geom_type
+  }: FeatureClassInput): FeatureClassOutput => {
+    const { group } = determineFeatureClass(name);
+    return {
+      fcName: name,
+      groupName: group,
+      elements: fields,
+      domainTables: getDomains(fields),
+      headingData: {
+        // @ts-ignore
+        geomType: GeomTypes[geom_type].geom_type,
+        // @ts-ignore
+        geomDimension: GeomTypes[geom_type].dimension,
+        // @ts-ignore
+        image: GeomTypes[geom_type].image,
+        estName: desc,
+        count,
       },
     };
   };
@@ -123,7 +153,7 @@ export const generateFeatureClass = (): FeatureClasses => {
   };
 
   feature_classes.forEach((fc) => {
-    const fcObj = createFc(fc);
+    const fcObj = createFcLevituum(fc);
     const fcType = fcObj.fcName.substring(fcObj.fcName.lastIndexOf("_") + 1);
 
     switch (fcType) {
@@ -146,7 +176,7 @@ export const generateFeatureClass = (): FeatureClasses => {
   });
 
   feature_classes_tuletiskihid.forEach((fc) => {
-    const fcObj = createFc(fc);
+    const fcObj = createFcTuletiskiht(fc);
     const fcType = fcObj.fcName.substring(0, fcObj.fcName.indexOf("_"));
 
     // TODO kuidas eristada tuletiskihtide tüüpe?
@@ -158,7 +188,7 @@ export const generateFeatureClass = (): FeatureClasses => {
   });
 
   feature_classes_3d.forEach((fc) => {
-    const fcObj = createFc(fc);
+    const fcObj = createFcLevituum(fc);
 
     allFeatureClasses.kolmD.push(fcObj);
 

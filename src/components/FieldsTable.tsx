@@ -73,13 +73,14 @@ export const FieldsTable = ({
   };
 
   const getFeatureCount = () => {
-    switch (fcName) {
+    console.log("fcname", groupName)
+    switch (groupName) {
       case "Alusdokument":
         return 100;
-      case "Vooluveed":
-        return <ObjectCount url={generateWfsUrl(fcName, true)}></ObjectCount>;
+      case "tuletiskiht":
+        return <ObjectCount url={generateWfsUrl(fcName, true)} hardcodedCount={headingData.count}></ObjectCount>;
       default:
-        return <ObjectCount url={generateWfsUrl(fcName)}></ObjectCount>;
+        return <ObjectCount url={generateWfsUrl(fcName)} hardcodedCount={headingData.count}></ObjectCount>;
     }
   };
 

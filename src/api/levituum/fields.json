@@ -139,7 +139,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Kivi"
+        "count": 103486,
+        "desc": "Kivi",
+        "geom_type": "3D Point"
     },
     {
         "name": "E_102_nolv_j",
@@ -273,7 +275,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Nõlv"
+        "count": 21406,
+        "desc": "Nõlv",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_103_pinnavorm_j",
@@ -399,7 +403,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Pinnavorm joonena"
+        "count": 9155,
+        "desc": "Pinnavorm joonena",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_103_pinnavorm_p",
@@ -533,7 +539,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Pinnavorm punktina"
+        "count": 24882,
+        "desc": "Pinnavorm punktina",
+        "geom_type": "3D Point"
     },
     {
         "name": "E_201_meri_a",
@@ -643,7 +651,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Meri"
+        "count": 476,
+        "desc": "Meri",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_202_seisuveekogu_a",
@@ -793,7 +803,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Seisuveekogu alana"
+        "count": 120404,
+        "desc": "Seisuveekogu alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_202_seisuveekogu_p",
@@ -927,7 +939,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Seisuveekogu punktina"
+        "count": 1866,
+        "desc": "Seisuveekogu punktina",
+        "geom_type": "3D Point"
     },
     {
         "name": "E_203_vooluveekogu_a",
@@ -1069,7 +1083,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Vooluveekogu alana"
+        "count": 6493,
+        "desc": "Vooluveekogu alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_203_vooluveekogu_j",
@@ -1235,7 +1251,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Vooluveekogu telgjoon"
+        "count": 966802,
+        "desc": "Vooluveekogu telgjoon",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_204_kaldajoon_j",
@@ -1361,7 +1379,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Kaldajoon"
+        "count": 144741,
+        "desc": "Kaldajoon",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_205_hudrotehniline_rajatis_j",
@@ -1471,7 +1491,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Hüdrotehniline rajatis"
+        "count": 1642,
+        "desc": "Hüdrotehniline rajatis",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_206_truup_j",
@@ -1581,7 +1603,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Truup"
+        "count": 196609,
+        "desc": "Truup",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_301_muu_kolvik_a",
@@ -1699,7 +1723,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Muu kõlvik alana"
+        "count": 30979,
+        "desc": "Muu kõlvik alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_301_muu_kolvik_ka",
@@ -1841,7 +1867,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Muu kõlvik kattuva alana"
+        "count": 2132,
+        "desc": "Muu kõlvik kattuva alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_301_muu_kolvik_p",
@@ -1967,7 +1995,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Muu kõlvik punktina"
+        "count": 1569,
+        "desc": "Muu kõlvik punktina",
+        "geom_type": "3D Point"
     },
     {
         "name": "E_302_ou_a",
@@ -2093,7 +2123,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Õu"
+        "count": 118680,
+        "desc": "Õu",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_303_haritav_maa_a",
@@ -2219,7 +2251,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Haritav maa"
+        "count": 56981,
+        "desc": "Haritav maa",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_304_lage_a",
@@ -2337,7 +2371,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Lage"
+        "count": 297785,
+        "desc": "Lage",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_305_puittaimestik_a",
@@ -2455,7 +2491,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Puittaimestik alana"
+        "count": 158882,
+        "desc": "Puittaimestik alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_305_puittaimestik_j",
@@ -2573,7 +2611,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Puittaimestik joonena"
+        "count": 210770,
+        "desc": "Puittaimestik joonena",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_305_puittaimestik_p",
@@ -2707,7 +2747,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Puittaimestik punktina"
+        "count": 509235,
+        "desc": "Puittaimestik punktina",
+        "geom_type": "3D Point"
     },
     {
         "name": "E_306_margala_a",
@@ -2833,7 +2875,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Märgala alana"
+        "count": 55071,
+        "desc": "Märgala alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_306_margala_ka",
@@ -2951,7 +2995,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Märgala kattuva alana"
+        "count": 2799,
+        "desc": "Märgala kattuva alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_307_turbavali_a",
@@ -3069,7 +3115,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Turbaväli"
+        "count": 403,
+        "desc": "Turbaväli",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_401_hoone_ka",
@@ -3227,7 +3275,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Hoone"
+        "count": 917841,
+        "desc": "Hoone",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_402_korgrajatis_p",
@@ -3393,7 +3443,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Kõrgrajatis"
+        "count": 3429,
+        "desc": "Kõrgrajatis",
+        "geom_type": "3D Point"
     },
     {
         "name": "E_403_muu_rajatis_ka",
@@ -3527,7 +3579,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Muu rajatis kattuva alana"
+        "count": 53905,
+        "desc": "Muu rajatis kattuva alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_403_muu_rajatis_p",
@@ -3669,7 +3723,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Muu rajatis punktina"
+        "count": 1691,
+        "desc": "Muu rajatis punktina",
+        "geom_type": "3D Point"
     },
     {
         "name": "E_404_maaalune_hoone_ka",
@@ -3819,7 +3875,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Maa-alune hoone"
+        "count": 6509,
+        "desc": "Maa-alune hoone",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_405_piire_j",
@@ -3945,7 +4003,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Piire"
+        "count": 91487,
+        "desc": "Piire",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_501_tee_a",
@@ -4063,7 +4123,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Tee alana"
+        "count": 15388,
+        "desc": "Tee alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_501_tee_j",
@@ -4333,7 +4395,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Tee joonena"
+        "count": 676863,
+        "desc": "Tee joonena",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_502_roobastee_j",
@@ -4459,7 +4523,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Rööbastee"
+        "count": 4182,
+        "desc": "Rööbastee",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_503_siht_j",
@@ -4561,7 +4627,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Siht"
+        "count": 64364,
+        "desc": "Siht",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_505_liikluskorralduslik_rajatis_ka",
@@ -4703,7 +4771,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Liikluskorralduslik rajatis kattuva alana"
+        "count": 2611,
+        "desc": "Liikluskorralduslik rajatis kattuva alana",
+        "geom_type": "3D Multi Polygon"
     },
     {
         "name": "E_505_liikluskorralduslik_rajatis_j",
@@ -4821,7 +4891,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Liikluskorralduslik rajatis joonena"
+        "count": 14567,
+        "desc": "Liikluskorralduslik rajatis joonena",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_601_elektriliin_j",
@@ -4939,7 +5011,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Elektriliin"
+        "count": 16885,
+        "desc": "Elektriliin",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "E_602_tehnopaigaldis_p",
@@ -5057,7 +5131,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Tehnopaigaldis"
+        "count": 19756,
+        "desc": "Tehnopaigaldis",
+        "geom_type": "3D Point"
     },
     {
         "name": "E_603_torujuhe_j",
@@ -5167,7 +5243,9 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Torujuhe"
+        "count": 752,
+        "desc": "Torujuhe",
+        "geom_type": "3D Multi Line String"
     },
     {
         "name": "alusdokument",
@@ -5277,6 +5355,8 @@
                 "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Alusdokument"
+        "count": 227,
+        "desc": "Alusdokument",
+        "geom_type": "Multi Polygon"
     }
 ]

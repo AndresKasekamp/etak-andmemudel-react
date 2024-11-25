@@ -1,12 +1,12 @@
 import { ObjectCountResponse } from "../interfaces/interfaces";
 
-// TODO tuletiskihtidega on vaja natuke erinevalt lahendada
+// TODO tuletiskihtidega on vaja natuke erinevalt lahendada ja 3D on hardcode
 export const generateWfsUrl = (
   name: string,
   derived: boolean = false
 ): string => {
   if (derived) {
-    return `https://gsavalik.envir.ee/geoserver/etak_tuletis/wfs?typename=etak_tuletis:eelis_tervikvooluveed_pohiteljed&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
+    return `https://gsavalik.envir.ee/geoserver/etak_tuletis/wfs?typename=etak_tuletis:${name.toLowerCase()}&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
   }
   return `https://gsavalik.envir.ee/geoserver/wfs?typename=etak:${name.toLowerCase()}&service=wfs&srs=EPSG:3301&request=getfeature&outputformat=json`;
 };

@@ -5,10 +5,10 @@
             {
                 "name": "mps_id",
                 "type": "String",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://portaal.agri.ee/avalik/#/maaparandus/msr/systeemi-otsing",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Eesvoolu identifikaator Maaparandussüsteemide registris"
             },
             {
                 "name": "muutmisaeg",
@@ -16,7 +16,7 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
             },
             {
                 "name": "pikkus_etak",
@@ -40,7 +40,7 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "maaparandussüsteemi kood"
             },
             {
                 "name": "ehitise_kood",
@@ -48,7 +48,7 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "maaparandussüsteemi ehitise kood"
             },
             {
                 "name": "ev_osa",
@@ -56,10 +56,20 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "maaparandussüsteemi ühe ja sama ehitise eesvoolu erinevate osade eristamiseks antav number"
+            },
+            {
+                "name": "id",
+                "type": "OID",
+                "meta_type": "general",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Kirjeldus"
+        "count": 14602,
+        "desc": "Kirjeldus",
+        "geom_type": "Multi Line String"
     },
     {
         "name": "etak_hooned_ehr",
@@ -70,7 +80,7 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
             },
             {
                 "name": "etak_id",
@@ -78,15 +88,15 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "ETAK objekti unikaalne identifikaator"
             },
             {
                 "name": "ehr_gid",
                 "type": "String",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://livekluster.ehr.ee/ui/ehr/v1",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
             },
             {
                 "name": "kood",
@@ -94,7 +104,7 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Nähtuse kood ETAK reaalsusmudelis"
             },
             {
                 "name": "tyyp",
@@ -110,23 +120,23 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Vabas vormis märkused objekti kohta"
             },
             {
                 "name": "ads_oid",
                 "type": "String",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://xgis.maaamet.ee/adsavalik/",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis"
             },
             {
                 "name": "ads_lahiaadress",
                 "type": "String",
-                "meta_type": "general",
+                "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis"
             },
             {
                 "name": "korgus_m",
@@ -139,10 +149,10 @@
             {
                 "name": "nimetus",
                 "type": "String",
-                "meta_type": "general",
+                "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
             },
             {
                 "name": "esmane_kasutus",
@@ -263,9 +273,19 @@
                 "link": null,
                 "domain": "",
                 "desc": "Kirjeldus"
+            },
+            {
+                "name": "id",
+                "type": "OID",
+                "meta_type": "general",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Kirjeldus"
+        "count": 922089,
+        "desc": "Kirjeldus",
+        "geom_type": "Polygon"
     },
     {
         "name": "etak_saared",
@@ -281,26 +301,26 @@
             {
                 "name": "kkr_kood",
                 "type": "String",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
             },
             {
                 "name": "knr_id",
                 "type": "Integer",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
             },
             {
                 "name": "nimetus",
                 "type": "String",
-                "meta_type": "general",
+                "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
             },
             {
                 "name": "veekogu_tyyp",
@@ -340,7 +360,7 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
             },
             {
                 "name": "pindala",
@@ -357,9 +377,19 @@
                 "link": null,
                 "domain": "",
                 "desc": "Kirjeldus"
+            },
+            {
+                "name": "id",
+                "type": "OID",
+                "meta_type": "general",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Kirjeldus"
+        "count": 7904,
+        "desc": "Kirjeldus",
+        "geom_type": "Polygon"
     },
     {
         "name": "etak_seisuveed_eelis",
@@ -367,10 +397,10 @@
             {
                 "name": "kkr_kood",
                 "type": "String",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
             },
             {
                 "name": "kkr_tyyp",
@@ -383,18 +413,18 @@
             {
                 "name": "nimetus",
                 "type": "String",
-                "meta_type": "general",
+                "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
             },
             {
                 "name": "knr_id",
                 "type": "Integer",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
             },
             {
                 "name": "muutmisaeg",
@@ -402,10 +432,20 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "id",
+                "type": "OID",
+                "meta_type": "general",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Kirjeldus"
+        "count": 2880,
+        "desc": "Kirjeldus",
+        "geom_type": "Polygon"
     },
     {
         "name": "etak_vooluveed_eelis",
@@ -413,10 +453,10 @@
             {
                 "name": "kkr_kood",
                 "type": "String",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
             },
             {
                 "name": "kkr_tyyp",
@@ -429,18 +469,18 @@
             {
                 "name": "nimetus",
                 "type": "String",
-                "meta_type": "general",
+                "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
             },
             {
                 "name": "knr_id",
                 "type": "Integer",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
             },
             {
                 "name": "korguste_vahe",
@@ -456,21 +496,31 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+            },
+            {
+                "name": "id",
+                "type": "OID",
+                "meta_type": "general",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Kirjeldus"
+        "count": 3777,
+        "desc": "Kirjeldus",
+        "geom_type": "Line String"
     },
     {
-        "name": "etak_voooluveed_sekundaartelgedega_eelis",
+        "name": "etak_vooluveed_sekundaartelgedega_eelis",
         "fields": [
             {
                 "name": "kkr_kood",
                 "type": "String",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti kood Eesti looduse infosüsteemis"
             },
             {
                 "name": "kkr_tyyp",
@@ -483,18 +533,18 @@
             {
                 "name": "nimetus",
                 "type": "String",
-                "meta_type": "general",
+                "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
             },
             {
                 "name": "knr_id",
                 "type": "Integer",
-                "meta_type": "general",
-                "link": null,
+                "meta_type": "register",
+                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
             },
             {
                 "name": "algus_x",
@@ -550,7 +600,7 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
             },
             {
                 "name": "algus_z_dtm",
@@ -567,8 +617,18 @@
                 "link": null,
                 "domain": "",
                 "desc": "Kirjeldus"
+            },
+            {
+                "name": "id",
+                "type": "OID",
+                "meta_type": "general",
+                "link": "",
+                "domain": "",
+                "desc": "Tehniline identifikaator"
             }
         ],
-        "desc": "Kirjeldus"
+        "count": 22554,
+        "desc": "Kirjeldus",
+        "geom_type": "Line String"
     }
 ]

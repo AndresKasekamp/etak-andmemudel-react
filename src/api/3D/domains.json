@@ -1,0 +1,36 @@
+[
+    {
+        "name": "hoone_tyyp",
+        "desc": "Hoone tüüp ETAKis",
+        "coded_values": {
+            "10": "Elu- või ühiskondlik hoone",
+            "20": "Kõrval- või tootmishoone",
+            "30": "Vundament",
+            "40": "Vare",
+            "50": "Ehitatav hoone"
+        }
+    },
+    {
+        "name": "tyyp",
+        "desc": "Katusealune",
+        "coded_values": {
+            "20": "Katusealune"
+        }
+    },
+    {
+        "name": "liikluskorralduslik_rajatis_tyyp",
+        "desc": "Liikluskorraldusliku rajatise tüüp ETAKis",
+        "coded_values": {
+            "30": "Sild",
+            "60": "Autotunnel"
+        }
+    },
+    {
+        "name": "puutyyp",
+        "desc": "Puutüüp Sentineli NDVI andmetel",
+        "coded_values": {
+            "10": "Okaspuu",
+            "20": "Lehtpuu"
+        }
+    }
+]

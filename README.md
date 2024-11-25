@@ -80,4 +80,3 @@ Set to port 4173 on the host. Go to **localhost:4173**.
 ```bash
 docker run -d -p 4173:4173 etak-andmemudel-frontend
 ```
-

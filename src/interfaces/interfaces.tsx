@@ -3,6 +3,7 @@ interface HeadingData {
   geomDimension: number;
   image: string;
   estName: string;
+  count: number;
 }
 
 export interface Field {
@@ -18,6 +19,8 @@ export interface FeatureClassInput {
   name: string;
   fields: Field[];
   desc: string;
+  count: number;
+  geom_type: string
 }
 
 export interface GeometryInfo {
@@ -78,6 +81,7 @@ export interface ObjectCountResponse {
 
 export interface ObjectCountProps {
   url: string;
+  hardcodedCount: number
 }
 
 export interface DetailViewLinkProps {
@@ -95,3 +99,13 @@ export interface TableProps {
   itemNames: FeatureClassOutput[];
   dataTypeClass: string;
 }
+
+// Define the shape of each value in the dictionary
+export interface GeomTypeInfo {
+  geom_type: string; // or a specific type like `GeomType`
+  dimension: number;
+  image: string; // Assuming `lineImageSource` and `polyImageSource` are strings; adjust as necessary
+}
+
+// Use a union type for the keys (valid geometry types)
+export type GeomTypeKey = "Multi Line String" | "Line String" | "Polygon";

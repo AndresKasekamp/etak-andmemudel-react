@@ -8,7 +8,7 @@ import {
   ObjectCountProps,
 } from "../../interfaces/interfaces.tsx";
 
-const ObjectCount = ({ url }: ObjectCountProps) => {
+const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
   const [data, setData] = useState<number | null>(null); // Use number or null
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -21,7 +21,7 @@ const ObjectCount = ({ url }: ObjectCountProps) => {
         setData(result["totalFeatures"]); // Adjust based on actual response structure
         setLoading(false);
       } catch (err) {
-        setError("Failed to fetch data");
+        setError("Päring ebaõnnestus");
         setLoading(false);
       }
     };
@@ -30,9 +30,9 @@ const ObjectCount = ({ url }: ObjectCountProps) => {
   }, [url]); // Empty dependency array means this effect runs once when the component mounts
 
   if (loading) return <Typography>Laen...</Typography>;
-  if (error) return <Typography color="error">{error}</Typography>;
+  // if (error) return <Typography color="error">{error}</Typography>;
 
-  return <Typography>{data !== null ? data : "Unknown"}</Typography>;
+  return <Typography>{data !== null ? data : hardcodedCount}</Typography>;
 };
 
 export default ObjectCount;
