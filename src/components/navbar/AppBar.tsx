@@ -8,9 +8,13 @@ import LinkDerivatives from "./LinkDerivatives";
 import { AppBarColor } from "../../data/colors";
 import LastUpdated from "./LastUpdated";
 import { useMediaQuery } from '@mui/material';
+import ChangeLanguage from "./ChangeLanguage";
+import { useTranslation } from "react-i18next";
+
 
 export default function EtakAppBar() {
 
+  const { t } = useTranslation();
   const isMobile = useMediaQuery('(max-width:600px)');
 
   return (
@@ -40,13 +44,14 @@ export default function EtakAppBar() {
             component="div"
             sx={{ textAlign: "center"}}
           >
-            {isMobile ? 'ETAK' : 'Eesti topograafia andmekogu tuumandmete andmemudel'}
+            {isMobile ?  t('titleShort') : t('title')}
           </Typography>
           </Box>
 
           <Box sx={{ ml: "auto", display: "flex", gap: 2, alignItems: 'center' }}>
             <LinkDerivatives></LinkDerivatives>
             <Link3D></Link3D>
+            <ChangeLanguage></ChangeLanguage>
             <LastUpdated></LastUpdated>
             <HomeLink></HomeLink>
           </Box>

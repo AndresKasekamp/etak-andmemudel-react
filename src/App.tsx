@@ -11,9 +11,11 @@ import {
   metadataPath,
 } from "./pages/groupPaths.ts";
 import { TablesTogetherLink } from "./components/TablesTogetherLink.tsx";
-
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Container maxWidth="xl" sx={{ height: "100vh", mt: 2 }}>
@@ -25,7 +27,7 @@ function App() {
           sx={{ textAlign: "center", color: "#32774e" }}
         >
           <Typography variant="h3" gutterBottom>
-            Üldvaade
+            {t("overView")}
           </Typography>
 
           <TablesTogetherLink route="/levituum/all" />
@@ -92,8 +94,6 @@ function App() {
               dataTypeClass={polyPath}
             />
           </Box>
-
-
         </Box>
       </Container>
     </>
