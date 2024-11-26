@@ -8,7 +8,10 @@
                 "meta_type": "register",
                 "link": "https://portaal.agri.ee/avalik/#/maaparandus/msr/systeemi-otsing",
                 "domain": "",
-                "desc": "Eesvoolu identifikaator Maaparandussüsteemide registris"
+                "desc": {
+                    "et": "Eesvoolu identifikaator Maaparandussüsteemide registris",
+                    "en": "Artificial recipient code in Register of Land Improvement Systems"
+                }
             },
             {
                 "name": "muutmisaeg",
@@ -16,7 +19,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "pikkus_etak",
@@ -24,7 +30,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "riigi_ev",
@@ -32,7 +41,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "ms_kood",
@@ -40,7 +52,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "maaparandussüsteemi kood"
+                "desc": {
+                    "et": "maaparandussüsteemi kood",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "ehitise_kood",
@@ -48,7 +63,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "maaparandussüsteemi ehitise kood"
+                "desc": {
+                    "et": "maaparandussüsteemi ehitise kood",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "ev_osa",
@@ -56,7 +74,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "maaparandussüsteemi ühe ja sama ehitise eesvoolu erinevate osade eristamiseks antav number"
+                "desc": {
+                    "et": "maaparandussüsteemi ühe ja sama ehitise eesvoolu erinevate osade eristamiseks antav number",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "id",
@@ -64,11 +85,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 14602,
-        "desc": "Kirjeldus",
+        "desc": {
+            "en": "Desc",
+            "et": "Kirjeldus"
+        },
         "geom_type": "Multi Line String",
         "group": "derivatives"
     },
@@ -81,7 +108,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "etak_id",
@@ -89,7 +119,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ETAK objekti unikaalne identifikaator"
+                "desc": {
+                    "et": "ETAK objekti unikaalne identifikaator",
+                    "en": "Unique identifier of topographic object"
+                }
             },
             {
                 "name": "ehr_gid",
@@ -97,7 +130,10 @@
                 "meta_type": "register",
                 "link": "https://livekluster.ehr.ee/ui/ehr/v1",
                 "domain": "",
-                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+                "desc": {
+                    "et": "Ehitise osa geomeetria identifikaator Ehitisregistris",
+                    "en": "Identifier of building part geometry in  Register of buildings"
+                }
             },
             {
                 "name": "kood",
@@ -105,7 +141,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Nähtuse kood ETAK reaalsusmudelis"
+                "desc": {
+                    "et": "Nähtuse kood ETAK reaalsusmudelis",
+                    "en": "Feature code in ETDB conceptual data model"
+                }
             },
             {
                 "name": "tyyp",
@@ -113,7 +152,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "markused",
@@ -121,7 +163,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Vabas vormis märkused objekti kohta"
+                "desc": {
+                    "et": "Vabas vormis märkused objekti kohta",
+                    "en": "Additional comments"
+                }
             },
             {
                 "name": "ads_oid",
@@ -129,7 +174,10 @@
                 "meta_type": "register",
                 "link": "https://xgis.maaamet.ee/adsavalik/",
                 "domain": "",
-                "desc": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis"
+                "desc": {
+                    "et": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis",
+                    "en": "Identifier of address object in Address Data System information system"
+                }
             },
             {
                 "name": "ads_lahiaadress",
@@ -137,7 +185,10 @@
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis"
+                "desc": {
+                    "et": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis",
+                    "en": "Short address in Address Data System information system"
+                }
             },
             {
                 "name": "korgus_m",
@@ -145,7 +196,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "nimetus",
@@ -153,7 +207,10 @@
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti nimetus Riiklikus kohanimeregistris",
+                    "en": "Object name in  National Place Names Register"
+                }
             },
             {
                 "name": "esmane_kasutus",
@@ -161,7 +218,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "max_korruste_arv",
@@ -169,7 +229,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "min_korruste_arv",
@@ -177,7 +240,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "ehitisalune_pind",
@@ -185,7 +251,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "korgus",
@@ -193,7 +262,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "ehitisalune_maap_pind",
@@ -201,7 +273,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "kaos_kood_peamine",
@@ -209,7 +284,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "kaos_nimetus_peamine",
@@ -217,7 +295,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "kaos_kood",
@@ -225,7 +306,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "kaos_nimetus",
@@ -233,7 +317,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "seisund",
@@ -241,7 +328,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "energiaklass",
@@ -249,7 +339,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "suletud_netopind",
@@ -257,7 +350,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "taisaadress",
@@ -265,7 +361,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "ehr_url",
@@ -273,7 +372,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "id",
@@ -281,11 +383,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 922089,
-        "desc": "Kirjeldus",
+        "desc": {
+            "en": "Desc",
+            "et": "Kirjeldus"
+        },
         "geom_type": "Polygon",
         "group": "derivatives"
     },
@@ -298,7 +406,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "kkr_kood",
@@ -306,7 +417,10 @@
                 "meta_type": "register",
                 "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
-                "desc": "Objekti kood Eesti looduse infosüsteemis"
+                "desc": {
+                    "et": "Objekti kood Eesti looduse infosüsteemis",
+                    "en": "Object code in Estonian Nature Information System"
+                }
             },
             {
                 "name": "knr_id",
@@ -314,7 +428,10 @@
                 "meta_type": "register",
                 "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
                 "domain": "",
-                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti identifikaator Riiklikus kohanimeregistris",
+                    "en": "Object identifier in  National Place Names Register"
+                }
             },
             {
                 "name": "nimetus",
@@ -322,7 +439,10 @@
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti nimetus Riiklikus kohanimeregistris",
+                    "en": "Object name in  National Place Names Register"
+                }
             },
             {
                 "name": "veekogu_tyyp",
@@ -330,7 +450,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "veekogu_nimetus",
@@ -338,7 +461,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "veekogu_kkr_kood",
@@ -346,7 +472,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "veekogu_knr_id",
@@ -354,7 +483,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "muutmisaeg",
@@ -362,7 +494,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "pindala",
@@ -370,7 +505,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "ymbermoot",
@@ -378,7 +516,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "id",
@@ -386,11 +527,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 7904,
-        "desc": "Kirjeldus",
+        "desc": {
+            "en": "Desc",
+            "et": "Kirjeldus"
+        },
         "geom_type": "Polygon",
         "group": "derivatives"
     },
@@ -403,7 +550,10 @@
                 "meta_type": "register",
                 "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
-                "desc": "Objekti kood Eesti looduse infosüsteemis"
+                "desc": {
+                    "et": "Objekti kood Eesti looduse infosüsteemis",
+                    "en": "Object code in Estonian Nature Information System"
+                }
             },
             {
                 "name": "kkr_tyyp",
@@ -411,7 +561,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "nimetus",
@@ -419,7 +572,10 @@
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti nimetus Riiklikus kohanimeregistris",
+                    "en": "Object name in  National Place Names Register"
+                }
             },
             {
                 "name": "knr_id",
@@ -427,7 +583,10 @@
                 "meta_type": "register",
                 "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
                 "domain": "",
-                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti identifikaator Riiklikus kohanimeregistris",
+                    "en": "Object identifier in  National Place Names Register"
+                }
             },
             {
                 "name": "muutmisaeg",
@@ -435,7 +594,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "id",
@@ -443,11 +605,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 2880,
-        "desc": "Kirjeldus",
+        "desc": {
+            "en": "Desc",
+            "et": "Kirjeldus"
+        },
         "geom_type": "Polygon",
         "group": "derivatives"
     },
@@ -460,7 +628,10 @@
                 "meta_type": "register",
                 "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
-                "desc": "Objekti kood Eesti looduse infosüsteemis"
+                "desc": {
+                    "et": "Objekti kood Eesti looduse infosüsteemis",
+                    "en": "Object code in Estonian Nature Information System"
+                }
             },
             {
                 "name": "kkr_tyyp",
@@ -468,7 +639,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "nimetus",
@@ -476,7 +650,10 @@
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti nimetus Riiklikus kohanimeregistris",
+                    "en": "Object name in  National Place Names Register"
+                }
             },
             {
                 "name": "knr_id",
@@ -484,7 +661,10 @@
                 "meta_type": "register",
                 "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
                 "domain": "",
-                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti identifikaator Riiklikus kohanimeregistris",
+                    "en": "Object identifier in  National Place Names Register"
+                }
             },
             {
                 "name": "korguste_vahe",
@@ -492,7 +672,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "muutmisaeg",
@@ -500,7 +683,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "id",
@@ -508,11 +694,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 3777,
-        "desc": "Kirjeldus",
+        "desc": {
+            "en": "Desc",
+            "et": "Kirjeldus"
+        },
         "geom_type": "Line String",
         "group": "derivatives"
     },
@@ -525,7 +717,10 @@
                 "meta_type": "register",
                 "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
-                "desc": "Objekti kood Eesti looduse infosüsteemis"
+                "desc": {
+                    "et": "Objekti kood Eesti looduse infosüsteemis",
+                    "en": "Object code in Estonian Nature Information System"
+                }
             },
             {
                 "name": "kkr_tyyp",
@@ -533,7 +728,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "nimetus",
@@ -541,7 +739,10 @@
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti nimetus Riiklikus kohanimeregistris",
+                    "en": "Object name in  National Place Names Register"
+                }
             },
             {
                 "name": "knr_id",
@@ -549,7 +750,10 @@
                 "meta_type": "register",
                 "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
                 "domain": "",
-                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti identifikaator Riiklikus kohanimeregistris",
+                    "en": "Object identifier in  National Place Names Register"
+                }
             },
             {
                 "name": "algus_x",
@@ -557,7 +761,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "algus_y",
@@ -565,7 +772,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "algus_z",
@@ -573,7 +783,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "lopp_x",
@@ -581,7 +794,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "lopp_y",
@@ -589,7 +805,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "lopp_z",
@@ -597,7 +816,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "muutmisaeg",
@@ -605,7 +827,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "algus_z_dtm",
@@ -613,7 +838,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "lopp_z_dtm",
@@ -621,7 +849,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "id",
@@ -629,11 +860,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 22554,
-        "desc": "Kirjeldus",
+        "desc": {
+            "en": "Desc",
+            "et": "Kirjeldus"
+        },
         "geom_type": "Line String",
         "group": "derivatives"
     }

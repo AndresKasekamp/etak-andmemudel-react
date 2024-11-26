@@ -8,6 +8,7 @@ import { FeatureClassOutput } from "../interfaces/interfaces";
 import Derivatives from "./Derivatives";
 import ThreeD from "./ThreeD";
 
+
 const allLevituumDataTogether = [
   ...generateFeatureClass().metaandmed,
   ...generateFeatureClass().punktobjektid,

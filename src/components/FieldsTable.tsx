@@ -31,6 +31,8 @@ import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
 import RegisterHyperLink from "./formatHelpers/RegisterHyperLink.tsx";
 
 import { CategoryKey, DataTypeKey } from "./formatHelpers/translate.ts";
+import { useTranslation } from "react-i18next"
+import { Description } from "../interfaces/interfaces.tsx";
 
 export const FieldsTable = ({
   elements,
@@ -39,6 +41,11 @@ export const FieldsTable = ({
   headingData,
   domainTables,
 }: FeatureClassOutput) => {
+
+  const { i18n } = useTranslation();
+  const appLang: keyof Description = i18n.language
+  console.log("Current language data view table" ,appLang)
+
   const handleExportPDF = () => {
     const doc = new jsPDF();
 
@@ -171,7 +178,7 @@ export const FieldsTable = ({
       </div>
       <div>
         <Typography variant="h5" sx={{ marginLeft: 2 }}>
-          {headingData.estName}
+          {headingData.desc[appLang]}
         </Typography>
 
         <Typography sx={{ marginLeft: 2 }}>{isLevituum()}</Typography>
@@ -227,10 +234,10 @@ export const FieldsTable = ({
                 {row.link ? (
                   <RegisterHyperLink
                     link={row.link}
-                    desc={row.desc}
+                    desc={row.desc[appLang]}
                   ></RegisterHyperLink>
                 ) : (
-                  row.desc
+                  row.desc[appLang]
                 )}
               </TableCell>
             </TableRow>

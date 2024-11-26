@@ -33,6 +33,8 @@ export const generateFeatureClass = (): FeatureClasses => {
     count,
     geom_type,
   }: FeatureClassInput): FeatureClassOutput => {
+    // Getting the description in the correct language
+
     return {
       fcName: name,
       groupName: GroupNames[group],
@@ -45,7 +47,7 @@ export const generateFeatureClass = (): FeatureClasses => {
         geomDimension: GeomTypes[geom_type].dimension,
         // @ts-ignore
         image: GeomTypes[geom_type].image,
-        estName: desc,
+        desc,
         count,
       },
     };

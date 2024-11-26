@@ -8,7 +8,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ETAK objekti unikaalne identifikaator"
+                "desc": {
+                    "et": "ETAK objekti unikaalne identifikaator",
+                    "en": "Unique identifier of topographic object"
+                }
             },
             {
                 "name": "ehr_gid",
@@ -16,7 +19,10 @@
                 "meta_type": "register",
                 "link": "https://livekluster.ehr.ee/ui/ehr/v1",
                 "domain": "",
-                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+                "desc": {
+                    "et": "Ehitise osa geomeetria identifikaator Ehitisregistris",
+                    "en": "Identifier of building part geometry in  Register of buildings"
+                }
             },
             {
                 "name": "ads_oid",
@@ -24,7 +30,10 @@
                 "meta_type": "register",
                 "link": "https://xgis.maaamet.ee/adsavalik/",
                 "domain": "",
-                "desc": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis"
+                "desc": {
+                    "et": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis",
+                    "en": "Identifier of address object in Address Data System information system"
+                }
             },
             {
                 "name": "ads_lahiaadress",
@@ -32,7 +41,10 @@
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis"
+                "desc": {
+                    "et": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis",
+                    "en": "Short address in Address Data System information system"
+                }
             },
             {
                 "name": "lod1_muutmisaeg",
@@ -40,7 +52,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Hoone LOD1 muutmisaeg"
+                "desc": {
+                    "et": "Hoone LOD1 muutmisaeg",
+                    "en": "LOD1 building modification time"
+                }
             },
             {
                 "name": "z_min",
@@ -48,7 +63,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Minimaalne z-koordinaat"
+                "desc": {
+                    "et": "Minimaalne z-koordinaat",
+                    "en": "Minimum z-coordinate"
+                }
             },
             {
                 "name": "z_max",
@@ -56,7 +74,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Maksimaalne z-koordinaat"
+                "desc": {
+                    "et": "Maksimaalne z-koordinaat",
+                    "en": "Maximum z-coordinate"
+                }
             },
             {
                 "name": "etak_muutmisaeg",
@@ -64,7 +85,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "tyyp",
@@ -72,7 +96,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "hoone_tyyp",
-                "desc": "Hoone tüüp"
+                "desc": {
+                    "et": "Hoone tüüp",
+                    "en": "Building type"
+                }
             },
             {
                 "name": "shape",
@@ -80,7 +107,10 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Objekti ruumikuju"
+                "desc": {
+                    "et": "Objekti ruumikuju",
+                    "en": "Feature geometry"
+                }
             },
             {
                 "name": "OBJECTID",
@@ -88,11 +118,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 912954,
-        "desc": "LOD1 hooned",
+        "desc": {
+            "en": "Desc",
+            "et": "LOD1 hooned"
+        },
         "geom_type": "3D TIN",
         "group": "3D"
     },
@@ -105,7 +141,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ETAK objekti unikaalne identifikaator"
+                "desc": {
+                    "et": "ETAK objekti unikaalne identifikaator",
+                    "en": "Unique identifier of topographic object"
+                }
             },
             {
                 "name": "ehr_gid",
@@ -113,7 +152,10 @@
                 "meta_type": "register",
                 "link": "https://livekluster.ehr.ee/ui/ehr/v1",
                 "domain": "",
-                "desc": "Ehitise osa geomeetria identifikaator Ehitisregistris"
+                "desc": {
+                    "et": "Ehitise osa geomeetria identifikaator Ehitisregistris",
+                    "en": "Identifier of building part geometry in  Register of buildings"
+                }
             },
             {
                 "name": "ads_oid",
@@ -121,7 +163,10 @@
                 "meta_type": "register",
                 "link": "https://xgis.maaamet.ee/adsavalik/",
                 "domain": "",
-                "desc": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis"
+                "desc": {
+                    "et": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis",
+                    "en": "Identifier of address object in Address Data System information system"
+                }
             },
             {
                 "name": "ads_lahiaadress",
@@ -129,7 +174,10 @@
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis"
+                "desc": {
+                    "et": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis",
+                    "en": "Short address in Address Data System information system"
+                }
             },
             {
                 "name": "lod2_muutmisaeg",
@@ -137,7 +185,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kirjeldus"
+                "desc": {
+                    "et": "Kirjeldus",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "z_min",
@@ -145,7 +196,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Minimaalne z-koordinaat"
+                "desc": {
+                    "et": "Minimaalne z-koordinaat",
+                    "en": "Minimum z-coordinate"
+                }
             },
             {
                 "name": "z_max",
@@ -153,7 +207,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Maksimaalne z-koordinaat"
+                "desc": {
+                    "et": "Maksimaalne z-koordinaat",
+                    "en": "Maximum z-coordinate"
+                }
             },
             {
                 "name": "etak_muutmisaeg",
@@ -161,7 +218,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "tyyp",
@@ -169,7 +229,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "hoone_tyyp",
-                "desc": "Hoone tüüp"
+                "desc": {
+                    "et": "Hoone tüüp",
+                    "en": "Building type"
+                }
             },
             {
                 "name": "als_aasta",
@@ -177,7 +240,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ALS kaardistuaasta"
+                "desc": {
+                    "et": "ALS kaardistuaasta",
+                    "en": "ALS flight year"
+                }
             },
             {
                 "name": "shape",
@@ -185,7 +251,10 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Objekti ruumikuju"
+                "desc": {
+                    "et": "Objekti ruumikuju",
+                    "en": "Feature geometry"
+                }
             },
             {
                 "name": "OBJECTID",
@@ -193,11 +262,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 842443,
-        "desc": "LOD2 hooned",
+        "desc": {
+            "en": "Desc",
+            "et": "LOD2 hooned"
+        },
         "geom_type": "3D Multi Polygon",
         "group": "3D"
     },
@@ -210,7 +285,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ETAK objekti unikaalne identifikaator"
+                "desc": {
+                    "et": "ETAK objekti unikaalne identifikaator",
+                    "en": "Unique identifier of topographic object"
+                }
             },
             {
                 "name": "lod1_muutmisaeg",
@@ -218,7 +296,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kasvuhoone LOD1 muutmisaeg"
+                "desc": {
+                    "et": "Kasvuhoone LOD1 muutmisaeg",
+                    "en": "Greenhouse LOD1 modification time"
+                }
             },
             {
                 "name": "etak_muutmisaeg",
@@ -226,7 +307,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "tyyp",
@@ -234,7 +318,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "tyyp",
-                "desc": "Rajatise tüüp"
+                "desc": {
+                    "et": "Rajatise tüüp",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "vertikaalne_voimendus",
@@ -242,7 +329,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Kasvuhoone võimendus maapinnast LOD1 kuju loomiseks"
+                "desc": {
+                    "et": "Kasvuhoone võimendus maapinnast LOD1 kuju loomiseks",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "shape",
@@ -250,7 +340,10 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Objekti ruumikuju"
+                "desc": {
+                    "et": "Objekti ruumikuju",
+                    "en": "Feature geometry"
+                }
             },
             {
                 "name": "OBJECTID",
@@ -258,11 +351,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 3908,
-        "desc": "Kasvuhooned LOD1",
+        "desc": {
+            "en": "Desc",
+            "et": "Kasvuhooned LOD1"
+        },
         "geom_type": "3D TIN",
         "group": "3D"
     },
@@ -275,7 +374,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ETAK objekti unikaalne identifikaator"
+                "desc": {
+                    "et": "ETAK objekti unikaalne identifikaator",
+                    "en": "Unique identifier of topographic object"
+                }
             },
             {
                 "name": "lod1_muutmisaeg",
@@ -283,7 +385,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Katusealuse LOD1 muutmisaeg"
+                "desc": {
+                    "et": "Katusealuse LOD1 muutmisaeg",
+                    "en": "Passageway LOD1 modification time"
+                }
             },
             {
                 "name": "etak_muutmisaeg",
@@ -291,7 +396,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "tyyp",
@@ -299,7 +407,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "tyyp",
-                "desc": "Rajatise tüüp"
+                "desc": {
+                    "et": "Rajatise tüüp",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "vertikaalne_voimendus",
@@ -307,7 +418,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Võimendus z-koordinaadist alla LOD1 kuju loomiseks"
+                "desc": {
+                    "et": "Võimendus z-koordinaadist alla LOD1 kuju loomiseks",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "shape",
@@ -315,7 +429,10 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Objekti ruumikuju"
+                "desc": {
+                    "et": "Objekti ruumikuju",
+                    "en": "Feature geometry"
+                }
             },
             {
                 "name": "OBJECTID",
@@ -323,11 +440,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 42075,
-        "desc": "Katusealused LOD1/2",
+        "desc": {
+            "en": "Desc",
+            "et": "Katusealused LOD1/2"
+        },
         "geom_type": "3D TIN",
         "group": "3D"
     },
@@ -340,7 +463,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ETAK objekti unikaalne identifikaator"
+                "desc": {
+                    "et": "ETAK objekti unikaalne identifikaator",
+                    "en": "Unique identifier of topographic object"
+                }
             },
             {
                 "name": "lod1_muutmisaeg",
@@ -348,7 +474,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Liikluskorraldusliku rajatise LOD1 muutmisaeg"
+                "desc": {
+                    "et": "Liikluskorraldusliku rajatise LOD1 muutmisaeg",
+                    "en": "Bridge LOD1 modification time"
+                }
             },
             {
                 "name": "etak_muutmisaeg",
@@ -356,7 +485,10 @@
                 "meta_type": "meta",
                 "link": null,
                 "domain": "",
-                "desc": "Operaatori poolt tehtud viimase muutuse aeg"
+                "desc": {
+                    "et": "Operaatori poolt tehtud viimase muutuse aeg",
+                    "en": "Time of latest update by operator"
+                }
             },
             {
                 "name": "tyyp",
@@ -364,7 +496,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "liikluskorralduslik_rajatis_tyyp",
-                "desc": "Liikluskorraldusliku rajatise tüüp"
+                "desc": {
+                    "et": "Liikluskorraldusliku rajatise tüüp",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "knr_id",
@@ -372,7 +507,10 @@
                 "meta_type": "register",
                 "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
                 "domain": "",
-                "desc": "Objekti identifikaator Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti identifikaator Riiklikus kohanimeregistris",
+                    "en": "Object identifier in  National Place Names Register"
+                }
             },
             {
                 "name": "nimetus",
@@ -380,7 +518,10 @@
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti nimetus Riiklikus kohanimeregistris"
+                "desc": {
+                    "et": "Objekti nimetus Riiklikus kohanimeregistris",
+                    "en": "Object name in  National Place Names Register"
+                }
             },
             {
                 "name": "vertikaalne_voimendus",
@@ -388,7 +529,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Võimendus z-koordinaadist alla LOD1 kuju loomiseks"
+                "desc": {
+                    "et": "Võimendus z-koordinaadist alla LOD1 kuju loomiseks",
+                    "en": "Desc"
+                }
             },
             {
                 "name": "shape",
@@ -396,7 +540,10 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Objekti ruumikuju"
+                "desc": {
+                    "et": "Objekti ruumikuju",
+                    "en": "Feature geometry"
+                }
             },
             {
                 "name": "OBJECTID",
@@ -404,11 +551,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 2598,
-        "desc": "Liikluskorralduslikud rajatised LOD1",
+        "desc": {
+            "en": "Desc",
+            "et": "Liikluskorralduslikud rajatised LOD1"
+        },
         "geom_type": "3D TIN",
         "group": "3D"
     },
@@ -421,7 +574,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ETAK objekti unikaalne identifikaator"
+                "desc": {
+                    "et": "ETAK objekti unikaalne identifikaator",
+                    "en": "Unique identifier of topographic object"
+                }
             },
             {
                 "name": "puutyyp",
@@ -429,7 +585,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "puutyyp",
-                "desc": "Lehtpuu/okaspuu eristamine NGR foto alusel"
+                "desc": {
+                    "et": "Lehtpuu/okaspuu eristamine NGR foto alusel",
+                    "en": "TBA"
+                }
             },
             {
                 "name": "korgus",
@@ -437,7 +596,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Puu kõrgus (m)"
+                "desc": {
+                    "et": "Puu kõrgus (m)",
+                    "en": "TBA"
+                }
             },
             {
                 "name": "puukroon",
@@ -445,7 +607,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Võra läbimõõt (m)"
+                "desc": {
+                    "et": "Võra läbimõõt (m)",
+                    "en": "TBA"
+                }
             },
             {
                 "name": "als_aasta",
@@ -453,7 +618,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ALS kaardistuaasta"
+                "desc": {
+                    "et": "ALS kaardistuaasta",
+                    "en": "ALS flight year"
+                }
             },
             {
                 "name": "shape",
@@ -461,7 +629,10 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Objekti ruumikuju"
+                "desc": {
+                    "et": "Objekti ruumikuju",
+                    "en": "Feature geometry"
+                }
             },
             {
                 "name": "OBJECTID",
@@ -469,11 +640,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 6996048,
-        "desc": "Üksikpuud keskpunkt",
+        "desc": {
+            "en": "Desc",
+            "et": "Üksikpuud keskpunkt"
+        },
         "geom_type": "Point",
         "group": "3D"
     },
@@ -486,7 +663,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ETAK objekti unikaalne identifikaator"
+                "desc": {
+                    "et": "ETAK objekti unikaalne identifikaator",
+                    "en": "Unique identifier of topographic object"
+                }
             },
             {
                 "name": "puutyyp",
@@ -494,7 +674,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "puutyyp",
-                "desc": "Lehtpuu/okaspuu eristamine NGR foto alusel"
+                "desc": {
+                    "et": "Lehtpuu/okaspuu eristamine NGR foto alusel",
+                    "en": "TBA"
+                }
             },
             {
                 "name": "korgus",
@@ -502,7 +685,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "Puu kõrgus (m)"
+                "desc": {
+                    "et": "Puu kõrgus (m)",
+                    "en": "TBA"
+                }
             },
             {
                 "name": "als_aasta",
@@ -510,7 +696,10 @@
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
-                "desc": "ALS kaardistuaasta"
+                "desc": {
+                    "et": "ALS kaardistuaasta",
+                    "en": "ALS flight year"
+                }
             },
             {
                 "name": "Shape_Length",
@@ -518,7 +707,10 @@
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti ruumikuju pikkus või ümbermõõt"
+                "desc": {
+                    "et": "Objekti ruumikuju pikkus või ümbermõõt",
+                    "en": "Length or perimeter of the object's geometry"
+                }
             },
             {
                 "name": "Shape_Area",
@@ -526,7 +718,10 @@
                 "meta_type": "technical",
                 "link": null,
                 "domain": "",
-                "desc": "Objekti ruumikuju pindala"
+                "desc": {
+                    "et": "Objekti ruumikuju pindala",
+                    "en": "Area of the objects's geometry"
+                }
             },
             {
                 "name": "shape",
@@ -534,7 +729,10 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Objekti ruumikuju"
+                "desc": {
+                    "et": "Objekti ruumikuju",
+                    "en": "Feature geometry"
+                }
             },
             {
                 "name": "OBJECTID",
@@ -542,11 +740,17 @@
                 "meta_type": "technical",
                 "link": "",
                 "domain": "",
-                "desc": "Tehniline identifikaator"
+                "desc": {
+                    "et": "Tehniline identifikaator",
+                    "en": "Technical identifier"
+                }
             }
         ],
         "count": 6996048,
-        "desc": "Üksikpuud puukroon",
+        "desc": {
+            "en": "Desc",
+            "et": "Üksikpuud puukroon"
+        },
         "geom_type": "Multi Polygon",
         "group": "3D"
     }

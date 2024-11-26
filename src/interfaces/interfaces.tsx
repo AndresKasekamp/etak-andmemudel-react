@@ -1,8 +1,14 @@
+export type Description = {
+  [key: string]: string; // Accept any string key
+  et: string;
+  en: string;
+}
+
 interface HeadingData {
   geomType: string;
   geomDimension: number;
   image: string;
-  estName: string;
+  desc: Description;
   count: number;
 }
 
@@ -12,14 +18,14 @@ export interface Field {
   type: string;
   meta_type: string;
   link: string | null;
-  desc: string;
+  desc: Description;
 }
 
 export interface FeatureClassInput {
   name: string;
   group: string;
   fields: Field[];
-  desc: string;
+  desc: Description;
   count: number;
   geom_type: string
 }
