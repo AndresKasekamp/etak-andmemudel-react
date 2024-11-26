@@ -25,6 +25,8 @@ export const generateFeatureClass = (): FeatureClasses => {
     threeD: [],
   };
 
+  // TODO hooned_lod2 pole 3D praegu (GDAL probleem)
+
   const createFeatureClass = ({
     name,
     group,

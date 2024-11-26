@@ -3,10 +3,12 @@ import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
+import { useTranslation } from "react-i18next";
 
-// TODO kuidas saada kätte build kuupäev
+
 
 export default function LastUpdated() {
+  const { t } = useTranslation();
   const currentDate = new Date();
   const day = String(currentDate.getDate()).padStart(2, "0");
   const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are zero-indexed
@@ -48,7 +50,7 @@ export default function LastUpdated() {
         }}
       >
         <Typography sx={{ p: 1 }}>
-          Viimati uuendatud: {formattedDate}
+          {t("lastUpdated")}: {formattedDate }
         </Typography>
       </Popover>
     </div>

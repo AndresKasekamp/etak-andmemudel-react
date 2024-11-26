@@ -20,5 +20,7 @@
   "name3DLayers": "3D kihid",
   "downloadAllTables": "Lae alla kõik tabelid",
   "fieldDomainCode": "Kood",
-  "fieldDomainNaming": "Nimetus"
+  "fieldDomainNaming": "Nimetus",
+  "nameLevituum": "Levituum",
+  "lastUpdated": "Viimati uuendatud"
 }

@@ -20,6 +20,7 @@
   "name3DLayers": "3D layers",
   "downloadAllTables": "Download all tables",
   "fieldDomainCode": "Code",
-  "fieldDomainNaming": "Name"
-
+  "fieldDomainNaming": "Name",
+  "nameLevituum": "Levituum",
+  "lastUpdated": "Last updated"
 }

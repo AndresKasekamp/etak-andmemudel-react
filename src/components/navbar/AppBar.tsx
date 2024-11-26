@@ -49,11 +49,11 @@ export default function EtakAppBar() {
           </Box>
 
           <Box sx={{ ml: "auto", display: "flex", gap: 2, alignItems: 'center' }}>
+            <HomeLink></HomeLink>
             <LinkDerivatives></LinkDerivatives>
             <Link3D></Link3D>
             <ChangeLanguage></ChangeLanguage>
             <LastUpdated></LastUpdated>
-            <HomeLink></HomeLink>
           </Box>
         </Toolbar>
       </AppBar>
