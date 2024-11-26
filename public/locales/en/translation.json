@@ -1,5 +1,25 @@
 {
   "overView": "Overview",
   "title": "Estonian Topographic Database Data Model",
-  "titleShort": "ETDB"
+  "titleShort": "ETDB",
+  "objectCount": "Objects in feature class",
+  "domainTable": "Domain table",
+  "fieldName": "Field name",
+  "fieldType": "Data type",
+  "fieldDomain": "Domain",
+  "fieldDesc": "Description",
+  "dataFrom": "Database",
+  "namePointObjects": "Point objects",
+  "nameMetadata": "Metadata",
+  "nameLineObjects": "Line objects",
+  "nameAllPolygonObjects": "Pindobjektid",
+  "nameMainPolygonObjects": "Põhiindobjektid",
+  "nameOverlappingPolygonObjects": "Overlapping polygon",
+  "dataInOnePage": "Data in one page",
+  "nameDerivatives": "Derivatives",
+  "name3DLayers": "3D layers",
+  "downloadAllTables": "Download all tables",
+  "fieldDomainCode": "Code",
+  "fieldDomainNaming": "Name"
+
 }

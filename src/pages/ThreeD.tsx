@@ -6,8 +6,11 @@ import { FrontPageIndexTable } from "../components/FrontPageIndexTable.tsx";
 import { generateFeatureClass } from "../data/featureClasses.tsx";
 import { threeDPath } from "./groupPaths.ts";
 import { TablesTogetherLink } from "../components/TablesTogetherLink.tsx";
+import { useTranslation } from "react-i18next";
 
 function ThreeD() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Container maxWidth="xl" sx={{ height: "100vh", mt: 2 }}>
@@ -19,11 +22,10 @@ function ThreeD() {
           sx={{ textAlign: "center", color: "#32774e" }}
         >
           <Typography variant="h3" gutterBottom>
-            3D kihid
+            {t("name3DLayers")}
           </Typography>
 
           <TablesTogetherLink route="/3d/all" />
-
         </Box>
 
         <Box
@@ -42,7 +44,7 @@ function ThreeD() {
           }}
         >
           <FrontPageIndexTable
-            objectName="3D kihid"
+            objectName={t("name3DLayers")}
             itemNames={generateFeatureClass().threeD}
             dataTypeClass={threeDPath}
           />

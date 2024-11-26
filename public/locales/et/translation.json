@@ -1,5 +1,24 @@
 {
   "overView": "Üldvaade",
   "title": "Eesti topograafia andmekogu tuumandmete andmemudel",
-  "titleShort": "ETAK"
+  "titleShort": "ETAK",
+  "objectCount": "Objekte nähtusklassis",
+  "domainTable": "Domeen/kooditabel",
+  "fieldName": "Välja nimi",
+  "fieldType": "Andmetüüp",
+  "fieldDomain": "Domeen",
+  "fieldDesc": "Kirjeldus",
+  "dataFrom": "Andmestik",
+  "namePointObjects": "Punktobjektid",
+  "nameMetadata": "Metaandmed",
+  "nameLineObjects": "Joonobjektid",
+  "nameAllPolygonObjects": "Pindobjektid",
+  "nameMainPolygonObjects": "Põhipindobjektid",
+  "nameOverlappingPolygonObjects": "Kattuvad pindobjektid",
+  "dataInOnePage": "Andmed ühel lehel",
+  "nameDerivatives": "Tuletiskihid",
+  "name3DLayers": "3D kihid",
+  "downloadAllTables": "Lae alla kõik tabelid",
+  "fieldDomainCode": "Kood",
+  "fieldDomainNaming": "Nimetus"
 }

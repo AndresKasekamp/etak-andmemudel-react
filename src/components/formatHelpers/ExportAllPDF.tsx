@@ -4,13 +4,16 @@ import autoTable from "jspdf-autotable";
 import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { AllTablesAndDomainsMerge } from "../../interfaces/interfaces";
+import { useTranslation } from "react-i18next";
+import { Description } from "../../interfaces/interfaces.tsx";
 
 // TODO viimase lehe probleem lahendada
 export const ExportAllPDF = ({
   allTablesAndDomains,
   domainsMerged,
 }: AllTablesAndDomainsMerge) => {
-  console.log("all tables and domains", allTablesAndDomains);
+  const { i18n, t } = useTranslation();
+  const appLang: keyof Description = i18n.language;
 
   const handleExportPDF = () => {
     const doc = new jsPDF();
@@ -22,12 +25,14 @@ export const ExportAllPDF = ({
       doc.text(rows.fcName, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {
-        head: [["Välja nimi", "Andmetüüp", "Domeen", "Kirjeldus"]],
+        head: [
+          [t("fieldName"), t("fieldType"), t("fieldDomain"), t("fieldDesc")],
+        ],
         body: rows.elements.map((row) => [
           row.name,
           row.type,
           row.domain,
-          row.desc,
+          row.desc[appLang],
         ]),
         startY: 30,
       });
@@ -39,7 +44,7 @@ export const ExportAllPDF = ({
       doc.text(domain.name, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {
-        head: [["Kood", "Nimetus"]],
+        head: [[t("fieldType"), t("fieldDesc")]],
         body: Object.entries(domain.coded_values).map(([key, value]) => [
           key,
           value,
@@ -76,7 +81,7 @@ export const ExportAllPDF = ({
       sx={{ marginTop: 1 }}
       onClick={handleExportPDF}
     >
-      Lae alla kõik tabelid
+      {t("downloadAllTables")}
     </Button>
   );
 };

@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import ThreeDRotationIcon from "@mui/icons-material/ThreeDRotation";
 import { Button } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const Link3D = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
 
+  const { t } = useTranslation();
+
   return (
-    <Link to="/3d" title="3D kihid">
+    <Link to="/3d" title={t("name3DLayers")}>
       <Button
         variant="contained"
         size="large"
@@ -21,7 +24,7 @@ const Link3D = () => {
           },
         }}
       >
-        {isMobile ? "" : "3D kihid"}
+        {isMobile ? "" : t("name3DLayers")}
       </Button>
     </Link>
   );

@@ -23,6 +23,24 @@ export type DataTypeValue =
   | typeof REAL_NUMBER
   | string;
 
+
+  export const determineDataType = (datatype: string, appLang: string) => {
+    const dataTypes: Record<DataTypeKey, DataTypeValue> = {
+      OID: INTEGER,
+      Geometry: GEOMETRY,
+      DateTime: DATE,
+      Integer: INTEGER,
+      SmallInteger: REAL_NUMBER,
+      Real: SHORT_INTEGER,
+      String: "tekst", // TODO seal on pärast veel mingi sulgudes reegeld ()
+    };
+    if (appLang === "et") {
+      return dataTypes[datatype as DataTypeKey];
+    } 
+    return datatype;
+    
+  };
+
 export const dataTypes: Record<DataTypeKey, DataTypeValue> = {
   OID: INTEGER,
   Geometry: GEOMETRY,

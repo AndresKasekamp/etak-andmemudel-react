@@ -25,13 +25,13 @@ import { useLocation, Location } from "react-router-dom";
 import { getTableName } from "../utils/utils.tsx";
 import { generateWfsUrl } from "../utils/wfsRequest.ts";
 
-import { dataTypes, bgColor } from "./formatHelpers/translate.ts";
+import { bgColor, determineDataType } from "./formatHelpers/translate.ts";
 import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
 
 import RegisterHyperLink from "./formatHelpers/RegisterHyperLink.tsx";
 
-import { CategoryKey, DataTypeKey } from "./formatHelpers/translate.ts";
-import { useTranslation } from "react-i18next"
+import { CategoryKey } from "./formatHelpers/translate.ts";
+import { useTranslation } from "react-i18next";
 import { Description } from "../interfaces/interfaces.tsx";
 
 export const FieldsTable = ({
@@ -41,10 +41,9 @@ export const FieldsTable = ({
   headingData,
   domainTables,
 }: FeatureClassOutput) => {
-
-  const { i18n } = useTranslation();
-  const appLang: keyof Description = i18n.language
-  console.log("Current language data view table" ,appLang)
+  const { i18n, t } = useTranslation();
+  const appLang: keyof Description = i18n.language;
+  console.log("Current language data view table", appLang);
 
   const handleExportPDF = () => {
     const doc = new jsPDF();
@@ -54,8 +53,15 @@ export const FieldsTable = ({
 
     // AutoTable function to generate the main table logic
     autoTable(doc, {
-      head: [["Välja nimi", "Andmetüüp", "Domeen", "Kirjeldus"]],
-      body: elements.map((row) => [row.name, row.type, row.domain, row.desc]),
+      head: [
+        [t("fieldName"), t("fieldType"), t("fieldDomain"), t("fieldDesc")],
+      ],
+      body: elements.map((row) => [
+        row.name,
+        row.type,
+        row.domain,
+        row.desc[appLang],
+      ]),
       startY: 30,
     });
 
@@ -65,7 +71,7 @@ export const FieldsTable = ({
       doc.text(domain.name, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {
-        head: [["Kood", "Nimetus"]],
+        head: [[t("fieldDomainCode"), t("fieldDomainNaming")]],
         //body: domain.coded_values.map((row) => [row.kood, row.nimetus]),
         body: Object.entries(domain.coded_values).map(([key, value]) => [
           key,
@@ -102,7 +108,7 @@ export const FieldsTable = ({
 
   const isLevituum = () => {
     const validGroups = ["tuletiskiht", "3d"];
-    return `Andmestik: ${
+    return `${t("dataFrom")}: ${
       validGroups.includes(groupName) ? groupName : "levituum"
     }`;
   };
@@ -185,14 +191,14 @@ export const FieldsTable = ({
 
         <div style={{ display: "flex" }}>
           <Typography sx={{ marginLeft: 2 }}>
-            Objekte nähtusklassis:&nbsp;
+            {t("objectCount")}:&nbsp;
           </Typography>
           {getFeatureCount()}
         </div>
       </div>
 
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        {pathName === "2d" ? (
+        {pathName === "all" ? (
           <caption>
             <DetailViewLink group={groupName} table={fcName} />
           </caption>
@@ -204,10 +210,10 @@ export const FieldsTable = ({
               backgroundColor: TableHeaderColor,
             }}
           >
-            <TableCell>Välja nimi</TableCell>
-            <TableCell>Andmetüüp</TableCell>
-            <TableCell>Domeen</TableCell>
-            <TableCell>Kirjeldus</TableCell>
+            <TableCell>{t("fieldName")}</TableCell>
+            <TableCell>{t("fieldType")}</TableCell>
+            <TableCell>{t("fieldDomain")}</TableCell>
+            <TableCell>{t("fieldDesc")}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -222,7 +228,7 @@ export const FieldsTable = ({
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell>{dataTypes[row.type as DataTypeKey]}</TableCell>
+              <TableCell>{determineDataType(row.type, appLang)}</TableCell>
 
               <TableCell>
                 <HashLink smooth to={`#${row.domain}`}>

@@ -49,17 +49,17 @@ function App() {
           }}
         >
           <FrontPageIndexTable
-            objectName="Metaandmed"
+            objectName={t("nameMetadata")}
             itemNames={generateFeatureClass().metaandmed}
             dataTypeClass={metadataPath}
           />
           <FrontPageIndexTable
-            objectName="Punktobjektid"
+            objectName={t("namePointObjects")}
             itemNames={generateFeatureClass().punktobjektid}
             dataTypeClass={pointPath}
           />
           <FrontPageIndexTable
-            objectName="Joonobjektid"
+            objectName={t("nameLineObjects")}
             itemNames={generateFeatureClass().joonobjektid}
             dataTypeClass={linePath}
           />
@@ -80,16 +80,16 @@ function App() {
               }}
               gutterBottom
             >
-              Pindobjektid
+              {t("nameAllPolygonObjects")}
             </Typography>
 
             <FrontPageIndexTable
-              objectName="Põhipindobjektid"
+              objectName={t("nameMainPolygonObjects")}
               itemNames={generateFeatureClass().pindobjektid}
               dataTypeClass={polyPath}
             />
             <FrontPageIndexTable
-              objectName="Kattuvad pindobjektid"
+              objectName={t("nameOverlappingPolygonObjects")}
               itemNames={generateFeatureClass().pindobjektidOverlap}
               dataTypeClass={polyPath}
             />

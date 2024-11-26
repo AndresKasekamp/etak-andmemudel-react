@@ -6,8 +6,13 @@ import { useMediaQuery } from "@mui/material";
 
 import { TablesTogetherLinkProps } from "../interfaces/interfaces";
 
+import { useTranslation } from "react-i18next";
+
+
 export const TablesTogetherLink = ({ route }: TablesTogetherLinkProps) => {
   const isMobile = useMediaQuery("(max-width:600px)");
+
+  const { t } = useTranslation();
 
   return (
     <Link to={route}>
@@ -26,7 +31,7 @@ export const TablesTogetherLink = ({ route }: TablesTogetherLinkProps) => {
           },
         }}
       >
-        {isMobile ? "" : "Andmed Ühel lehel"}
+        {isMobile ? "" : t("dataInOnePage")}
       </Button>
     </Link>
   );

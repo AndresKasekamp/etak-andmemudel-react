@@ -11,8 +11,12 @@ import Typography from "@mui/material/Typography";
 import { SHORT_INTEGER } from "../../data/dataTypes";
 
 import { DomainTableProps2 } from "../../interfaces/interfaces";
+import { useTranslation } from "react-i18next";
 
 export default function DomainTable({ domain }: DomainTableProps2) {
+
+  const { t } = useTranslation();
+
   return (
     <TableContainer
       id={domain.name}
@@ -25,16 +29,16 @@ export default function DomainTable({ domain }: DomainTableProps2) {
     >
       <div style={{ alignItems: "center" }}>
         <Typography variant="h5" sx={{ marginLeft: 2 }}>
-          Domeen/kooditabel
+        {t("domainTable")}
         </Typography>
         <Typography variant="h4" sx={{ marginLeft: 2, marginBottom: 1 }}>
           {domain.name}
         </Typography>
 
-        <Typography sx={{ marginLeft: 2 }}>Kirjeldus: {domain.desc}</Typography>
+        <Typography sx={{ marginLeft: 2 }}>{t("fieldDesc")}: {domain.desc}</Typography>
 
         <Typography sx={{ marginLeft: 2, marginBottom: 1 }}>
-          Andmetüüp: {SHORT_INTEGER}
+        {t("fieldType")}: {SHORT_INTEGER}
         </Typography>
       </div>
       <Table sx={{ minWidth: 350 }} size="small" aria-label="a dense table">
@@ -44,8 +48,8 @@ export default function DomainTable({ domain }: DomainTableProps2) {
               backgroundColor: "#FF6961",
             }}
           >
-            <TableCell>Kood</TableCell>
-            <TableCell>Nimetus</TableCell>
+            <TableCell>{t("fieldDomainCode")}</TableCell>
+            <TableCell>{t("fieldDomainNaming")}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
