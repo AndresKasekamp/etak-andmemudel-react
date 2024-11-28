@@ -7,6 +7,7 @@ import {
   ObjectCountResponse,
   ObjectCountProps,
 } from "../../interfaces/interfaces.tsx";
+import LoadingSpinner from "../LoadingSpinner.tsx";
 
 const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
   const [data, setData] = useState<number | null>(null); // Use number or null
@@ -30,7 +31,8 @@ const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
     fetchDataFromApi();
   }, [url]); // Empty dependency array means this effect runs once when the component mounts
 
-  if (loading) return <Typography>Laen...</Typography>;
+  // if (loading) return <Typography>Laen...</Typography>;
+  if (loading) return <LoadingSpinner wfsData={true} />;
   // if (error) return <Typography color="error">{error}</Typography>;
 
   return <Typography>{data !== null ? data : hardcodedCount}</Typography>;

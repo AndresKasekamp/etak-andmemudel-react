@@ -22,5 +22,16 @@
   "fieldDomainCode": "Kood",
   "fieldDomainNaming": "Nimetus",
   "nameLevituum": "Levituum",
-  "lastUpdated": "Viimati uuendatud"
+  "lastUpdated": "Viimati uuendatud",
+  "version": "Versioon",
+  "aboutPageTitle": "ETAK andmemudel info",
+  "aboutPageText": "Eesti topograafia andmekogu (ETAK) on riigi infosüsteemi kuuluv andmekogu ja geoinfosüsteem, mis on oluliseks osaks Maa-ameti andmebaasipõhises topograafiliste andmete ja kaartide tootmisprotsessis. ETAK-i vektorandmetest toodetakse Eesti põhikaarti, kaardirakendustehübriidkaarti jne.",
+  "contact": "Kontakt",
+  "usefulLinks": "Kasulikud lingid",
+  "moreInfoETAKHyper": "Eesti topograafia andmekogu",
+  "moreInfoETAKsub": "Rohkem infot ETAK kohta",
+  "moreInfoETAKDataHyper": "Laadi andmed alla",
+  "moreInfoETAKDatasub": "Andmete allalaadimine",
+  "nameAboutPage": "Info"
+
 }

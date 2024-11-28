@@ -12,3 +12,5 @@ export const FrontPageTableColor = "#F5FAFA";
 
 // AppBar ELB color
 export const AppBarColor = "#32774e";
+
+export const AboutPageText = "#000000";

@@ -22,5 +22,16 @@
   "fieldDomainCode": "Code",
   "fieldDomainNaming": "Name",
   "nameLevituum": "Levituum",
-  "lastUpdated": "Last updated"
+  "lastUpdated": "Last updated",
+  "version": "Version",
+  "aboutPageTitle": "ETDB data model info",
+  "aboutPageText": "The Estonian Topographic Database (ETD) together with the Cadastral Information System serves as a basis for the National Land Information System.",
+  "contact": "Contact",
+  "usefulLinks": "Useful links",
+  "moreInfoETAKHyper": "Estonian Topographic Database",
+  "moreInfoETAKsub": "More info about ETDB",
+  "moreInfoETAKDataHyper": "Download the data",
+  "moreInfoETAKDatasub": "Downloading the data",
+  "nameAboutPage": "About"
+
 }

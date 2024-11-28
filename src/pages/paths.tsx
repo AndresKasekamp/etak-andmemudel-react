@@ -7,6 +7,7 @@ import { FeatureClassPath } from "../interfaces/interfaces";
 import { FeatureClassOutput } from "../interfaces/interfaces";
 import Derivatives from "./Derivatives";
 import ThreeD from "./ThreeD";
+import AboutPage from "./AboutPage";
 
 
 const allLevituumDataTogether = [
@@ -65,6 +66,11 @@ const derivativePath = {
 const threeDPath = {
   path: "/3d",
   element: <ThreeD />,
+};
+
+const aboutPath = {
+  path: "/about",
+  element: <AboutPage />,
 };
 
 const featureClassPath = (
@@ -131,6 +137,7 @@ export const paths = () => [
   all3DPath,
   derivativePath,
   threeDPath,
+  aboutPath,
   ...featureClassPath(generateFeatureClass().punktobjektid),
   ...featureClassPath(generateFeatureClass().joonobjektid),
   ...featureClassPath(generateFeatureClass().pindobjektidOverlap),
