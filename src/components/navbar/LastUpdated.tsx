@@ -5,16 +5,8 @@ import Button from "@mui/material/Button";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import { useTranslation } from "react-i18next";
 
-
-
 export default function LastUpdated() {
   const { t } = useTranslation();
-  const currentDate = new Date();
-  const day = String(currentDate.getDate()).padStart(2, "0");
-  const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are zero-indexed
-  const year = currentDate.getFullYear();
-
-  const formattedDate = `${day}.${month}.${year}`;
 
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null
@@ -50,7 +42,7 @@ export default function LastUpdated() {
         }}
       >
         <Typography sx={{ p: 1 }}>
-          {t("lastUpdated")}: {formattedDate }
+          {t("lastUpdated")}: {__BUILD_DATE__}
         </Typography>
       </Popover>
     </div>
