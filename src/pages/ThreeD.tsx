@@ -2,7 +2,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
-import { FrontPageIndexTable } from "../components/FrontPageIndexTable.tsx";
 import { generateFeatureClass } from "../data/featureClasses.tsx";
 import { threeDPath } from "./groupPaths.ts";
 import { TablesTogetherLink } from "../components/TablesTogetherLink.tsx";
