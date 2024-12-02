@@ -3,7 +3,6 @@ import { initReactI18next } from "react-i18next";
 //@ts-ignore
 import Backend from "i18next-http-backend";
 
-// TODO aga kuidas saada tööle oma jsoni failidest toodud desc esmalt?
 
 i18n
   .use(initReactI18next)

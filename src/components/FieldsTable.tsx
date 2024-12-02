@@ -126,6 +126,7 @@ export const FieldsTable = ({
         },
         margin: "auto", // Center the table
         marginTop: 2,
+        overflowX: 'auto'
       }}
     >
       <div style={{ display: "flex", alignItems: "center", marginLeft: 2 }}>

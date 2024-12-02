@@ -3,6 +3,11 @@ import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { sortElements } from "./formatHelpers/sortElements.ts";
 import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
 
+
+
+
+
+
 export const FullDataTable = ({
   fcName,
   groupName,
