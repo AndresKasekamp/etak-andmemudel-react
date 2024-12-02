@@ -43,7 +43,6 @@ export const FieldsTable = ({
 }: FeatureClassOutput) => {
   const { i18n, t } = useTranslation();
   const appLang: keyof Description = i18n.language;
-  console.log("Current language data view table", appLang);
 
   const handleExportPDF = () => {
     const doc = new jsPDF();

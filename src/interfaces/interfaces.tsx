@@ -111,6 +111,10 @@ export interface TableProps {
   dataTypeClass: string;
 }
 
+export interface ResourcesTableProps {
+  data: TableProps[];
+}
+
 // Define the shape of each value in the dictionary
 export interface GeomTypeInfo {
   geom_type: string; // or a specific type like `GeomType`

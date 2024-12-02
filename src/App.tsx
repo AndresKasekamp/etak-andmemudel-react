@@ -12,6 +12,7 @@ import {
 } from "./pages/groupPaths.ts";
 import { TablesTogetherLink } from "./components/TablesTogetherLink.tsx";
 import { useTranslation } from "react-i18next";
+import ResourcesTable from "./components/ResourcesTable.tsx";
 
 function App() {
   const { t } = useTranslation();
@@ -32,6 +33,36 @@ function App() {
 
           <TablesTogetherLink route="/levituum/all" />
         </Box>
+
+        <ResourcesTable
+          data={[
+            {
+              objectName: t("nameMetadata"),
+              dataTypeClass: metadataPath,
+              itemNames: generateFeatureClass().metaandmed,
+            },
+            {
+              objectName: t("namePointObjects"),
+              dataTypeClass: pointPath,
+              itemNames: generateFeatureClass().punktobjektid,
+            },
+            {
+              objectName: t("nameLineObjects"),
+              dataTypeClass: linePath,
+              itemNames: generateFeatureClass().joonobjektid,
+            },
+            {
+              objectName: t("nameMainPolygonObjects"),
+              dataTypeClass: polyPath,
+              itemNames: generateFeatureClass().pindobjektid,
+            },
+            {
+              objectName: t("nameOverlappingPolygonObjects"),
+              dataTypeClass: polyPath,
+              itemNames: generateFeatureClass().pindobjektidOverlap,
+            },
+          ]}
+        ></ResourcesTable>
 
         <Box
           display="flex"
