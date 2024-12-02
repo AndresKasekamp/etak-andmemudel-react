@@ -64,68 +64,7 @@ function App() {
           ]}
         ></ResourcesTable>
 
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="space-evenly"
-          alignItems="flex-start"
-          sx={{
-            textAlign: "center",
-            marginTop: "1rem",
-            flexWrap: "wrap",
-            flexDirection: "column",
-            "@media (min-width: 600px)": {
-              flexDirection: "row",
-            },
-          }}
-        >
-          <FrontPageIndexTable
-            objectName={t("nameMetadata")}
-            itemNames={generateFeatureClass().metaandmed}
-            dataTypeClass={metadataPath}
-          />
-          <FrontPageIndexTable
-            objectName={t("namePointObjects")}
-            itemNames={generateFeatureClass().punktobjektid}
-            dataTypeClass={pointPath}
-          />
-          <FrontPageIndexTable
-            objectName={t("nameLineObjects")}
-            itemNames={generateFeatureClass().joonobjektid}
-            dataTypeClass={linePath}
-          />
 
-          <Box
-            sx={{
-              backgroundColor: "#FFFFFF",
-              padding: "1rem",
-              borderRadius: "5px",
-              border: "1px solid #4F4F4F", // Dark grey border
-              m: 1,
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                color: "#797C7F",
-              }}
-              gutterBottom
-            >
-              {t("nameAllPolygonObjects")}
-            </Typography>
-
-            <FrontPageIndexTable
-              objectName={t("nameMainPolygonObjects")}
-              itemNames={generateFeatureClass().pindobjektid}
-              dataTypeClass={polyPath}
-            />
-            <FrontPageIndexTable
-              objectName={t("nameOverlappingPolygonObjects")}
-              itemNames={generateFeatureClass().pindobjektidOverlap}
-              dataTypeClass={polyPath}
-            />
-          </Box>
-        </Box>
       </Container>
     </>
   );
