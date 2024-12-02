@@ -7,6 +7,7 @@ import { generateFeatureClass } from "../data/featureClasses.tsx";
 import { derivedPath } from "./groupPaths.ts";
 import { TablesTogetherLink } from "../components/TablesTogetherLink.tsx";
 
+import ResourcesTable from "../components/ResourcesTable.tsx";
 import { useTranslation } from "react-i18next";
 
 function Derivatives() {
@@ -28,27 +29,17 @@ function Derivatives() {
           <TablesTogetherLink route="/tuletiskihid/all" />
         </Box>
 
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="space-evenly"
-          alignItems="flex-start"
-          sx={{
-            textAlign: "center",
-            marginTop: "1rem",
-            flexWrap: "wrap",
-            flexDirection: "column",
-            "@media (min-width: 600px)": {
-              flexDirection: "row",
-            },
-          }}
-        >
-          <FrontPageIndexTable
-            objectName={t("nameDerivatives")}
-            itemNames={generateFeatureClass().tuletiskihid}
-            dataTypeClass={derivedPath}
-          />
-        </Box>
+        <ResourcesTable
+          data={[
+            {
+              objectName: t("nameDerivatives"),
+              dataTypeClass: derivedPath,
+              itemNames: generateFeatureClass().tuletiskihid,
+            }
+          ]}
+        ></ResourcesTable>
+
+
       </Container>
     </>
   );

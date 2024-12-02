@@ -8,6 +8,8 @@ import { threeDPath } from "./groupPaths.ts";
 import { TablesTogetherLink } from "../components/TablesTogetherLink.tsx";
 import { useTranslation } from "react-i18next";
 
+import ResourcesTable from "../components/ResourcesTable.tsx";
+
 function ThreeD() {
   const { t } = useTranslation();
 
@@ -28,27 +30,17 @@ function ThreeD() {
           <TablesTogetherLink route="/3d/all" />
         </Box>
 
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="space-evenly"
-          alignItems="flex-start"
-          sx={{
-            textAlign: "center",
-            marginTop: "1rem",
-            flexWrap: "wrap",
-            flexDirection: "column",
-            "@media (min-width: 600px)": {
-              flexDirection: "row",
-            },
-          }}
-        >
-          <FrontPageIndexTable
-            objectName={t("name3DLayers")}
-            itemNames={generateFeatureClass().threeD}
-            dataTypeClass={threeDPath}
-          />
-        </Box>
+        <ResourcesTable
+          data={[
+            {
+              objectName: t("name3DLayers"),
+              dataTypeClass: threeDPath,
+              itemNames: generateFeatureClass().threeD,
+            }
+          ]}
+        ></ResourcesTable>
+
+
       </Container>
     </>
   );
