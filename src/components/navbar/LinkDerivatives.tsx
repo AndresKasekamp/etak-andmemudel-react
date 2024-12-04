@@ -14,7 +14,7 @@ const LinkDerivatives = () => {
     <Link to="/tuletiskihid" title={t("nameDerivatives")}>
       <Button
         variant="contained"
-        size="large"
+        size="medium"
         startIcon={<AltRouteIcon />}
         sx={{
           backgroundColor: "#32774E",

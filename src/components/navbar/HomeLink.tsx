@@ -13,7 +13,7 @@ const HomeLink = () => {
     <Link to="/" title={t("nameLevituum")}>
       <Button
         variant="contained"
-        size="large"
+        size="medium"
         startIcon={<HomeIcon />}
         sx={{
           backgroundColor: "#32774E",

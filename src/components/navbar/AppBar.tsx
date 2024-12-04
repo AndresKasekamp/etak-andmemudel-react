@@ -20,24 +20,9 @@ export default function EtakAppBar() {
       <AppBar sx={{ backgroundColor: AppBarColor }}>
         <Toolbar sx={{ position: "relative" }}>
           <Box sx={{ mr: "auto", display: "flex", gap: 2 }}>
-            {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="https://geoportaal.maaamet.ee/est/"
-            sx={{
-              display: { md: "none", lg: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-            }}
-          >
-            Geoportaal
-          </Typography> */}
 
             <Typography
-              variant="h4"
+              variant="h5"
               component="div"
               sx={{ textAlign: "center" }}
             >
@@ -46,7 +31,7 @@ export default function EtakAppBar() {
           </Box>
 
           <Box
-            sx={{ ml: "auto", display: "flex", gap: 2, alignItems: "center" }}
+            sx={{ ml: "auto", display: "flex", gap: 1, alignItems: "center" }}
           >
             <ChangeLanguage></ChangeLanguage>
             <LinkAbout></LinkAbout>

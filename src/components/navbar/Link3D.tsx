@@ -13,7 +13,7 @@ const Link3D = () => {
     <Link to="/3d" title={t("name3DLayers")}>
       <Button
         variant="contained"
-        size="large"
+        size="medium"
         startIcon={<ThreeDRotationIcon />}
         sx={{
           backgroundColor: "#32774E",
