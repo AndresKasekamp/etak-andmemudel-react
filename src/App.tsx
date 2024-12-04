@@ -11,7 +11,8 @@ import {
 } from "./pages/groupPaths.ts";
 import { TablesTogetherLink } from "./components/TablesTogetherLink.tsx";
 import { useTranslation } from "react-i18next";
-import ResourcesTable from "./components/ResourcesTable.tsx";
+// import ResourcesTable from "./components/ResourcesTable.tsx";
+import ResourcesTable from "./components/ResourcesList.tsx";
 
 function App() {
   const { t } = useTranslation();

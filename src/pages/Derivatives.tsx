@@ -6,7 +6,7 @@ import { generateFeatureClass } from "../data/featureClasses.tsx";
 import { derivedPath } from "./groupPaths.ts";
 import { TablesTogetherLink } from "../components/TablesTogetherLink.tsx";
 
-import ResourcesTable from "../components/ResourcesTable.tsx";
+import ResourcesTable from "../components/ResourcesList.tsx";
 import { useTranslation } from "react-i18next";
 
 function Derivatives() {
