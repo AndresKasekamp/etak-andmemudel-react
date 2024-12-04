@@ -11,10 +11,13 @@ import ChangeLanguage from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
 import LinkAbout from "./LinkAbout";
 import BasicMenu from "./MobileView";
+import { useTheme } from '@mui/material/styles';
 
 export default function EtakAppBar() {
   const { t } = useTranslation();
-  const isMobile = useMediaQuery("(max-width:600px)");
+  // const isMobile = useMediaQuery("(max-width:600px)");
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <Box sx={{ flexGrow: 1, mb: 10 }}>
