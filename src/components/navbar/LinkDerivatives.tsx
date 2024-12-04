@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 import AltRouteIcon from "@mui/icons-material/AltRoute";
 import { Button } from "@mui/material";
-import { useMediaQuery } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
 
 const LinkDerivatives = () => {
-  const isMobile = useMediaQuery("(max-width:600px)");
-
   const { t } = useTranslation();
 
   return (
@@ -25,7 +22,7 @@ const LinkDerivatives = () => {
           },
         }}
       >
-        {isMobile ? "" : t("nameDerivatives")}
+        {t("nameDerivatives")}
       </Button>
     </Link>
   );

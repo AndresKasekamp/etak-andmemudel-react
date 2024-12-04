@@ -10,6 +10,7 @@ import { useMediaQuery } from "@mui/material";
 import ChangeLanguage from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
 import LinkAbout from "./LinkAbout";
+import BasicMenu from "./MobileView";
 
 export default function EtakAppBar() {
   const { t } = useTranslation();
@@ -20,7 +21,6 @@ export default function EtakAppBar() {
       <AppBar sx={{ backgroundColor: AppBarColor }}>
         <Toolbar sx={{ position: "relative" }}>
           <Box sx={{ mr: "auto", display: "flex", gap: 2 }}>
-
             <Typography
               variant="h5"
               component="div"
@@ -35,9 +35,15 @@ export default function EtakAppBar() {
           >
             <ChangeLanguage></ChangeLanguage>
             <LinkAbout></LinkAbout>
-            <LinkDerivatives></LinkDerivatives>
-            <Link3D></Link3D>
-            <HomeLink></HomeLink>
+            {isMobile ? (
+              <BasicMenu></BasicMenu>
+            ) : (
+              <>
+                <LinkDerivatives></LinkDerivatives>
+                <Link3D></Link3D>
+                <HomeLink></HomeLink>
+              </>
+            )}
           </Box>
         </Toolbar>
       </AppBar>

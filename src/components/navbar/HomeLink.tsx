@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import { Button } from "@mui/material";
-import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 const HomeLink = () => {
-  const isMobile = useMediaQuery("(max-width:600px)");
-
   const { t } = useTranslation();
 
   return (
@@ -24,7 +21,7 @@ const HomeLink = () => {
           },
         }}
       >
-        {isMobile ? "" : t("nameLevituum")}
+        {t("nameLevituum")}
       </Button>
     </Link>
   );
