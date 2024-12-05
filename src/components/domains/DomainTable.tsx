@@ -14,14 +14,12 @@ import { DomainTableProps2 } from "../../interfaces/interfaces";
 import { useTranslation } from "react-i18next";
 
 export default function DomainTable({ domain }: DomainTableProps2) {
-
   const { t } = useTranslation();
 
   return (
     <TableContainer
       id={domain.name}
       component={Paper}
-      
       sx={{
         maxWidth: 400,
         // minWidth: 400,
@@ -30,19 +28,21 @@ export default function DomainTable({ domain }: DomainTableProps2) {
     >
       <div style={{ alignItems: "center" }}>
         <Typography variant="h5" sx={{ marginLeft: 2 }}>
-        {t("domainTable")}
+          {t("domainTable")}
         </Typography>
         <Typography variant="h4" sx={{ marginLeft: 2, marginBottom: 1 }}>
           {domain.name}
         </Typography>
 
-        <Typography sx={{ marginLeft: 2 }}>{t("fieldDesc")}: {domain.desc}</Typography>
+        <Typography sx={{ marginLeft: 2 }}>
+          {t("fieldDesc")}: {domain.desc}
+        </Typography>
 
         <Typography sx={{ marginLeft: 2, marginBottom: 1 }}>
-        {t("fieldType")}: {SHORT_INTEGER}
+          {t("fieldType")}: {SHORT_INTEGER}
         </Typography>
       </div>
-      <Table   size="small" aria-label="a dense table">
+      <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow
             sx={{

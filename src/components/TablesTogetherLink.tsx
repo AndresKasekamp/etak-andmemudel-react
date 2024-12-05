@@ -8,7 +8,6 @@ import { TablesTogetherLinkProps } from "../interfaces/interfaces";
 
 import { useTranslation } from "react-i18next";
 
-
 export const TablesTogetherLink = ({ route }: TablesTogetherLinkProps) => {
   const isMobile = useMediaQuery("(max-width:600px)");
 

@@ -9,7 +9,6 @@ import Derivatives from "./Derivatives";
 import ThreeD from "./ThreeD";
 import AboutPage from "./AboutPage";
 
-
 const allLevituumDataTogether = [
   ...generateFeatureClass().metaandmed,
   ...generateFeatureClass().punktobjektid,

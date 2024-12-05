@@ -18,8 +18,8 @@ export const FullDataTable = ({
     <Container
       sx={{
         maxWidth: {
-          xs: "lg", 
-          xl: "xl", 
+          xs: "lg",
+          xl: "xl",
         },
         display: "flex",
         flexDirection: "column",

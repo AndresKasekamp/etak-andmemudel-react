@@ -1,4 +1,3 @@
-import TableContainer from "@mui/material/TableContainer";
 import Paper from "@mui/material/Paper";
 import DomainTable from "./DomainTable";
 import { DomainTableMainProps } from "../../interfaces/interfaces";

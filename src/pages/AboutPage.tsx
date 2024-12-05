@@ -42,7 +42,7 @@ const AboutPage = () => {
         <strong>{t("lastUpdated")}:</strong> {__BUILD_DATE__}
       </Typography>
 
-      <Stack direction="row" spacing={2} justifyContent="center" mt={4}  >
+      <Stack direction="row" spacing={2} justifyContent="center" mt={4}>
         <Button
           variant="outlined"
           startIcon={<GitHub />}
@@ -75,7 +75,6 @@ const AboutPage = () => {
           {t("contact")}
         </Button>
       </Stack>
-
 
       {/* Useful Links Section */}
       <Box sx={{ mt: 6, textAlign: "left" }}>

@@ -1,6 +1,5 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 
 import { generateFeatureClass } from "../data/featureClasses.tsx";
 import { derivedPath } from "./groupPaths.ts";
@@ -14,7 +13,6 @@ function Derivatives() {
 
   return (
     <>
-      {/* <Container maxWidth="xl" sx={{ height: "100vh", mt: 2 }}> */}
         <Box
           display="flex"
           flexDirection="row"
@@ -37,7 +35,6 @@ function Derivatives() {
             },
           ]}
         ></ResourcesTable>
-      {/* </Container> */}
     </>
   );
 }

@@ -4,7 +4,6 @@ import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 const Link3D = () => {
-
   const { t } = useTranslation();
 
   return (
