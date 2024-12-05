@@ -1,6 +1,5 @@
 import { ObjectCountResponse } from "../interfaces/interfaces";
 
-// TODO tuletiskihtidega on vaja natuke erinevalt lahendada ja 3D on hardcode
 export const generateWfsUrl = (
   name: string,
   derived: boolean = false

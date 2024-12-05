@@ -1,6 +1,6 @@
 [
     {
-        "name": "etak_eesvoolud_mps",
+        "name": "mps_tervikeesvoolud",
         "fields": [
             {
                 "name": "mps_id",
@@ -91,7 +91,7 @@
                 }
             }
         ],
-        "count": 14602,
+        "count": 14608,
         "desc": {
             "en": "Desc",
             "et": "Kirjeldus"
@@ -100,7 +100,7 @@
         "group": "derivatives"
     },
     {
-        "name": "etak_hooned_ehr",
+        "name": "etak_ehr_hooned",
         "fields": [
             {
                 "name": "muutmisaeg",
@@ -389,7 +389,7 @@
                 }
             }
         ],
-        "count": 922089,
+        "count": 921642,
         "desc": {
             "en": "Desc",
             "et": "Kirjeldus"
@@ -398,7 +398,7 @@
         "group": "derivatives"
     },
     {
-        "name": "etak_saared",
+        "name": "saared",
         "fields": [
             {
                 "name": "saar_id",
@@ -533,7 +533,7 @@
                 }
             }
         ],
-        "count": 7904,
+        "count": 7907,
         "desc": {
             "en": "Desc",
             "et": "Kirjeldus"
@@ -542,7 +542,7 @@
         "group": "derivatives"
     },
     {
-        "name": "etak_seisuveed_eelis",
+        "name": "eelis_tervikseisuveed",
         "fields": [
             {
                 "name": "kkr_kood",
@@ -620,7 +620,7 @@
         "group": "derivatives"
     },
     {
-        "name": "etak_vooluveed_eelis",
+        "name": "eelis_tervikvooluveed_pohiteljed",
         "fields": [
             {
                 "name": "kkr_kood",
@@ -709,7 +709,7 @@
         "group": "derivatives"
     },
     {
-        "name": "etak_vooluveed_sekundaartelgedega_eelis",
+        "name": "eelis_tervikvooluveed_sekteljed",
         "fields": [
             {
                 "name": "kkr_kood",
@@ -866,7 +866,7 @@
                 }
             }
         ],
-        "count": 22554,
+        "count": 22548,
         "desc": {
             "en": "Desc",
             "et": "Kirjeldus"

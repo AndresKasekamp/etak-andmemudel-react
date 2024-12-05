@@ -86,8 +86,6 @@ export const FieldsTable = ({
 
   const getFeatureCount = () => {
     switch (groupName) {
-      case "Alusdokument":
-        return 100;
       case "tuletiskiht":
         return (
           <ObjectCount
