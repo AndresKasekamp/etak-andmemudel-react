@@ -21,10 +21,11 @@ export default function DomainTable({ domain }: DomainTableProps2) {
     <TableContainer
       id={domain.name}
       component={Paper}
+      
       sx={{
         maxWidth: 400,
-        minWidth: 400,
-        margin: 5,
+        // minWidth: 400,
+        m: 2,
       }}
     >
       <div style={{ alignItems: "center" }}>
@@ -41,7 +42,7 @@ export default function DomainTable({ domain }: DomainTableProps2) {
         {t("fieldType")}: {SHORT_INTEGER}
         </Typography>
       </div>
-      <Table sx={{ minWidth: 350 }} size="small" aria-label="a dense table">
+      <Table   size="small" aria-label="a dense table">
         <TableHead>
           <TableRow
             sx={{

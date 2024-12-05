@@ -2,12 +2,13 @@ import TableContainer from "@mui/material/TableContainer";
 import Paper from "@mui/material/Paper";
 import DomainTable from "./DomainTable";
 import { DomainTableMainProps } from "../../interfaces/interfaces";
+import { Container } from "@mui/material";
 
 export const DomainTableMain: React.FC<DomainTableMainProps> = ({
   domains,
 }) => {
   return (
-    <TableContainer
+    <Container
       id="domain"
       component={Paper}
       sx={{
@@ -27,6 +28,6 @@ export const DomainTableMain: React.FC<DomainTableMainProps> = ({
       {domains.map((domain, idx) => (
         <DomainTable key={idx} domain={domain}></DomainTable>
       ))}
-    </TableContainer>
+    </Container>
   );
 };
