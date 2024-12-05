@@ -26,13 +26,14 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
 
       {/* Horizontal List */}
       <Box
+
         sx={{
           display: "flex",
           flexWrap: "wrap",
         }}
       >
         {itemNames.map((item) => (
-          <RouterLink to={`${dataTypeClass}/${item.fcName}`}>
+          <RouterLink  key={item.fcName} to={`${dataTypeClass}/${item.fcName}`}>
             <ListItemButton
               component={Link}
               sx={{
