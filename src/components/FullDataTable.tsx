@@ -2,11 +2,7 @@ import { FieldsTable } from "./FieldsTable.tsx";
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";
 import { sortElements } from "./formatHelpers/sortElements.ts";
 import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
-
-
-
-
-
+import Container from "@mui/material/Container";
 
 export const FullDataTable = ({
   fcName,
@@ -19,12 +15,15 @@ export const FullDataTable = ({
   domainTables.sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <div
-      style={{
+    <Container
+      sx={{
+        maxWidth: {
+          xs: "lg", 
+          xl: "xl", 
+        },
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        maxWidth: "100%",
       }}
     >
       <FieldsTable
@@ -35,6 +34,6 @@ export const FullDataTable = ({
         domainTables={domainTables}
       ></FieldsTable>
       <DomainTableMain domains={domainTables}></DomainTableMain>
-    </div>
+    </Container>
   );
 };

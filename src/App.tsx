@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+// import Container from "@mui/material/Container";
 
 import { generateFeatureClass } from "./data/featureClasses.tsx";
 import {
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Container maxWidth="xl" sx={{ height: "100vh", mt: 2 }}>
+      {/* <Container maxWidth="xl" sx={{ height: "100vh", mt: 2 }}> */}
         <Box
           display="flex"
           flexDirection="row"
@@ -63,7 +63,7 @@ function App() {
             },
           ]}
         ></ResourcesTable>
-      </Container>
+      {/* </Container> */}
     </>
   );
 }

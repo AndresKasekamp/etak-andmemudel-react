@@ -117,139 +117,143 @@ export const FieldsTable = ({
   const pathName = getTableName(location);
 
   return (
-    <TableContainer
-      component={Paper}
-      sx={{
-        maxWidth: {
-          xs: "lg", // For extra small and small screens, max width is "lg"
-          xl: "xl", // For extra large screens, max width is "xl"
-        },
-        margin: "auto", // Center the table
-        marginTop: 2,
-        overflowX: 'auto'
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center", marginLeft: 2 }}>
-        <Tooltip
-          title={
-            <span style={{ fontSize: "1.5em" }}>
-              Nähtusklassi geomeetria: {headingData.geomType}
-            </span>
-          }
-          placement="top"
+    <Box sx={{ overflow: "auto" }}>
+      <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
+        <TableContainer
+          component={Paper}
+          sx={{
+            maxWidth: {
+              xs: "lg", // For extra small and small screens, max width is "lg"
+              xl: "xl", // For extra large screens, max width is "xl"
+            },
+            margin: "auto", // Center the table
+            marginTop: 2,
+            // overflowX: 'auto'
+          }}
         >
-          <img
-            src={headingData.image}
-            alt="Multipoint"
-            width={50}
-            height={50}
-          />
-        </Tooltip>
-
-        <Tooltip
-          title={
-            <span style={{ fontSize: "1.5em" }}>
-              Ruumikuju dimensioon: {headingData.geomDimension}D
-            </span>
-          }
-          placement="top"
-        >
-          <Box
-            sx={{
-              marginLeft: 1,
-              marginRight: 1,
-              p: 0.5,
-              border: "3px solid black",
-              boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
-              transform: "translateY(-2px)",
-            }}
-          >
-            {headingData.geomDimension}D
-          </Box>
-        </Tooltip>
-
-        <Typography variant="h4" sx={{ marginRight: 1 }}>
-          {fcName}
-        </Typography>
-
-        <Button
-          variant="contained"
-          color="primary"
-          startIcon={<FileDownloadIcon />}
-          sx={{ marginLeft: "auto", marginRight: 2 }}
-          onClick={handleExportPDF}
-        >
-          PDF
-        </Button>
-      </div>
-      <div>
-        <Typography variant="h5" sx={{ marginLeft: 2 }}>
-          {headingData.desc[appLang]}
-        </Typography>
-
-        <Typography sx={{ marginLeft: 2 }}>{isLevituum()}</Typography>
-
-        <div style={{ display: "flex" }}>
-          <Typography sx={{ marginLeft: 2 }}>
-            {t("objectCount")}:&nbsp;
-          </Typography>
-          {getFeatureCount()}
-        </div>
-      </div>
-
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        {pathName === "all" ? (
-          <caption>
-            <DetailViewLink group={groupName} table={fcName} />
-          </caption>
-        ) : null}
-
-        <TableHead>
-          <TableRow
-            sx={{
-              backgroundColor: TableHeaderColor,
-            }}
-          >
-            <TableCell>{t("fieldName")}</TableCell>
-            <TableCell>{t("fieldType")}</TableCell>
-            <TableCell>{t("fieldDomain")}</TableCell>
-            <TableCell>{t("fieldDesc")}</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {elements.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{
-                "&:last-child td, &:last-child th": { border: 0 },
-                backgroundColor: bgColor[row.meta_type as CategoryKey],
-              }}
+          <Box sx={{ display: "flex", alignItems: "center", marginLeft: 2 }}>
+            <Tooltip
+              title={
+                <span style={{ fontSize: "1.5em" }}>
+                  Nähtusklassi geomeetria: {headingData.geomType}
+                </span>
+              }
+              placement="top"
             >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell>{determineDataType(row.type, appLang)}</TableCell>
+              <img
+                src={headingData.image}
+                alt="Multipoint"
+                width={50}
+                height={50}
+              />
+            </Tooltip>
 
-              <TableCell>
-                <HashLink smooth to={`#${row.domain}`}>
-                  {row.domain}
-                </HashLink>
-              </TableCell>
+            <Tooltip
+              title={
+                <span style={{ fontSize: "1.5em" }}>
+                  Ruumikuju dimensioon: {headingData.geomDimension}D
+                </span>
+              }
+              placement="top"
+            >
+              <Box
+                sx={{
+                  marginLeft: 1,
+                  marginRight: 1,
+                  p: 0.5,
+                  border: "3px solid black",
+                  boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
+                  transform: "translateY(-2px)",
+                }}
+              >
+                {headingData.geomDimension}D
+              </Box>
+            </Tooltip>
 
-              <TableCell>
-                {row.link ? (
-                  <RegisterHyperLink
-                    link={row.link}
-                    desc={row.desc[appLang]}
-                  ></RegisterHyperLink>
-                ) : (
-                  row.desc[appLang]
-                )}
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+            <Typography variant="h4" sx={{ marginRight: 1 }}>
+              {fcName}
+            </Typography>
+
+            <Button
+              variant="contained"
+              color="primary"
+              startIcon={<FileDownloadIcon />}
+              sx={{ marginLeft: "auto", marginRight: 2 }}
+              onClick={handleExportPDF}
+            >
+              PDF
+            </Button>
+          </Box>
+          <Box>
+            <Typography variant="h5" sx={{ marginLeft: 2 }}>
+              {headingData.desc[appLang]}
+            </Typography>
+
+            <Typography sx={{ marginLeft: 2 }}>{isLevituum()}</Typography>
+
+            <Box sx={{ display: "flex" }}>
+              <Typography sx={{ marginLeft: 2 }}>
+                {t("objectCount")}:&nbsp;
+              </Typography>
+              {getFeatureCount()}
+            </Box>
+          </Box>
+
+          <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+            {pathName === "all" ? (
+              <caption>
+                <DetailViewLink group={groupName} table={fcName} />
+              </caption>
+            ) : null}
+
+            <TableHead>
+              <TableRow
+                sx={{
+                  backgroundColor: TableHeaderColor,
+                }}
+              >
+                <TableCell>{t("fieldName")}</TableCell>
+                <TableCell>{t("fieldType")}</TableCell>
+                <TableCell>{t("fieldDomain")}</TableCell>
+                <TableCell>{t("fieldDesc")}</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {elements.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{
+                    "&:last-child td, &:last-child th": { border: 0 },
+                    backgroundColor: bgColor[row.meta_type as CategoryKey],
+                  }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell>{determineDataType(row.type, appLang)}</TableCell>
+
+                  <TableCell>
+                    <HashLink smooth to={`#${row.domain}`}>
+                      {row.domain}
+                    </HashLink>
+                  </TableCell>
+
+                  <TableCell>
+                    {row.link ? (
+                      <RegisterHyperLink
+                        link={row.link}
+                        desc={row.desc[appLang]}
+                      ></RegisterHyperLink>
+                    ) : (
+                      row.desc[appLang]
+                    )}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Box>
+    </Box>
   );
 };
