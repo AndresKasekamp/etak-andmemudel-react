@@ -117,7 +117,7 @@ export const FieldsTable = ({
   const pathName = getTableName(location);
 
   return (
-    <Box sx={{ overflow: "auto" }}>
+    <Box sx={{ overflow: "auto" }} >
       <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
         <TableContainer
           component={Paper}
@@ -130,6 +130,7 @@ export const FieldsTable = ({
             marginTop: 2,
             // overflowX: 'auto'
           }}
+          
         >
           <Box sx={{ display: "flex", alignItems: "center", marginLeft: 2 }}>
             <Tooltip

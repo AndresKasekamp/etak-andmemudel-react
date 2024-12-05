@@ -14,7 +14,7 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
       component={Paper}
       elevation={2}
       sx={{
-        p: 1,
+        p: { xs: 0.5, sm: 2 },
         mb: 2,
         backgroundColor: FrontPageTableColor,
       }}
@@ -51,6 +51,8 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
         ))}
       </Box>
     </Box>
+
+
   );
 };
 

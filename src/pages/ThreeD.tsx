@@ -15,7 +15,7 @@ function ThreeD() {
 
   return (
     <>
-      <Container maxWidth="xl" sx={{ height: "100vh", mt: 2 }}>
+      {/* <Container maxWidth="xl" sx={{ height: "100vh", mt: 2 }}> */}
         <Box
           display="flex"
           flexDirection="row"
@@ -41,7 +41,7 @@ function ThreeD() {
         ></ResourcesTable>
 
 
-      </Container>
+      {/* </Container> */}
     </>
   );
 }
