@@ -42,7 +42,7 @@ const AboutPage = () => {
         <strong>{t("lastUpdated")}:</strong> {__BUILD_DATE__}
       </Typography>
 
-      <Stack direction="row" spacing={2} justifyContent="center" mt={4}>
+      <Stack direction="row" spacing={1.5} justifyContent="center" mt={4} >
         <Button
           variant="outlined"
           startIcon={<GitHub />}
