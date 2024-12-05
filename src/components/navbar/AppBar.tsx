@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import LinkAbout from "./LinkAbout";
 import BasicMenu from "./MobileView";
 import { useTheme } from '@mui/material/styles';
+// import Container from '@mui/material/Container';
 
 export default function EtakAppBar() {
   const { t } = useTranslation();
@@ -21,8 +22,8 @@ export default function EtakAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1, mb: 10 }}>
-      <AppBar sx={{ backgroundColor: AppBarColor }}>
-        <Toolbar sx={{ position: "relative" }}>
+      <AppBar  sx={{ backgroundColor: AppBarColor }}>
+        <Toolbar  sx={{ position: "relative" }}>
           <Box sx={{ mr: "auto", display: "flex", gap: 2 }}>
             <Typography
               variant="h5"
@@ -33,7 +34,7 @@ export default function EtakAppBar() {
             </Typography>
           </Box>
 
-          <Box
+          <Box 
             sx={{ ml: "auto", display: "flex", gap: 1, alignItems: "center" }}
           >
             <ChangeLanguage></ChangeLanguage>
@@ -53,3 +54,6 @@ export default function EtakAppBar() {
     </Box>
   );
 }
+
+
+

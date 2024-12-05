@@ -21,7 +21,6 @@ const AboutPage = () => {
   return (
     <Box
       sx={{
-        padding: "2rem",
         textAlign: "center",
         color: AboutPageText,
         maxWidth: "800px",

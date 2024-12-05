@@ -62,4 +62,5 @@ export default function ResourcesTable({ data }: ResourcesTableProps) {
       ))}
     </Box>
   );
+
 }
