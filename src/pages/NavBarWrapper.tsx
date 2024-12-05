@@ -1,4 +1,4 @@
-import EtakAppBar from "./navbar/AppBar";
+import EtakAppBar from "../components/navbar/AppBar";
 import { Outlet } from "react-router-dom";
 import ScrollToTopOnPageChange from "../components/ScrollToTop";
 import ScrollToTop from "react-scroll-to-top";
