@@ -12,9 +12,10 @@ export type DataTypeKey =
   | "Geometry"
   | "DateTime"
   | "Integer"
-  | "SmallInteger"
+  | "ShortInteger"
   | "Real"
   | "String";
+
 export type DataTypeValue =
   | typeof INTEGER
   | typeof GEOMETRY
@@ -30,8 +31,8 @@ export type DataTypeValue =
       Geometry: GEOMETRY,
       DateTime: DATE,
       Integer: INTEGER,
-      SmallInteger: REAL_NUMBER,
-      Real: SHORT_INTEGER,
+      ShortInteger: SHORT_INTEGER,
+      Real: REAL_NUMBER,
       String: "tekst", // TODO seal on pärast veel mingi sulgudes reegeld ()
     };
     if (appLang === "et") {
@@ -46,7 +47,7 @@ export const dataTypes: Record<DataTypeKey, DataTypeValue> = {
   Geometry: GEOMETRY,
   DateTime: DATE,
   Integer: INTEGER,
-  SmallInteger: REAL_NUMBER,
+  ShortInteger: REAL_NUMBER,
   Real: SHORT_INTEGER,
   String: "tekst", // TODO seal on pärast veel mingi sulgudes reegeld ()
 };
