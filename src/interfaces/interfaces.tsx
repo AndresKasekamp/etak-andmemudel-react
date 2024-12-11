@@ -19,6 +19,7 @@ export interface Field {
   meta_type: string;
   link: string | null;
   desc: Description;
+  chart_values: any;
 }
 
 export interface FeatureClassInput {
@@ -120,6 +121,18 @@ export interface GeomTypeInfo {
   geom_type: string; // or a specific type like `GeomType`
   dimension: number;
   image: string; // Assuming `lineImageSource` and `polyImageSource` are strings; adjust as necessary
+}
+
+// Type definition for the row prop
+interface ChartRow {
+  name: string;
+  chart_values: Record<string, number>; // This represents the chart data where keys are strings and values are numbers
+}
+
+export interface ValueChartBarProps {
+  open: boolean;
+  handleClose: () => void;
+  row: ChartRow;
 }
 
 // Use a union type for the keys (valid geometry types)

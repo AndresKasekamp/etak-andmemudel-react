@@ -11,7 +11,8 @@
                 "desc": {
                     "et": "ETAK objekti unikaalne identifikaator",
                     "en": "Unique identifier of topographic object"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "ehr_gid",
@@ -22,7 +23,8 @@
                 "desc": {
                     "et": "Ehitise osa geomeetria identifikaator Ehitisregistris",
                     "en": "Identifier of building part geometry in  Register of buildings"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "ads_oid",
@@ -33,7 +35,8 @@
                 "desc": {
                     "et": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis",
                     "en": "Identifier of address object in Address Data System information system"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "ads_lahiaadress",
@@ -44,7 +47,8 @@
                 "desc": {
                     "et": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis",
                     "en": "Short address in Address Data System information system"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "lod1_muutmisaeg",
@@ -55,7 +59,8 @@
                 "desc": {
                     "et": "Hoone LOD1 muutmisaeg",
                     "en": "LOD1 building modification time"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "z_min",
@@ -66,7 +71,8 @@
                 "desc": {
                     "et": "Minimaalne z-koordinaat",
                     "en": "Minimum z-coordinate"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "z_max",
@@ -77,7 +83,8 @@
                 "desc": {
                     "et": "Maksimaalne z-koordinaat",
                     "en": "Maximum z-coordinate"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "etak_muutmisaeg",
@@ -88,7 +95,8 @@
                 "desc": {
                     "et": "Operaatori poolt tehtud viimase muutuse aeg",
                     "en": "Time of latest update by operator"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "tyyp",
@@ -99,7 +107,8 @@
                 "desc": {
                     "et": "Hoone tüüp",
                     "en": "Building type"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "shape",
@@ -110,7 +119,8 @@
                 "desc": {
                     "et": "Objekti ruumikuju",
                     "en": "Feature geometry"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "OBJECTID",
@@ -121,7 +131,8 @@
                 "desc": {
                     "et": "Tehniline identifikaator",
                     "en": "Technical identifier"
-                }
+                },
+                "chart_values": {}
             }
         ],
         "count": 912954,
@@ -144,7 +155,8 @@
                 "desc": {
                     "et": "ETAK objekti unikaalne identifikaator",
                     "en": "Unique identifier of topographic object"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "ehr_gid",
@@ -155,7 +167,8 @@
                 "desc": {
                     "et": "Ehitise osa geomeetria identifikaator Ehitisregistris",
                     "en": "Identifier of building part geometry in  Register of buildings"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "ads_oid",
@@ -166,7 +179,8 @@
                 "desc": {
                     "et": "Aadressiobjekti identifikaator Aadressiandmete süsteemi infosüsteemis",
                     "en": "Identifier of address object in Address Data System information system"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "ads_lahiaadress",
@@ -177,7 +191,8 @@
                 "desc": {
                     "et": "Objekti lähiaadress Aadressiandmete süsteemi infosüsteemis",
                     "en": "Short address in Address Data System information system"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "lod2_muutmisaeg",
@@ -188,7 +203,8 @@
                 "desc": {
                     "et": "Kirjeldus",
                     "en": "Desc"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "z_min",
@@ -199,7 +215,8 @@
                 "desc": {
                     "et": "Minimaalne z-koordinaat",
                     "en": "Minimum z-coordinate"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "z_max",
@@ -210,7 +227,8 @@
                 "desc": {
                     "et": "Maksimaalne z-koordinaat",
                     "en": "Maximum z-coordinate"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "etak_muutmisaeg",
@@ -221,7 +239,8 @@
                 "desc": {
                     "et": "Operaatori poolt tehtud viimase muutuse aeg",
                     "en": "Time of latest update by operator"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "tyyp",
@@ -232,6 +251,13 @@
                 "desc": {
                     "et": "Hoone tüüp",
                     "en": "Building type"
+                },
+                "chart_values": {
+                    "10": 309214,
+                    "20": 484902,
+                    "30": 18835,
+                    "40": 28031,
+                    "50": 607
                 }
             },
             {
@@ -243,7 +269,8 @@
                 "desc": {
                     "et": "ALS kaardistuaasta",
                     "en": "ALS flight year"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "shape",
@@ -254,7 +281,8 @@
                 "desc": {
                     "et": "Objekti ruumikuju",
                     "en": "Feature geometry"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "OBJECTID",
@@ -265,10 +293,11 @@
                 "desc": {
                     "et": "Tehniline identifikaator",
                     "en": "Technical identifier"
-                }
+                },
+                "chart_values": {}
             }
         ],
-        "count": 842443,
+        "count": 841589,
         "desc": {
             "en": "Desc",
             "et": "LOD2 hooned"
@@ -288,7 +317,8 @@
                 "desc": {
                     "et": "ETAK objekti unikaalne identifikaator",
                     "en": "Unique identifier of topographic object"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "lod1_muutmisaeg",
@@ -299,7 +329,8 @@
                 "desc": {
                     "et": "Kasvuhoone LOD1 muutmisaeg",
                     "en": "Greenhouse LOD1 modification time"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "etak_muutmisaeg",
@@ -310,7 +341,8 @@
                 "desc": {
                     "et": "Operaatori poolt tehtud viimase muutuse aeg",
                     "en": "Time of latest update by operator"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "tyyp",
@@ -321,7 +353,8 @@
                 "desc": {
                     "et": "Rajatise tüüp",
                     "en": "Desc"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "vertikaalne_voimendus",
@@ -332,7 +365,8 @@
                 "desc": {
                     "et": "Kasvuhoone võimendus maapinnast LOD1 kuju loomiseks",
                     "en": "Desc"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "shape",
@@ -343,7 +377,8 @@
                 "desc": {
                     "et": "Objekti ruumikuju",
                     "en": "Feature geometry"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "OBJECTID",
@@ -354,7 +389,8 @@
                 "desc": {
                     "et": "Tehniline identifikaator",
                     "en": "Technical identifier"
-                }
+                },
+                "chart_values": {}
             }
         ],
         "count": 3908,
@@ -377,7 +413,8 @@
                 "desc": {
                     "et": "ETAK objekti unikaalne identifikaator",
                     "en": "Unique identifier of topographic object"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "lod1_muutmisaeg",
@@ -388,7 +425,8 @@
                 "desc": {
                     "et": "Katusealuse LOD1 muutmisaeg",
                     "en": "Passageway LOD1 modification time"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "etak_muutmisaeg",
@@ -399,7 +437,8 @@
                 "desc": {
                     "et": "Operaatori poolt tehtud viimase muutuse aeg",
                     "en": "Time of latest update by operator"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "tyyp",
@@ -410,7 +449,8 @@
                 "desc": {
                     "et": "Rajatise tüüp",
                     "en": "Desc"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "vertikaalne_voimendus",
@@ -421,7 +461,8 @@
                 "desc": {
                     "et": "Võimendus z-koordinaadist alla LOD1 kuju loomiseks",
                     "en": "Desc"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "shape",
@@ -432,7 +473,8 @@
                 "desc": {
                     "et": "Objekti ruumikuju",
                     "en": "Feature geometry"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "OBJECTID",
@@ -443,7 +485,8 @@
                 "desc": {
                     "et": "Tehniline identifikaator",
                     "en": "Technical identifier"
-                }
+                },
+                "chart_values": {}
             }
         ],
         "count": 42075,
@@ -466,7 +509,8 @@
                 "desc": {
                     "et": "ETAK objekti unikaalne identifikaator",
                     "en": "Unique identifier of topographic object"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "lod1_muutmisaeg",
@@ -477,7 +521,8 @@
                 "desc": {
                     "et": "Liikluskorraldusliku rajatise LOD1 muutmisaeg",
                     "en": "Bridge LOD1 modification time"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "etak_muutmisaeg",
@@ -488,7 +533,8 @@
                 "desc": {
                     "et": "Operaatori poolt tehtud viimase muutuse aeg",
                     "en": "Time of latest update by operator"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "tyyp",
@@ -499,7 +545,8 @@
                 "desc": {
                     "et": "Liikluskorraldusliku rajatise tüüp",
                     "en": "Desc"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "knr_id",
@@ -510,7 +557,8 @@
                 "desc": {
                     "et": "Objekti identifikaator Riiklikus kohanimeregistris",
                     "en": "Object identifier in  National Place Names Register"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "nimetus",
@@ -521,7 +569,8 @@
                 "desc": {
                     "et": "Objekti nimetus Riiklikus kohanimeregistris",
                     "en": "Object name in  National Place Names Register"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "vertikaalne_voimendus",
@@ -532,7 +581,8 @@
                 "desc": {
                     "et": "Võimendus z-koordinaadist alla LOD1 kuju loomiseks",
                     "en": "Desc"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "shape",
@@ -543,7 +593,8 @@
                 "desc": {
                     "et": "Objekti ruumikuju",
                     "en": "Feature geometry"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "OBJECTID",
@@ -554,7 +605,8 @@
                 "desc": {
                     "et": "Tehniline identifikaator",
                     "en": "Technical identifier"
-                }
+                },
+                "chart_values": {}
             }
         ],
         "count": 2598,
@@ -577,7 +629,8 @@
                 "desc": {
                     "et": "ETAK objekti unikaalne identifikaator",
                     "en": "Unique identifier of topographic object"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "puutyyp",
@@ -588,7 +641,8 @@
                 "desc": {
                     "et": "Lehtpuu/okaspuu eristamine NGR foto alusel",
                     "en": "TBA"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "korgus",
@@ -599,6 +653,13 @@
                 "desc": {
                     "et": "Puu kõrgus (m)",
                     "en": "TBA"
+                },
+                "chart_values": {
+                    "4.0 - 9.829999923706055": 1512428,
+                    "9.829999923706055 - 15.270000457763672": 1395308,
+                    "15.270000457763672 - 20.309999465942383": 1800851,
+                    "20.309999465942383 - 25.6299991607666": 1452135,
+                    "25.6299991607666 - 46.88999938964844": 835326
                 }
             },
             {
@@ -610,7 +671,8 @@
                 "desc": {
                     "et": "Võra läbimõõt (m)",
                     "en": "TBA"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "als_aasta",
@@ -621,7 +683,8 @@
                 "desc": {
                     "et": "ALS kaardistuaasta",
                     "en": "ALS flight year"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "shape",
@@ -632,7 +695,8 @@
                 "desc": {
                     "et": "Objekti ruumikuju",
                     "en": "Feature geometry"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "OBJECTID",
@@ -643,7 +707,8 @@
                 "desc": {
                     "et": "Tehniline identifikaator",
                     "en": "Technical identifier"
-                }
+                },
+                "chart_values": {}
             }
         ],
         "count": 6996048,
@@ -666,7 +731,8 @@
                 "desc": {
                     "et": "ETAK objekti unikaalne identifikaator",
                     "en": "Unique identifier of topographic object"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "puutyyp",
@@ -677,7 +743,8 @@
                 "desc": {
                     "et": "Lehtpuu/okaspuu eristamine NGR foto alusel",
                     "en": "TBA"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "korgus",
@@ -688,6 +755,13 @@
                 "desc": {
                     "et": "Puu kõrgus (m)",
                     "en": "TBA"
+                },
+                "chart_values": {
+                    "4.0 - 9.819999694824219": 1510249,
+                    "9.819999694824219 - 15.239999771118164": 1387972,
+                    "15.239999771118164 - 20.260000228881836": 1794041,
+                    "20.260000228881836 - 25.59000015258789": 1460063,
+                    "25.59000015258789 - 46.88999938964844": 843723
                 }
             },
             {
@@ -699,7 +773,8 @@
                 "desc": {
                     "et": "ALS kaardistuaasta",
                     "en": "ALS flight year"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "Shape_Length",
@@ -710,7 +785,8 @@
                 "desc": {
                     "et": "Objekti ruumikuju pikkus või ümbermõõt",
                     "en": "Length or perimeter of the object's geometry"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "Shape_Area",
@@ -721,7 +797,8 @@
                 "desc": {
                     "et": "Objekti ruumikuju pindala",
                     "en": "Area of the objects's geometry"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "shape",
@@ -732,7 +809,8 @@
                 "desc": {
                     "et": "Objekti ruumikuju",
                     "en": "Feature geometry"
-                }
+                },
+                "chart_values": {}
             },
             {
                 "name": "OBJECTID",
@@ -743,7 +821,8 @@
                 "desc": {
                     "et": "Tehniline identifikaator",
                     "en": "Technical identifier"
-                }
+                },
+                "chart_values": {}
             }
         ],
         "count": 6996048,

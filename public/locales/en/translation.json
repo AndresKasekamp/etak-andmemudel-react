@@ -32,6 +32,6 @@
   "moreInfoETAKsub": "More info about ETDB",
   "moreInfoETAKDataHyper": "Download the data",
   "moreInfoETAKDatasub": "Downloading the data",
-  "nameAboutPage": "About"
-
+  "nameAboutPage": "About",
+  "closeButton": "Close"
 }

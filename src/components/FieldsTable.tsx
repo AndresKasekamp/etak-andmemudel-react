@@ -34,6 +34,11 @@ import { CategoryKey } from "./formatHelpers/translate.ts";
 import { useTranslation } from "react-i18next";
 import { Description } from "../interfaces/interfaces.tsx";
 
+import ValueChartBar from "./ValueChartBar.tsx";
+import BarChartIcon from "@mui/icons-material/BarChart";
+
+import { useState } from "react";
+
 export const FieldsTable = ({
   elements,
   fcName,
@@ -41,6 +46,18 @@ export const FieldsTable = ({
   headingData,
   domainTables,
 }: FeatureClassOutput) => {
+  // State for managing the modal
+  // const [open, setOpen] = useState(false);
+  const [openRow, setOpenRow] = useState<number | null>(null); // To track the open row index
+
+  const handleOpen = (index: number): void => {
+    setOpenRow(index); // Open the modal for the clicked row
+  };
+
+  const handleClose = (): void => {
+    setOpenRow(null); // Close the modal
+  };
+
   const { i18n, t } = useTranslation();
   const appLang: keyof Description = i18n.language;
 
@@ -217,36 +234,63 @@ export const FieldsTable = ({
           </TableRow>
         </TableHead>
         <TableBody>
-          {elements.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{
-                "&:last-child td, &:last-child th": { border: 0 },
-                backgroundColor: bgColor[row.meta_type as CategoryKey],
-              }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell>{determineDataType(row.type, appLang)}</TableCell>
+          {elements.map((row, index) => (
+            <>
+              <TableRow
+                key={row.name}
+                sx={{
+                  "&:last-child td, &:last-child th": { border: 0 },
+                  backgroundColor: bgColor[row.meta_type as CategoryKey],
+                }}
+              >
+                <TableCell
+                  component="th"
+                  scope="row"
+                  onClick={() =>
+                    Object.entries(row.chart_values).length !== 0
+                      ? handleOpen(index) // Pass row index to open specific modal
+                      : undefined
+                  }
+                  sx={{
+                    cursor:
+                      Object.entries(row.chart_values).length !== 0
+                        ? "pointer"
+                        : "default",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 0.5,
+                  }}
+                >
+                  {row.name}
+                  {Object.entries(row.chart_values).length !== 0 && (
+                    <BarChartIcon fontSize="small" sx={{ color: "green" }} />
+                  )}
+                </TableCell>
+                
+                <ValueChartBar open={openRow === index} handleClose={handleClose} row={row} />
 
-              <TableCell>
-                <HashLink smooth to={`#${row.domain}`}>
-                  {row.domain}
-                </HashLink>
-              </TableCell>
+                <TableCell>{determineDataType(row.type, appLang)}</TableCell>
 
-              <TableCell>
-                {row.link ? (
-                  <RegisterHyperLink
-                    link={row.link}
-                    desc={row.desc[appLang]}
-                  ></RegisterHyperLink>
-                ) : (
-                  row.desc[appLang]
-                )}
-              </TableCell>
-            </TableRow>
+                <TableCell>
+                  <HashLink smooth to={`#${row.domain}`}>
+                    {row.domain}
+                  </HashLink>
+                </TableCell>
+
+                <TableCell>
+                  {row.link ? (
+                    <RegisterHyperLink
+                      link={row.link}
+                      desc={row.desc[appLang]}
+                    ></RegisterHyperLink>
+                  ) : (
+                    row.desc[appLang]
+                  )}
+                </TableCell>
+              </TableRow>
+
+              
+            </>
           ))}
         </TableBody>
       </Table>
