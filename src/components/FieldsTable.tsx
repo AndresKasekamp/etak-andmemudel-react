@@ -149,7 +149,7 @@ export const FieldsTable = ({
           <Tooltip
             title={
               <span style={{ fontSize: "1.5em" }}>
-                Nähtusklassi geomeetria: {headingData.geomType}
+                {t("featureClassGeometry")}: {headingData.geomType}
               </span>
             }
             placement="top"
@@ -165,7 +165,7 @@ export const FieldsTable = ({
           <Tooltip
             title={
               <span style={{ fontSize: "1.5em" }}>
-                Ruumikuju dimensioon: {headingData.geomDimension}D
+                {t("spatialDimension")}: {headingData.geomDimension}D
               </span>
             }
             placement="top"
@@ -176,7 +176,6 @@ export const FieldsTable = ({
                 marginRight: 1,
                 p: 0.5,
                 border: "3px solid black",
-                boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.3)",
                 transform: "translateY(-2px)",
               }}
             >

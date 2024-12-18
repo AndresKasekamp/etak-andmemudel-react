@@ -4,8 +4,14 @@ import { Button } from "@mui/material";
 
 import { Link } from "react-router-dom";
 import { DetailViewLinkProps } from "../interfaces/interfaces";
+import { useTranslation } from "react-i18next";
+
 
 export const DetailViewLink = ({ group, table }: DetailViewLinkProps) => {
+
+  const { t } = useTranslation();
+
+
   return (
     <Link to={`/${group}/${table}`}>
       <Button
@@ -21,7 +27,7 @@ export const DetailViewLink = ({ group, table }: DetailViewLinkProps) => {
           },
         }}
       >
-        Detailvaade
+        {t("detailView")}
       </Button>
     </Link>
   );

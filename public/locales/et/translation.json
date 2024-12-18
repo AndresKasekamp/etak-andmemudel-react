@@ -33,5 +33,11 @@
   "moreInfoETAKDataHyper": "Laadi andmed alla",
   "moreInfoETAKDatasub": "Andmete allalaadimine",
   "nameAboutPage": "Info",
-  "closeButton": "Sulge"
+  "closeButton": "Sulge",
+  "spatialDimension": "Ruumikuju dimensioon",
+  "featureClassGeometry": "Nähtusklassi geomeetria",
+  "detailView": "Detailvaade"
+
+
+
 }

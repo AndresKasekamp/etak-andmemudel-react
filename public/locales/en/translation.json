@@ -33,5 +33,8 @@
   "moreInfoETAKDataHyper": "Download the data",
   "moreInfoETAKDatasub": "Downloading the data",
   "nameAboutPage": "About",
-  "closeButton": "Close"
+  "closeButton": "Close",
+  "spatialDimension": "Spatial dimension",
+  "featureClassGeometry": "Feature class geometry",
+  "detailView": "Detail view"
 }
