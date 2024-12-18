@@ -25,7 +25,6 @@ export const generateFeatureClass = (): FeatureClasses => {
     threeD: [],
   };
 
-
   const createFeatureClass = ({
     name,
     group,
@@ -36,6 +35,10 @@ export const generateFeatureClass = (): FeatureClasses => {
   }: FeatureClassInput): FeatureClassOutput => {
     // Getting the description in the correct language
 
+    // Workaround for lod2 buildings (classification from gdal)
+    if (name === "hooned_lod2") {
+      geom_type = "3D TIN";
+    }
     return {
       fcName: name,
       groupName: GroupNames[group],
