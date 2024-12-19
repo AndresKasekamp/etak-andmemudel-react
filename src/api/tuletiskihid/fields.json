@@ -4,7 +4,7 @@
         "fields": [
             {
                 "name": "mps_id",
-                "type": "String",
+                "type": "String(17)",
                 "meta_type": "register",
                 "link": "https://portaal.agri.ee/avalik/#/maaparandus/msr/systeemi-otsing",
                 "domain": "",
@@ -37,10 +37,10 @@
                     "en": "Desc"
                 },
                 "chart_values": {
-                    "11.66 - 1415.5": 8981,
-                    "1415.5 - 3425.27": 3883,
-                    "3425.27 - 6845.3": 1314,
-                    "6845.3 - 14152.25": 370,
+                    "11.66 - 1400.09": 8916,
+                    "1400.09 - 3392.03": 3915,
+                    "3392.03 - 6815.35": 1342,
+                    "6815.35 - 14152.25": 375,
                     "14152.25 - 48681.03": 69
                 }
             },
@@ -58,7 +58,7 @@
             },
             {
                 "name": "ms_kood",
-                "type": "String",
+                "type": "String(13)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -70,7 +70,7 @@
             },
             {
                 "name": "ehitise_kood",
-                "type": "String",
+                "type": "String(3)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -142,7 +142,7 @@
             },
             {
                 "name": "ehr_gid",
-                "type": "String",
+                "type": "String(20)",
                 "meta_type": "register",
                 "link": "https://livekluster.ehr.ee/ui/ehr/v1",
                 "domain": "",
@@ -187,7 +187,7 @@
             },
             {
                 "name": "markused",
-                "type": "String",
+                "type": "String(255)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -199,7 +199,7 @@
             },
             {
                 "name": "ads_oid",
-                "type": "String",
+                "type": "String(10)",
                 "meta_type": "register",
                 "link": "https://xgis.maaamet.ee/adsavalik/",
                 "domain": "",
@@ -211,7 +211,7 @@
             },
             {
                 "name": "ads_lahiaadress",
-                "type": "String",
+                "type": "String(255)",
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
@@ -231,11 +231,17 @@
                     "et": "Kirjeldus",
                     "en": "Desc"
                 },
-                "chart_values": {}
+                "chart_values": {
+                    "0.0 - 4.0": 147559,
+                    "4.0 - 7.0": 147277,
+                    "7.0 - 11.0": 101357,
+                    "11.0 - 22.0": 16632,
+                    "22.0 - 175.0": 1779
+                }
             },
             {
                 "name": "nimetus",
-                "type": "String",
+                "type": "String(150)",
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
@@ -303,7 +309,13 @@
                     "et": "Kirjeldus",
                     "en": "Desc"
                 },
-                "chart_values": {}
+                "chart_values": {
+                    "-300.0 - 11.4": 195017,
+                    "11.4 - 314.0": 9355,
+                    "314.0 - 1200.0": 18,
+                    "1200.0 - 5100.0": 2,
+                    "5100.0 - 7940.0": 1
+                }
             },
             {
                 "name": "ehitisalune_maap_pind",
@@ -319,7 +331,7 @@
             },
             {
                 "name": "kaos_kood_peamine",
-                "type": "String",
+                "type": "String(10)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -331,7 +343,7 @@
             },
             {
                 "name": "kaos_nimetus_peamine",
-                "type": "String",
+                "type": "String(200)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -343,7 +355,7 @@
             },
             {
                 "name": "kaos_kood",
-                "type": "String",
+                "type": "String(200)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -355,7 +367,7 @@
             },
             {
                 "name": "kaos_nimetus",
-                "type": "String",
+                "type": "String(255)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -367,7 +379,7 @@
             },
             {
                 "name": "seisund",
-                "type": "String",
+                "type": "String(50)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -379,7 +391,7 @@
             },
             {
                 "name": "energiaklass",
-                "type": "String",
+                "type": "String(10)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -412,7 +424,7 @@
             },
             {
                 "name": "taisaadress",
-                "type": "String",
+                "type": "String(255)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -424,7 +436,7 @@
             },
             {
                 "name": "ehr_url",
-                "type": "String",
+                "type": "String(255)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -472,7 +484,7 @@
             },
             {
                 "name": "kkr_kood",
-                "type": "String",
+                "type": "String(10)",
                 "meta_type": "register",
                 "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
@@ -496,7 +508,7 @@
             },
             {
                 "name": "nimetus",
-                "type": "String",
+                "type": "String(100)",
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
@@ -524,7 +536,7 @@
             },
             {
                 "name": "veekogu_nimetus",
-                "type": "String",
+                "type": "String(100)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -536,7 +548,7 @@
             },
             {
                 "name": "veekogu_kkr_kood",
-                "type": "String",
+                "type": "String(10)",
                 "meta_type": "general",
                 "link": null,
                 "domain": "",
@@ -581,11 +593,11 @@
                     "en": "Desc"
                 },
                 "chart_values": {
-                    "20.012 - 18941345.091": 7904,
-                    "18941345.091 - 93422315.178": 1,
-                    "93422315.178 - 202934062.266": 1,
-                    "202934062.266 - 1018482765.571": 1,
-                    "1018482765.571 - 2684356638.069": 1
+                    "20.01 - 18941345.09": 7904,
+                    "18941345.09 - 93422315.18": 1,
+                    "93422315.18 - 202934062.27": 1,
+                    "202934062.27 - 1018482765.57": 1,
+                    "1018482765.57 - 2684356638.07": 1
                 }
             },
             {
@@ -599,11 +611,11 @@
                     "en": "Desc"
                 },
                 "chart_values": {
-                    "16.178 - 7367.908": 7876,
-                    "7367.908 - 33835.209": 28,
-                    "33835.209 - 131746.749": 2,
-                    "131746.749 - 425709.905": 1,
-                    "425709.905 - 878824.559": 1
+                    "16.18 - 7367.91": 7876,
+                    "7367.91 - 33835.21": 28,
+                    "33835.21 - 131746.75": 2,
+                    "131746.75 - 425709.91": 1,
+                    "425709.91 - 878824.56": 1
                 }
             },
             {
@@ -632,7 +644,7 @@
         "fields": [
             {
                 "name": "kkr_kood",
-                "type": "String",
+                "type": "String(10)",
                 "meta_type": "register",
                 "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
@@ -660,7 +672,7 @@
             },
             {
                 "name": "nimetus",
-                "type": "String",
+                "type": "String(100)",
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
@@ -720,7 +732,7 @@
         "fields": [
             {
                 "name": "kkr_kood",
-                "type": "String",
+                "type": "String(10)",
                 "meta_type": "register",
                 "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
@@ -750,7 +762,7 @@
             },
             {
                 "name": "nimetus",
-                "type": "String",
+                "type": "String(100)",
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
@@ -783,10 +795,10 @@
                     "en": "Desc"
                 },
                 "chart_values": {
-                    "-10036.05 - 18.83": 2926,
+                    "-10036.05 - 19.5": 2965,
                     "-10036.05 - -10036.05": 1,
-                    "18.83 - 53.64": 729,
-                    "53.64 - 213.29": 120,
+                    "19.5 - 55.62": 699,
+                    "55.62 - 213.29": 111,
                     "213.29 - 10004.14": 1
                 }
             },
@@ -828,7 +840,7 @@
         "fields": [
             {
                 "name": "kkr_kood",
-                "type": "String",
+                "type": "String(10)",
                 "meta_type": "register",
                 "link": "https://keskkonnaagentuur.ee/eelis",
                 "domain": "",
@@ -858,7 +870,7 @@
             },
             {
                 "name": "nimetus",
-                "type": "String",
+                "type": "String(100)",
                 "meta_type": "register",
                 "link": null,
                 "domain": "",
