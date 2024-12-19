@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useState, MouseEvent } from "react";
 
+import { derivedPathMany, threeDPath } from "../../pages/paths/groupPaths";
+
 export default function LinksMenu() {
   const { t } = useTranslation();
 
@@ -46,13 +48,13 @@ export default function LinksMenu() {
         </MenuItem>
         <MenuItem onClick={handleClose}>
           {" "}
-          <Link to="/3d" title={t("name3DLayers")}>
+          <Link to={threeDPath} title={t("name3DLayers")}>
             {t("name3DLayers")}
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           {" "}
-          <Link to="/tuletiskihid" title={t("nameDerivatives")}>
+          <Link to={derivedPathMany} title={t("nameDerivatives")}>
             {t("nameDerivatives")}
           </Link>
         </MenuItem>

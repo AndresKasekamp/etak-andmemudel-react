@@ -2,7 +2,7 @@ export type Description = {
   [key: string]: string; // Accept any string key
   et: string;
   en: string;
-}
+};
 
 interface HeadingData {
   geomType: string;
@@ -28,7 +28,7 @@ export interface FeatureClassInput {
   fields: Field[];
   desc: Description;
   count: number;
-  geom_type: string
+  geom_type: string;
 }
 
 export interface GeometryInfo {
@@ -89,7 +89,7 @@ export interface ObjectCountResponse {
 
 export interface ObjectCountProps {
   url: string;
-  hardcodedCount: number
+  hardcodedCount: number;
 }
 
 export interface DetailViewLinkProps {
@@ -136,4 +136,13 @@ export interface ValueChartBarProps {
 }
 
 // Use a union type for the keys (valid geometry types)
-export type GeomTypeKey = "Multi Line String" | "Line String" | "Polygon" | "3D Point" | "3D Multi Line String" | "3D Multi Polygon" | "Multi Polygon" | "3D TIN" | "Point";
+export type GeomTypeKey =
+  | "Multi Line String"
+  | "Line String"
+  | "Polygon"
+  | "3D Point"
+  | "3D Multi Line String"
+  | "3D Multi Polygon"
+  | "Multi Polygon"
+  | "3D TIN"
+  | "Point";

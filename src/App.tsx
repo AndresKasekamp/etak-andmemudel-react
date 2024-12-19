@@ -8,8 +8,8 @@ import {
   polyPath,
   linePath,
   metadataPath,
-} from "./pages/groupPaths.ts";
-import { TablesTogetherLink } from "./components/TablesTogetherLink.tsx";
+} from "./pages/paths/groupPaths.ts";
+import { TablesTogetherLink } from "./components/helpers/TablesTogetherLink.tsx";
 import { useTranslation } from "react-i18next";
 // import ResourcesTable from "./components/ResourcesTable.tsx";
 import ResourcesTable from "./components/ResourcesList.tsx";

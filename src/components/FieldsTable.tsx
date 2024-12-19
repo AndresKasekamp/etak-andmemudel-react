@@ -15,7 +15,7 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { jsPDF } from "jspdf"; //or use your library of choice here
 import autoTable from "jspdf-autotable";
 
-import ObjectCount from "./formatHelpers/ObjectCount.tsx";
+import ObjectCount from "./helpers/ObjectCount.tsx";
 import { HashLink } from "react-router-hash-link";
 
 import { TableHeaderColor } from "../data/colors.ts";
@@ -25,12 +25,12 @@ import { useLocation, Location } from "react-router-dom";
 import { getTableName } from "../utils/utils.tsx";
 import { generateWfsUrl } from "../utils/wfsRequest.ts";
 
-import { bgColor, determineDataType } from "./formatHelpers/translate.ts";
+import { bgColor, determineDataType } from "../utils/translate.ts";
 import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
 
-import RegisterHyperLink from "./formatHelpers/RegisterHyperLink.tsx";
+import RegisterHyperLink from "./helpers/RegisterHyperLink.tsx";
 
-import { CategoryKey } from "./formatHelpers/translate.ts";
+import { CategoryKey } from "../utils/translate.ts";
 import { useTranslation } from "react-i18next";
 import { Description } from "../interfaces/interfaces.tsx";
 
@@ -265,8 +265,12 @@ export const FieldsTable = ({
                     <BarChartIcon fontSize="small" sx={{ color: "green" }} />
                   )}
                 </TableCell>
-                
-                <ValueChartBar open={openRow === index} handleClose={handleClose} row={row} />
+
+                <ValueChartBar
+                  open={openRow === index}
+                  handleClose={handleClose}
+                  row={row}
+                />
 
                 <TableCell>{determineDataType(row.type, appLang)}</TableCell>
 
@@ -287,8 +291,6 @@ export const FieldsTable = ({
                   )}
                 </TableCell>
               </TableRow>
-
-              
             </>
           ))}
         </TableBody>

@@ -7,7 +7,7 @@ import {
   ObjectCountResponse,
   ObjectCountProps,
 } from "../../interfaces/interfaces.tsx";
-import LoadingSpinner from "../LoadingSpinner.tsx";
+import LoadingSpinner from "./LoadingSpinner.tsx";
 
 const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
   const [data, setData] = useState<number | null>(null); // Use number or null

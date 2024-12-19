@@ -1,11 +1,17 @@
-import { SHORT_INTEGER, INTEGER, DATE, GEOMETRY, REAL_NUMBER } from "../../data/dataTypes";
+import {
+  SHORT_INTEGER,
+  INTEGER,
+  DATE,
+  GEOMETRY,
+  REAL_NUMBER,
+} from "../data/dataTypes";
 
 import {
   MainCategory,
   EsriCategory,
   EtakMetaCategory,
   RegisterCategory,
-} from "../../data/colors";
+} from "../data/colors";
 
 export type DataTypeKey =
   | "OID"
@@ -24,23 +30,21 @@ export type DataTypeValue =
   | typeof REAL_NUMBER
   | string;
 
-
-  export const determineDataType = (datatype: string, appLang: string) => {
-    const dataTypes: Record<DataTypeKey, DataTypeValue> = {
-      OID: INTEGER,
-      Geometry: GEOMETRY,
-      DateTime: DATE,
-      Integer: INTEGER,
-      ShortInteger: SHORT_INTEGER,
-      Real: REAL_NUMBER,
-      String: "tekst", // TODO seal on pärast veel mingi sulgudes reegeld ()
-    };
-    if (appLang === "et") {
-      return dataTypes[datatype as DataTypeKey];
-    } 
-    return datatype;
-    
+export const determineDataType = (datatype: string, appLang: string) => {
+  const dataTypes: Record<DataTypeKey, DataTypeValue> = {
+    OID: INTEGER,
+    Geometry: GEOMETRY,
+    DateTime: DATE,
+    Integer: INTEGER,
+    ShortInteger: SHORT_INTEGER,
+    Real: REAL_NUMBER,
+    String: "tekst",
   };
+  if (appLang === "et") {
+    return dataTypes[datatype as DataTypeKey];
+  }
+  return datatype;
+};
 
 export const dataTypes: Record<DataTypeKey, DataTypeValue> = {
   OID: INTEGER,
@@ -49,7 +53,7 @@ export const dataTypes: Record<DataTypeKey, DataTypeValue> = {
   Integer: INTEGER,
   ShortInteger: REAL_NUMBER,
   Real: SHORT_INTEGER,
-  String: "tekst", // TODO seal on pärast veel mingi sulgudes reegeld ()
+  String: "tekst",
 };
 
 export type CategoryKey = "technical" | "meta" | "general" | "register";

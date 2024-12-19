@@ -6,11 +6,10 @@ import { Link } from "react-router-dom";
 import { DetailViewLinkProps } from "../interfaces/interfaces";
 import { useTranslation } from "react-i18next";
 
+// TODO siin on vaja fixida natuke gruppidega
 
 export const DetailViewLink = ({ group, table }: DetailViewLinkProps) => {
-
   const { t } = useTranslation();
-
 
   return (
     <Link to={`/${group}/${table}`}>

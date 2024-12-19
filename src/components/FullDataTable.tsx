@@ -1,6 +1,6 @@
 import { FieldsTable } from "./FieldsTable.tsx";
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";
-import { sortElements } from "./formatHelpers/sortElements.ts";
+import { sortElements } from "../utils/sortElements.ts";
 import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
 import Container from "@mui/material/Container";
 

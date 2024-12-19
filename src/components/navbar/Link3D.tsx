@@ -3,11 +3,13 @@ import ThreeDRotationIcon from "@mui/icons-material/ThreeDRotation";
 import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
+import { threeDPath } from "../../pages/paths/groupPaths";
+
 const Link3D = () => {
   const { t } = useTranslation();
 
   return (
-    <Link to="/3d" title={t("name3DLayers")}>
+    <Link to={threeDPath} title={t("name3DLayers")}>
       <Button
         variant="contained"
         size="medium"

@@ -9,7 +9,4 @@ export const getTableName = (location: Location): string => {
   return currentEndpoint || "";
 };
 
-
-export const threeDreplacemnt = () => {
-  
-}
+export const threeDreplacemnt = () => {};

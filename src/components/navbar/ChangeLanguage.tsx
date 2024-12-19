@@ -51,7 +51,7 @@ export default function ChangeLanguage() {
   };
 
   return (
-    <div>
+    <>
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
@@ -74,6 +74,6 @@ export default function ChangeLanguage() {
       >
         <MenuItem onClick={handleLanguageChange}>{menuLanguage}</MenuItem>
       </Menu>
-    </div>
+    </>
   );
 }

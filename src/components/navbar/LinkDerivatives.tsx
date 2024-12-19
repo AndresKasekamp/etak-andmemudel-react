@@ -4,11 +4,13 @@ import { Button } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
 
+import { derivedPathMany } from "../../pages/paths/groupPaths";
+
 const LinkDerivatives = () => {
   const { t } = useTranslation();
 
   return (
-    <Link to="/tuletiskihid" title={t("nameDerivatives")}>
+    <Link to={derivedPathMany} title={t("nameDerivatives")}>
       <Button
         variant="contained"
         size="medium"

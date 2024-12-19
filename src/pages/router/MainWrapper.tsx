@@ -1,10 +1,10 @@
-import EtakAppBar from "../components/navbar/AppBar";
+import EtakAppBar from "../../components/navbar/AppBar";
 import { Outlet } from "react-router-dom";
-import ScrollToTopOnPageChange from "../components/ScrollToTop";
+import ScrollToTopOnPageChange from "../../components/helpers/ScrollToTop";
 import ScrollToTop from "react-scroll-to-top";
 import Container from "@mui/material/Container";
 
-const NavBarWrapper = () => {
+const MainWrapper = () => {
   return (
     <>
       <EtakAppBar />
@@ -17,4 +17,4 @@ const NavBarWrapper = () => {
   );
 };
 
-export default NavBarWrapper;
+export default MainWrapper;

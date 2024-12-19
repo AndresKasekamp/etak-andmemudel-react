@@ -12,7 +12,7 @@ import {
   metadataPath,
   derivedPath,
   threeDPath,
-} from "../pages/groupPaths.ts";
+} from "../pages/paths/groupPaths.ts";
 
 export const SHORT_INTEGER = "lühike täisarv";
 export const INTEGER = "täisarv";
@@ -78,8 +78,7 @@ export const GeomTypes: Record<GeomTypeKey, GeomTypeInfo> = {
     geom_type: POINT_GEOMETRY,
     dimension: SPATIAL_DIMENSION_2,
     image: pointImageSource,
-  }
-
+  },
 };
 
 export const GroupNames: Record<string, string> = {

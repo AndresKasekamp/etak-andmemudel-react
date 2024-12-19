@@ -1,6 +1,6 @@
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-import { AppBarColor } from "../data/colors";
+import { AppBarColor } from "../../data/colors";
 
 interface SpinnerSize {
   wfsData?: boolean; // Made optional for flexibility

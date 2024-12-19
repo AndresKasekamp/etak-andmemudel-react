@@ -3,7 +3,6 @@ import domains_3D from "../api/3D/domains.json" assert { type: "json" };
 
 import { DomainTable } from "../interfaces/interfaces";
 
-// TODO ilmselt on kaks domainFinderit vaja kirjutada
 export const domainFinderForLevituum = (name: string): DomainTable => {
   const foundDomain = domains_levituum.find((domain) => domain.name === name);
 

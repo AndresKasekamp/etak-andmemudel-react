@@ -3,7 +3,7 @@ import ViewStreamIcon from "@mui/icons-material/ViewStream";
 import { Link } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { useTranslation } from "react-i18next";
-import { TablesTogetherLinkProps } from "../interfaces/interfaces";
+import { TablesTogetherLinkProps } from "../../interfaces/interfaces";
 
 export const TablesTogetherLink = ({ route }: TablesTogetherLinkProps) => {
   const theme = useTheme();

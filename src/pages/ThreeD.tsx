@@ -2,8 +2,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 import { generateFeatureClass } from "../data/featureClasses.tsx";
-import { threeDPath } from "./groupPaths.ts";
-import { TablesTogetherLink } from "../components/TablesTogetherLink.tsx";
+import { threeDPath } from "./paths/groupPaths.ts";
+import { TablesTogetherLink } from "../components/helpers/TablesTogetherLink.tsx";
 import { useTranslation } from "react-i18next";
 
 import ResourcesTable from "../components/ResourcesList.tsx";

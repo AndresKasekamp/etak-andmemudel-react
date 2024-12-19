@@ -26,14 +26,13 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
 
       {/* Horizontal List */}
       <Box
-
         sx={{
           display: "flex",
           flexWrap: "wrap",
         }}
       >
         {itemNames.map((item) => (
-          <RouterLink  key={item.fcName} to={`${dataTypeClass}/${item.fcName}`}>
+          <RouterLink key={item.fcName} to={`${dataTypeClass}/${item.fcName}`}>
             <ListItemButton
               component={Link}
               sx={{
@@ -52,8 +51,6 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
         ))}
       </Box>
     </Box>
-
-
   );
 };
 
@@ -65,5 +62,4 @@ export default function ResourcesTable({ data }: ResourcesTableProps) {
       ))}
     </Box>
   );
-
 }

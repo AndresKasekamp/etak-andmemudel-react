@@ -1,11 +1,11 @@
 import { FieldsTable } from "./FieldsTable.tsx";
 import { DomainTableMain } from "./domains/DomainTableMain.tsx";
-import { generateDomainsTogether } from "./formatHelpers/generateTableFront.ts";
-import { ExportAllPDF } from "./formatHelpers/ExportAllPDF.tsx";
+import { generateDomainsTogether } from "../utils/generateTableFront.ts";
+import { ExportAllPDF } from "./export/ExportAllPDF.tsx";
 
 import { AllTablesAndDomains } from "../interfaces/interfaces.tsx";
 
-import { sortElements } from "./formatHelpers/sortElements.ts";
+import { sortElements } from "../utils/sortElements.ts";
 
 export const OnePagerForData = ({
   allTablesAndDomains,

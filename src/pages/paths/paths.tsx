@@ -1,13 +1,13 @@
-import { generateFeatureClass } from "../data/featureClasses";
-import App from "../App";
-import { FullDataTable } from "../components/FullDataTable";
-import { OnePagerForData } from "../components/OnePager2d";
-import { FeatureClassPath } from "../interfaces/interfaces";
+import { generateFeatureClass } from "../../data/featureClasses";
+import App from "../../App";
+import { FullDataTable } from "../../components/FullDataTable";
+import { OnePagerForData } from "../../components/AllDataInOnePage";
+import { FeatureClassPath } from "../../interfaces/interfaces";
 
-import { FeatureClassOutput } from "../interfaces/interfaces";
-import Derivatives from "./Derivatives";
-import ThreeD from "./ThreeD";
-import AboutPage from "./AboutPage";
+import { FeatureClassOutput } from "../../interfaces/interfaces";
+import Derivatives from "../Derivatives";
+import ThreeD from "../ThreeD";
+import AboutPage from "../About";
 
 const allLevituumDataTogether = [
   ...generateFeatureClass().metaandmed,
