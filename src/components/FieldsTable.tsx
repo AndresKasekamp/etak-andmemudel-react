@@ -234,64 +234,62 @@ export const FieldsTable = ({
         </TableHead>
         <TableBody>
           {elements.map((row, index) => (
-            <>
-              <TableRow
-                key={row.name}
+            <TableRow
+              key={index}
+              sx={{
+                "&:last-child td, &:last-child th": { border: 0 },
+                backgroundColor: bgColor[row.meta_type as CategoryKey],
+              }}
+            >
+              <TableCell
+                component="th"
+                scope="row"
+                onClick={() =>
+                  Object.entries(row.chart_values).length !== 0
+                    ? handleOpen(index) // Pass row index to open specific modal
+                    : undefined
+                }
                 sx={{
-                  "&:last-child td, &:last-child th": { border: 0 },
-                  backgroundColor: bgColor[row.meta_type as CategoryKey],
+                  cursor:
+                    Object.entries(row.chart_values).length !== 0
+                      ? "pointer"
+                      : "default",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 0.5,
                 }}
               >
-                <TableCell
-                  component="th"
-                  scope="row"
-                  onClick={() =>
-                    Object.entries(row.chart_values).length !== 0
-                      ? handleOpen(index) // Pass row index to open specific modal
-                      : undefined
-                  }
-                  sx={{
-                    cursor:
-                      Object.entries(row.chart_values).length !== 0
-                        ? "pointer"
-                        : "default",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 0.5,
-                  }}
-                >
-                  {row.name}
-                  {Object.entries(row.chart_values).length !== 0 && (
-                    <BarChartIcon fontSize="small" sx={{ color: "green" }} />
-                  )}
-                </TableCell>
+                {row.name}
+                {Object.entries(row.chart_values).length !== 0 && (
+                  <BarChartIcon fontSize="small" sx={{ color: "green" }} />
+                )}
+              </TableCell>
 
-                <ValueChartBar
-                  open={openRow === index}
-                  handleClose={handleClose}
-                  row={row}
-                />
+              <ValueChartBar
+                open={openRow === index}
+                handleClose={handleClose}
+                row={row}
+              />
 
-                <TableCell>{determineDataType(row.type, appLang)}</TableCell>
+              <TableCell>{determineDataType(row.type, appLang)}</TableCell>
 
-                <TableCell>
-                  <HashLink smooth to={`#${row.domain}`}>
-                    {row.domain}
-                  </HashLink>
-                </TableCell>
+              <TableCell>
+                <HashLink smooth to={`#${row.domain}`}>
+                  {row.domain}
+                </HashLink>
+              </TableCell>
 
-                <TableCell>
-                  {row.link ? (
-                    <RegisterHyperLink
-                      link={row.link}
-                      desc={row.desc[appLang]}
-                    ></RegisterHyperLink>
-                  ) : (
-                    row.desc[appLang]
-                  )}
-                </TableCell>
-              </TableRow>
-            </>
+              <TableCell>
+                {row.link ? (
+                  <RegisterHyperLink
+                    link={row.link}
+                    desc={row.desc[appLang]}
+                  ></RegisterHyperLink>
+                ) : (
+                  row.desc[appLang]
+                )}
+              </TableCell>
+            </TableRow>
           ))}
         </TableBody>
       </Table>
