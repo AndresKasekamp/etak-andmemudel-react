@@ -58,8 +58,11 @@ export interface FeatureClasses {
   joonobjektid: FeatureClassOutput[];
   pindobjektidOverlap: FeatureClassOutput[];
   pindobjektid: FeatureClassOutput[];
-  tuletiskihid: FeatureClassOutput[];
-  threeD: FeatureClassOutput[];
+  tuletiskihidLines: FeatureClassOutput[],
+  tuletiskihidPolygons: FeatureClassOutput[],
+  lod2: FeatureClassOutput[],
+  lod1: FeatureClassOutput[],
+  lod0: FeatureClassOutput[]
 }
 
 export interface AllTablesAndDomains {
@@ -93,6 +96,7 @@ export interface ObjectCountProps {
 }
 
 export interface DetailViewLinkProps {
+  locationPathName: string;
   group: string;
   table: string;
 }

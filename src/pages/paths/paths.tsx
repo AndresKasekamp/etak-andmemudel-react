@@ -9,6 +9,13 @@ import Derivatives from "../Derivatives";
 import ThreeD from "../ThreeD";
 import AboutPage from "../About";
 
+import {
+  threeDPath as path3d,
+  derivedPathMany,
+  aboutPath as pathAbout,
+  levituumPath,
+} from "./groupPaths";
+
 const allLevituumDataTogether = [
   ...generateFeatureClass().metaandmed,
   ...generateFeatureClass().punktobjektid,
@@ -17,9 +24,16 @@ const allLevituumDataTogether = [
   ...generateFeatureClass().pindobjektid,
 ];
 
-const allTuletiskihidTogether = [...generateFeatureClass().tuletiskihid];
+const allTuletiskihidTogether = [
+  ...generateFeatureClass().tuletiskihidLines,
+  ...generateFeatureClass().tuletiskihidPolygons,
+];
 
-const all3dTogether = [...generateFeatureClass().threeD];
+const all3dTogether = [
+  ...generateFeatureClass().lod2,
+  ...generateFeatureClass().lod1,
+  ...generateFeatureClass().lod0,
+];
 
 const generateAllDataMerge = (combinedData: FeatureClassOutput[]) => {
   return combinedData.sort((a, b) => a.fcName.localeCompare(b.fcName));
@@ -31,7 +45,7 @@ const initPath = {
 };
 
 const allLevituumPath = {
-  path: "/levituum/all",
+  path: `/${levituumPath}/all`,
   element: (
     <OnePagerForData
       allTablesAndDomains={generateAllDataMerge(allLevituumDataTogether)}
@@ -40,7 +54,7 @@ const allLevituumPath = {
 };
 
 const allDerivativePath = {
-  path: "/tuletiskihid/all",
+  path: `/${derivedPathMany}/all`,
   element: (
     <OnePagerForData
       allTablesAndDomains={generateAllDataMerge(allTuletiskihidTogether)}
@@ -49,7 +63,7 @@ const allDerivativePath = {
 };
 
 const all3DPath = {
-  path: "/3d/all",
+  path: `/${path3d}/all`,
   element: (
     <OnePagerForData
       allTablesAndDomains={generateAllDataMerge(all3dTogether)}
@@ -58,17 +72,17 @@ const all3DPath = {
 };
 
 const derivativePath = {
-  path: "/tuletiskihid",
+  path: derivedPathMany,
   element: <Derivatives />,
 };
 
 const threeDPath = {
-  path: "/3d",
+  path: path3d,
   element: <ThreeD />,
 };
 
 const aboutPath = {
-  path: "/about",
+  path: pathAbout,
   element: <AboutPage />,
 };
 
@@ -142,6 +156,9 @@ export const paths = () => [
   ...featureClassPath(generateFeatureClass().pindobjektidOverlap),
   ...featureClassPath(generateFeatureClass().pindobjektid),
   ...featureClassPath(generateFeatureClass().metaandmed),
-  ...featureClassTuletiskiht(generateFeatureClass().tuletiskihid),
-  ...featureClassPath3D(generateFeatureClass().threeD),
+  ...featureClassTuletiskiht(generateFeatureClass().tuletiskihidLines),
+  ...featureClassTuletiskiht(generateFeatureClass().tuletiskihidPolygons),
+  ...featureClassPath3D(generateFeatureClass().lod2),
+  ...featureClassPath3D(generateFeatureClass().lod1),
+  ...featureClassPath3D(generateFeatureClass().lod0),
 ];

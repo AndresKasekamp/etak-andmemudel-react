@@ -21,8 +21,13 @@ export const generateFeatureClass = (): FeatureClasses => {
     joonobjektid: [],
     pindobjektidOverlap: [],
     pindobjektid: [],
-    tuletiskihid: [],
-    threeD: [],
+    // tuletiskihid: [],
+    tuletiskihidLines: [],
+    tuletiskihidPolygons: [],
+    lod2: [],
+    lod1: [],
+    lod0: []
+    // threeD: [],
   };
 
   const createFeatureClass = ({
@@ -58,7 +63,8 @@ export const generateFeatureClass = (): FeatureClasses => {
   };
 
   const getDomains = (fields: Field[], group: string): DomainTable[] => {
-    if (group !== "3D") {
+    const groups3d = ["lod2", "lod1", "lod0"]
+    if (!groups3d.includes(group)) {
       return fields.flatMap((field) =>
         field.domain ? [domainFinderForLevituum(field.domain)] : []
       );
@@ -93,13 +99,31 @@ export const generateFeatureClass = (): FeatureClasses => {
 
   feature_classes_tuletiskihid.forEach((fc) => {
     const fcObj = createFeatureClass(fc);
-    allFeatureClasses.tuletiskihid.push(fcObj);
+
+    switch (fc.group) {
+      case "lines":
+        allFeatureClasses.tuletiskihidLines.push(fcObj);
+        break;
+      case "polygons":
+        allFeatureClasses.tuletiskihidPolygons.push(fcObj);
+        break;
+    }
   });
 
   feature_classes_3d.forEach((fc) => {
     const fcObj = createFeatureClass(fc);
 
-    allFeatureClasses.threeD.push(fcObj);
+    switch (fc.group) {
+      case "lod2":
+        allFeatureClasses.lod2.push(fcObj);
+        break;
+      case "lod1":
+        allFeatureClasses.lod1.push(fcObj);
+        break;
+      case "lod0":
+        allFeatureClasses.lod0.push(fcObj);
+        break;
+      }
   });
 
   return allFeatureClasses;

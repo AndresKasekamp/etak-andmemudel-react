@@ -8,11 +8,22 @@ import { useTranslation } from "react-i18next";
 
 // TODO siin on vaja fixida natuke gruppidega
 
-export const DetailViewLink = ({ group, table }: DetailViewLinkProps) => {
+export const DetailViewLink = ({
+  locationPathName,
+  group,
+  table,
+}: DetailViewLinkProps) => {
   const { t } = useTranslation();
 
+  let linkTo = `/${group}/${table}`;
+  if (locationPathName === "/tuletiskihid/all") {
+    linkTo = `/tuletiskihid/${group}/${table}`;
+  } else if (locationPathName === "/3d/all") {
+    linkTo = `/3d/${group}/${table}`;
+  }
+
   return (
-    <Link to={`/${group}/${table}`}>
+    <Link to={linkTo}>
       <Button
         variant="contained"
         size="medium"

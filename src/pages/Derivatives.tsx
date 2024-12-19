@@ -2,7 +2,12 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 import { generateFeatureClass } from "../data/featureClasses.tsx";
-import { derivedPath } from "./paths/groupPaths.ts";
+import {
+  derivedPath,
+  pointPath,
+  linePath,
+  polyPath,
+} from "./paths/groupPaths.ts";
 import { TablesTogetherLink } from "../components/helpers/TablesTogetherLink.tsx";
 
 import ResourcesTable from "../components/ResourcesList.tsx";
@@ -13,28 +18,34 @@ function Derivatives() {
 
   return (
     <>
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="space-between"
-          alignItems="center"
-          sx={{ textAlign: "center", color: "#32774e" }}
-        >
-          <Typography variant="h3" gutterBottom>
-            {t("nameDerivatives")}
-          </Typography>
-          <TablesTogetherLink route="/tuletiskihid/all" />
-        </Box>
+      <Box
+        display="flex"
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="center"
+        sx={{ textAlign: "center", color: "#32774e" }}
+      >
+        <Typography variant="h3" gutterBottom>
+          {t("nameDerivatives")}
+        </Typography>
+        <TablesTogetherLink route="/tuletiskihid/all" />
+      </Box>
 
-        <ResourcesTable
-          data={[
-            {
-              objectName: t("nameDerivatives"),
-              dataTypeClass: derivedPath,
-              itemNames: generateFeatureClass().tuletiskihid,
-            },
-          ]}
-        ></ResourcesTable>
+      <ResourcesTable
+        data={[
+          {
+            objectName: t("nameLineObjects"),
+            dataTypeClass: linePath,
+            itemNames: generateFeatureClass().tuletiskihidLines,
+          },
+
+          {
+            objectName: t("nameAllPolygonObjects"),
+            dataTypeClass: polyPath,
+            itemNames: generateFeatureClass().tuletiskihidPolygons,
+          },
+        ]}
+      ></ResourcesTable>
     </>
   );
 }

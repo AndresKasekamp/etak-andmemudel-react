@@ -12,6 +12,9 @@ import {
   metadataPath,
   derivedPath,
   threeDPath,
+  lod2Path,
+  lod1Path,
+  lod0Path
 } from "../pages/paths/groupPaths.ts";
 
 export const SHORT_INTEGER = "lühike täisarv";
@@ -87,6 +90,10 @@ export const GroupNames: Record<string, string> = {
   lines: linePath,
   land_cover: polyPath,
   overlapping: polyPath,
+  polygons: polyPath,
   derivatives: derivedPath,
   "3D": threeDPath,
+  lod2: lod2Path,
+  lod1: lod1Path,
+  lod0: lod0Path
 };

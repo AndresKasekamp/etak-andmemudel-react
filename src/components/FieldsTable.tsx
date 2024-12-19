@@ -119,7 +119,8 @@ export const FieldsTable = ({
         );
     }
   };
-
+  	
+  // TODO see on katki
   const isLevituum = () => {
     const validGroups = ["tuletiskiht", "3d"];
     return `${t("dataFrom")}: ${
@@ -128,8 +129,8 @@ export const FieldsTable = ({
   };
 
   const location: Location = useLocation();
-
-  const pathName = getTableName(location);
+  const locationPathName = location.pathname
+  const pathNameEnd = getTableName(location);
 
   return (
     <TableContainer
@@ -214,9 +215,9 @@ export const FieldsTable = ({
       </Box>
 
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        {pathName === "all" ? (
+        {pathNameEnd === "all" ? (
           <caption>
-            <DetailViewLink group={groupName} table={fcName} />
+            <DetailViewLink locationPathName={locationPathName} group={groupName} table={fcName} />
           </caption>
         ) : null}
 
