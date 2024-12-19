@@ -8,9 +8,11 @@ import {
   ListItem,
   ListItemText,
 } from "@mui/material";
-import { GitHub, LinkedIn, ContactPage } from "@mui/icons-material";
+import { LinkedIn, ContactPage } from "@mui/icons-material";
 import { AboutPageText } from "../data/colors";
 import packageInfo from "../../package.json" assert { type: "json" };
+
+import { FaGitlab } from "react-icons/fa";
 
 import { useTranslation } from "react-i18next";
 
@@ -45,13 +47,13 @@ const AboutPage = () => {
       <Stack direction="row" spacing={2} justifyContent="center" mt={4}>
         <Button
           variant="outlined"
-          startIcon={<GitHub />}
+          startIcon={<FaGitlab />}
           component={Link}
-          href="https://github.com/your-github-username/your-repo-name"
+          href="https://koodivaramu.eesti.ee/maa-ja-ruumiamet/geoinfo"
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub
+          GitLab
         </Button>
 
         <Button
