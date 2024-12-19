@@ -20,7 +20,6 @@ export type DataTypeKey =
   | "Integer"
   | "ShortInteger"
   | "Real"
-  | "String";
 
 export type DataTypeValue =
   | typeof INTEGER
@@ -28,7 +27,6 @@ export type DataTypeValue =
   | typeof DATE
   | typeof SHORT_INTEGER
   | typeof REAL_NUMBER
-  | string;
 
 export const determineDataType = (datatype: string, appLang: string) => {
   const dataTypes: Record<DataTypeKey, DataTypeValue> = {
@@ -37,10 +35,12 @@ export const determineDataType = (datatype: string, appLang: string) => {
     DateTime: DATE,
     Integer: INTEGER,
     ShortInteger: SHORT_INTEGER,
-    Real: REAL_NUMBER,
-    String: "tekst",
+    Real: REAL_NUMBER
   };
   if (appLang === "et") {
+    if (datatype.includes("String")) {
+        return datatype.replace("String", "tekst");
+    }
     return dataTypes[datatype as DataTypeKey];
   }
   return datatype;
@@ -53,7 +53,6 @@ export const dataTypes: Record<DataTypeKey, DataTypeValue> = {
   Integer: INTEGER,
   ShortInteger: REAL_NUMBER,
   Real: SHORT_INTEGER,
-  String: "tekst",
 };
 
 export type CategoryKey = "technical" | "meta" | "general" | "register";
