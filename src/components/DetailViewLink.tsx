@@ -5,8 +5,7 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { DetailViewLinkProps } from "../interfaces/interfaces";
 import { useTranslation } from "react-i18next";
-
-// TODO siin on vaja fixida natuke gruppidega
+import { derivedPathMany, threeDPath } from "../pages/paths/groupPaths";
 
 export const DetailViewLink = ({
   locationPathName,
@@ -15,11 +14,10 @@ export const DetailViewLink = ({
 }: DetailViewLinkProps) => {
   const { t } = useTranslation();
 
+  const extraLayers = [derivedPathMany, threeDPath];
   let linkTo = `/${group}/${table}`;
-  if (locationPathName === "/tuletiskihid/all") {
-    linkTo = `/tuletiskihid/${group}/${table}`;
-  } else if (locationPathName === "/3d/all") {
-    linkTo = `/3d/${group}/${table}`;
+  if (extraLayers.includes(locationPathName)) {
+    linkTo = `/${locationPathName}/${group}/${table}`;
   }
 
   return (

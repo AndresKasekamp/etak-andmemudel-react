@@ -39,6 +39,8 @@ import BarChartIcon from "@mui/icons-material/BarChart";
 
 import { useState } from "react";
 
+import { derivedPathMany, threeDPath } from "../pages/paths/groupPaths";
+
 export const FieldsTable = ({
   elements,
   fcName,
@@ -119,18 +121,16 @@ export const FieldsTable = ({
         );
     }
   };
-  	
-  // TODO see on katki
-  const isLevituum = () => {
-    const validGroups = ["tuletiskiht", "3d"];
-    return `${t("dataFrom")}: ${
-      validGroups.includes(groupName) ? groupName : "levituum"
-    }`;
-  };
 
   const location: Location = useLocation();
-  const locationPathName = location.pathname
+  const locationPathName = location.pathname.split("/")[1];
   const pathNameEnd = getTableName(location);
+  const isLevituum = () => {
+    const extraLayers = [derivedPathMany, threeDPath];
+    return `${t("dataFrom")}: ${
+      extraLayers.includes(locationPathName) ? locationPathName : "levituum"
+    }`;
+  };
 
   return (
     <TableContainer
@@ -217,7 +217,11 @@ export const FieldsTable = ({
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         {pathNameEnd === "all" ? (
           <caption>
-            <DetailViewLink locationPathName={locationPathName} group={groupName} table={fcName} />
+            <DetailViewLink
+              locationPathName={locationPathName}
+              group={groupName}
+              table={fcName}
+            />
           </caption>
         ) : null}
 
