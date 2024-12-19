@@ -3,8 +3,6 @@ import Box from "@mui/material/Box";
 
 import { generateFeatureClass } from "../data/featureClasses.tsx";
 import {
-  derivedPath,
-  pointPath,
   linePath,
   polyPath,
 } from "./paths/groupPaths.ts";
