@@ -38,6 +38,8 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
               sx={{
                 color: "#797C7F",
                 m: 0.5,
+                px: 1,
+                py: 0.5,
                 border: "1px solid lightgray", // Add a light gray border
                 borderRadius: 1, // Optional: Add rounded corners
                 "&:hover": {
