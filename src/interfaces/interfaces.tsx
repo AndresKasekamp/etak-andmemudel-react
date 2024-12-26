@@ -153,7 +153,7 @@ export interface ValueChartBarProps {
 }
 
 export type LocationFormats = {
-  [key: string]: string[];
+  [key: string]: { key: string; value: string }[];
 };
 
 // Use a union type for the keys (valid geometry types)

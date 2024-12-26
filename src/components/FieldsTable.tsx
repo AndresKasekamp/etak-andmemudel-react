@@ -46,6 +46,7 @@ import { FileFormat } from "./helpers/FileFormat.tsx";
 import { LocationFormats } from "../interfaces/interfaces.tsx";
 
 import ButtonGroup from "@mui/material/ButtonGroup";
+import spatialDataTypes from "../data/formatExplained.ts";
 
 export const FieldsTable = ({
   elements,
@@ -132,27 +133,52 @@ export const FieldsTable = ({
     }
   };
 
+  // TODO info kättesaamine kahekeelne formaadi eripära kohta
   const getFileFormats = (
     locationPathName: string,
     pathNameEnd: string
   ): JSX.Element | null => {
     const formatsByLocation: LocationFormats = {
-      tuletiskihid: ["SHP", "TAB", "GPKG"],
-      "3d": ["GDB", "CityGML", "OBJ"],
-      default: ["SHP", "GDB", "TAB", "GPKG", "DGN", "DWG"],
+      tuletiskihid: [
+        { key: "SHP", value: spatialDataTypes.SHP },
+        { key: "TAB", value: spatialDataTypes.TAB },
+        { key: "GPKG", value: spatialDataTypes.GPKG },
+      ],
+      "3d": [
+        { key: "GDB", value: spatialDataTypes.GDB },
+        { key: "CityGML", value: spatialDataTypes.CityGML },
+        { key: "OBJ", value: spatialDataTypes.OBJ },
+      ],
+      "3dLod0": [
+        { key: "GDB", value: spatialDataTypes.GDB },
+        { key: "GPKG", value: spatialDataTypes.GPKG },
+      ],
+      default: [
+        { key: "SHP", value: spatialDataTypes.SHP },
+        { key: "GDB", value: spatialDataTypes.GDB },
+        { key: "TAB", value: spatialDataTypes.TAB },
+        { key: "GPKG", value: spatialDataTypes.GPKG },
+        { key: "DGN", value: spatialDataTypes.DGN },
+        { key: "DWG", value: spatialDataTypes.DWG },
+      ],
     };
 
     if (pathNameEnd === "all") {
       return null;
     }
 
-    const formats =
-      formatsByLocation[locationPathName] || formatsByLocation.default;
+    let formats;
+    if (["yksikpuud_keskpunkt", "yksikpuud_puukroon"].includes(pathNameEnd)) {
+      formats = formatsByLocation["3dLod0"];
+    } else {
+      formats =
+        formatsByLocation[locationPathName] || formatsByLocation.default;
+    }
 
     return (
       <ButtonGroup color="secondary" variant="contained" size="small">
-        {formats.map((format) => (
-          <FileFormat key={format} info="spec info" format={format} />
+        {formats.map((format, index) => (
+          <FileFormat key={index} info={format.value} format={format.key} />
         ))}
       </ButtonGroup>
     );
