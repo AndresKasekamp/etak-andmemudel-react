@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type Description = {
   [key: string]: string; // Accept any string key
   et: string;
@@ -131,6 +133,12 @@ export interface GeomTypeInfo {
 interface ChartRow {
   name: string;
   chart_values: Record<string, number>; // This represents the chart data where keys are strings and values are numbers
+}
+
+export interface CategoryLinkProps {
+  path: string;
+  title: string;
+  icon: ReactNode;
 }
 
 export interface ValueChartBarProps {

@@ -13,6 +13,14 @@ import LinkAbout from "./LinkAbout";
 import LinksMenu from "./MobileView";
 import { useTheme } from "@mui/material/styles";
 
+import { CategoryLinks } from "./CategoryLinks";
+
+import { derivedPathMany, threeDPath } from "../../pages/paths/groupPaths";
+
+import HomeIcon from "@mui/icons-material/Home";
+import ThreeDRotationIcon from "@mui/icons-material/ThreeDRotation";
+import AltRouteIcon from "@mui/icons-material/AltRoute";
+
 export default function EtakAppBar() {
   const { t } = useTranslation();
   const theme = useTheme();
@@ -41,9 +49,21 @@ export default function EtakAppBar() {
               <LinksMenu></LinksMenu>
             ) : (
               <>
-                <LinkDerivatives></LinkDerivatives>
-                <Link3D></Link3D>
-                <HomeLink></HomeLink>
+                <CategoryLinks
+                  path={derivedPathMany}
+                  title={t("nameDerivatives")}
+                  icon={<AltRouteIcon />}
+                ></CategoryLinks>
+                <CategoryLinks
+                  path={threeDPath}
+                  title={t("name3DLayers")}
+                  icon={<ThreeDRotationIcon />}
+                ></CategoryLinks>
+                <CategoryLinks
+                  path={"/"}
+                  title={t("nameLevituum")}
+                  icon={<HomeIcon />}
+                ></CategoryLinks>
               </>
             )}
           </Box>
