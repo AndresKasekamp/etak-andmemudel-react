@@ -43,6 +43,8 @@ import { derivedPathMany, threeDPath } from "../pages/paths/groupPaths";
 
 import { FileFormat } from "./helpers/FileFormat.tsx";
 
+import { LocationFormats } from "../interfaces/interfaces.tsx";
+
 export const FieldsTable = ({
   elements,
   fcName,
@@ -128,38 +130,31 @@ export const FieldsTable = ({
     }
   };
 
-  const getFileFormats = () => {
-    switch (locationPathName) {
-      case "tuletiskihid":
-        return (
-          <>
-            <FileFormat info={"spec info"} format={"SHP"}></FileFormat>
-            <FileFormat info={"spec info"} format={"TAB"}></FileFormat>
-            <FileFormat info={"spec info"} format={"GPKG"}></FileFormat>
-          </>
-        );
-      case "3d":
-        return (
-          <>
-            <FileFormat info={"spec info"} format={"GDB"}></FileFormat>
-            <FileFormat info={"spec info"} format={"CityGML"}></FileFormat>
-            <FileFormat info={"spec info"} format={"OBJ"}></FileFormat>
-          </>
-        );
-      default:
-        return (
-          <>
-            <FileFormat info={"spec info"} format={"SHP"}></FileFormat>
-            <FileFormat info={"spec info"} format={"GDB"}></FileFormat>
-            <FileFormat info={"spec info"} format={"TAB"}></FileFormat>
-            <FileFormat info={"spec info"} format={"GPKG"}></FileFormat>
-            <FileFormat info={"spec info"} format={"DGN"}></FileFormat>
-            <FileFormat info={"spec info"} format={"DWG"}></FileFormat>
-          </>
-        );
-    }
-  };
+  const getFileFormats = (
+    locationPathName: string,
+    pathNameEnd: string
+  ): JSX.Element | null => {
+    const formatsByLocation: LocationFormats = {
+      tuletiskihid: ["SHP", "TAB", "GPKG"],
+      "3d": ["GDB", "CityGML", "OBJ"],
+      default: ["SHP", "GDB", "TAB", "GPKG", "DGN", "DWG"],
+    };
 
+    if (pathNameEnd === "all") {
+      return null;
+    }
+
+    const formats =
+      formatsByLocation[locationPathName] || formatsByLocation.default;
+
+    return (
+      <>
+        {formats.map((format) => (
+          <FileFormat key={format} info="spec info" format={format} />
+        ))}
+      </>
+    );
+  };
 
   const isLevituum = () => {
     const extraLayers = [derivedPathMany, threeDPath];
@@ -225,7 +220,7 @@ export const FieldsTable = ({
           </Typography>
 
           <Box sx={{ marginLeft: "auto" }}>
-            {getFileFormats()}
+            {getFileFormats(locationPathName, pathNameEnd)}
 
             <Button
               variant="contained"
@@ -238,20 +233,23 @@ export const FieldsTable = ({
             </Button>
           </Box>
         </Box>
-        <Box>
-          <Typography variant="h5" sx={{ marginLeft: 2 }}>
-            {headingData.desc[appLang]}
-          </Typography>
 
-          <Typography sx={{ marginLeft: 2 }}>{isLevituum()}</Typography>
-
-          <Box sx={{ display: "flex" }}>
-            <Typography sx={{ marginLeft: 2 }}>
-              {t("objectCount")}:&nbsp;
+        {pathNameEnd === "all" ? null : (
+          <Box>
+            <Typography variant="h5" sx={{ marginLeft: 2 }}>
+              {headingData.desc[appLang]}
             </Typography>
-            {getFeatureCount()}
+
+            <Typography sx={{ marginLeft: 2 }}>{isLevituum()}</Typography>
+
+            <Box sx={{ display: "flex" }}>
+              <Typography sx={{ marginLeft: 2 }}>
+                {t("objectCount")}:&nbsp;
+              </Typography>
+              {getFeatureCount()}
+            </Box>
           </Box>
-        </Box>
+        )}
       </Box>
 
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">

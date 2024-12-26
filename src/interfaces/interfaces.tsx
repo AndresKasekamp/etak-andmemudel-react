@@ -60,11 +60,11 @@ export interface FeatureClasses {
   joonobjektid: FeatureClassOutput[];
   pindobjektidOverlap: FeatureClassOutput[];
   pindobjektid: FeatureClassOutput[];
-  tuletiskihidLines: FeatureClassOutput[],
-  tuletiskihidPolygons: FeatureClassOutput[],
-  lod2: FeatureClassOutput[],
-  lod1: FeatureClassOutput[],
-  lod0: FeatureClassOutput[]
+  tuletiskihidLines: FeatureClassOutput[];
+  tuletiskihidPolygons: FeatureClassOutput[];
+  lod2: FeatureClassOutput[];
+  lod1: FeatureClassOutput[];
+  lod0: FeatureClassOutput[];
 }
 
 export interface AllTablesAndDomains {
@@ -151,6 +151,10 @@ export interface ValueChartBarProps {
   handleClose: () => void;
   row: ChartRow;
 }
+
+export type LocationFormats = {
+  [key: string]: string[];
+};
 
 // Use a union type for the keys (valid geometry types)
 export type GeomTypeKey =
