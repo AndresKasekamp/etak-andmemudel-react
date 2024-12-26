@@ -33,7 +33,6 @@ export default function ValueChartBar({
           series={[{ data: Object.values(row.chart_values) }]}
           width={500}
           height={300}
-          barLabel="value"
         />
       </DialogContent>
       <DialogActions>
