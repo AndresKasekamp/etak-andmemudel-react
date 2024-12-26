@@ -2,9 +2,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import HomeLink from "./HomeLink";
-import Link3D from "./Link3D";
-import LinkDerivatives from "./LinkDerivatives";
+
 import { AppBarColor } from "../../data/colors";
 import { useMediaQuery } from "@mui/material";
 import ChangeLanguage from "./ChangeLanguage";

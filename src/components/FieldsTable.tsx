@@ -41,6 +41,8 @@ import { useState } from "react";
 
 import { derivedPathMany, threeDPath } from "../pages/paths/groupPaths";
 
+import { FileFormat } from "./helpers/FileFormat.tsx";
+
 export const FieldsTable = ({
   elements,
   fcName,
@@ -103,9 +105,13 @@ export const FieldsTable = ({
     doc.save(`${fcName}.pdf`);
   };
 
+  const location: Location = useLocation();
+  const locationPathName = location.pathname.split("/")[1];
+  const pathNameEnd = getTableName(location);
+
   const getFeatureCount = () => {
-    switch (groupName) {
-      case "tuletiskiht":
+    switch (locationPathName) {
+      case "tuletiskihid":
         return (
           <ObjectCount
             url={generateWfsUrl(fcName, true)}
@@ -122,9 +128,39 @@ export const FieldsTable = ({
     }
   };
 
-  const location: Location = useLocation();
-  const locationPathName = location.pathname.split("/")[1];
-  const pathNameEnd = getTableName(location);
+  const getFileFormats = () => {
+    switch (locationPathName) {
+      case "tuletiskihid":
+        return (
+          <>
+            <FileFormat info={"spec info"} format={"SHP"}></FileFormat>
+            <FileFormat info={"spec info"} format={"TAB"}></FileFormat>
+            <FileFormat info={"spec info"} format={"GPKG"}></FileFormat>
+          </>
+        );
+      case "3d":
+        return (
+          <>
+            <FileFormat info={"spec info"} format={"GDB"}></FileFormat>
+            <FileFormat info={"spec info"} format={"CityGML"}></FileFormat>
+            <FileFormat info={"spec info"} format={"OBJ"}></FileFormat>
+          </>
+        );
+      default:
+        return (
+          <>
+            <FileFormat info={"spec info"} format={"SHP"}></FileFormat>
+            <FileFormat info={"spec info"} format={"GDB"}></FileFormat>
+            <FileFormat info={"spec info"} format={"TAB"}></FileFormat>
+            <FileFormat info={"spec info"} format={"GPKG"}></FileFormat>
+            <FileFormat info={"spec info"} format={"DGN"}></FileFormat>
+            <FileFormat info={"spec info"} format={"DWG"}></FileFormat>
+          </>
+        );
+    }
+  };
+
+
   const isLevituum = () => {
     const extraLayers = [derivedPathMany, threeDPath];
     return `${t("dataFrom")}: ${
@@ -188,15 +224,19 @@ export const FieldsTable = ({
             {fcName}
           </Typography>
 
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<FileDownloadIcon />}
-            sx={{ marginLeft: "auto", marginRight: 2 }}
-            onClick={handleExportPDF}
-          >
-            PDF
-          </Button>
+          <Box sx={{ marginLeft: "auto" }}>
+            {getFileFormats()}
+
+            <Button
+              variant="contained"
+              color="primary"
+              startIcon={<FileDownloadIcon />}
+              sx={{ marginLeft: 2, marginRight: 2 }}
+              onClick={handleExportPDF}
+            >
+              PDF
+            </Button>
+          </Box>
         </Box>
         <Box>
           <Typography variant="h5" sx={{ marginLeft: 2 }}>

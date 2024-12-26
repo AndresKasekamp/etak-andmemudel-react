@@ -141,6 +141,11 @@ export interface CategoryLinkProps {
   icon: ReactNode;
 }
 
+export interface FileFormatProps {
+  info: string;
+  format: string;
+}
+
 export interface ValueChartBarProps {
   open: boolean;
   handleClose: () => void;
