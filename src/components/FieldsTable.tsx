@@ -45,6 +45,8 @@ import { FileFormat } from "./helpers/FileFormat.tsx";
 
 import { LocationFormats } from "../interfaces/interfaces.tsx";
 
+import ButtonGroup from "@mui/material/ButtonGroup";
+
 export const FieldsTable = ({
   elements,
   fcName,
@@ -148,11 +150,11 @@ export const FieldsTable = ({
       formatsByLocation[locationPathName] || formatsByLocation.default;
 
     return (
-      <>
+      <ButtonGroup color="secondary" variant="contained" size="small">
         {formats.map((format) => (
           <FileFormat key={format} info="spec info" format={format} />
         ))}
-      </>
+      </ButtonGroup>
     );
   };
 
