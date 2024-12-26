@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
 const buildDate = () => {
   const currentDate = new Date();
@@ -9,13 +9,13 @@ const buildDate = () => {
 
   const formattedDate = `${day}.${month}.${year}`;
 
-  return JSON.stringify(formattedDate)
-}
+  return JSON.stringify(formattedDate);
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   define: {
-    __BUILD_DATE__: buildDate()
-  }
-})
+    __BUILD_DATE__: buildDate(),
+  },
+});

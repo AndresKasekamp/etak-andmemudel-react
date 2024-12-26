@@ -3,9 +3,12 @@ import { Button } from "@mui/material";
 
 import { FileFormatProps } from "../../interfaces/interfaces";
 
-export const FileFormat = ({ info, format }: FileFormatProps) => {
+import { useTranslation } from "react-i18next";
+
+export const FileFormat = ({ format }: FileFormatProps) => {
+  const { t } = useTranslation();
   return (
-    <Tooltip title={info} placement="bottom">
+    <Tooltip title={t(format)} placement="bottom">
       <Button>{format}</Button>
     </Tooltip>
   );

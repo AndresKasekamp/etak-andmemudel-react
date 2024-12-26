@@ -41,5 +41,13 @@
   "esriAttributes": "Esri attributes",
   "etakMetaAttributes": "ETDB meta attributes",
   "registerAttributes": "Registry attributes",
-  "attributeExplanation": "Category explanation"
+  "attributeExplanation": "Category explanation",
+  "SHP": "Desc",
+  "TAB": "Desc",
+  "GPKG": "Desc",
+  "GDB": "Desc",
+  "CityGML": "Desc",
+  "OBJ": "Desc",
+  "DGN": "Desc",
+  "DWG": "Desc"
 }

@@ -144,7 +144,6 @@ export interface CategoryLinkProps {
 }
 
 export interface FileFormatProps {
-  info: string;
   format: string;
 }
 
@@ -155,7 +154,7 @@ export interface ValueChartBarProps {
 }
 
 export type LocationFormats = {
-  [key: string]: { key: string; value: string }[];
+  [key: string]: string[];
 };
 
 // Use a union type for the keys (valid geometry types)

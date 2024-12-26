@@ -46,7 +46,6 @@ import { FileFormat } from "./helpers/FileFormat.tsx";
 import { LocationFormats } from "../interfaces/interfaces.tsx";
 
 import ButtonGroup from "@mui/material/ButtonGroup";
-import spatialDataTypes from "../data/formatExplained.ts";
 
 export const FieldsTable = ({
   elements,
@@ -56,7 +55,6 @@ export const FieldsTable = ({
   domainTables,
 }: FeatureClassOutput) => {
   // State for managing the modal
-  // const [open, setOpen] = useState(false);
   const [openRow, setOpenRow] = useState<number | null>(null); // To track the open row index
 
   const handleOpen = (index: number): void => {
@@ -133,34 +131,15 @@ export const FieldsTable = ({
     }
   };
 
-  // TODO info kättesaamine kahekeelne formaadi eripära kohta
   const getFileFormats = (
     locationPathName: string,
     pathNameEnd: string
   ): JSX.Element | null => {
     const formatsByLocation: LocationFormats = {
-      tuletiskihid: [
-        { key: "SHP", value: spatialDataTypes.SHP },
-        { key: "TAB", value: spatialDataTypes.TAB },
-        { key: "GPKG", value: spatialDataTypes.GPKG },
-      ],
-      "3d": [
-        { key: "GDB", value: spatialDataTypes.GDB },
-        { key: "CityGML", value: spatialDataTypes.CityGML },
-        { key: "OBJ", value: spatialDataTypes.OBJ },
-      ],
-      "3dLod0": [
-        { key: "GDB", value: spatialDataTypes.GDB },
-        { key: "GPKG", value: spatialDataTypes.GPKG },
-      ],
-      default: [
-        { key: "SHP", value: spatialDataTypes.SHP },
-        { key: "GDB", value: spatialDataTypes.GDB },
-        { key: "TAB", value: spatialDataTypes.TAB },
-        { key: "GPKG", value: spatialDataTypes.GPKG },
-        { key: "DGN", value: spatialDataTypes.DGN },
-        { key: "DWG", value: spatialDataTypes.DWG },
-      ],
+      tuletiskihid: ["SHP", "TAB", "GPKG"],
+      "3d": ["GDB", "CityGML", "OBJ"],
+      "3dLod0": ["GDB", "GPKG"],
+      default: ["SHP", "GDB", "TAB", "GPKG", "DGN", "DWG"],
     };
 
     if (pathNameEnd === "all") {
@@ -178,7 +157,7 @@ export const FieldsTable = ({
     return (
       <ButtonGroup color="secondary" variant="contained" size="small">
         {formats.map((format, index) => (
-          <FileFormat key={index} info={format.value} format={format.key} />
+          <FileFormat key={index} format={format} />
         ))}
       </ButtonGroup>
     );

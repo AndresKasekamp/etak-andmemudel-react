@@ -9,6 +9,8 @@ import {
 } from "../../interfaces/interfaces.tsx";
 import LoadingSpinner from "./LoadingSpinner.tsx";
 
+import { todayDate } from "../../utils/utils.tsx";
+
 const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
   const [data, setData] = useState<number | null>(null); // Use number or null
   const [loading, setLoading] = useState<boolean>(true);
@@ -35,7 +37,25 @@ const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
   if (loading) return <LoadingSpinner wfsData={true} />;
   // if (error) return <Typography color="error">{error}</Typography>;
 
-  return <Typography>{data !== null ? data : hardcodedCount}</Typography>;
+  return (
+    <Typography>
+      {data !== null ? (
+        <>
+          {data}{" "}
+          <span style={{ fontSize: "0.8em", color: "gray" }}>
+            ({todayDate()})
+          </span>
+        </>
+      ) : (
+        <>
+          {hardcodedCount}{" "}
+          <span style={{ fontSize: "0.8em", color: "gray" }}>
+            ({__BUILD_DATE__})
+          </span>
+        </>
+      )}
+    </Typography>
+  );
 };
 
 export default ObjectCount;
