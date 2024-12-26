@@ -36,5 +36,10 @@
   "closeButton": "Close",
   "spatialDimension": "Spatial dimension",
   "featureClassGeometry": "Feature class geometry",
-  "detailView": "Detail view"
+  "detailView": "Detail view",
+  "mainAttributes": "Main attributes",
+  "esriAttributes": "Esri attributes",
+  "etakMetaAttributes": "ETDB meta attributes",
+  "registerAttributes": "Registry attributes",
+  "attributeExplanation": "Category explanation"
 }

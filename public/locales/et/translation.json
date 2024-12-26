@@ -36,7 +36,12 @@
   "closeButton": "Sulge",
   "spatialDimension": "Ruumikuju dimensioon",
   "featureClassGeometry": "Nähtusklassi geomeetria",
-  "detailView": "Detailvaade"
+  "detailView": "Detailvaade",
+  "mainAttributes": "Peamised atribuudid",
+  "esriAttributes": "Esri atribuudid",
+  "etakMetaAttributes":"ETAK meta atribuudid",
+  "registerAttributes": "Registripõhised atribuudid" ,
+  "attributeExplanation": "Kategooriate selgitus"
 
 
 

@@ -11,7 +11,7 @@ import {
 import { LinkedIn, ContactPage } from "@mui/icons-material";
 import { AboutPageText } from "../data/colors";
 import packageInfo from "../../package.json" assert { type: "json" };
-
+import Legend from "../components/helpers/CategoryLegend";
 import { FaGitlab } from "react-icons/fa";
 
 import { useTranslation } from "react-i18next";
@@ -78,8 +78,10 @@ const AboutPage = () => {
         </Button>
       </Stack>
 
+      <Legend></Legend>
+
       {/* Useful Links Section */}
-      <Box sx={{ mt: 6, textAlign: "left" }}>
+      <Box sx={{ mt: 3, textAlign: "left" }}>
         <Typography variant="h5" gutterBottom>
           {t("usefulLinks")}
         </Typography>
