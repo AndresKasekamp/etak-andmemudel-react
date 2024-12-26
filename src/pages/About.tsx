@@ -14,6 +14,11 @@ import packageInfo from "../../package.json" assert { type: "json" };
 import Legend from "../components/helpers/CategoryLegend";
 import { FaGitlab } from "react-icons/fa";
 
+import DataSourceCount from "../components/helpers/DataSouceCount";
+
+
+
+
 import { useTranslation } from "react-i18next";
 
 const AboutPage = () => {
@@ -35,6 +40,8 @@ const AboutPage = () => {
       <Typography variant="body1" component="p">
         {t("aboutPageText")}
       </Typography>
+
+      <DataSourceCount></DataSourceCount>
 
       {/* Project Details */}
       <Typography variant="body2" component="p" color="text.secondary" mt={2}>

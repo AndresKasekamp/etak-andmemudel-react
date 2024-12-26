@@ -118,6 +118,8 @@ export interface TableProps {
   dataTypeClass: string;
 }
 
+
+
 export interface ResourcesTableProps {
   data: TableProps[];
 }

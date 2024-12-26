@@ -12,10 +12,12 @@ import { useTranslation } from "react-i18next";
 
 export default function ValueChartBar({
   open,
+
   handleClose,
   row,
 }: ValueChartBarProps) {
   const { t } = useTranslation();
+  
 
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>

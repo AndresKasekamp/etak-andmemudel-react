@@ -1,6 +1,5 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-// import Container from "@mui/material/Container";
 
 import { generateFeatureClass } from "./data/featureClasses.tsx";
 import {
@@ -11,7 +10,6 @@ import {
 } from "./pages/paths/groupPaths.ts";
 import { TablesTogetherLink } from "./components/helpers/TablesTogetherLink.tsx";
 import { useTranslation } from "react-i18next";
-// import ResourcesTable from "./components/ResourcesTable.tsx";
 import ResourcesTable from "./components/ResourcesList.tsx";
 
 function App() {
