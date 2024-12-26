@@ -136,10 +136,10 @@ export const FieldsTable = ({
     pathNameEnd: string
   ): JSX.Element | null => {
     const formatsByLocation: LocationFormats = {
-      tuletiskihid: ["SHP", "TAB", "GPKG"],
+      tuletiskihid: ["WFS", "SHP", "TAB", "GPKG"],
       "3d": ["GDB", "CityGML", "OBJ"],
       "3dLod0": ["GDB", "GPKG"],
-      default: ["SHP", "GDB", "TAB", "GPKG", "DGN", "DWG"],
+      default: ["WFS", "SHP", "GDB", "TAB", "GPKG", "DGN", "DWG"],
     };
 
     if (pathNameEnd === "all") {

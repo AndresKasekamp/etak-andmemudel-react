@@ -49,5 +49,6 @@
   "CityGML": "Desc",
   "OBJ": "Desc",
   "DGN": "Desc",
-  "DWG": "Desc"
+  "DWG": "Desc",
+  "WFS": "Desc"
 }
