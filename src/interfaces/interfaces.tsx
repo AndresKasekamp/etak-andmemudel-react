@@ -6,7 +6,7 @@ export type Description = {
   en: string;
 };
 
-interface HeadingData {
+export interface HeadingData {
   geomType: string;
   geomDimension: number;
   image: string;
@@ -118,8 +118,6 @@ export interface TableProps {
   dataTypeClass: string;
 }
 
-
-
 export interface ResourcesTableProps {
   data: TableProps[];
 }
@@ -156,6 +154,14 @@ export interface ValueChartBarProps {
 export type LocationFormats = {
   [key: string]: string[];
 };
+
+export interface DataTableProps {
+  pathNameEnd: string;
+  locationPathName: string;
+  groupName: string;
+  fcName: string;
+  elements: Field[];
+}
 
 // Use a union type for the keys (valid geometry types)
 export type GeomTypeKey =

@@ -1,9 +1,5 @@
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
+
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
@@ -15,37 +11,17 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { jsPDF } from "jspdf"; //or use your library of choice here
 import autoTable from "jspdf-autotable";
 
-import ObjectCount from "./helpers/ObjectCount.tsx";
-import { HashLink } from "react-router-hash-link";
-
-import { TableHeaderColor } from "../data/colors.ts";
-
-import { DetailViewLink } from "./DetailViewLink.tsx";
 import { useLocation, Location } from "react-router-dom";
 import { getTableName } from "../utils/utils.tsx";
-import { generateWfsUrl } from "../utils/wfsRequest.ts";
 
-import { bgColor, determineDataType } from "../utils/translate.ts";
+import { determineDataType } from "../utils/translate.ts";
 import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
 
-import RegisterHyperLink from "./helpers/RegisterHyperLink.tsx";
-
-import { CategoryKey } from "../utils/translate.ts";
 import { useTranslation } from "react-i18next";
 import { Description } from "../interfaces/interfaces.tsx";
 
-import ValueChartBar from "./ValueChartBar.tsx";
-import BarChartIcon from "@mui/icons-material/BarChart";
-
-import { useState } from "react";
-
-import { derivedPathMany, threeDPath } from "../pages/paths/groupPaths";
-
-import { FileFormat } from "./helpers/FileFormat.tsx";
-
-import { LocationFormats } from "../interfaces/interfaces.tsx";
-
-import ButtonGroup from "@mui/material/ButtonGroup";
+import { DataTable } from "./table/DataTable.tsx";
+import { getFeatureCount, getFileFormats, isLevituum } from "./table/utils.tsx";
 
 export const FieldsTable = ({
   elements,
@@ -54,17 +30,6 @@ export const FieldsTable = ({
   headingData,
   domainTables,
 }: FeatureClassOutput) => {
-  // State for managing the modal
-  const [openRow, setOpenRow] = useState<number | null>(null); // To track the open row index
-
-  const handleOpen = (index: number): void => {
-    setOpenRow(index); // Open the modal for the clicked row
-  };
-
-  const handleClose = (): void => {
-    setOpenRow(null); // Close the modal
-  };
-
   const { i18n, t } = useTranslation();
   const appLang: keyof Description = i18n.language;
 
@@ -109,66 +74,7 @@ export const FieldsTable = ({
   };
 
   const location: Location = useLocation();
-  const locationPathName = location.pathname.split("/")[1];
-  const pathNameEnd = getTableName(location);
-
-  const getFeatureCount = () => {
-    switch (locationPathName) {
-      case "tuletiskihid":
-        return (
-          <ObjectCount
-            url={generateWfsUrl(fcName, true)}
-            hardcodedCount={headingData.count}
-          ></ObjectCount>
-        );
-      default:
-        return (
-          <ObjectCount
-            url={generateWfsUrl(fcName)}
-            hardcodedCount={headingData.count}
-          ></ObjectCount>
-        );
-    }
-  };
-
-  const getFileFormats = (
-    locationPathName: string,
-    pathNameEnd: string
-  ): JSX.Element | null => {
-    const formatsByLocation: LocationFormats = {
-      tuletiskihid: ["WFS", "SHP", "TAB", "GPKG"],
-      "3d": ["GDB", "CityGML", "OBJ"],
-      "3dLod0": ["GDB", "GPKG"],
-      default: ["WFS", "SHP", "GDB", "TAB", "GPKG", "DGN", "DWG"],
-    };
-
-    if (pathNameEnd === "all") {
-      return null;
-    }
-
-    let formats;
-    if (["yksikpuud_keskpunkt", "yksikpuud_puukroon"].includes(pathNameEnd)) {
-      formats = formatsByLocation["3dLod0"];
-    } else {
-      formats =
-        formatsByLocation[locationPathName] || formatsByLocation.default;
-    }
-
-    return (
-      <ButtonGroup color="secondary" variant="contained" size="small">
-        {formats.map((format, index) => (
-          <FileFormat key={index} format={format} />
-        ))}
-      </ButtonGroup>
-    );
-  };
-
-  const isLevituum = () => {
-    const extraLayers = [derivedPathMany, threeDPath];
-    return `${t("dataFrom")}: ${
-      extraLayers.includes(locationPathName) ? locationPathName : "levituum"
-    }`;
-  };
+  const [pathNameEnd, locationPathName] = getTableName(location);
 
   return (
     <TableContainer
@@ -247,102 +153,27 @@ export const FieldsTable = ({
               {headingData.desc[appLang]}
             </Typography>
 
-            <Typography sx={{ marginLeft: 2 }}>{isLevituum()}</Typography>
+            <Typography sx={{ marginLeft: 2 }}>
+              {isLevituum(locationPathName)}
+            </Typography>
 
             <Box sx={{ display: "flex" }}>
               <Typography sx={{ marginLeft: 2 }}>
                 {t("objectCount")}:&nbsp;
               </Typography>
-              {getFeatureCount()}
+              {getFeatureCount(locationPathName, fcName, headingData)}
             </Box>
           </Box>
         )}
       </Box>
 
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        {pathNameEnd === "all" ? (
-          <caption>
-            <DetailViewLink
-              locationPathName={locationPathName}
-              group={groupName}
-              table={fcName}
-            />
-          </caption>
-        ) : null}
-
-        <TableHead>
-          <TableRow
-            sx={{
-              backgroundColor: TableHeaderColor,
-            }}
-          >
-            <TableCell>{t("fieldName")}</TableCell>
-            <TableCell>{t("fieldType")}</TableCell>
-            <TableCell>{t("fieldDomain")}</TableCell>
-            <TableCell>{t("fieldDesc")}</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {elements.map((row, index) => (
-            <TableRow
-              key={index}
-              sx={{
-                "&:last-child td, &:last-child th": { border: 0 },
-                backgroundColor: bgColor[row.meta_type as CategoryKey],
-              }}
-            >
-              <TableCell
-                component="th"
-                scope="row"
-                onClick={() =>
-                  Object.entries(row.chart_values).length !== 0
-                    ? handleOpen(index) // Pass row index to open specific modal
-                    : undefined
-                }
-                sx={{
-                  cursor:
-                    Object.entries(row.chart_values).length !== 0
-                      ? "pointer"
-                      : "default",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 0.5,
-                }}
-              >
-                {row.name}
-                {Object.entries(row.chart_values).length !== 0 && (
-                  <BarChartIcon fontSize="small" sx={{ color: "green" }} />
-                )}
-              </TableCell>
-
-              <ValueChartBar
-                open={openRow === index}
-                handleClose={handleClose}
-                row={row}
-              />
-
-              <TableCell>{determineDataType(row.type, appLang)}</TableCell>
-
-              <TableCell>
-                <HashLink smooth to={`#${row.domain}`}>
-                  {row.domain}
-                </HashLink>
-              </TableCell>
-
-              <TableCell>
-                {row.link ? (
-                  <RegisterHyperLink
-                    link={row.link}
-                    desc={row.desc[appLang]}
-                  ></RegisterHyperLink>
-                ) : (
-                  row.desc[appLang]
-                )}
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <DataTable
+        pathNameEnd={pathNameEnd}
+        locationPathName={locationPathName}
+        groupName={groupName}
+        fcName={fcName}
+        elements={elements}
+      />
     </TableContainer>
   );
 };
