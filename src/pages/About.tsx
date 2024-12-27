@@ -44,12 +44,7 @@ const AboutPage = () => {
       <DataSourceCount></DataSourceCount>
 
       {/* Project Details */}
-      <Typography variant="body2" component="p" color="text.secondary" mt={2}>
-        <strong>{t("version")}:</strong> {packageInfo.version}
-      </Typography>
-      <Typography variant="body2" component="p" color="text.secondary" mt={1}>
-        <strong>{t("lastUpdated")}:</strong> {__BUILD_DATE__}
-      </Typography>
+
 
       <Legend></Legend>
 
@@ -123,6 +118,13 @@ const AboutPage = () => {
           {t("contact")}
         </Button>
       </Stack>
+
+      <Typography variant="body2" component="p" color="text.secondary" mt={2}>
+        <strong>{t("version")}:</strong> {packageInfo.version}
+      </Typography>
+      <Typography variant="body2" component="p" color="text.secondary" mt={1}>
+        <strong>{t("lastUpdated")}:</strong> {__BUILD_DATE__}
+      </Typography>
     </Box>
   );
 };
