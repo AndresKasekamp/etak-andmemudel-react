@@ -8,8 +8,6 @@ import Paper from "@mui/material/Paper";
 
 import Typography from "@mui/material/Typography";
 
-import { SHORT_INTEGER } from "../../data/dataTypes";
-
 import { DomainTableProps2 } from "../../interfaces/interfaces";
 import { useTranslation } from "react-i18next";
 
@@ -22,7 +20,6 @@ export default function DomainTable({ domain }: DomainTableProps2) {
       component={Paper}
       sx={{
         maxWidth: 400,
-        // minWidth: 400,
         m: 2,
       }}
     >
@@ -39,7 +36,7 @@ export default function DomainTable({ domain }: DomainTableProps2) {
         </Typography>
 
         <Typography sx={{ marginLeft: 2, marginBottom: 1 }}>
-          {t("fieldType")}: {SHORT_INTEGER}
+          {t("fieldType")}: {t("shortInteger")}
         </Typography>
       </div>
       <Table size="small" aria-label="a dense table">

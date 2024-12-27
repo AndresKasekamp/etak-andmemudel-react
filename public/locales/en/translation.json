@@ -50,5 +50,6 @@
   "OBJ": "Desc",
   "DGN": "Desc",
   "DWG": "Desc",
-  "WFS": "Desc"
+  "WFS": "Desc",
+  "shortInteger": "Short Integer"
 }
