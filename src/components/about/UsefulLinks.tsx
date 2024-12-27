@@ -13,7 +13,7 @@ export const UsefulLinks = () => {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ mt: 3, textAlign: "left" }}>
+    <Box sx={{ mt: 3, textAlign: "left", ml: 2 }}>
       <Typography variant="h5" gutterBottom>
         {t("usefulLinks")}
       </Typography>

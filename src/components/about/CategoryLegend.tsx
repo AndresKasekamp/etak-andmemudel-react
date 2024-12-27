@@ -24,12 +24,11 @@ export const Legend = () => {
       <Typography
         variant="h5"
         gutterBottom
-        sx={{ marginBottom: 1, textAlign: "left" }}
       >
         {t("attributeExplanation")}
       </Typography>
       {legendItems.map((item, index) => (
-        <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+        <Box key={index} sx={{ ml: 2, display: "flex", alignItems: "center", gap: 1 }}>
           {/* Color box */}
           <Box
             sx={{

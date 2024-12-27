@@ -20,6 +20,9 @@ const AboutPage = () => {
         color: AboutPageText,
         maxWidth: "800px",
         margin: "0 auto",
+        display: "flex", // Flexbox layout
+        flexDirection: "column", // Stack children vertically
+        alignItems: "center", // Center children horizontally
       }}
     >
       <Typography variant="h4" gutterBottom>

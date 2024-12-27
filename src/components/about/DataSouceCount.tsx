@@ -1,4 +1,5 @@
 import List from "@mui/material/List";
+
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
@@ -12,7 +13,11 @@ import { generateFeatureClass } from "../../data/featureClasses";
 
 export default function DataSouceCount() {
   return (
-    <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+    <List        sx={{
+      display: "flex", // Use flexbox
+      flexDirection: "row", // Align items horizontally
+      justifyContent: "center", // Optional: Center items horizontally
+    }}>
       <ListItem>
         <ListItemAvatar>
           <Avatar>
