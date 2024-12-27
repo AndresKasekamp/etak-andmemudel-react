@@ -6,6 +6,7 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { AllTablesAndDomainsMerge } from "../../interfaces/interfaces.tsx";
 import { useTranslation } from "react-i18next";
 import { Description } from "../../interfaces/interfaces.tsx";
+import { determineDataType } from "../../utils/translate.ts";
 
 export const ExportAllPDF = ({
   allTablesAndDomains,
@@ -29,7 +30,7 @@ export const ExportAllPDF = ({
         ],
         body: rows.elements.map((row) => [
           row.name,
-          row.type,
+          determineDataType(row.type, appLang),
           row.domain,
           row.desc[appLang],
         ]),

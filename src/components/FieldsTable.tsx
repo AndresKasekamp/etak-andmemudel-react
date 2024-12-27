@@ -81,7 +81,7 @@ export const FieldsTable = ({
       ],
       body: elements.map((row) => [
         row.name,
-        row.type,
+        determineDataType(row.type, appLang),
         row.domain,
         row.desc[appLang],
       ]),
