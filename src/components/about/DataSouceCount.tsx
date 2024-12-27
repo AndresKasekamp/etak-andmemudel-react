@@ -15,8 +15,12 @@ export default function DataSouceCount() {
   return (
     <List        sx={{
       display: "flex", // Use flexbox
-      flexDirection: "row", // Align items horizontally
+      flexDirection: {
+        xs: "column", // Vertical layout for extra-small screens (mobile)
+        sm: "row",    // Horizontal layout for small screens and above
+      }, // Align items horizontally
       justifyContent: "center", // Optional: Center items horizontally
+      alignItems: "center"     // Optional: Center items vertically in column vie
     }}>
       <ListItem>
         <ListItemAvatar>
