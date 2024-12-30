@@ -85,8 +85,8 @@
                     "en": "Type of boulder"
                 },
                 "chart_values": {
-                    "Üksik kivi": 14450,
-                    "Kivihunnik": 72836,
+                    "Üksik kivi": 14455,
+                    "Kivihunnik": 72827,
                     "Kivine ala": 16221
                 }
             },
@@ -101,8 +101,8 @@
                     "en": "Relative height of protected standalone boulder [m]"
                 },
                 "chart_values": {
-                    "0.0 - 0.0": 99014,
-                    "0.0 - 1.0": 1032,
+                    "0.0 - 0.0": 99005,
+                    "0.0 - 1.0": 1037,
                     "1.0 - 2.0": 2834,
                     "2.0 - 4.0": 578,
                     "4.0 - 12.0": 49
@@ -181,7 +181,7 @@
                 "chart_values": {
                     "Vajalik välikontroll": 12,
                     "Ruumikuju vajab täpsustamist": 29,
-                    "Korras": 103466
+                    "Korras": 103462
                 }
             },
             {
@@ -221,7 +221,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 103507,
+        "count": 103503,
         "desc": {
             "en": "Boulder",
             "et": "Kivi"
@@ -315,9 +315,9 @@
                     "en": "Type of slope"
                 },
                 "chart_values": {
-                    "Nõlv": 19644,
+                    "Nõlv": 19632,
                     "Looduslik järsak": 1124,
-                    "Tehisjärsak": 616
+                    "Tehisjärsak": 617
                 }
             },
             {
@@ -367,7 +367,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 21384
+                    "Korras": 21373
                 }
             },
             {
@@ -431,7 +431,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 21384,
+        "count": 21373,
         "desc": {
             "en": "Slope",
             "et": "Nõlv"
@@ -526,7 +526,7 @@
                 },
                 "chart_values": {
                     "Kaitsekraav": 1283,
-                    "Vall": 7839,
+                    "Vall": 7840,
                     "Juga": 25
                 }
             },
@@ -577,7 +577,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 9147
+                    "Korras": 9148
                 }
             },
             {
@@ -629,7 +629,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 9147,
+        "count": 9148,
         "desc": {
             "en": "Landform as line",
             "et": "Pinnavorm joonena"
@@ -723,11 +723,11 @@
                     "en": "Type of landform as point"
                 },
                 "chart_values": {
-                    "Auk": 2342,
-                    "Tehisküngas": 6400,
+                    "Auk": 2337,
+                    "Tehisküngas": 6398,
                     "Koobas": 29,
-                    "Ebatasane ala": 15924,
-                    "Kärestik": 182
+                    "Ebatasane ala": 15927,
+                    "Kärestik": 183
                 }
             },
             {
@@ -789,7 +789,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 24877
+                    "Korras": 24874
                 }
             },
             {
@@ -841,7 +841,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 24877,
+        "count": 24874,
         "desc": {
             "en": "Landform as point",
             "et": "Pinnavorm punktina"
@@ -1105,14 +1105,14 @@
                     "en": "Type of standing water body as area"
                 },
                 "chart_values": {
-                    "Järv": 1602,
+                    "Järv": 1598,
                     "Paisjärv": 593,
-                    "Tehisjärv": 733,
+                    "Tehisjärv": 749,
                     "Laugas": 45742,
-                    "Biotiik": 1616,
-                    "Tiik": 62723,
-                    "Paadikanal": 574,
-                    "Muu": 6870
+                    "Biotiik": 1614,
+                    "Tiik": 62762,
+                    "Paadikanal": 575,
+                    "Muu": 6869
                 }
             },
             {
@@ -1175,7 +1175,7 @@
                 },
                 "chart_values": {
                     "Ruumikuju vajab täpsustamist": 3,
-                    "Korras": 120447,
+                    "Korras": 120496,
                     "Tärkandmed vajavad täpsustamist": 3
                 }
             },
@@ -1252,7 +1252,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 120453,
+        "count": 120502,
         "desc": {
             "en": "Standing water body as area",
             "et": "Seisuveekogu alana"
@@ -1346,7 +1346,7 @@
                     "en": "Type of standing water body as point"
                 },
                 "chart_values": {
-                    "Allikas": 1869
+                    "Allikas": 1871
                 }
             },
             {
@@ -1420,8 +1420,8 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Vajalik välikontroll": 72,
-                    "Korras": 1793,
+                    "Vajalik välikontroll": 71,
+                    "Korras": 1796,
                     "Tärkandmed vajavad täpsustamist": 4
                 }
             },
@@ -1462,7 +1462,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 1869,
+        "count": 1871,
         "desc": {
             "en": "Standing water body as point",
             "et": "Seisuveekogu punktina"
@@ -1774,11 +1774,11 @@
                     "en": "Type of watercourse"
                 },
                 "chart_values": {
-                    "Jõgi": 46652,
-                    "Kanal": 533,
-                    "Oja": 51136,
-                    "Peakraav": 15733,
-                    "Kraav": 853990
+                    "Jõgi": 46706,
+                    "Kanal": 548,
+                    "Oja": 51200,
+                    "Peakraav": 15693,
+                    "Kraav": 855013
                 }
             },
             {
@@ -1792,9 +1792,9 @@
                     "en": "Type of watercourse centerline"
                 },
                 "chart_values": {
-                    "Maa-pealne telg": 955582,
-                    "Maa-alune telg": 1975,
-                    "Mõtteline telg": 10487
+                    "Maa-pealne telg": 956639,
+                    "Maa-alune telg": 1999,
+                    "Mõtteline telg": 10522
                 }
             },
             {
@@ -1808,11 +1808,11 @@
                     "en": "Width range of watercourse"
                 },
                 "chart_values": {
-                    "10.0 - 10.0": 394663,
-                    "10.0 - 20.0": 379359,
-                    "20.0 - 30.0": 101905,
-                    "30.0 - 40.0": 39521,
-                    "40.0 - 60.0": 52596
+                    "10.0 - 10.0": 395048,
+                    "10.0 - 20.0": 379870,
+                    "20.0 - 30.0": 102012,
+                    "30.0 - 40.0": 39546,
+                    "40.0 - 60.0": 52684
                 }
             },
             {
@@ -1888,8 +1888,8 @@
                 "chart_values": {
                     "Vajalik välikontroll": 8,
                     "Ruumikuju vajab täpsustamist": 5,
-                    "Korras": 968026,
-                    "Tärkandmed vajavad täpsustamist": 5
+                    "Korras": 969144,
+                    "Tärkandmed vajavad täpsustamist": 3
                 }
             },
             {
@@ -1953,7 +1953,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 968044,
+        "count": 969160,
         "desc": {
             "en": "Watercourse centerline",
             "et": "Vooluveekogu telgjoon"
@@ -2047,10 +2047,10 @@
                     "en": "Type of coastline"
                 },
                 "chart_values": {
-                    "Selge": 132961,
+                    "Selge": 133018,
                     "Ebamäärane": 7388,
-                    "Kindlustatud": 1591,
-                    "Mõtteline": 2893
+                    "Kindlustatud": 1593,
+                    "Mõtteline": 2894
                 }
             },
             {
@@ -2065,11 +2065,11 @@
                 },
                 "chart_values": {
                     "Merekallas": 4556,
-                    "Seisuveekogu kallas": 127278,
-                    "Vooluveekogu kallas": 12072,
+                    "Seisuveekogu kallas": 127334,
+                    "Vooluveekogu kallas": 12075,
                     "Mere ja seisuveekogu vaheline kallas": 187,
                     "Mere ja vooluveekogu vaheline kallas": 62,
-                    "Seisu- ja vooluveekogu vaheline kallas": 676,
+                    "Seisu- ja vooluveekogu vaheline kallas": 677,
                     "Saartevaheline kallas": 2
                 }
             },
@@ -2085,7 +2085,7 @@
                 },
                 "chart_values": {
                     "Jah": 6088,
-                    "Ei": 138745
+                    "Ei": 138805
                 }
             },
             {
@@ -2113,7 +2113,7 @@
                 "chart_values": {
                     "Vajalik välikontroll": 1,
                     "Ruumikuju vajab täpsustamist": 3,
-                    "Korras": 144828,
+                    "Korras": 144888,
                     "Tärkandmed vajavad täpsustamist": 1
                 }
             },
@@ -2166,7 +2166,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 144833,
+        "count": 144893,
         "desc": {
             "en": "Coastline",
             "et": "Kaldajoon"
@@ -2261,7 +2261,7 @@
                 },
                 "chart_values": {
                     "Pais": 598,
-                    "Paadisild": 961,
+                    "Paadisild": 962,
                     "Muul": 85
                 }
             },
@@ -2288,7 +2288,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 1644
+                    "Korras": 1645
                 }
             },
             {
@@ -2340,7 +2340,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 1644,
+        "count": 1645,
         "desc": {
             "en": "Hydrotechnical structure",
             "et": "Hüdrotehniline rajatis"
@@ -2434,8 +2434,8 @@
                     "en": "Type of culvert"
                 },
                 "chart_values": {
-                    "Ühendatud": 189254,
-                    "Kuiv": 7743
+                    "Ühendatud": 189580,
+                    "Kuiv": 7748
                 }
             },
             {
@@ -2463,7 +2463,7 @@
                 "chart_values": {
                     "Vajalik välikontroll": 4,
                     "Ruumikuju vajab täpsustamist": 4,
-                    "Korras": 196989
+                    "Korras": 197320
                 }
             },
             {
@@ -2515,7 +2515,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 196997,
+        "count": 197328,
         "desc": {
             "en": "Culvert",
             "et": "Truup"
@@ -2609,7 +2609,7 @@
                     "en": "Type of other land use as area"
                 },
                 "chart_values": {
-                    "Haljasala": 30648,
+                    "Haljasala": 30653,
                     "Jäätmaa": 377
                 }
             },
@@ -2636,7 +2636,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 31025
+                    "Korras": 31030
                 }
             },
             {
@@ -2700,7 +2700,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 31025,
+        "count": 31030,
         "desc": {
             "en": "Other land use as area",
             "et": "Muu kõlvik alana"
@@ -2797,7 +2797,7 @@
                     "Kalmistu": 460,
                     "Lennuväli": 24,
                     "Sadam": 236,
-                    "Spordikompleks": 957,
+                    "Spordikompleks": 956,
                     "Prügila": 7,
                     "Karjäär": 456
                 }
@@ -2861,7 +2861,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 2140
+                    "Korras": 2139
                 }
             },
             {
@@ -2925,7 +2925,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 2140,
+        "count": 2139,
         "desc": {
             "en": "Other land use as overlapping area",
             "et": "Muu kõlvik kattuva alana"
@@ -3020,7 +3020,7 @@
                 },
                 "chart_values": {
                     "Üksikhaud": 122,
-                    "Mälestusmärk": 1446
+                    "Mälestusmärk": 1450
                 }
             },
             {
@@ -3059,7 +3059,7 @@
                 },
                 "chart_values": {
                     "Ruumikuju vajab täpsustamist": 1,
-                    "Korras": 1567
+                    "Korras": 1571
                 }
             },
             {
@@ -3123,7 +3123,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 1568,
+        "count": 1572,
         "desc": {
             "en": "Other land use as point",
             "et": "Muu kõlvik punktina"
@@ -3217,8 +3217,8 @@
                     "en": "Type of yard"
                 },
                 "chart_values": {
-                    "Eraõu": 107458,
-                    "Tootmisõu": 11328
+                    "Eraõu": 107598,
+                    "Tootmisõu": 11329
                 }
             },
             {
@@ -3233,12 +3233,12 @@
                 },
                 "chart_values": {
                     "Alajaam": 305,
-                    "Tsisternladu": 148,
+                    "Tsisternladu": 146,
                     "Ilmajaam": 17,
                     "Antennirajatis": 83,
-                    "Päikesepark": 1375,
-                    "Ei ole rakendatav": 107458,
-                    "Muu": 9400
+                    "Päikesepark": 1379,
+                    "Ei ole rakendatav": 107598,
+                    "Muu": 9399
                 }
             },
             {
@@ -3264,7 +3264,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 118786
+                    "Korras": 118927
                 }
             },
             {
@@ -3328,7 +3328,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 118786,
+        "count": 118927,
         "desc": {
             "en": "Yard",
             "et": "Õu"
@@ -3422,8 +3422,8 @@
                     "en": "Type of field"
                 },
                 "chart_values": {
-                    "Põld": 52669,
-                    "Aianduslik maa": 4370
+                    "Põld": 52656,
+                    "Aianduslik maa": 4369
                 }
             },
             {
@@ -3449,7 +3449,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 57039
+                    "Korras": 57025
                 }
             },
             {
@@ -3463,8 +3463,8 @@
                     "en": "Growth of woody plants in area"
                 },
                 "chart_values": {
-                    "Jah": 3909,
-                    "Ei": 53130
+                    "Jah": 3915,
+                    "Ei": 53110
                 }
             },
             {
@@ -3528,7 +3528,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 57039,
+        "count": 57025,
         "desc": {
             "en": "Field",
             "et": "Haritav maa"
@@ -3622,10 +3622,10 @@
                     "en": "Type of open land"
                 },
                 "chart_values": {
-                    "Rohumaa": 165723,
-                    "Liivane ala": 574,
-                    "Muu lage": 131078,
-                    "Klibune ala": 388
+                    "Rohumaa": 165729,
+                    "Liivane ala": 572,
+                    "Muu lage": 131126,
+                    "Klibune ala": 387
                 }
             },
             {
@@ -3651,7 +3651,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 297763
+                    "Korras": 297814
                 }
             },
             {
@@ -3715,7 +3715,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 297763,
+        "count": 297814,
         "desc": {
             "en": "Open land",
             "et": "Lage"
@@ -3809,8 +3809,8 @@
                     "en": "Type of woody plants as area"
                 },
                 "chart_values": {
-                    "Mets": 118132,
-                    "Põõsastik": 40662
+                    "Mets": 118106,
+                    "Põõsastik": 40635
                 }
             },
             {
@@ -3836,7 +3836,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 158794
+                    "Korras": 158741
                 }
             },
             {
@@ -3900,7 +3900,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 158794,
+        "count": 158741,
         "desc": {
             "en": "Woody plants as area",
             "et": "Puittaimestik alana"
@@ -3994,7 +3994,7 @@
                     "en": "Type of woody plants as line"
                 },
                 "chart_values": {
-                    "Puittaimede rida": 210415
+                    "Puittaimede rida": 210192
                 }
             },
             {
@@ -4020,7 +4020,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 210415
+                    "Korras": 210192
                 }
             },
             {
@@ -4084,7 +4084,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 210415,
+        "count": 210192,
         "desc": {
             "en": "Woody plants as line",
             "et": "Puittaimestik joonena"
@@ -4178,9 +4178,9 @@
                     "en": "Type of woody plants as point"
                 },
                 "chart_values": {
-                    "Puittaim": 67080,
-                    "Harvik": 370444,
-                    "Salu": 70651
+                    "Puittaim": 67018,
+                    "Harvik": 370287,
+                    "Salu": 70587
                 }
             },
             {
@@ -4256,7 +4256,7 @@
                 "chart_values": {
                     "Vajalik välikontroll": 3,
                     "Ruumikuju vajab täpsustamist": 130,
-                    "Korras": 508042
+                    "Korras": 507759
                 }
             },
             {
@@ -4296,7 +4296,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 508175,
+        "count": 507892,
         "desc": {
             "en": "Woody plants as point",
             "et": "Puittaimestik punktina"
@@ -4390,10 +4390,10 @@
                     "en": "Type of wetland as area"
                 },
                 "chart_values": {
-                    "Madalsoo": 33123,
-                    "Raba": 11985,
+                    "Madalsoo": 33118,
+                    "Raba": 11971,
                     "Õõtsik": 998,
-                    "Soovik": 8930
+                    "Soovik": 8935
                 }
             },
             {
@@ -4407,8 +4407,8 @@
                     "en": "Growth of woody plants in area"
                 },
                 "chart_values": {
-                    "Jah": 17795,
-                    "Ei": 37241
+                    "Jah": 17782,
+                    "Ei": 37240
                 }
             },
             {
@@ -4434,7 +4434,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 55036
+                    "Korras": 55022
                 }
             },
             {
@@ -4498,7 +4498,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 55036,
+        "count": 55022,
         "desc": {
             "en": "Wetland as area",
             "et": "Märgala alana"
@@ -4961,11 +4961,11 @@
                     "en": "Type of building"
                 },
                 "chart_values": {
-                    "Elu- või ühiskondlik hoone": 314495,
-                    "Kõrval- või tootmishoone": 520695,
-                    "Vundament": 45319,
-                    "Vare": 36377,
-                    "Ehitatav hoone": 1606
+                    "Elu- või ühiskondlik hoone": 314585,
+                    "Kõrval- või tootmishoone": 520913,
+                    "Vundament": 45399,
+                    "Vare": 36407,
+                    "Ehitatav hoone": 1658
                 }
             },
             {
@@ -5027,8 +5027,8 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Ruumikuju vajab täpsustamist": 87,
-                    "Korras": 918404,
+                    "Ruumikuju vajab täpsustamist": 78,
+                    "Korras": 918883,
                     "Tärkandmed vajavad täpsustamist": 1
                 }
             },
@@ -5067,11 +5067,11 @@
                     "en": "Maximal relative height of building [m]"
                 },
                 "chart_values": {
-                    "0.0 - 5.0": 200618,
-                    "5.0 - 8.0": 154818,
-                    "8.0 - 12.0": 58846,
-                    "12.0 - 23.0": 13132,
-                    "23.0 - 175.0": 1754
+                    "0.0 - 4.0": 150398,
+                    "4.0 - 7.0": 153127,
+                    "7.0 - 12.0": 110304,
+                    "12.0 - 24.0": 13259,
+                    "24.0 - 175.0": 1623
                 }
             },
             {
@@ -5123,7 +5123,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 918492,
+        "count": 918962,
         "desc": {
             "en": "Building",
             "et": "Hoone"
@@ -5217,10 +5217,10 @@
                     "en": "Type of high-rise structure"
                 },
                 "chart_values": {
-                    "Korsten": 858,
+                    "Korsten": 861,
                     "Sidemast": 1308,
-                    "Torn": 835,
-                    "Valgusmast": 431
+                    "Torn": 838,
+                    "Valgusmast": 430
                 }
             },
             {
@@ -5234,9 +5234,9 @@
                     "en": "Relative height of high-rise structure [m]"
                 },
                 "chart_values": {
-                    "3.0 - 36.0": 2035,
-                    "36.0 - 63.0": 571,
-                    "63.0 - 89.0": 478,
+                    "3.0 - 35.0": 2005,
+                    "35.0 - 62.0": 600,
+                    "62.0 - 89.0": 484,
                     "89.0 - 152.0": 335,
                     "152.0 - 349.0": 13
                 }
@@ -5252,7 +5252,7 @@
                     "en": "High-rise structure's relation to building"
                 },
                 "chart_values": {
-                    "Kõrgrajatisel puudub seos hoonega": 2895,
+                    "Kõrgrajatisel puudub seos hoonega": 2900,
                     "Kõrgrajatis asub hoone peal": 486,
                     "Kõrgrajatis ja hoone on sama objekt": 51
                 }
@@ -5281,7 +5281,7 @@
                 },
                 "chart_values": {
                     "Jah": 53,
-                    "Ei": 3379
+                    "Ei": 3384
                 }
             },
             {
@@ -5356,7 +5356,7 @@
                 },
                 "chart_values": {
                     "Ruumikuju vajab täpsustamist": 26,
-                    "Korras": 3406
+                    "Korras": 3411
                 }
             },
             {
@@ -5396,7 +5396,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 3432,
+        "count": 3437,
         "desc": {
             "en": "High-rise structure",
             "et": "Kõrgrajatis"
@@ -5490,9 +5490,9 @@
                     "en": "Type of other stucture as overlapping area"
                 },
                 "chart_values": {
-                    "Kasvuhoone": 3850,
-                    "Katusealune": 45561,
-                    "Muu": 5510
+                    "Kasvuhoone": 3798,
+                    "Katusealune": 46351,
+                    "Muu": 5503
                 }
             },
             {
@@ -5531,7 +5531,7 @@
                 },
                 "chart_values": {
                     "Ruumikuju vajab täpsustamist": 11,
-                    "Korras": 54910
+                    "Korras": 55641
                 }
             },
             {
@@ -5607,7 +5607,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 54921,
+        "count": 55652,
         "desc": {
             "en": "Other stucture as overlapping area",
             "et": "Muu rajatis kattuva alana"
@@ -5701,7 +5701,7 @@
                     "en": "Type of other structure as point"
                 },
                 "chart_values": {
-                    "Muu": 1703
+                    "Muu": 1699
                 }
             },
             {
@@ -5716,7 +5716,7 @@
                 },
                 "chart_values": {
                     "Jah": 272,
-                    "Ei": 1431
+                    "Ei": 1427
                 }
             },
             {
@@ -5791,7 +5791,7 @@
                 },
                 "chart_values": {
                     "Ruumikuju vajab täpsustamist": 9,
-                    "Korras": 1694
+                    "Korras": 1690
                 }
             },
             {
@@ -5831,7 +5831,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 1703,
+        "count": 1699,
         "desc": {
             "en": "Other structure as point",
             "et": "Muu rajatis punktina"
@@ -5925,9 +5925,9 @@
                     "en": "Type of underground building"
                 },
                 "chart_values": {
-                    "Kelder": 6132,
-                    "Garaaž": 215,
-                    "Muu": 249
+                    "Kelder": 6254,
+                    "Garaaž": 216,
+                    "Muu": 243
                 }
             },
             {
@@ -5989,7 +5989,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 6596
+                    "Korras": 6713
                 }
             },
             {
@@ -6065,7 +6065,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 6596,
+        "count": 6713,
         "desc": {
             "en": "Underground building",
             "et": "Maa-alune hoone"
@@ -6159,10 +6159,10 @@
                     "en": "Type of barrier"
                 },
                 "chart_values": {
-                    "Piirdeaed": 26847,
-                    "Kiviaed": 56526,
-                    "Müür": 636,
-                    "Tehissein": 7492
+                    "Piirdeaed": 26857,
+                    "Kiviaed": 56528,
+                    "Müür": 635,
+                    "Tehissein": 7487
                 }
             },
             {
@@ -6176,9 +6176,9 @@
                     "en": "Woody plants growing atop or near the barrier"
                 },
                 "chart_values": {
-                    "Jah": 19528,
-                    "Ei": 62769,
-                    "Täitmata": 9204
+                    "Jah": 19520,
+                    "Ei": 62785,
+                    "Täitmata": 9202
                 }
             },
             {
@@ -6204,7 +6204,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 91501
+                    "Korras": 91507
                 }
             },
             {
@@ -6268,7 +6268,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 91501,
+        "count": 91507,
         "desc": {
             "en": "Barrier",
             "et": "Piire"
@@ -6374,7 +6374,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 15404
+                    "Korras": 15407
                 }
             },
             {
@@ -6400,14 +6400,14 @@
                     "en": "Type of road as area"
                 },
                 "chart_values": {
-                    "Liiklusala": 4826,
-                    "Parkla": 3790,
+                    "Liiklusala": 4829,
+                    "Parkla": 3791,
                     "Bussijaam": 34,
                     "Lennurada": 16,
                     "Sport": 1439,
                     "Jalakäijate ala": 569,
-                    "Täitmata": 1259,
-                    "Muu": 3471
+                    "Täitmata": 1252,
+                    "Muu": 3477
                 }
             },
             {
@@ -6459,7 +6459,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 15404,
+        "count": 15407,
         "desc": {
             "en": "Road as area",
             "et": "Tee alana"
@@ -6553,15 +6553,15 @@
                     "en": "Type of road as line"
                 },
                 "chart_values": {
-                    "Põhimaantee": 7815,
-                    "Tugimaantee": 13151,
-                    "Kõrvalmaantee": 60145,
+                    "Põhimaantee": 7776,
+                    "Tugimaantee": 13129,
+                    "Kõrvalmaantee": 59957,
                     "Ramp või ühendustee": 1596,
                     "Muu riigimaantee": 1,
-                    "Tänav": 106532,
-                    "Muu tee": 336280,
-                    "Rada": 129597,
-                    "Kergliiklustee": 19726
+                    "Tänav": 106497,
+                    "Muu tee": 335256,
+                    "Rada": 129573,
+                    "Kergliiklustee": 19787
                 }
             },
             {
@@ -6575,11 +6575,11 @@
                     "en": "Width of the road, including hard shoulders [m]"
                 },
                 "chart_values": {
-                    "0.0 - 1.0": 98698,
-                    "1.0 - 3.0": 275896,
-                    "3.0 - 5.0": 162432,
-                    "5.0 - 8.0": 104265,
-                    "8.0 - 80.0": 33551
+                    "0.0 - 1.0": 98671,
+                    "1.0 - 3.0": 275169,
+                    "3.0 - 5.0": 162156,
+                    "5.0 - 8.0": 104085,
+                    "8.0 - 80.0": 33490
                 }
             },
             {
@@ -6593,11 +6593,12 @@
                     "en": "Type of road surface"
                 },
                 "chart_values": {
-                    "Püsikate": 243464,
-                    "Kruuskate": 199537,
-                    "Kivikate": 2394,
-                    "Pinnas": 228442,
-                    "Puit": 602,
+                    "Püsikate": 243296,
+                    "Kruuskate": 199053,
+                    "Kivikate": 2400,
+                    "Pinnas": 227811,
+                    "Puit": 607,
+                    "Täitmata": 1,
                     "Muu": 404
                 }
             },
@@ -6612,10 +6613,10 @@
                     "en": "Allowed traffic direction on road"
                 },
                 "chart_values": {
-                    "Kahesuunaline": 622902,
-                    "Pärisuunaline": 5966,
-                    "Vastassuunaline": 2693,
-                    "Täitmata": 43282
+                    "Kahesuunaline": 621658,
+                    "Pärisuunaline": 5961,
+                    "Vastassuunaline": 2689,
+                    "Täitmata": 43264
                 }
             },
             {
@@ -6653,9 +6654,9 @@
                     "en": "Carriageway code in Road Register"
                 },
                 "chart_values": {
-                    "Parempoolne või ainuke": 292127,
-                    "Vasakpoolne": 1153,
-                    "Täitmata": 381563
+                    "Parempoolne või ainuke": 291088,
+                    "Vasakpoolne": 1151,
+                    "Täitmata": 381333
                 }
             },
             {
@@ -6693,9 +6694,9 @@
                     "en": "Carriageway code of the second road sharing the road link"
                 },
                 "chart_values": {
-                    "Parempoolne või ainuke": 3531,
+                    "Parempoolne või ainuke": 3523,
                     "Vasakpoolne": 139,
-                    "Täitmata": 671173
+                    "Täitmata": 669910
                 }
             },
             {
@@ -6735,7 +6736,7 @@
                 "chart_values": {
                     "Parempoolne või ainuke": 57,
                     "Vasakpoolne": 3,
-                    "Täitmata": 674783
+                    "Täitmata": 673512
                 }
             },
             {
@@ -6833,13 +6834,13 @@
                     "en": "Importance of street"
                 },
                 "chart_values": {
-                    "Põhitänav": 20175,
-                    "Jaotustänav": 10805,
-                    "Kõrvaltänav": 26092,
+                    "Põhitänav": 20118,
+                    "Jaotustänav": 10799,
+                    "Kõrvaltänav": 26077,
                     "Väiketänav": 21,
-                    "Kvartalisisene tänav": 44684,
+                    "Kvartalisisene tänav": 44654,
                     "Jalgtänav": 981,
-                    "Täitmata": 572085
+                    "Täitmata": 570922
                 }
             },
             {
@@ -6866,9 +6867,9 @@
                 },
                 "chart_values": {
                     "Vajalik välikontroll": 30,
-                    "Ruumikuju vajab täpsustamist": 136,
-                    "Korras": 674595,
-                    "Tärkandmed vajavad täpsustamist": 82
+                    "Ruumikuju vajab täpsustamist": 102,
+                    "Korras": 673362,
+                    "Tärkandmed vajavad täpsustamist": 78
                 }
             },
             {
@@ -6920,7 +6921,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 674843,
+        "count": 673572,
         "desc": {
             "en": "Roas as line",
             "et": "Tee joonena"
@@ -7014,7 +7015,7 @@
                     "en": "Type of rail"
                 },
                 "chart_values": {
-                    "Laiarööpmeline": 3895,
+                    "Laiarööpmeline": 3891,
                     "Kitsarööpmeline": 134,
                     "Köistee": 18,
                     "Trammitee": 102,
@@ -7033,7 +7034,7 @@
                 },
                 "chart_values": {
                     "Jah": 320,
-                    "Ei": 3575,
+                    "Ei": 3571,
                     "Ei ole rakendatav": 283
                 }
             },
@@ -7050,7 +7051,7 @@
                 "chart_values": {
                     "Põhitee": 502,
                     "Kõrvaltee": 797,
-                    "Harutee": 2832,
+                    "Harutee": 2828,
                     "Ei ole rakendatav": 47
                 }
             },
@@ -7078,7 +7079,7 @@
                 },
                 "chart_values": {
                     "Ruumikuju vajab täpsustamist": 5,
-                    "Korras": 4173
+                    "Korras": 4169
                 }
             },
             {
@@ -7130,7 +7131,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 4178,
+        "count": 4174,
         "desc": {
             "en": "Rail",
             "et": "Rööbastee"
@@ -7236,7 +7237,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 64312
+                    "Korras": 64237
                 }
             },
             {
@@ -7288,7 +7289,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 64312,
+        "count": 64237,
         "desc": {
             "en": "Forest aisle",
             "et": "Siht"
@@ -7605,8 +7606,8 @@
                 },
                 "chart_values": {
                     "Ülevedu": 3,
-                    "Sõidutakistus": 2766,
-                    "Purre": 11708,
+                    "Sõidutakistus": 2779,
+                    "Purre": 11691,
                     "Tunnel": 139
                 }
             },
@@ -7621,10 +7622,10 @@
                     "en": "Type of obstruction"
                 },
                 "chart_values": {
-                    "Püsivalt suletud": 653,
-                    "Avatav": 2004,
+                    "Püsivalt suletud": 655,
+                    "Avatav": 2015,
                     "Täitmata": 109,
-                    "Ei ole rakendatav": 11850
+                    "Ei ole rakendatav": 11833
                 }
             },
             {
@@ -7651,7 +7652,7 @@
                 },
                 "chart_values": {
                     "Ruumikuju vajab täpsustamist": 1,
-                    "Korras": 14615
+                    "Korras": 14611
                 }
             },
             {
@@ -7703,7 +7704,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 14616,
+        "count": 14612,
         "desc": {
             "en": "Transport infrastructure as line",
             "et": "Liikluskorralduslik rajatis joonena"
@@ -7834,7 +7835,7 @@
                 },
                 "chart_values": {
                     "Ruumikuju vajab täpsustamist": 2,
-                    "Korras": 16861
+                    "Korras": 16815
                 }
             },
             {
@@ -7886,7 +7887,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 16863,
+        "count": 16817,
         "desc": {
             "en": "Power line",
             "et": "Elektriliin"
@@ -7980,9 +7981,9 @@
                     "en": "Type of technical installation"
                 },
                 "chart_values": {
-                    "Trafo": 18229,
+                    "Trafo": 18308,
                     "Elektrituulik": 196,
-                    "Mahuti": 1360
+                    "Mahuti": 1355
                 }
             },
             {
@@ -8020,7 +8021,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 19785
+                    "Korras": 19859
                 }
             },
             {
@@ -8048,9 +8049,9 @@
                 "chart_values": {
                     "12.0 - 62.0": 36,
                     "62.0 - 122.0": 60,
-                    "122.0 - 170.0": 76,
-                    "170.0 - 230.0": 24,
-                    "230.0 - 998.0": 19589
+                    "122.0 - 160.0": 59,
+                    "160.0 - 230.0": 41,
+                    "230.0 - 998.0": 19663
                 }
             },
             {
@@ -8078,7 +8079,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 19785,
+        "count": 19859,
         "desc": {
             "en": "Technical installation",
             "et": "Tehnopaigaldis"
@@ -8196,7 +8197,7 @@
                     "en": "Object's status"
                 },
                 "chart_values": {
-                    "Korras": 750
+                    "Korras": 747
                 }
             },
             {
@@ -8248,7 +8249,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 750,
+        "count": 747,
         "desc": {
             "en": "Pipeline",
             "et": "Torujuhe"
@@ -8319,8 +8320,8 @@
                 },
                 "chart_values": {
                     "Maa-ameti aerofoto": 97,
-                    "Ruumiandmekogum": 32,
-                    "Tärkandmekogum": 8,
+                    "Ruumiandmekogum": 33,
+                    "Tärkandmekogum": 7,
                     "Kaardistus": 51,
                     "Kõrgusmudel": 12,
                     "Muu": 27
