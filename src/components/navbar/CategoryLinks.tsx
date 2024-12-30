@@ -11,12 +11,12 @@ export const CategoryLinks = ({ path, title, icon }: CategoryLinkProps) => {
         size="medium"
         startIcon={icon}
         sx={{
-          backgroundColor: "#32774E",
-          borderColor: "#32774E",
-          color: "#FFFFFF",
+          backgroundColor: "appColor.landBoardMain",
+          borderColor: "appColor.landBoardMain",
+          color: "appColor.mainCategory",
           "&:hover": {
-            backgroundColor: "#285f3f", 
-            borderColor: "#285f3f",
+            backgroundColor: "appColor.appBarColorHover",
+            borderColor: "appColor.appBarColorHover",
           },
         }}
       >

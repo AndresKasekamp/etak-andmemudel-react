@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
-import { AppBarColor } from "../../data/colors";
 import { useMediaQuery } from "@mui/material";
 import ChangeLanguage from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
@@ -26,7 +25,7 @@ export default function EtakAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1, mb: 10 }}>
-      <AppBar sx={{ backgroundColor: AppBarColor }}>
+      <AppBar sx={{ backgroundColor: "appColor.landBoardMain" }}>
         <Toolbar sx={{ position: "relative" }}>
           <Box sx={{ mr: "auto", display: "flex", gap: 2 }}>
             <Typography

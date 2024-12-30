@@ -6,8 +6,6 @@ import TableRow from "@mui/material/TableRow";
 
 import { HashLink } from "react-router-hash-link";
 
-import { TableHeaderColor } from "../../data/colors.ts";
-
 import { DetailViewLink } from "../DetailViewLink.tsx";
 
 import { bgColor, determineDataType } from "../../utils/translate.ts";
@@ -65,7 +63,7 @@ export const DataTable = ({
       <TableHead>
         <TableRow
           sx={{
-            backgroundColor: TableHeaderColor,
+            backgroundColor: "appColor.tableHeaderColor",
           }}
         >
           <TableCell>{t("fieldName")}</TableCell>
@@ -103,7 +101,10 @@ export const DataTable = ({
             >
               {row.name}
               {Object.entries(row.chart_values).length !== 0 && (
-                <BarChartIcon fontSize="small" sx={{ color: "green" }} />
+                <BarChartIcon
+                  fontSize="small"
+                  sx={{ color: "appColor.landBoardMain" }}
+                />
               )}
             </TableCell>
 

@@ -43,7 +43,7 @@ export default function DomainTable({ domain }: DomainTableProps2) {
         <TableHead>
           <TableRow
             sx={{
-              backgroundColor: "#FF6961",
+              backgroundColor: "appColor.domainTableHeadingColor",
             }}
           >
             <TableCell>{t("fieldDomainCode")}</TableCell>
@@ -56,7 +56,7 @@ export default function DomainTable({ domain }: DomainTableProps2) {
               key={key}
               sx={{
                 "&:last-child td, &:last-child th": { border: 0 },
-                backgroundColor: "#fde0e0",
+                backgroundColor: "appColor.domainTableFieldColor",
               }}
             >
               <TableCell align="right">{key}</TableCell>

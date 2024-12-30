@@ -12,7 +12,10 @@ export default function LinkAbout() {
     <div>
       <Link to={aboutPath} title={t("nameAboutPage")}>
         <Button>
-          <InfoIcon fontSize="large" sx={{ color: "white" }}></InfoIcon>
+          <InfoIcon
+            fontSize="large"
+            sx={{ color: "appColor.mainCategory" }}
+          ></InfoIcon>
         </Button>
       </Link>
     </div>

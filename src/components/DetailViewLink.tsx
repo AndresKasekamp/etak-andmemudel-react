@@ -27,11 +27,11 @@ export const DetailViewLink = ({
         size="medium"
         startIcon={<PageviewIcon />}
         sx={{
-          backgroundColor: "#32774E",
-          borderColor: "#32774E",
+          backgroundColor: "appColor.landBoardMain",
+          borderColor: "appColor.landBoardMain",
           "&:hover": {
-            backgroundColor: "#285f3f", // Darker shade for hover
-            borderColor: "#285f3f",
+            backgroundColor: "appColor.appBarColorHover", // Darker shade for hover
+            borderColor: "appColor.appBarColorHover",
           },
         }}
       >

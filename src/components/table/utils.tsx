@@ -13,7 +13,6 @@ import { derivedPathMany, threeDPath } from "../../pages/paths/groupPaths.ts";
 
 import { useTranslation } from "react-i18next";
 
-
 export const getFileFormats = (
   locationPathName: string,
   pathNameEnd: string
@@ -68,13 +67,11 @@ export const getFeatureCount = (
   }
 };
 
-
 export const isLevituum = (locationPathName: string) => {
+  const { t } = useTranslation();
 
-  const {  t } = useTranslation();
-
-    const extraLayers = [derivedPathMany, threeDPath];
-    return `${t("dataFrom")}: ${
-      extraLayers.includes(locationPathName) ? locationPathName : "levituum"
-    }`;
-  };
+  const extraLayers = [derivedPathMany, threeDPath];
+  return `${t("dataFrom")}: ${
+    extraLayers.includes(locationPathName) ? locationPathName : "levituum"
+  }`;
+};

@@ -1,5 +1,15 @@
 const NotFoundPage = () => {
-  return <h2 style={{ marginTop: 2, color: "black" }}>404 Not Found</h2>;
+  return (
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}>
+      <h2 style={{ margin: 0, color: "appColor.aboutPageText" }}>
+        Page not found
+      </h2>
+    </div>
+  );
 };
 
 export default NotFoundPage;

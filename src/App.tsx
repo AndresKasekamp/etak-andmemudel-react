@@ -22,7 +22,7 @@ function App() {
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
-        sx={{ textAlign: "center", color: "#32774e" }}
+        sx={{ textAlign: "center", color: "appColor.landBoardMain" }}
       >
         <Typography variant="h3" gutterBottom>
           {t("overView")}

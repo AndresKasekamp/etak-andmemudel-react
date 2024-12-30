@@ -17,7 +17,6 @@ export default function ValueChartBar({
   row,
 }: ValueChartBarProps) {
   const { t } = useTranslation();
-  
 
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>

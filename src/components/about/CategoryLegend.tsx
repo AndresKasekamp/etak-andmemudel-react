@@ -1,12 +1,5 @@
 import { Box, Typography } from "@mui/material";
 
-import {
-  MainCategory,
-  EsriCategory,
-  EtakMetaCategory,
-  RegisterCategory,
-} from "../../data/colors";
-
 import { useTranslation } from "react-i18next";
 
 export const Legend = () => {
@@ -14,21 +7,21 @@ export const Legend = () => {
 
   // Example data for the legend
   const legendItems = [
-    { color: MainCategory, label: t("mainAttributes") },
-    { color: EsriCategory, label: t("esriAttributes") },
-    { color: EtakMetaCategory, label: t("etakMetaAttributes") },
-    { color: RegisterCategory, label: t("registerAttributes") },
+    { color: "appColor.mainCategory", label: t("mainAttributes") },
+    { color: "appColor.esriCategory", label: t("esriAttributes") },
+    { color: "appColor.etakMetaCategory", label: t("etakMetaAttributes") },
+    { color: "appColor.registerCategory", label: t("registerAttributes") },
   ];
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 1, mt: 3 }}>
-      <Typography
-        variant="h5"
-        gutterBottom
-      >
+      <Typography variant="h5" gutterBottom>
         {t("attributeExplanation")}
       </Typography>
       {legendItems.map((item, index) => (
-        <Box key={index} sx={{ ml: 2, display: "flex", alignItems: "center", gap: 1 }}>
+        <Box
+          key={index}
+          sx={{ ml: 2, display: "flex", alignItems: "center", gap: 1 }}
+        >
           {/* Color box */}
           <Box
             sx={{

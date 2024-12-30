@@ -4,7 +4,6 @@ import ListItemText from "@mui/material/ListItemText";
 import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 import { TableProps, ResourcesTableProps } from "../interfaces/interfaces";
-import { FrontPageTableColor } from "../data/colors";
 
 const HorizontalList = ({ row }: { row: TableProps }) => {
   const { objectName, dataTypeClass, itemNames } = row;
@@ -16,7 +15,7 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
       sx={{
         p: { xs: 0.5, sm: 2 },
         mb: 2,
-        backgroundColor: FrontPageTableColor,
+        backgroundColor: "appColor.frontPageTableColor",
       }}
     >
       {/* Title Section */}
@@ -36,7 +35,7 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
             <ListItemButton
               component={Link}
               sx={{
-                color: "#797C7F",
+                color: "appColor.resources",
                 m: 0.5,
                 px: 1,
                 py: 0.5,

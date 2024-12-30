@@ -1,6 +1,5 @@
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-import { AppBarColor } from "../../data/colors";
 
 interface SpinnerSize {
   wfsData?: boolean; // Made optional for flexibility
@@ -22,7 +21,10 @@ export default function LoadingSpinner({ wfsData = false }: SpinnerSize) {
 
   return (
     <Box sx={wfsData ? defaultBoxStyles : centeredBoxStyles}>
-      <CircularProgress size={wfsData ? 20 : 80} sx={{ color: AppBarColor }} />
+      <CircularProgress
+        size={wfsData ? 20 : 80}
+        sx={{ color: "appColor.landBoardMain" }}
+      />
     </Box>
   );
 }

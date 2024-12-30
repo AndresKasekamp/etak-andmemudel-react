@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import { AboutPageText } from "../data/colors";
 import Legend from "../components/about/CategoryLegend";
 
 import DataSourceCount from "../components/about/DataSouceCount";
@@ -17,7 +16,7 @@ const AboutPage = () => {
     <Box
       sx={{
         textAlign: "center",
-        color: AboutPageText,
+        color: "appColor.aboutPageText",
         maxWidth: "800px",
         margin: "0 auto",
         display: "flex", // Flexbox layout

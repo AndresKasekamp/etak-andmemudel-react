@@ -58,7 +58,7 @@ export default function ChangeLanguage() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        sx={{ color: "white" }}
+        sx={{ color: "appColor.mainCategory" }}
         endIcon={<KeyboardArrowDownIcon />}
       >
         {currentLanguage}

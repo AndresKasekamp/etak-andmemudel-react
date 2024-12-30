@@ -14,11 +14,11 @@ export const TablesTogetherLink = ({ route }: TablesTogetherLinkProps) => {
   const buttonStyles = {
     ml: 2,
     mb: 2,
-    backgroundColor: "#32774E",
-    borderColor: "#32774E",
+    backgroundColor: "appColor.landBoardMain",
+    borderColor: "appColor.landBoardMain",
     "&:hover": {
-      backgroundColor: "#285f3f", // Darker shade for hover
-      borderColor: "#285f3f",
+      backgroundColor: "appColor.appBarColorHover",
+      borderColor: "appColor.appBarColorHover",
     },
   };
 
