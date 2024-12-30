@@ -7,12 +7,13 @@ export const CategoryLinks = ({ path, title, icon }: CategoryLinkProps) => {
   return (
     <Link to={path} title={title}>
       <Button
-        variant="contained"
+        variant="text"
         size="medium"
         startIcon={icon}
         sx={{
           backgroundColor: "#32774E",
           borderColor: "#32774E",
+          color: "#FFFFFF",
           "&:hover": {
             backgroundColor: "#285f3f", 
             borderColor: "#285f3f",
