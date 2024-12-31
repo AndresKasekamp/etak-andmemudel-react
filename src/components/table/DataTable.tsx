@@ -16,8 +16,6 @@ import { CategoryKey } from "../../utils/translate.ts";
 
 import ValueChartBar from "../ValueChartBar.tsx";
 
-import BarChartIcon from "@mui/icons-material/BarChart";
-
 import { useTranslation } from "react-i18next";
 
 import { Description } from "../../interfaces/interfaces.tsx";
@@ -25,6 +23,12 @@ import { Description } from "../../interfaces/interfaces.tsx";
 import { useState } from "react";
 
 import { DataTableProps } from "../../interfaces/interfaces.tsx";
+
+import { IoBarChartSharp } from "react-icons/io5";
+
+import { IconContext } from "react-icons";
+
+import { AppBarColor } from "../../data/colors.ts";
 
 export const DataTable = ({
   pathNameEnd,
@@ -86,7 +90,7 @@ export const DataTable = ({
               scope="row"
               onClick={() =>
                 Object.entries(row.chart_values).length !== 0
-                  ? handleOpen(index) // Pass row index to open specific modal
+                  ? handleOpen(index)
                   : undefined
               }
               sx={{
@@ -94,17 +98,16 @@ export const DataTable = ({
                   Object.entries(row.chart_values).length !== 0
                     ? "pointer"
                     : "default",
-                display: "flex",
-                alignItems: "center",
-                gap: 0.5,
               }}
             >
               {row.name}
               {Object.entries(row.chart_values).length !== 0 && (
-                <BarChartIcon
-                  fontSize="small"
-                  sx={{ color: "appColor.landBoardMain" }}
-                />
+                <IconContext.Provider
+                  value={{ color: AppBarColor, className: "global-class-name" }}
+                >
+                  {" "}
+                  <IoBarChartSharp />
+                </IconContext.Provider>
               )}
             </TableCell>
 
