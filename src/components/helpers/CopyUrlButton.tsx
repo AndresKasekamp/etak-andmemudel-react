@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
-import ShareIcon from "@mui/icons-material/Share";
 import Tooltip from "@mui/material/Tooltip";
 import { useTranslation } from "react-i18next";
+import { MdContentCopy } from "react-icons/md";
 
 const CopyUrlButton = (pathNameEnd: string): JSX.Element | null => {
   // Full data page the sharing is not shown
@@ -18,7 +18,7 @@ const CopyUrlButton = (pathNameEnd: string): JSX.Element | null => {
       <Button
         variant="contained"
         color="primary"
-        startIcon={<ShareIcon />}
+        startIcon={<MdContentCopy />}
         onClick={copyToClipboard}
         sx={{ marginLeft: 1, marginRight: 1 }}
       >
