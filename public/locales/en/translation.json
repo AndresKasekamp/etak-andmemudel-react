@@ -51,5 +51,7 @@
   "DGN": "Desc",
   "DWG": "Desc",
   "WFS": "Desc",
-  "shortInteger": "Short Integer"
+  "shortInteger": "Short Integer",
+  "copyToClipboardShort": "Share",
+  "copyToClipboardLong": "Copy to clipboard"
 }

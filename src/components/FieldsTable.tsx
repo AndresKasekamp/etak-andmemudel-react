@@ -23,6 +23,8 @@ import { Description } from "../interfaces/interfaces.tsx";
 import { DataTable } from "./table/DataTable.tsx";
 import { getFeatureCount, getFileFormats, isLevituum } from "./table/utils.tsx";
 
+import CopyUrlButton from "./helpers/CopyUrlButton.tsx";
+
 export const FieldsTable = ({
   elements,
   fcName,
@@ -90,7 +92,14 @@ export const FieldsTable = ({
       }}
     >
       <Box>
-        <Box sx={{ display: "flex", alignItems: "center", marginLeft: 2 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            marginLeft: 2,
+            marginTop: 1,
+          }}
+        >
           <Tooltip
             title={
               <span style={{ fontSize: "1.5em" }}>
@@ -135,11 +144,13 @@ export const FieldsTable = ({
           <Box sx={{ marginLeft: "auto" }}>
             {getFileFormats(locationPathName, pathNameEnd)}
 
+            {CopyUrlButton(pathNameEnd)}
+
             <Button
               variant="contained"
               color="primary"
               startIcon={<FileDownloadIcon />}
-              sx={{ marginLeft: 2, marginRight: 2 }}
+              sx={{ marginLeft: 1, marginRight: 2 }}
               onClick={handleExportPDF}
             >
               PDF

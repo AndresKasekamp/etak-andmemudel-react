@@ -9,7 +9,15 @@ export const FileFormat = ({ format }: FileFormatProps) => {
   const { t } = useTranslation();
   return (
     <Tooltip title={t(format)} placement="bottom">
-      <Button>{format}</Button>
+      <Button
+        sx={{
+          "&:hover": {
+            backgroundColor: "inherit", // No darkening effect on hover
+          },
+        }}
+      >
+        {format}
+      </Button>
     </Tooltip>
   );
 };

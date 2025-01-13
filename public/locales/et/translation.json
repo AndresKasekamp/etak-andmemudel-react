@@ -51,7 +51,7 @@
   "DGN": "MicroStation DGN - atribuudid puuduvad",
   "DWG": "Autodesk DWG - atribuudid puuduvad",
   "WFS": "Web Feature Service teenus, z-koordinaat puudub",
-  "shortInteger": "Lühike täisarv"
-
-
+  "shortInteger": "Lühike täisarv",
+  "copyToClipboardShort": "Jaga",
+  "copyToClipboardLong": "Kopeeri lõikelauale"
 }

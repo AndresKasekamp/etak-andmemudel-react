@@ -36,7 +36,12 @@ export const getFileFormats = (
   }
 
   return (
-    <ButtonGroup color="secondary" variant="contained" size="small">
+    <ButtonGroup
+      color="secondary"
+      variant="outlined"
+      size="small"
+      sx={{ marginRight: 1, marginBottom: 1 }}
+    >
       {formats.map((format, index) => (
         <FileFormat key={index} format={format} />
       ))}
