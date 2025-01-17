@@ -6,7 +6,8 @@ export const getTableName = (location: Location): string[] => {
     ? location.pathname.split("/").pop()
     : location.pathname;
 
-  const locationPathName = location.pathname.split("/")[1];
+  // This will retrieve either tuletiskihid or 3d
+  const locationPathName = location.pathname.split("/")[2];
 
   return [currentEndpoint || "", locationPathName];
 };

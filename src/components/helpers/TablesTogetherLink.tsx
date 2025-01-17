@@ -8,8 +8,9 @@ import { TablesTogetherLinkProps } from "../../interfaces/interfaces";
 export const TablesTogetherLink = ({ route }: TablesTogetherLinkProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
+  const langRoute = `/${i18n.language}${route}`
   // Common button styles
   const buttonStyles = {
     ml: 2,
@@ -23,7 +24,7 @@ export const TablesTogetherLink = ({ route }: TablesTogetherLinkProps) => {
   };
 
   return (
-    <Link to={route} style={{ textDecoration: "none" }}>
+    <Link to={langRoute} style={{ textDecoration: "none" }}>
       <Button
         variant="contained"
         size="large"

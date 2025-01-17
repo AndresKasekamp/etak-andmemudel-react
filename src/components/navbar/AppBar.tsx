@@ -40,7 +40,7 @@ export default function EtakAppBar() {
           <Box
             sx={{ ml: "auto", display: "flex", gap: 1, alignItems: "center" }}
           >
-            <ChangeLanguage></ChangeLanguage>
+            <ChangeLanguage />
             <LinkAbout></LinkAbout>
             {isMobile ? (
               <LinksMenu></LinksMenu>
@@ -57,7 +57,7 @@ export default function EtakAppBar() {
                   icon={<ThreeDRotationIcon />}
                 ></CategoryLinks>
                 <CategoryLinks
-                  path={"/"}
+                  path={""}
                   title={t("nameLevituum")}
                   icon={<HomeIcon />}
                 ></CategoryLinks>

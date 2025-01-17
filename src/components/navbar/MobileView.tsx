@@ -42,7 +42,7 @@ export default function LinksMenu() {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Link to="/" title={t("nameLevituum")}>
+          <Link to="" title={t("nameLevituum")}>
             {t("nameLevituum")}
           </Link>
         </MenuItem>

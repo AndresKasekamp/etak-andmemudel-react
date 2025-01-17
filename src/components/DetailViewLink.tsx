@@ -12,12 +12,12 @@ export const DetailViewLink = ({
   group,
   table,
 }: DetailViewLinkProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const extraLayers = [derivedPathMany, threeDPath];
-  let linkTo = `/${group}/${table}`;
+  let linkTo = `/${i18n.language}/${group}/${table}`;
   if (extraLayers.includes(locationPathName)) {
-    linkTo = `/${locationPathName}/${group}/${table}`;
+    linkTo = `/${i18n.language}/${locationPathName}/${group}/${table}`;
   }
 
   return (

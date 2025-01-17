@@ -40,12 +40,12 @@ const generateAllDataMerge = (combinedData: FeatureClassOutput[]) => {
 };
 
 const initPath = {
-  path: "/",
+  path: "",
   element: <App />,
 };
 
 const allLevituumPath = {
-  path: `/${levituumPath}/all`,
+  path: `${levituumPath}/all`,
   element: (
     <OnePagerForData
       allTablesAndDomains={generateAllDataMerge(allLevituumDataTogether)}
@@ -54,7 +54,7 @@ const allLevituumPath = {
 };
 
 const allDerivativePath = {
-  path: `/${derivedPathMany}/all`,
+  path: `${derivedPathMany}/all`,
   element: (
     <OnePagerForData
       allTablesAndDomains={generateAllDataMerge(allTuletiskihidTogether)}
@@ -63,7 +63,7 @@ const allDerivativePath = {
 };
 
 const all3DPath = {
-  path: `/${path3d}/all`,
+  path: `${path3d}/all`,
   element: (
     <OnePagerForData
       allTablesAndDomains={generateAllDataMerge(all3dTogether)}

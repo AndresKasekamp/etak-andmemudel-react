@@ -15,7 +15,11 @@ i18n
     returnObjects: true,
     fallbackLng: "et",
     lng: "et",
-
+    supportedLngs: ['en', 'et'],
+    // detection: {
+    //   order: ['path', 'cookie', 'localStorage'],
+    //   caches: ['cookie'],
+    // },
     interpolation: {
       escapeValue: false, // react already safes from xss
     },

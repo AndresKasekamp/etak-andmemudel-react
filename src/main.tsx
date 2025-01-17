@@ -8,7 +8,7 @@ import LoadingSpinner from "./components/helpers/LoadingSpinner.tsx";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material";
-
+import LanguageInitializer from "./utils/LanguageInitializer.tsx";
 import {
   AppBarColor,
   AppBarColorHover,
@@ -21,13 +21,13 @@ import {
   TableHeaderColor,
   Resources,
   FrontPageTableColor,
-  AboutPageText
+  AboutPageText,
 } from "./data/colors.ts";
 
 const theme = createTheme({
   palette: {
     mode: "light",
-    
+
     //@ts-ignore
     appColor: {
       landBoardMain: AppBarColor,
@@ -51,7 +51,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <React.Suspense fallback={<LoadingSpinner wfsData={false} />}>
-        <RouterProvider router={router}></RouterProvider>
+        <LanguageInitializer />
+        <RouterProvider router={router}/>
       </React.Suspense>
     </ThemeProvider>
   </React.StrictMode>
