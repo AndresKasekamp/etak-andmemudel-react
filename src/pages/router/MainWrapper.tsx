@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 
 const MainWrapper = () => {
   const { lng = "" } = useParams();
-  console.log("lng", lng);
   return (
     <>
       {["et", "en"].includes(lng) ? (

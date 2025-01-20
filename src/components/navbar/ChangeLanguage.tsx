@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useNavigate, useLocation, Location } from "react-router-dom";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const languages = [
   { code: "et", lang: "EST" },
@@ -16,19 +17,20 @@ export default function ChangeLanguage() {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
   const location: Location = useLocation();
+  const { lng } = useParams();
 
-  console.log("i18n lang", i18n.language);
+  console.log("lng change", lng);
+
 
   // Get the initial language setup from i18n
-  const initialLang = languages.find((lang) => lang.code === i18n.language) || {
+  const initialLang = languages.find((lang) => lang.code === lng) || {
     code: "en",
     lang: "ENG",
   };
   const alternateLang = languages.find(
-    (lang) => lang.code !== i18n.language
+    (lang) => lang.code !== lng
   ) || { code: "et", lang: "EST" };
 
-  console.log("Initial lang", initialLang);
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [currentLanguage, setCurrentLanguage] = useState(initialLang.lang);
@@ -36,16 +38,15 @@ export default function ChangeLanguage() {
 
   useEffect(() => {
     const initialLang = languages.find(
-      (lang) => lang.code === i18n.language
+      (lang) => lang.code === lng
     ) || { code: "en", lang: "ENG" };
     const alternateLang = languages.find(
-      (lang) => lang.code !== i18n.language
+      (lang) => lang.code !== lng
     ) || { code: "et", lang: "EST" };
     setCurrentLanguage(initialLang.lang);
     setMenuLanguage(alternateLang.lang);
-  }, [i18n.language]);
+  }, [lng]);
 
-  console.log("Current language", currentLanguage);
   const open = Boolean(anchorEl);
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {

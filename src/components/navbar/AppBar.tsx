@@ -12,7 +12,7 @@ import { useTheme } from "@mui/material/styles";
 
 import { CategoryLinks } from "./CategoryLinks";
 
-import { derivedPathMany, threeDPath } from "../../pages/paths/groupPaths";
+import { derivedPathMany, threeDPath, levituumPath } from "../../pages/paths/groupPaths";
 
 import HomeIcon from "@mui/icons-material/Home";
 import ThreeDRotationIcon from "@mui/icons-material/ThreeDRotation";
@@ -41,7 +41,7 @@ export default function EtakAppBar() {
             sx={{ ml: "auto", display: "flex", gap: 1, alignItems: "center" }}
           >
             <ChangeLanguage />
-            <LinkAbout></LinkAbout>
+            <LinkAbout />
             {isMobile ? (
               <LinksMenu></LinksMenu>
             ) : (
@@ -57,7 +57,7 @@ export default function EtakAppBar() {
                   icon={<ThreeDRotationIcon />}
                 ></CategoryLinks>
                 <CategoryLinks
-                  path={""}
+                  path={levituumPath}
                   title={t("nameLevituum")}
                   icon={<HomeIcon />}
                 ></CategoryLinks>

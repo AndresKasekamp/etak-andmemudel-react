@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useState, MouseEvent } from "react";
 
-import { derivedPathMany, threeDPath } from "../../pages/paths/groupPaths";
+import { derivedPathMany, threeDPath, levituumPath } from "../../pages/paths/groupPaths";
 
 export default function LinksMenu() {
   const { t } = useTranslation();
@@ -42,7 +42,7 @@ export default function LinksMenu() {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Link to="" title={t("nameLevituum")}>
+          <Link to={levituumPath} title={t("nameLevituum")}>
             {t("nameLevituum")}
           </Link>
         </MenuItem>

@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { useTranslation } from "react-i18next";
 import { TablesTogetherLinkProps } from "../../interfaces/interfaces";
+import { useParams } from "react-router-dom";
 
 export const TablesTogetherLink = ({ route }: TablesTogetherLinkProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { lng } = useParams<{ lng: string }>();
 
-  const langRoute = `/${i18n.language}${route}`
+  const langRoute = `/${lng}${route}`;
   // Common button styles
   const buttonStyles = {
     ml: 2,

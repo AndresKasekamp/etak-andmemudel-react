@@ -5,20 +5,17 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { DetailViewLinkProps } from "../interfaces/interfaces";
 import { useTranslation } from "react-i18next";
-import { derivedPathMany, threeDPath } from "../pages/paths/groupPaths";
+import { useParams } from "react-router-dom";
 
 export const DetailViewLink = ({
   locationPathName,
   group,
   table,
 }: DetailViewLinkProps) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { lng } = useParams<{ lng: string }>();
 
-  const extraLayers = [derivedPathMany, threeDPath];
-  let linkTo = `/${i18n.language}/${group}/${table}`;
-  if (extraLayers.includes(locationPathName)) {
-    linkTo = `/${i18n.language}/${locationPathName}/${group}/${table}`;
-  }
+  const linkTo = `/${lng}/${locationPathName}/${group}/${table}`;
 
   return (
     <Link to={linkTo}>

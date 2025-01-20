@@ -40,7 +40,7 @@ const generateAllDataMerge = (combinedData: FeatureClassOutput[]) => {
 };
 
 const initPath = {
-  path: "",
+  path: levituumPath,
   element: <App />,
 };
 
@@ -90,7 +90,7 @@ const featureClassPath = (
   featureclasses: FeatureClassOutput[]
 ): FeatureClassPath[] => {
   const featureclassPaths = featureclasses.map((fc) => ({
-    path: `${fc.groupName}/${fc.fcName}`,
+    path: `levituum/${fc.groupName}/${fc.fcName}`,
     element: (
       <FullDataTable
         fcName={fc.fcName}
