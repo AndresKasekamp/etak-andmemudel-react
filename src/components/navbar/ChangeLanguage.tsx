@@ -19,30 +19,29 @@ export default function ChangeLanguage() {
   const location: Location = useLocation();
   const { lng } = useParams();
 
-  console.log("lng change", lng);
-
-
   // Get the initial language setup from i18n
   const initialLang = languages.find((lang) => lang.code === lng) || {
     code: "en",
     lang: "ENG",
   };
-  const alternateLang = languages.find(
-    (lang) => lang.code !== lng
-  ) || { code: "et", lang: "EST" };
-
+  const alternateLang = languages.find((lang) => lang.code !== lng) || {
+    code: "et",
+    lang: "EST",
+  };
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [currentLanguage, setCurrentLanguage] = useState(initialLang.lang);
   const [menuLanguage, setMenuLanguage] = useState(alternateLang.lang);
 
   useEffect(() => {
-    const initialLang = languages.find(
-      (lang) => lang.code === lng
-    ) || { code: "en", lang: "ENG" };
-    const alternateLang = languages.find(
-      (lang) => lang.code !== lng
-    ) || { code: "et", lang: "EST" };
+    const initialLang = languages.find((lang) => lang.code === lng) || {
+      code: "en",
+      lang: "ENG",
+    };
+    const alternateLang = languages.find((lang) => lang.code !== lng) || {
+      code: "et",
+      lang: "EST",
+    };
     setCurrentLanguage(initialLang.lang);
     setMenuLanguage(alternateLang.lang);
   }, [lng]);
@@ -64,10 +63,8 @@ export default function ChangeLanguage() {
       (lang) => lang.lang === newCurrentLanguage
     )?.code;
 
-    const pathname = location.pathname;
-
     // Extract the path after the language code
-    const pathAfterLanguage = pathname.replace(/^\/[^/]+/, ""); // Remove the first segment
+    const pathAfterLanguage = location.pathname.replace(`/${lng}`, "");
 
     if (newLanguageCode) {
       i18n.changeLanguage(newLanguageCode);

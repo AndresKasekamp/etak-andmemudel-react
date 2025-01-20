@@ -10,9 +10,9 @@ const MainWrapper = () => {
   const { lng = "" } = useParams();
   return (
     <>
+      <EtakAppBar />
       {["et", "en"].includes(lng) ? (
         <>
-          <EtakAppBar />
           <Container maxWidth="xl" sx={{ height: "100vh" }}>
             <ScrollToTopOnPageChange />
             <ScrollToTop smooth color="#6f00ff" />
