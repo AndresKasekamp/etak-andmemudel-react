@@ -48,9 +48,7 @@ const theme = createTheme({
   },
 });
 
-const projectId = "pxd52elxcc";
-
-Clarity.init(projectId);
+Clarity.init(import.meta.env.VITE_CLARITY_PROJECT_ID);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
