@@ -25,6 +25,7 @@
     "@emotion/styled": "^11.13.0",
     "@fontsource/ibm-plex-mono": "^5.1.1",
     "@fontsource/roboto": "^5.0.14",
+    "@microsoft/clarity": "^1.0.0",
     "@mui/icons-material": "^6.0.1",
     "@mui/material": "^6.0.1",
     "@mui/x-charts": "^7.23.1",

@@ -9,6 +9,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material";
 import LanguageInitializer from "./utils/LanguageInitializer.tsx";
+import Clarity from "@microsoft/clarity";
+
 import {
   AppBarColor,
   AppBarColorHover,
@@ -46,13 +48,17 @@ const theme = createTheme({
   },
 });
 
+const projectId = "pxd52elxcc";
+
+Clarity.init(projectId);
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <React.Suspense fallback={<LoadingSpinner wfsData={false} />}>
         <LanguageInitializer />
-        <RouterProvider router={router}/>
+        <RouterProvider router={router} />
       </React.Suspense>
     </ThemeProvider>
   </React.StrictMode>
