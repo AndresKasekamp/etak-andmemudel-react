@@ -53,5 +53,7 @@
   "WFS": "Desc",
   "shortInteger": "Short Integer",
   "copyToClipboardShort": "Share",
-  "copyToClipboardLong": "Copy to clipboard"
+  "copyToClipboardLong": "Copy to clipboard",
+  "pageTitle": "ETDB Data Model",
+  "notFoundPage": "Lehte ei leitud"
 }

@@ -13,34 +13,36 @@ const AboutPage = () => {
   // Project metadata
 
   return (
-    <Box
-      sx={{
-        textAlign: "center",
-        color: "appColor.aboutPageText",
-        maxWidth: "800px",
-        margin: "0 auto",
-        display: "flex", // Flexbox layout
-        flexDirection: "column", // Stack children vertically
-        alignItems: "center", // Center children horizontally
-      }}
-    >
-      <Typography variant="h4" gutterBottom>
-        {t("aboutPageTitle")}
-      </Typography>
-      <Typography variant="body1" component="p">
-        {t("aboutPageText")}
-      </Typography>
+    <>
+      <Box
+        sx={{
+          textAlign: "center",
+          color: "appColor.aboutPageText",
+          maxWidth: "800px",
+          margin: "0 auto",
+          display: "flex", // Flexbox layout
+          flexDirection: "column", // Stack children vertically
+          alignItems: "center", // Center children horizontally
+        }}
+      >
+        <Typography variant="h4" gutterBottom>
+          {t("aboutPageTitle")}
+        </Typography>
+        <Typography variant="body1" component="p">
+          {t("aboutPageText")}
+        </Typography>
 
-      <DataSourceCount></DataSourceCount>
+        <DataSourceCount></DataSourceCount>
 
-      <Legend></Legend>
+        <Legend></Legend>
 
-      <UsefulLinks></UsefulLinks>
+        <UsefulLinks></UsefulLinks>
 
-      <ContactInfo></ContactInfo>
+        <ContactInfo></ContactInfo>
 
-      <MetaInfo></MetaInfo>
-    </Box>
+        <MetaInfo></MetaInfo>
+      </Box>
+    </>
   );
 };
 

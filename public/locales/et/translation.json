@@ -53,5 +53,7 @@
   "WFS": "Web Feature Service teenus, z-koordinaat puudub",
   "shortInteger": "Lühike täisarv",
   "copyToClipboardShort": "Jaga",
-  "copyToClipboardLong": "Kopeeri lõikelauale"
+  "copyToClipboardLong": "Kopeeri lõikelauale",
+  "pageTitle": "ETAK Andmemudel",
+  "notFoundPage": "Lehte ei leitud"
 }

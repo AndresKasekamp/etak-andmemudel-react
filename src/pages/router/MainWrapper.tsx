@@ -10,16 +10,6 @@ const MainWrapper = () => {
   const { lng = "" } = useParams();
   return (
     <>
-      {(() => {
-        switch (lng) {
-          case "et":
-            return <title>ETAK Andmemudel</title>;
-          case "en":
-            return <title>ETAK Data Model</title>;
-          default:
-            return <title>ETAK</title>;
-        }
-      })()}
       <EtakAppBar />
       {["et", "en"].includes(lng) ? (
         <>

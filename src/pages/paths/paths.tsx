@@ -9,6 +9,8 @@ import Derivatives from "../Derivatives";
 import ThreeD from "../ThreeD";
 import AboutPage from "../About";
 
+import PageTitle from "../../components/PageTitle";
+
 import {
   threeDPath as path3d,
   derivedPathMany,
@@ -41,49 +43,78 @@ const generateAllDataMerge = (combinedData: FeatureClassOutput[]) => {
 
 const initPath = {
   path: levituumPath,
-  element: <App />,
+  element: (
+    <>
+      <PageTitle title="Levituum" />
+      <App />
+    </>
+  ),
 };
 
 const allLevituumPath = {
   path: `${levituumPath}/all`,
   element: (
-    <OnePagerForData
-      allTablesAndDomains={generateAllDataMerge(allLevituumDataTogether)}
-    />
+    <>
+      <PageTitle title="Levituum all" />
+      <OnePagerForData
+        allTablesAndDomains={generateAllDataMerge(allLevituumDataTogether)}
+      />
+    </>
   ),
 };
 
 const allDerivativePath = {
   path: `${derivedPathMany}/all`,
   element: (
-    <OnePagerForData
-      allTablesAndDomains={generateAllDataMerge(allTuletiskihidTogether)}
-    />
+    <>
+      <PageTitle title="Tuletiskihid all" />
+      <OnePagerForData
+        allTablesAndDomains={generateAllDataMerge(allTuletiskihidTogether)}
+      />
+    </>
   ),
 };
 
 const all3DPath = {
   path: `${path3d}/all`,
   element: (
-    <OnePagerForData
-      allTablesAndDomains={generateAllDataMerge(all3dTogether)}
-    />
+    <>
+      <PageTitle title="3D all" />
+      <OnePagerForData
+        allTablesAndDomains={generateAllDataMerge(all3dTogether)}
+      />
+    </>
   ),
 };
 
 const derivativePath = {
   path: derivedPathMany,
-  element: <Derivatives />,
+  element: (
+    <>
+      <PageTitle title="Tuletiskihid" />
+      <Derivatives />,
+    </>
+  ),
 };
 
 const threeDPath = {
   path: path3d,
-  element: <ThreeD />,
+  element: (
+    <>
+      <PageTitle title="3D" />
+      <ThreeD />,
+    </>
+  ),
 };
 
 const aboutPath = {
   path: pathAbout,
-  element: <AboutPage />,
+  element: (
+    <>
+      <PageTitle title="About" />
+      <AboutPage />,
+    </>
+  ),
 };
 
 const featureClassPath = (
@@ -92,13 +123,16 @@ const featureClassPath = (
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `levituum/${fc.groupName}/${fc.fcName}`,
     element: (
-      <FullDataTable
-        fcName={fc.fcName}
-        groupName={fc.groupName}
-        elements={fc.elements}
-        domainTables={fc.domainTables}
-        headingData={fc.headingData}
-      />
+      <>
+        <PageTitle title={fc.fcName} />
+        <FullDataTable
+          fcName={fc.fcName}
+          groupName={fc.groupName}
+          elements={fc.elements}
+          domainTables={fc.domainTables}
+          headingData={fc.headingData}
+        />
+      </>
     ),
   }));
 
@@ -111,13 +145,16 @@ const featureClassTuletiskiht = (
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `tuletiskihid/${fc.groupName}/${fc.fcName}`,
     element: (
-      <FullDataTable
-        fcName={fc.fcName}
-        groupName={fc.groupName}
-        elements={fc.elements}
-        domainTables={fc.domainTables}
-        headingData={fc.headingData}
-      />
+      <>
+        <PageTitle title={fc.fcName} />
+        <FullDataTable
+          fcName={fc.fcName}
+          groupName={fc.groupName}
+          elements={fc.elements}
+          domainTables={fc.domainTables}
+          headingData={fc.headingData}
+        />
+      </>
     ),
   }));
 
@@ -130,13 +167,16 @@ const featureClassPath3D = (
   const featureclassPaths = featureclasses.map((fc) => ({
     path: `3d/${fc.groupName}/${fc.fcName}`,
     element: (
-      <FullDataTable
-        fcName={fc.fcName}
-        groupName={fc.groupName}
-        elements={fc.elements}
-        domainTables={fc.domainTables}
-        headingData={fc.headingData}
-      />
+      <>
+        <PageTitle title={fc.fcName} />
+        <FullDataTable
+          fcName={fc.fcName}
+          groupName={fc.groupName}
+          elements={fc.elements}
+          domainTables={fc.domainTables}
+          headingData={fc.headingData}
+        />
+      </>
     ),
   }));
 
