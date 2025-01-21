@@ -49,6 +49,7 @@ const theme = createTheme({
 });
 
 Clarity.init(import.meta.env.VITE_CLARITY_PROJECT_ID);
+console.log("Clarity initialized", import.meta.env.VITE_CLARITY_PROJECT_ID);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
