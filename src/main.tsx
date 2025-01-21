@@ -10,6 +10,7 @@ import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material";
 import LanguageInitializer from "./utils/LanguageInitializer.tsx";
 import Clarity from "@microsoft/clarity";
+import { PostHogProvider } from "posthog-js/react";
 
 import {
   AppBarColor,
@@ -48,16 +49,25 @@ const theme = createTheme({
   },
 });
 
+const options = {
+  api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+};
+
 Clarity.init(import.meta.env.VITE_CLARITY_PROJECT_ID);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <React.Suspense fallback={<LoadingSpinner wfsData={false} />}>
-        <LanguageInitializer />
-        <RouterProvider router={router} />
-      </React.Suspense>
-    </ThemeProvider>
+    <PostHogProvider
+      apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY}
+      options={options}
+    >
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <React.Suspense fallback={<LoadingSpinner wfsData={false} />}>
+          <LanguageInitializer />
+          <RouterProvider router={router} />
+        </React.Suspense>
+      </ThemeProvider>
+    </PostHogProvider>
   </React.StrictMode>
 );
