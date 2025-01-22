@@ -15,6 +15,8 @@ EST: Genereerib ETAK andmemudelile front-endi. Kasutab back-endi abil loodud JSO
 
 ## Installation options
 
+You can either use `node` (tested on v21.6.0) and `npm` or `Docker`.
+
 - [npm](#📦-npm)
 - [Docker](#🐳-docker)
 
@@ -44,7 +46,12 @@ cd etak-andmemudel-frontend
 npm install
 ```
 
-4) Build the app:
+If you prefer to have the cleanest possible install use:
+```bash
+npm ci && npm cache clean --force
+```
+
+4) Build the app with Vite:
 
 ```bash
 npm run build

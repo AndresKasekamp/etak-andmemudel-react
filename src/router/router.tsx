@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import { paths } from "../paths/paths";
-import MainWrapper from "./MainWrapper";
-import NotFoundPage from "../NotFoundPage";
+import { paths } from "../pages/paths/paths";
+import Layout from "../layouts/Layout";
+import NotFoundPage from "../pages/NotFoundPage";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/:lng",
-    element: <MainWrapper />,
+    element: <Layout />,
     children: [...paths(), { path: "*", element: <NotFoundPage /> }],
   },
 ]);

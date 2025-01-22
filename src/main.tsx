@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
-import { router } from "./pages/router/router.tsx";
+import { router } from "./router/router.tsx";
 import "./utils/i18n";
 import LoadingSpinner from "./components/helpers/LoadingSpinner.tsx";
 import CssBaseline from "@mui/material/CssBaseline";

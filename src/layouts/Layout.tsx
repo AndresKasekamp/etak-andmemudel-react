@@ -1,12 +1,12 @@
-import EtakAppBar from "../../components/navbar/AppBar";
+import EtakAppBar from "../components/navbar/AppBar";
 import { Outlet } from "react-router-dom";
-import ScrollToTopOnPageChange from "../../components/helpers/ScrollToTop";
+import ScrollToTopOnPageChange from "../components/helpers/ScrollToTop";
 import ScrollToTop from "react-scroll-to-top";
 import Container from "@mui/material/Container";
-import NotFoundPage from "../NotFoundPage";
+import NotFoundPage from "../pages/NotFoundPage";
 import { useParams } from "react-router-dom";
 
-const MainWrapper = () => {
+const Layout = () => {
   const { lng = "" } = useParams();
   return (
     <>
@@ -26,4 +26,4 @@ const MainWrapper = () => {
   );
 };
 
-export default MainWrapper;
+export default Layout;
