@@ -28,7 +28,7 @@ function App() {
           {t("overView")}
         </Typography>
 
-        <TablesTogetherLink route="/levituum/all" />
+        <TablesTogetherLink route="all" />
       </Box>
 
       <ResourcesTable

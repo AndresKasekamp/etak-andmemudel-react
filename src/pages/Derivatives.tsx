@@ -26,7 +26,7 @@ function Derivatives() {
         <Typography variant="h3" gutterBottom>
           {t("nameDerivatives")}
         </Typography>
-        <TablesTogetherLink route="/tuletiskihid/all" />
+        <TablesTogetherLink route="all" />
       </Box>
 
       <ResourcesTable

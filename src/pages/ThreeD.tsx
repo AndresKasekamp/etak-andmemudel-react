@@ -24,7 +24,7 @@ function ThreeD() {
           {t("name3DLayers")}
         </Typography>
 
-        <TablesTogetherLink route="/3d/all" />
+        <TablesTogetherLink route="all" />
       </Box>
 
       <ResourcesTable
