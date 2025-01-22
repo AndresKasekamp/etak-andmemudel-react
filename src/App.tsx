@@ -1,18 +1,12 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-import { generateFeatureClass } from "./data/featureClasses.ts";
-import {
-  pointPath,
-  polyPath,
-  linePath,
-  metadataPath,
-} from "./pages/paths/groupPaths.ts";
 import { TablesTogetherLink } from "./components/helpers/TablesTogetherLink.tsx";
 import { useTranslation } from "react-i18next";
 import ResourcesTable from "./components/ResourcesList.tsx";
+import { AppProps } from "./interfaces/interfaces.tsx";
 
-function App() {
+function App({ pageTitle, data }: AppProps) {
   const { t } = useTranslation();
 
   return (
@@ -25,41 +19,13 @@ function App() {
         sx={{ textAlign: "center", color: "appColor.landBoardMain" }}
       >
         <Typography variant="h3" gutterBottom>
-          {t("overView")}
+          {t(pageTitle)}
         </Typography>
 
         <TablesTogetherLink route="all" />
       </Box>
 
-      <ResourcesTable
-        data={[
-          {
-            objectName: t("nameMetadata"),
-            dataTypeClass: metadataPath,
-            itemNames: generateFeatureClass().metaandmed,
-          },
-          {
-            objectName: t("namePointObjects"),
-            dataTypeClass: pointPath,
-            itemNames: generateFeatureClass().punktobjektid,
-          },
-          {
-            objectName: t("nameLineObjects"),
-            dataTypeClass: linePath,
-            itemNames: generateFeatureClass().joonobjektid,
-          },
-          {
-            objectName: t("nameMainPolygonObjects"),
-            dataTypeClass: polyPath,
-            itemNames: generateFeatureClass().pindobjektid,
-          },
-          {
-            objectName: t("nameOverlappingPolygonObjects"),
-            dataTypeClass: polyPath,
-            itemNames: generateFeatureClass().pindobjektidOverlap,
-          },
-        ]}
-      ></ResourcesTable>
+      <ResourcesTable data={data} />
     </>
   );
 }

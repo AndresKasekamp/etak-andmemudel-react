@@ -163,6 +163,11 @@ export interface DataTableProps {
   elements: Field[];
 }
 
+export interface AppProps {
+  pageTitle: string;
+  data: TableProps[]; // Replace 'any' with the appropriate type if known
+}
+
 // Use a union type for the keys (valid geometry types)
 export type GeomTypeKey =
   | "Multi Line String"

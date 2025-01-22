@@ -4,9 +4,12 @@ import ListItemText from "@mui/material/ListItemText";
 import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 import { TableProps, ResourcesTableProps } from "../interfaces/interfaces";
+import { useTranslation } from "react-i18next";
 
 const HorizontalList = ({ row }: { row: TableProps }) => {
   const { objectName, dataTypeClass, itemNames } = row;
+
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -20,7 +23,7 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
     >
       {/* Title Section */}
       <Typography variant="h6" sx={{ mb: 1 }}>
-        {objectName}
+        {t(objectName)}
       </Typography>
 
       {/* Horizontal List */}

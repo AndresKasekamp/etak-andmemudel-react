@@ -5,8 +5,7 @@ import { OnePagerForData } from "../../components/AllDataInOnePage";
 import { FeatureClassPath } from "../../interfaces/interfaces";
 
 import { FeatureClassOutput } from "../../interfaces/interfaces";
-import Derivatives from "../Derivatives";
-import ThreeD from "../ThreeD";
+
 import AboutPage from "../About";
 
 import PageTitle from "../../components/PageTitle";
@@ -17,6 +16,16 @@ import {
   aboutPath as pathAbout,
   levituumPath,
 } from "./groupPaths";
+
+import {
+  pointPath,
+  polyPath,
+  linePath,
+  metadataPath,
+  lod0Path,
+  lod1Path,
+  lod2Path,
+} from "./groupPaths.ts";
 
 const allLevituumDataTogether = [
   ...generateFeatureClass().metaandmed,
@@ -46,7 +55,36 @@ const initPath = {
   element: (
     <>
       <PageTitle title="Levituum" />
-      <App />
+      <App
+        pageTitle="overView"
+        data={[
+          {
+            objectName: "nameMetadata",
+            dataTypeClass: metadataPath,
+            itemNames: generateFeatureClass().metaandmed,
+          },
+          {
+            objectName: "namePointObjects",
+            dataTypeClass: pointPath,
+            itemNames: generateFeatureClass().punktobjektid,
+          },
+          {
+            objectName: "nameLineObjects",
+            dataTypeClass: linePath,
+            itemNames: generateFeatureClass().joonobjektid,
+          },
+          {
+            objectName: "nameMainPolygonObjects",
+            dataTypeClass: polyPath,
+            itemNames: generateFeatureClass().pindobjektid,
+          },
+          {
+            objectName: "nameOverlappingPolygonObjects",
+            dataTypeClass: polyPath,
+            itemNames: generateFeatureClass().pindobjektidOverlap,
+          },
+        ]}
+      />
     </>
   ),
 };
@@ -92,7 +130,23 @@ const derivativePath = {
   element: (
     <>
       <PageTitle title="nameDerivatives" translate={true} />
-      <Derivatives />,
+      <App
+        pageTitle="nameDerivatives"
+        data={[
+          {
+            objectName: "nameLineObjects",
+            dataTypeClass: linePath,
+            itemNames: generateFeatureClass().tuletiskihidLines,
+          },
+
+          {
+            objectName: "nameAllPolygonObjects",
+            dataTypeClass: polyPath,
+            itemNames: generateFeatureClass().tuletiskihidPolygons,
+          },
+        ]}
+      />
+      ,
     </>
   ),
 };
@@ -102,7 +156,27 @@ const threeDPath = {
   element: (
     <>
       <PageTitle title="3D" />
-      <ThreeD />,
+      <App
+        pageTitle="name3DLayers"
+        data={[
+          {
+            objectName: "LoD2",
+            dataTypeClass: lod2Path,
+            itemNames: generateFeatureClass().lod2,
+          },
+          {
+            objectName: "LoD1",
+            dataTypeClass: lod1Path,
+            itemNames: generateFeatureClass().lod1,
+          },
+          {
+            objectName: "LoD0",
+            dataTypeClass: lod0Path,
+            itemNames: generateFeatureClass().lod0,
+          },
+        ]}
+      />
+      ,
     </>
   ),
 };
