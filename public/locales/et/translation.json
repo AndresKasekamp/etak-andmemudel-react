@@ -55,5 +55,8 @@
   "copyToClipboardShort": "Jaga",
   "copyToClipboardLong": "Kopeeri lõikelauale",
   "pageTitle": "ETAK Andmemudel",
-  "notFoundPage": "Lehte ei leitud"
+  "notFoundPage": "Lehte ei leitud",
+  "levituumAll": "Levituum kõik koos",
+  "tuletiskihidAll": "Tuletiskihid kõik koos",
+  "3DAll": "3D kõik koos"
 }

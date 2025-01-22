@@ -55,5 +55,8 @@
   "copyToClipboardShort": "Share",
   "copyToClipboardLong": "Copy to clipboard",
   "pageTitle": "ETDB Data Model",
-  "notFoundPage": "Lehte ei leitud"
+  "notFoundPage": "Lehte ei leitud",
+  "levituumAll": "Levituum All Together",
+  "tuletiskihidAll": "Derivatives All Together",
+  "3DAll": "3D All Together"
 }

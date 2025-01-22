@@ -55,7 +55,7 @@ const allLevituumPath = {
   path: `${levituumPath}/all`,
   element: (
     <>
-      <PageTitle title="Levituum all" />
+      <PageTitle title="levituumAll" translate={true} />
       <OnePagerForData
         allTablesAndDomains={generateAllDataMerge(allLevituumDataTogether)}
       />
@@ -67,7 +67,7 @@ const allDerivativePath = {
   path: `${derivedPathMany}/all`,
   element: (
     <>
-      <PageTitle title="Tuletiskihid all" />
+      <PageTitle title="tuletiskihidAll" translate={true} />
       <OnePagerForData
         allTablesAndDomains={generateAllDataMerge(allTuletiskihidTogether)}
       />
@@ -79,7 +79,7 @@ const all3DPath = {
   path: `${path3d}/all`,
   element: (
     <>
-      <PageTitle title="3D all" />
+      <PageTitle title="3DAll" translate={true} />
       <OnePagerForData
         allTablesAndDomains={generateAllDataMerge(all3dTogether)}
       />
@@ -91,7 +91,7 @@ const derivativePath = {
   path: derivedPathMany,
   element: (
     <>
-      <PageTitle title="Tuletiskihid" />
+      <PageTitle title="nameDerivatives" translate={true} />
       <Derivatives />,
     </>
   ),
@@ -111,61 +111,18 @@ const aboutPath = {
   path: pathAbout,
   element: (
     <>
-      <PageTitle title="About" />
+      <PageTitle title="nameAboutPage" translate={true} />
       <AboutPage />,
     </>
   ),
 };
 
 const featureClassPath = (
-  featureclasses: FeatureClassOutput[]
+  featureclasses: FeatureClassOutput[],
+  pageName: string
 ): FeatureClassPath[] => {
   const featureclassPaths = featureclasses.map((fc) => ({
-    path: `levituum/${fc.groupName}/${fc.fcName}`,
-    element: (
-      <>
-        <PageTitle title={fc.fcName} />
-        <FullDataTable
-          fcName={fc.fcName}
-          groupName={fc.groupName}
-          elements={fc.elements}
-          domainTables={fc.domainTables}
-          headingData={fc.headingData}
-        />
-      </>
-    ),
-  }));
-
-  return featureclassPaths;
-};
-
-const featureClassTuletiskiht = (
-  featureclasses: FeatureClassOutput[]
-): FeatureClassPath[] => {
-  const featureclassPaths = featureclasses.map((fc) => ({
-    path: `tuletiskihid/${fc.groupName}/${fc.fcName}`,
-    element: (
-      <>
-        <PageTitle title={fc.fcName} />
-        <FullDataTable
-          fcName={fc.fcName}
-          groupName={fc.groupName}
-          elements={fc.elements}
-          domainTables={fc.domainTables}
-          headingData={fc.headingData}
-        />
-      </>
-    ),
-  }));
-
-  return featureclassPaths;
-};
-
-const featureClassPath3D = (
-  featureclasses: FeatureClassOutput[]
-): FeatureClassPath[] => {
-  const featureclassPaths = featureclasses.map((fc) => ({
-    path: `3d/${fc.groupName}/${fc.fcName}`,
+    path: `${pageName}/${fc.groupName}/${fc.fcName}`,
     element: (
       <>
         <PageTitle title={fc.fcName} />
@@ -191,14 +148,20 @@ export const paths = () => [
   derivativePath,
   threeDPath,
   aboutPath,
-  ...featureClassPath(generateFeatureClass().punktobjektid),
-  ...featureClassPath(generateFeatureClass().joonobjektid),
-  ...featureClassPath(generateFeatureClass().pindobjektidOverlap),
-  ...featureClassPath(generateFeatureClass().pindobjektid),
-  ...featureClassPath(generateFeatureClass().metaandmed),
-  ...featureClassTuletiskiht(generateFeatureClass().tuletiskihidLines),
-  ...featureClassTuletiskiht(generateFeatureClass().tuletiskihidPolygons),
-  ...featureClassPath3D(generateFeatureClass().lod2),
-  ...featureClassPath3D(generateFeatureClass().lod1),
-  ...featureClassPath3D(generateFeatureClass().lod0),
+  ...featureClassPath(generateFeatureClass().punktobjektid, levituumPath),
+  ...featureClassPath(generateFeatureClass().joonobjektid, levituumPath),
+  ...featureClassPath(generateFeatureClass().pindobjektidOverlap, levituumPath),
+  ...featureClassPath(generateFeatureClass().pindobjektid, levituumPath),
+  ...featureClassPath(generateFeatureClass().metaandmed, levituumPath),
+  ...featureClassPath(
+    generateFeatureClass().tuletiskihidLines,
+    derivedPathMany
+  ),
+  ...featureClassPath(
+    generateFeatureClass().tuletiskihidPolygons,
+    derivedPathMany
+  ),
+  ...featureClassPath(generateFeatureClass().lod2, path3d),
+  ...featureClassPath(generateFeatureClass().lod1, path3d),
+  ...featureClassPath(generateFeatureClass().lod0, path3d),
 ];
