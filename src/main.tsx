@@ -9,7 +9,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material";
 import LanguageInitializer from "./utils/LanguageInitializer.tsx";
-import Clarity from "@microsoft/clarity";
+import { clarity } from "react-microsoft-clarity";
 import { PostHogProvider } from "posthog-js/react";
 
 import {
@@ -53,7 +53,7 @@ const options = {
   api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
 };
 
-Clarity.init(import.meta.env.VITE_CLARITY_PROJECT_ID);
+clarity.init(import.meta.env.VITE_CLARITY_PROJECT_ID);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
