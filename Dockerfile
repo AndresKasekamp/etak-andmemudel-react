@@ -1,4 +1,4 @@
-FROM node:20-alpine as builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN npm ci && npm cache clean --force
 
 RUN npm run build
 
-FROM nginx:1.27.2-alpine-slim as prod
+FROM nginx:1.27.2-alpine-slim AS prod
 
 COPY --from=builder /app/dist /usr/share/nginx/html
 
