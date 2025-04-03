@@ -62,7 +62,7 @@ export const getFeatureCount = (
   } else {
     return (
       <ObjectCount
-        url={generateWfsUrl(fcName)}
+        url={generateWfsUrl(fcName, false)}
         hardcodedCount={headingData.count}
       ></ObjectCount>
     );
