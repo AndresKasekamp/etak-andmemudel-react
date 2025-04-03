@@ -30,9 +30,7 @@ const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
     fetchDataFromApi();
   }, [url]); // Empty dependency array means this effect runs once when the component mounts
 
-  // if (loading) return <Typography>Laen...</Typography>;
   if (loading) return <LoadingSpinner wfsData={true} />;
-  // if (error) return <Typography color="error">{error}</Typography>;
 
   return (
     <Typography>
