@@ -7,7 +7,7 @@ import { useMediaQuery } from "@mui/material";
 import ChangeLanguage from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
 import LinkAbout from "./LinkAbout";
-import LinksMenu from "./MobileView";
+import MobileViewMenu from "./MobileViewMenu";
 import { useTheme } from "@mui/material/styles";
 
 import { CategoryLinks } from "./CategoryLinks";
@@ -52,7 +52,7 @@ export default function EtakAppBar() {
               <ChangeLanguage />
               <LinkAbout />
               {isMobile ? (
-                <LinksMenu></LinksMenu>
+                <MobileViewMenu></MobileViewMenu>
               ) : (
                 <>
                   <CategoryLinks

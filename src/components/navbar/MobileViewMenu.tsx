@@ -8,7 +8,7 @@ import { useState, MouseEvent } from "react";
 
 import { derivedPathMany, threeDPath, levituumPath } from "../../pages/paths/groupPaths";
 
-export default function LinksMenu() {
+export default function MobileViewMenu() {
   const { t } = useTranslation();
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
