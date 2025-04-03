@@ -37,16 +37,16 @@ export default function ChangeLanguage() {
   const [menuLanguage, setMenuLanguage] = useState(alternateLang.lang);
 
   useEffect(() => {
-    const initialLang = languages.find((lang) => lang.code === lng) || {
+    const initialLang2 = languages.find((lang) => lang.code === lng) || {
       code: "en",
       lang: "ENG",
     };
-    const alternateLang = languages.find((lang) => lang.code !== lng) || {
+    const alternateLang2 = languages.find((lang) => lang.code !== lng) || {
       code: "et",
       lang: "EST",
     };
-    setCurrentLanguage(initialLang.lang);
-    setMenuLanguage(alternateLang.lang);
+    setCurrentLanguage(initialLang2.lang);
+    setMenuLanguage(alternateLang2.lang);
   }, [lng]);
 
   const open = Boolean(anchorEl);
