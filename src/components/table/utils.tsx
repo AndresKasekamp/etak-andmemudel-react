@@ -52,21 +52,20 @@ export const getFeatureCount = (
   fcName: string,
   headingData: HeadingData
 ) => {
-  switch (locationPathName) {
-    case "tuletiskihid":
-      return (
-        <ObjectCount
-          url={generateWfsUrl(fcName, true)}
-          hardcodedCount={headingData.count}
-        ></ObjectCount>
-      );
-    default:
-      return (
-        <ObjectCount
-          url={generateWfsUrl(fcName)}
-          hardcodedCount={headingData.count}
-        ></ObjectCount>
-      );
+  if (locationPathName === "tuletiskihid") {
+    return (
+      <ObjectCount
+        url={generateWfsUrl(fcName, true)}
+        hardcodedCount={headingData.count}
+      ></ObjectCount>
+    );
+  } else {
+    return (
+      <ObjectCount
+        url={generateWfsUrl(fcName)}
+        hardcodedCount={headingData.count}
+      ></ObjectCount>
+    );
   }
 };
 
