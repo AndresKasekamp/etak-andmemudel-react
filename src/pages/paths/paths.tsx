@@ -2,12 +2,11 @@ import { generateFeatureClass } from "../../data/featureClasses";
 import App from "../../App";
 import { FullDataTable } from "../../components/FullDataTable";
 import { OnePagerForData } from "../../components/AllDataInOnePage";
-import { FeatureClassPath } from "../../interfaces/interfaces";
-
-import { FeatureClassOutput } from "../../interfaces/interfaces";
-
-import AboutPage from "../About";
-
+import {
+  FeatureClassPath,
+  FeatureClassOutput,
+} from "../../interfaces/interfaces";
+import About from "../About";
 import PageTitle from "../../components/PageTitle";
 
 import {
@@ -15,9 +14,6 @@ import {
   derivedPathMany,
   aboutPath as pathAbout,
   levituumPath,
-} from "./groupPaths";
-
-import {
   pointPath,
   polyPath,
   linePath,
@@ -25,7 +21,7 @@ import {
   lod0Path,
   lod1Path,
   lod2Path,
-} from "./groupPaths.ts";
+} from "./groupPaths";
 
 const allLevituumDataTogether = [
   ...generateFeatureClass().metaandmed,
@@ -186,7 +182,7 @@ const aboutPath = {
   element: (
     <>
       <PageTitle title="nameAboutPage" translate={true} />
-      <AboutPage />,
+      <About />,
     </>
   ),
 };

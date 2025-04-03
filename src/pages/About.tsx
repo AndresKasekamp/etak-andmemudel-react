@@ -8,7 +8,7 @@ import { MetaInfo } from "../components/about/MetaInfo";
 
 import { useTranslation } from "react-i18next";
 
-const AboutPage = () => {
+const About = () => {
   const { t } = useTranslation();
   // Project metadata
 
@@ -46,4 +46,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default About;
