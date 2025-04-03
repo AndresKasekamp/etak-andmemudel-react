@@ -1,13 +1,11 @@
 import { FileFormat } from "../helpers/FileFormat.tsx";
 
 import ObjectCount from "../helpers/ObjectCount.tsx";
-import { LocationFormats } from "../../interfaces/interfaces.tsx";
+import { LocationFormats, HeadingData } from "../../interfaces/interfaces.tsx";
 
 import ButtonGroup from "@mui/material/ButtonGroup";
 
 import { generateWfsUrl } from "../../utils/wfsRequest.ts";
-
-import { HeadingData } from "../../interfaces/interfaces.tsx";
 
 import { derivedPathMany, threeDPath } from "../../pages/paths/groupPaths.ts";
 

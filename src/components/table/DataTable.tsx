@@ -8,21 +8,21 @@ import { HashLink } from "react-router-hash-link";
 
 import { DetailViewLink } from "../DetailViewLink.tsx";
 
-import { bgColor, determineDataType } from "../../utils/translate.ts";
+import {
+  bgColor,
+  determineDataType,
+  CategoryKey,
+} from "../../utils/translate.ts";
 
 import RegisterHyperLink from "../helpers/RegisterHyperLink.tsx";
-
-import { CategoryKey } from "../../utils/translate.ts";
 
 import ValueChartBar from "../ValueChartBar.tsx";
 
 import { useTranslation } from "react-i18next";
 
-import { Description } from "../../interfaces/interfaces.tsx";
+import { Description, DataTableProps } from "../../interfaces/interfaces.tsx";
 
 import { useState } from "react";
-
-import { DataTableProps } from "../../interfaces/interfaces.tsx";
 
 import { IoBarChartSharp } from "react-icons/io5";
 
