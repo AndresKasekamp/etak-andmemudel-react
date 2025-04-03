@@ -191,7 +191,7 @@ const featureClassPath = (
   featureclasses: FeatureClassOutput[],
   pageName: string
 ): FeatureClassPath[] => {
-  const featureclassPaths = featureclasses.map((fc) => ({
+  return featureclasses.map((fc) => ({
     path: `${pageName}/${fc.groupName}/${fc.fcName}`,
     element: (
       <>
@@ -206,8 +206,6 @@ const featureClassPath = (
       </>
     ),
   }));
-
-  return featureclassPaths;
 };
 
 export const paths = () => [
