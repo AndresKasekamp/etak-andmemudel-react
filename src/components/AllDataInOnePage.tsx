@@ -27,20 +27,22 @@ export const OnePagerForData = ({
         domainsMerged={domainsMerged}
       />
 
-      {allTablesAndDomains.map((ad, idx) => (
+      {allTablesAndDomains.map((ad, idx) => {
         // Custom comparator function
-
-        <FieldsTable
-          key={idx}
-          fcName={ad.fcName}
-          groupName={ad.groupName}
-          elements={sortElements(ad.elements)}
-          headingData={ad.headingData}
-          domainTables={ad.domainTables.sort((a, b) =>
-            a.name.localeCompare(b.name)
-          )}
-        ></FieldsTable>
-      ))}
+        const sortedTable = ad.domainTables.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
+        return (
+          <FieldsTable
+            key={idx}
+            fcName={ad.fcName}
+            groupName={ad.groupName}
+            elements={sortElements(ad.elements)}
+            headingData={ad.headingData}
+            domainTables={sortedTable}
+          ></FieldsTable>
+        );
+      })}
       <DomainTableMain domains={domainsMerged}></DomainTableMain>
     </div>
   );
