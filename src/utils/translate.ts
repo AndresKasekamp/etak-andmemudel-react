@@ -29,7 +29,7 @@ export type DataTypeValue =
   | typeof REAL_NUMBER
 
 export const determineDataType = (datatype: string, appLang: string) => {
-  const dataTypes: Record<DataTypeKey, DataTypeValue> = {
+  const dataTypesInner: Record<DataTypeKey, DataTypeValue> = {
     OID: INTEGER,
     Geometry: GEOMETRY,
     DateTime: DATE,
@@ -41,7 +41,7 @@ export const determineDataType = (datatype: string, appLang: string) => {
     if (datatype.includes("String")) {
         return datatype.replace("String", "tekst");
     }
-    return dataTypes[datatype as DataTypeKey];
+    return dataTypesInner[datatype as DataTypeKey];
   }
   return datatype;
 };
