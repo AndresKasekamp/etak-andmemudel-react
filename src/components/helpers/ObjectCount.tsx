@@ -30,7 +30,9 @@ const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
     fetchDataFromApi();
   }, [url]);
 
-  if (loading) return <LoadingSpinner wfsData={true} />;
+  if (loading) {
+    return <LoadingSpinner wfsData={true} />;
+  }
 
   return (
     <Typography>
