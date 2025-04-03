@@ -15,10 +15,9 @@ import { useLocation, Location } from "react-router-dom";
 import { getTableName } from "../utils/utils.ts";
 
 import { determineDataType } from "../utils/translate.ts";
-import { FeatureClassOutput } from "../interfaces/interfaces.tsx";
+import { FeatureClassOutput, Description } from "../interfaces/interfaces.tsx";
 
 import { useTranslation } from "react-i18next";
-import { Description } from "../interfaces/interfaces.tsx";
 
 import { DataTable } from "./table/DataTable.tsx";
 import { getFeatureCount, getFileFormats, isLevituum } from "./table/utils.tsx";

@@ -2,10 +2,9 @@ import PageviewIcon from "@mui/icons-material/Pageview";
 
 import { Button } from "@mui/material";
 
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { DetailViewLinkProps } from "../interfaces/interfaces";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
 
 export const DetailViewLink = ({
   locationPathName,
