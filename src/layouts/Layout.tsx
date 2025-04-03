@@ -1,6 +1,6 @@
-import EtakAppBar from "../components/navbar/AppBar";
+import EtakAppBar from "../components/navbar/EtakAppBar";
 import { Outlet } from "react-router-dom";
-import ScrollToTopOnPageChange from "../components/helpers/ScrollToTop";
+import ScrollToTopOnPageChange from "../components/helpers/ScrollToTopOnPageChange";
 import ScrollToTop from "react-scroll-to-top";
 import Container from "@mui/material/Container";
 import NotFoundPage from "../pages/NotFoundPage";
