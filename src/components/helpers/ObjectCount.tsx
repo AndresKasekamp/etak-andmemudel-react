@@ -14,18 +14,15 @@ import { todayDate } from "../../utils/utils.ts";
 const ObjectCount = ({ url, hardcodedCount }: ObjectCountProps) => {
   const [data, setData] = useState<number | null>(null); // Use number or null
   const [loading, setLoading] = useState<boolean>(true);
-  // @ts-ignore
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchDataFromApi = async () => {
       try {
         // @ts-ignore
         const result: ObjectCountResponse = await getObjectCount(url);
-        setData(result["totalFeatures"]); // Adjust based on actual response structure
+        setData(result["totalFeatures"]);
         setLoading(false);
       } catch (err) {
-        setError("Päring ebaõnnestus");
         setLoading(false);
       }
     };
