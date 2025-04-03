@@ -1,12 +1,15 @@
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { useState, MouseEvent } from "react";
-import { useTranslation } from "react-i18next";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { useNavigate, useLocation, Location } from "react-router-dom";
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useState, MouseEvent, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  useNavigate,
+  useLocation,
+  Location,
+  useParams,
+} from "react-router-dom";
 
 const languages = [
   { code: "et", lang: "EST" },
