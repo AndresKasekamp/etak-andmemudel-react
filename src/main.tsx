@@ -6,8 +6,7 @@ import { router } from "./router/router.tsx";
 import "./utils/i18n";
 import LoadingSpinner from "./components/helpers/LoadingSpinner.tsx";
 import CssBaseline from "@mui/material/CssBaseline";
-import { createTheme } from "@mui/material";
-import { ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 import LanguageInitializer from "./utils/LanguageInitializer.tsx";
 import Clarity from "@microsoft/clarity";
 
