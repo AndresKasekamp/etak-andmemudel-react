@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 
 import { TablesTogetherLink } from "./components/helpers/TablesTogetherLink.tsx";
 import { useTranslation } from "react-i18next";
-import ResourcesTable from "./components/ResourcesList.tsx";
+import ResourcesTable from "./components/ResourcesTable.tsx";
 import { AppProps } from "./interfaces/interfaces.tsx";
 
 function App({ pageTitle, data }: AppProps) {
