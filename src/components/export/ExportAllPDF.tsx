@@ -21,7 +21,7 @@ export const ExportAllPDF = ({
     // Add the title or any other header elements
     doc.setFontSize(18);
 
-    allTablesAndDomains.map((rows) => {
+    allTablesAndDomains.forEach((rows) => {
       doc.text(rows.fcName, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {
@@ -40,7 +40,7 @@ export const ExportAllPDF = ({
       doc.addPage();
     });
 
-    domainsMerged.map((domain, index) => {
+    domainsMerged.forEach((domain, index) => {
       doc.text(domain.name, 14, 22);
       // AutoTable function to generate the table
       autoTable(doc, {

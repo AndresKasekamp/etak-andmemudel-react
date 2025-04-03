@@ -56,7 +56,7 @@ export const FieldsTable = ({
     });
 
     // Domain added to pdf
-    domainTables.map((domain) => {
+    domainTables.forEach((domain) => {
       doc.addPage();
       doc.text(domain.name, 14, 22);
       // AutoTable function to generate the table
