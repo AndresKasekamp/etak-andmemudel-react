@@ -25,7 +25,7 @@ export const ContactInfo = () => {
         variant="outlined"
         startIcon={<LinkedIn />}
         component={Link}
-        href="https://www.linkedin.com/in/andres-kasekamp-a226b2198/"
+        href="https://www.linkedin.com/company/maa-ja-ruumiamet"
         target="_blank"
         rel="noopener noreferrer"
       >
