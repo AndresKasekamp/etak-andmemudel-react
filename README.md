@@ -48,7 +48,7 @@ npm install
 
 If you prefer to have the cleanest possible install use:
 ```bash
-npm ci && npm cache clean --force
+npm ci --ignore-scripts && npm cache clean --force
 ```
 
 4) Build the app with Vite:
@@ -75,7 +75,7 @@ npm run dev
 docker --version
 ```
 
-(optionally) run docker build locally. But you can also use a pre-built image, in which it will not use the API that you updated.
+(optionally) run docker build locally. But you can also use a pre-built image, which it will not use the API that you updated.
 
 ```bash
 docker build -t etak-andmemudel-frontend .
