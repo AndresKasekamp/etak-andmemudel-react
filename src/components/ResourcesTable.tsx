@@ -38,18 +38,21 @@ const HorizontalList = ({ row }: { row: TableProps }) => {
             <ListItemButton
               component={Link}
               sx={{
-                color: "appColor.resources",
-                m: 0.5,
-                px: 1,
-                py: 0.5,
-                border: "1px solid lightgray", // Add a light gray border
-                borderRadius: 1, // Optional: Add rounded corners
-                "&:hover": {
-                  borderColor: "gray", // Optional: Change border color on hover
-                },
+              color: "appColor.landBoardMain",
+              m: 0.5,
+              px: 1,
+              py: 0.5,
+              border: "1px solid #b4b4b4", // Add a light gray border
+              borderRadius: 1, // Optional: Add rounded corners
+              "&:hover": {
+              borderColor: "gray", // Optional: Change border color on hover
+              },
               }}
             >
-              <ListItemText primary={item.fcName} />
+              <ListItemText
+              primaryTypographyProps={{ fontWeight: 500 }} // Reduce text boldness
+              primary={item.fcName}
+              />
             </ListItemButton>
           </RouterLink>
         ))}
