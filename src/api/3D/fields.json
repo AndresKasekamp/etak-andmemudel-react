@@ -135,9 +135,9 @@
                 "chart_values": {}
             }
         ],
-        "count": 912954,
+        "count": 917882,
         "desc": {
-            "en": "Desc",
+            "en": "LOD1 buildings",
             "et": "LOD1 hooned"
         },
         "geom_type": "3D TIN",
@@ -201,8 +201,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Andmete viimane muutmise aeg",
+                    "en": "Date of last modification"
                 },
                 "chart_values": {}
             },
@@ -253,11 +253,11 @@
                     "en": "Building type"
                 },
                 "chart_values": {
-                    "Elu- või ühiskondlik hoone": 309214,
-                    "Kõrval- või tootmishoone": 484902,
-                    "Vundament": 18835,
-                    "Vare": 28031,
-                    "Ehitatav hoone": 607
+                    "Elu- või ühiskondlik hoone": 312025,
+                    "Kõrval- või tootmishoone": 496488,
+                    "Vundament": 18877,
+                    "Vare": 28217,
+                    "Ehitatav hoone": 753
                 }
             },
             {
@@ -271,20 +271,21 @@
                     "en": "ALS flight year"
                 },
                 "chart_values": {
-                    "2017 kevad": 86393,
-                    "2017 madal": 9090,
-                    "2018 kevad": 74985,
-                    "2018 madal": 7867,
-                    "2019 kevad": 145753,
-                    "2019 madal": 137052,
-                    "2020 kevad": 82055,
-                    "2020 madal": 198273,
-                    "2021 kevad": 10019,
-                    "2022 kevad": 6607,
-                    "2022 madal": 14805,
-                    "2023 kevad": 8389,
-                    "2023 madal": 55085,
-                    "2024 madal": 5216
+                    "2017 kevad": 86357,
+                    "2017 madal": 9088,
+                    "2018 kevad": 74940,
+                    "2018 madal": 7865,
+                    "2019 kevad": 145691,
+                    "2019 madal": 136851,
+                    "2020 kevad": 81760,
+                    "2020 madal": 197703,
+                    "2021 kevad": 10015,
+                    "2022 kevad": 6605,
+                    "2022 madal": 14693,
+                    "2023 kevad": 8383,
+                    "2023 madal": 54982,
+                    "2024 kevad": 16238,
+                    "2024 madal": 5189
                 }
             },
             {
@@ -312,9 +313,9 @@
                 "chart_values": {}
             }
         ],
-        "count": 841589,
+        "count": 856360,
         "desc": {
-            "en": "Desc",
+            "en": "LOD2 buildings",
             "et": "LOD2 hooned"
         },
         "geom_type": "3D Multi Polygon",
@@ -367,7 +368,7 @@
                 "domain": "tyyp",
                 "desc": {
                     "et": "Rajatise tüüp",
-                    "en": "Desc"
+                    "en": "Facility type"
                 },
                 "chart_values": {}
             },
@@ -379,7 +380,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Kasvuhoone võimendus maapinnast LOD1 kuju loomiseks",
-                    "en": "Desc"
+                    "en": "Greenhouse extrusion from ground to create LOD1 shape"
                 },
                 "chart_values": {}
             },
@@ -408,9 +409,9 @@
                 "chart_values": {}
             }
         ],
-        "count": 3908,
+        "count": 3795,
         "desc": {
-            "en": "Desc",
+            "en": "Greenhouses LOD1",
             "et": "Kasvuhooned LOD1"
         },
         "geom_type": "3D TIN",
@@ -439,7 +440,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Katusealuse LOD1 muutmisaeg",
-                    "en": "Passageway LOD1 modification time"
+                    "en": "Roofed areas LOD1 modification time"
                 },
                 "chart_values": {}
             },
@@ -463,7 +464,7 @@
                 "domain": "tyyp",
                 "desc": {
                     "et": "Rajatise tüüp",
-                    "en": "Desc"
+                    "en": "Facility type"
                 },
                 "chart_values": {}
             },
@@ -475,7 +476,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Võimendus z-koordinaadist alla LOD1 kuju loomiseks",
-                    "en": "Desc"
+                    "en": "Extrusion from z-coordinate downwards to create LOD1 shape"
                 },
                 "chart_values": {}
             },
@@ -504,9 +505,9 @@
                 "chart_values": {}
             }
         ],
-        "count": 42075,
+        "count": 46315,
         "desc": {
-            "en": "Desc",
+            "en": "Roofed areas LOD1/2",
             "et": "Katusealused LOD1/2"
         },
         "geom_type": "3D TIN",
@@ -535,7 +536,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Liikluskorraldusliku rajatise LOD1 muutmisaeg",
-                    "en": "Bridge LOD1 modification time"
+                    "en": "Transport infrastrcture LOD1 modification date"
                 },
                 "chart_values": {}
             },
@@ -559,7 +560,7 @@
                 "domain": "liikluskorralduslik_rajatis_tyyp",
                 "desc": {
                     "et": "Liikluskorraldusliku rajatise tüüp",
-                    "en": "Desc"
+                    "en": "Transport infrastrcture type"
                 },
                 "chart_values": {}
             },
@@ -595,7 +596,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Võimendus z-koordinaadist alla LOD1 kuju loomiseks",
-                    "en": "Desc"
+                    "en": "Extrusion from z-coordinate downwards to create LOD1 shape"
                 },
                 "chart_values": {}
             },
@@ -624,9 +625,9 @@
                 "chart_values": {}
             }
         ],
-        "count": 2598,
+        "count": 2615,
         "desc": {
-            "en": "Desc",
+            "en": "Transport infrastrcture LOD1",
             "et": "Liikluskorralduslikud rajatised LOD1"
         },
         "geom_type": "3D TIN",
@@ -655,7 +656,7 @@
                 "domain": "puutyyp",
                 "desc": {
                     "et": "Lehtpuu/okaspuu eristamine NGR foto alusel",
-                    "en": "TBA"
+                    "en": "Deciduous/coniferous tree classification based on NGR photo"
                 },
                 "chart_values": {
                     "Okaspuu": 2309918,
@@ -670,14 +671,14 @@
                 "domain": "",
                 "desc": {
                     "et": "Puu kõrgus (m)",
-                    "en": "TBA"
+                    "en": "Tree height (m)"
                 },
                 "chart_values": {
-                    "4.0 - 9.82": 1510249,
-                    "9.82 - 15.18": 1368667,
-                    "15.18 - 20.12": 1767718,
-                    "20.12 - 25.4": 1465263,
-                    "25.4 - 46.89": 884151
+                    "4.0 - 9.84": 1514627,
+                    "9.84 - 15.29": 1399536,
+                    "15.29 - 20.31": 1794424,
+                    "20.31 - 25.61": 1447947,
+                    "25.61 - 46.89": 839514
                 }
             },
             {
@@ -688,13 +689,13 @@
                 "domain": "",
                 "desc": {
                     "et": "Võra läbimõõt (m)",
-                    "en": "TBA"
+                    "en": "Crown diameter (m)"
                 },
                 "chart_values": {
                     "3.61 - 6.38": 1143697,
                     "6.38 - 7.95": 1673353,
-                    "7.95 - 9.36": 1837876,
-                    "9.36 - 10.89": 1569011,
+                    "7.95 - 9.37": 1844951,
+                    "9.37 - 10.89": 1561936,
                     "10.89 - 13.44": 772111
                 }
             },
@@ -741,7 +742,7 @@
         ],
         "count": 6996048,
         "desc": {
-            "en": "Desc",
+            "en": "Individual trees centroid",
             "et": "Üksikpuud keskpunkt"
         },
         "geom_type": "Point",
@@ -770,7 +771,7 @@
                 "domain": "puutyyp",
                 "desc": {
                     "et": "Lehtpuu/okaspuu eristamine NGR foto alusel",
-                    "en": "TBA"
+                    "en": "Deciduous/coniferous tree classification based on NGR photo"
                 },
                 "chart_values": {
                     "Okaspuu": 2309918,
@@ -785,14 +786,14 @@
                 "domain": "",
                 "desc": {
                     "et": "Puu kõrgus (m)",
-                    "en": "TBA"
+                    "en": "Tree height (m)"
                 },
                 "chart_values": {
-                    "4.0 - 10.0": 1549863,
-                    "10.0 - 15.52": 1438290,
-                    "15.52 - 20.53": 1791155,
-                    "20.53 - 25.79": 1414166,
-                    "25.79 - 46.89": 802574
+                    "4.0 - 9.88": 1523523,
+                    "9.88 - 15.35": 1409919,
+                    "15.35 - 20.4": 1804189,
+                    "20.4 - 25.71": 1439692,
+                    "25.71 - 46.89": 818725
                 }
             },
             {
@@ -862,7 +863,7 @@
         ],
         "count": 6996048,
         "desc": {
-            "en": "Desc",
+            "en": "Individual trees crown",
             "et": "Üksikpuud puukroon"
         },
         "geom_type": "Multi Polygon",

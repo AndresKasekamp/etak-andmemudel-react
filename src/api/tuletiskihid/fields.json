@@ -21,13 +21,13 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Objekti tüüp Eesti looduse infosüsteemis",
+                    "en": "Object type in Estonian Nature Information System"
                 },
                 "chart_values": {
                     "10": 1550,
-                    "20": 593,
-                    "30": 749
+                    "20": 592,
+                    "30": 751
                 }
             },
             {
@@ -38,7 +38,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Objekti nimetus Riiklikus kohanimeregistris",
-                    "en": "Object name in  National Place Names Register"
+                    "en": "Object name in National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -50,7 +50,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Objekti identifikaator Riiklikus kohanimeregistris",
-                    "en": "Object identifier in  National Place Names Register"
+                    "en": "Object identifier in National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -79,10 +79,10 @@
                 "chart_values": {}
             }
         ],
-        "count": 2892,
+        "count": 2893,
         "desc": {
-            "en": "Desc",
-            "et": "Kirjeldus"
+            "en": "Complete shapes of standing water bodies created from the standing water bodies of the Estonian Topographic Database and the ID of the Estonian Nature Information System.",
+            "et": "Eesti topograafia andmekogu seisuveekogudest Eesti looduse infosüsteemi (EELIS) identifikaatori alusel moodustatud tervikruumikujud."
         },
         "geom_type": "Polygon",
         "group": "polygons"
@@ -109,15 +109,15 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Objekti tüüp Eesti looduse infosüsteemis",
+                    "en": "Object type in Estonian Nature Information System"
                 },
                 "chart_values": {
-                    "10": 237,
+                    "10": 239,
                     "20": 22,
-                    "30": 1106,
+                    "30": 1113,
                     "40": 487,
-                    "50": 1924
+                    "50": 1950
                 }
             },
             {
@@ -128,7 +128,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Objekti nimetus Riiklikus kohanimeregistris",
-                    "en": "Object name in  National Place Names Register"
+                    "en": "Object name in National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -140,7 +140,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Objekti identifikaator Riiklikus kohanimeregistris",
-                    "en": "Object identifier in  National Place Names Register"
+                    "en": "Object identifier in National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -151,13 +151,13 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Lähte- ja suudmepunkti kõrguste vahe",
+                    "en": "The difference in elevation between the source and the mouth of the watercourse"
                 },
                 "chart_values": {
-                    "-10036.05 - 19.02": 2941,
+                    "-10036.05 - 18.42": 2930,
                     "-10036.05 - -10036.05": 1,
-                    "19.02 - 54.39": 716,
+                    "18.42 - 54.39": 762,
                     "54.39 - 213.29": 117,
                     "213.29 - 10004.14": 1
                 }
@@ -187,10 +187,10 @@
                 "chart_values": {}
             }
         ],
-        "count": 3776,
+        "count": 3811,
         "desc": {
-            "en": "Desc",
-            "et": "Kirjeldus"
+            "en": "Complete shapes of watercourses created from the main watercourses of the Estonian Topographic Database and the ID of the Estonian Nature Information System.",
+            "et": "Eesti topograafia andmekogu vooluveekogu põhitelgedest Eesti looduse infosüsteemi (EELIS) identifikaatori alusel moodustatud tervikruumikujud."
         },
         "geom_type": "Line String",
         "group": "lines"
@@ -217,15 +217,15 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Objekti tüüp Eesti looduse infosüsteemis",
+                    "en": "Object type in Estonian Nature Information System"
                 },
                 "chart_values": {
-                    "10": 14293,
-                    "20": 27,
-                    "30": 5410,
-                    "40": 708,
-                    "50": 2153
+                    "10": 14336,
+                    "20": 24,
+                    "30": 5522,
+                    "40": 707,
+                    "50": 2173
                 }
             },
             {
@@ -236,7 +236,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Objekti nimetus Riiklikus kohanimeregistris",
-                    "en": "Object name in  National Place Names Register"
+                    "en": "Object name in National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -248,7 +248,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Objekti identifikaator Riiklikus kohanimeregistris",
-                    "en": "Object identifier in  National Place Names Register"
+                    "en": "Object identifier in National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -259,8 +259,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Vooluveekogu lähte y koordinaat L-EST97 süsteemis",
+                    "en": "Y-coordinate of the watercourse source in L-EST97 system"
                 },
                 "chart_values": {}
             },
@@ -271,8 +271,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Vooluveekogu lähte x koordinaat L-EST97 süsteemis",
+                    "en": "X-coordinate of the watercourse source in L-EST97 system"
                 },
                 "chart_values": {}
             },
@@ -283,8 +283,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Vooluveekogu lähte z koordinaat (kõrgus EH2000 süsteemis)",
+                    "en": "Z-coordinate of the watercourse source in L-EST97 system"
                 },
                 "chart_values": {}
             },
@@ -295,8 +295,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Vooluveekogu suudme y koordinaat L-EST97 süsteemis",
+                    "en": "Y-coordinate of the watercourse mouth in L-EST97 system"
                 },
                 "chart_values": {}
             },
@@ -307,8 +307,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Vooluveekogu suudme x koordinaat L-EST97 süsteemis",
+                    "en": "X-coordinate of the watercourse mouth in L-EST97 system"
                 },
                 "chart_values": {}
             },
@@ -319,8 +319,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Vooluveekogu suudme z koordinaat (kõrgus EH2000 süsteemis)",
+                    "en": "Z-coordinate of the watercourse mouth in L-EST97 system"
                 },
                 "chart_values": {}
             },
@@ -343,8 +343,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Vooluveekogu lähte kõrgus kõrgusmudelilt (kõrgus EH2000 süsteemis)",
+                    "en": "Elevation of watercourse source from the elevation model (in EH2000 system)"
                 },
                 "chart_values": {}
             },
@@ -355,8 +355,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Vooluveekogu suudme kõrgus kõrgusmudelilt (kõrgus EH2000 süsteemis)",
+                    "en": "Elevation of watercourse mouth from the elevation model (in EH2000 system)"
                 },
                 "chart_values": {}
             },
@@ -373,10 +373,10 @@
                 "chart_values": {}
             }
         ],
-        "count": 22591,
+        "count": 22762,
         "desc": {
-            "en": "Desc",
-            "et": "Kirjeldus"
+            "en": "Complete shapes of watercourses created from the main and tributary watercourses of the Estonian Topographic Database and the ID of the Estonian Nature Information System.",
+            "et": "Eesti topograafia andmekogu vooluveekogu põhi- ja sekundaartelgedest Eesti looduse infosüsteemi (EELIS) identifikaatori alusel moodustatud tervikruumikujud."
         },
         "geom_type": "Line String",
         "group": "lines"
@@ -439,18 +439,18 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Hoone tüüp",
+                    "en": "Type of building"
                 },
                 "chart_values": {
-                    "10": 314285,
-                    "20": 517243,
-                    "30": 44903,
-                    "40": 36234,
-                    "50": 1442,
-                    "60": 5725,
-                    "70": 138,
-                    "999": 241
+                    "10": 314330,
+                    "20": 516746,
+                    "30": 44820,
+                    "40": 36174,
+                    "50": 1383,
+                    "60": 5661,
+                    "70": 135,
+                    "999": 237
                 }
             },
             {
@@ -496,15 +496,15 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Hoone maksimaalne kõrgus maapinnast [m]",
+                    "en": "Maximum building height above ground level [m]"
                 },
                 "chart_values": {
-                    "0.0 - 4.0": 147196,
-                    "4.0 - 7.0": 147230,
-                    "7.0 - 12.0": 105936,
-                    "12.0 - 23.0": 12263,
-                    "23.0 - 175.0": 1604
+                    "0.0 - 4.0": 147109,
+                    "4.0 - 7.0": 147306,
+                    "7.0 - 12.0": 106088,
+                    "12.0 - 23.0": 12361,
+                    "23.0 - 175.0": 1613
                 }
             },
             {
@@ -515,7 +515,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Objekti nimetus Riiklikus kohanimeregistris",
-                    "en": "Object name in  National Place Names Register"
+                    "en": "Object name in National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -526,8 +526,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise kasutuselevõtmise aeg Ehitisregistris",
+                    "en": "Time of commissioning of the building in Building Register"
                 },
                 "chart_values": {}
             },
@@ -538,8 +538,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Hoone suurim lubatud maapealsete korruste arv Ehitisregistris",
+                    "en": "Maximum allowed number of floors above ground in building in Building Register"
                 },
                 "chart_values": {}
             },
@@ -550,8 +550,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Hoone vähim lubatud maapealsete korruste arv Ehitisregistris",
+                    "en": "Minimum allowed number of floors above ground in building in Building Register"
                 },
                 "chart_values": {}
             },
@@ -562,8 +562,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitisealune pind Ehitisregistris",
+                    "en": "Building area in Building Register"
                 },
                 "chart_values": {}
             },
@@ -574,12 +574,12 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise kõrgus Ehitisregistris",
+                    "en": "Building height in Building Register"
                 },
                 "chart_values": {
-                    "-300.0 - 11.5": 195440,
-                    "11.5 - 314.0": 9129,
+                    "-300.0 - 12.1": 198172,
+                    "12.1 - 314.0": 7861,
                     "314.0 - 1200.0": 18,
                     "1200.0 - 5100.0": 2,
                     "5100.0 - 7940.0": 1
@@ -592,8 +592,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Hoone maapealse osa alune pind Ehitisregistris",
+                    "en": "Building ground floor area in Building Register"
                 },
                 "chart_values": {}
             },
@@ -604,8 +604,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise peamise kasutamise otstarbe kood Ehitisregistris",
+                    "en": "Code of the main purpose of use of the building in Building Register"
                 },
                 "chart_values": {}
             },
@@ -616,8 +616,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise peamise kasutamise otstarbe nimetus Ehitisregistris",
+                    "en": "Name of the main purpose of use of the building in Building Register"
                 },
                 "chart_values": {}
             },
@@ -628,8 +628,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise kasutamise otstarbe kood Ehitisregistris",
+                    "en": "Code of the purpose of use of the building in Building Register"
                 },
                 "chart_values": {}
             },
@@ -640,8 +640,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise kasutamise otstarbe nimetus Ehitisregistris",
+                    "en": "Name of the purpose of use of the building in Building Register"
                 },
                 "chart_values": {}
             },
@@ -652,8 +652,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise seisund Ehitisregistris",
+                    "en": "Building state in Building Register"
                 },
                 "chart_values": {}
             },
@@ -664,18 +664,18 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise energiaklass Ehitisregistris",
+                    "en": "Building energy label in Building Register"
                 },
                 "chart_values": {
-                    "A": 5178,
-                    "B": 9040,
-                    "C": 8782,
-                    "D": 5600,
-                    "E": 3566,
-                    "F": 2269,
-                    "G": 876,
-                    "H": 837
+                    "A": 5314,
+                    "B": 9047,
+                    "C": 8823,
+                    "D": 5747,
+                    "E": 3693,
+                    "F": 2353,
+                    "G": 916,
+                    "H": 971
                 }
             },
             {
@@ -685,8 +685,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Hoone suletud netopind Ehitisregistris",
+                    "en": "Building net floor area in Building Register"
                 },
                 "chart_values": {}
             },
@@ -697,8 +697,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise täisaadress Aadressiandmete süsteemi infosüsteemis",
+                    "en": "Full address in Address Data System information system"
                 },
                 "chart_values": {}
             },
@@ -709,8 +709,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ehitise URL Ehitisregistris",
+                    "en": "Building URL in Building Register"
                 },
                 "chart_values": {}
             },
@@ -727,10 +727,10 @@
                 "chart_values": {}
             }
         ],
-        "count": 920211,
+        "count": 919486,
         "desc": {
-            "en": "Desc",
-            "et": "Kirjeldus"
+            "en": "Estonian Topographic Database buildings enriched with Building Register attributes",
+            "et": "ETAK hooned EHR tärkväljadega - Eesti topograafia andmekogu hoonete ja maa-aluste hoonete ruumikujusid koos tärkandmetega on rikastatud ehitisregistri tärkandmetega"
         },
         "geom_type": "Polygon",
         "group": "polygons"
@@ -769,15 +769,15 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ruumikuju pikkus",
+                    "en": "Shape length"
                 },
                 "chart_values": {
-                    "11.66 - 1391.06": 8896,
-                    "1391.06 - 3357.6": 3917,
-                    "3357.6 - 6705.6": 1363,
-                    "6705.6 - 13884.69": 387,
-                    "13884.69 - 48681.03": 71
+                    "11.66 - 1417.05": 9030,
+                    "1417.05 - 3429.52": 3890,
+                    "3429.52 - 6842.61": 1312,
+                    "6842.61 - 14152.25": 371,
+                    "14152.25 - 48681.03": 69
                 }
             },
             {
@@ -787,8 +787,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Kas on riigi eesvool",
+                    "en": "Is it a public artificial recipient"
                 },
                 "chart_values": {}
             },
@@ -799,8 +799,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "maaparandussüsteemi kood",
-                    "en": "Desc"
+                    "et": "Maaparandussüsteemi kood Maaparandussüsteemide registris",
+                    "en": "Code of land improvement system in Register of Land Improvement Systems"
                 },
                 "chart_values": {}
             },
@@ -811,8 +811,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "maaparandussüsteemi ehitise kood",
-                    "en": "Desc"
+                    "et": "Maaparandusehitise kood Maaparandussüsteemide registris",
+                    "en": "Code of water conduit in Register of Land Improvement Systems"
                 },
                 "chart_values": {}
             },
@@ -823,8 +823,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "maaparandussüsteemi ühe ja sama ehitise eesvoolu erinevate osade eristamiseks antav number",
-                    "en": "Desc"
+                    "et": "Maaparandussüsteemi ühe ja sama ehitise eesvoolu erinevate osade eristav number",
+                    "en": "Distinguishing number of different parts of the same artificial recipient in Register of Land Improvement Systems"
                 },
                 "chart_values": {}
             },
@@ -841,10 +841,10 @@
                 "chart_values": {}
             }
         ],
-        "count": 14634,
+        "count": 14672,
         "desc": {
-            "en": "Desc",
-            "et": "Kirjeldus"
+            "en": "Derivative feature layer of land improvement systems generated from watercourses in the Estonian Topography Database with a unique land improvement system ID (MPS_ID)",
+            "et": "Maaparandussüsteemi unikaalse id-ga (MPS_ID) Eesti topograafia andmekogu vooluveekogudest genereeritud tervikruumikujude kiht."
         },
         "geom_type": "Multi Line String",
         "group": "lines"
@@ -859,8 +859,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Saare objekti unikaalne identifikaator",
+                    "en": "Unique identifier of island"
                 },
                 "chart_values": {}
             },
@@ -884,7 +884,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Objekti identifikaator Riiklikus kohanimeregistris",
-                    "en": "Object identifier in  National Place Names Register"
+                    "en": "Object identifier in National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -896,7 +896,7 @@
                 "domain": "",
                 "desc": {
                     "et": "Objekti nimetus Riiklikus kohanimeregistris",
-                    "en": "Object name in  National Place Names Register"
+                    "en": "Object name in National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -907,13 +907,13 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Veekogu tüüp, kus saar asub",
+                    "en": "Type of water body the island is situated"
                 },
                 "chart_values": {
                     "10": 2318,
-                    "30": 4420,
-                    "40": 1177
+                    "30": 4445,
+                    "40": 1175
                 }
             },
             {
@@ -923,8 +923,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Veekogu nimetus Riiklikus kohanimeregistris",
+                    "en": "Name of water body in the National Place Names Register"
                 },
                 "chart_values": {}
             },
@@ -935,8 +935,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Veekogu kood Eesti looduse infosüsteemis",
+                    "en": "Code of water body in the Estonian Nature Information System"
                 },
                 "chart_values": {}
             },
@@ -947,8 +947,8 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Veekogu identifikaator Riiklikus kohanimeregistris",
+                    "en": "Identifier of water body in the Estonian Nature Information System"
                 },
                 "chart_values": {}
             },
@@ -971,11 +971,11 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ruumikuju pindala",
+                    "en": "Shape area"
                 },
                 "chart_values": {
-                    "20.01 - 18941345.09": 7911,
+                    "20.01 - 18941345.09": 7934,
                     "18941345.09 - 93422315.18": 1,
                     "93422315.18 - 202934062.27": 1,
                     "202934062.27 - 1018482765.57": 1,
@@ -989,11 +989,11 @@
                 "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Kirjeldus",
-                    "en": "Desc"
+                    "et": "Ruumikuju ümbermõõt",
+                    "en": "Shape length"
                 },
                 "chart_values": {
-                    "16.18 - 7367.91": 7883,
+                    "16.18 - 7367.91": 7906,
                     "7367.91 - 33835.21": 28,
                     "33835.21 - 131746.75": 2,
                     "131746.75 - 425709.91": 1,
@@ -1013,10 +1013,10 @@
                 "chart_values": {}
             }
         ],
-        "count": 7915,
+        "count": 7938,
         "desc": {
-            "en": "Desc",
-            "et": "Kirjeldus"
+            "en": "Island polygons created from the coastline of the Estonian Topographic Database and the data of the Estonian Nature Information System and the Place Names Register.",
+            "et": "Eesti topograafia andmekogu kaldajoonest, Eesti looduse infosüsteemi (EELIS) ja Kohanimeregistri (KNR) andmetest tekitatud saarte polügoonid."
         },
         "geom_type": "Polygon",
         "group": "polygons"
