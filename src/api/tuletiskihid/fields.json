@@ -43,14 +43,14 @@
                 "chart_values": {}
             },
             {
-                "name": "knr_id",
-                "type": "Integer",
+                "name": "no_oid",
+                "type": "String(11)",
                 "meta_type": "register",
-                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Objekti identifikaator Riiklikus kohanimeregistris",
-                    "en": "Object identifier in National Place Names Register"
+                    "et": "Nimeobjekti identifikaator Riiklikus Kohanimeregistris.",
+                    "en": "Name object ID in the National Register of Place Names (KNR)"
                 },
                 "chart_values": {}
             },
@@ -115,9 +115,9 @@
                 "chart_values": {
                     "10": 239,
                     "20": 22,
-                    "30": 1113,
+                    "30": 1116,
                     "40": 487,
-                    "50": 1950
+                    "50": 1953
                 }
             },
             {
@@ -133,14 +133,14 @@
                 "chart_values": {}
             },
             {
-                "name": "knr_id",
-                "type": "Integer",
+                "name": "no_oid",
+                "type": "String(11)",
                 "meta_type": "register",
-                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Objekti identifikaator Riiklikus kohanimeregistris",
-                    "en": "Object identifier in National Place Names Register"
+                    "et": "Nimeobjekti identifikaator Riiklikus Kohanimeregistris.",
+                    "en": "Name object ID in the National Register of Place Names (KNR)"
                 },
                 "chart_values": {}
             },
@@ -155,11 +155,11 @@
                     "en": "The difference in elevation between the source and the mouth of the watercourse"
                 },
                 "chart_values": {
-                    "-10036.05 - 18.42": 2930,
+                    "-10036.05 - 12.98": 2515,
                     "-10036.05 - -10036.05": 1,
-                    "18.42 - 54.39": 762,
-                    "54.39 - 213.29": 117,
-                    "213.29 - 10004.14": 1
+                    "12.98 - 32.14": 912,
+                    "32.14 - 69.82": 330,
+                    "69.82 - 213.29": 59
                 }
             },
             {
@@ -187,7 +187,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 3811,
+        "count": 3817,
         "desc": {
             "en": "Complete shapes of watercourses created from the main watercourses of the Estonian Topographic Database and the ID of the Estonian Nature Information System.",
             "et": "Eesti topograafia andmekogu vooluveekogu põhitelgedest Eesti looduse infosüsteemi (EELIS) identifikaatori alusel moodustatud tervikruumikujud."
@@ -221,11 +221,11 @@
                     "en": "Object type in Estonian Nature Information System"
                 },
                 "chart_values": {
-                    "10": 14336,
+                    "10": 14345,
                     "20": 24,
-                    "30": 5522,
+                    "30": 5546,
                     "40": 707,
-                    "50": 2173
+                    "50": 2179
                 }
             },
             {
@@ -241,14 +241,14 @@
                 "chart_values": {}
             },
             {
-                "name": "knr_id",
-                "type": "Integer",
+                "name": "no_oid",
+                "type": "String(11)",
                 "meta_type": "register",
-                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Objekti identifikaator Riiklikus kohanimeregistris",
-                    "en": "Object identifier in National Place Names Register"
+                    "et": "Nimeobjekti identifikaator Riiklikus Kohanimeregistris.",
+                    "en": "Name object ID in the National Register of Place Names (KNR)"
                 },
                 "chart_values": {}
             },
@@ -373,7 +373,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 22762,
+        "count": 22801,
         "desc": {
             "en": "Complete shapes of watercourses created from the main and tributary watercourses of the Estonian Topographic Database and the ID of the Estonian Nature Information System.",
             "et": "Eesti topograafia andmekogu vooluveekogu põhi- ja sekundaartelgedest Eesti looduse infosüsteemi (EELIS) identifikaatori alusel moodustatud tervikruumikujud."
@@ -443,11 +443,11 @@
                     "en": "Type of building"
                 },
                 "chart_values": {
-                    "10": 314330,
-                    "20": 516746,
-                    "30": 44820,
-                    "40": 36174,
-                    "50": 1383,
+                    "10": 314332,
+                    "20": 516669,
+                    "30": 44821,
+                    "40": 36169,
+                    "50": 1380,
                     "60": 5661,
                     "70": 135,
                     "999": 237
@@ -500,11 +500,11 @@
                     "en": "Maximum building height above ground level [m]"
                 },
                 "chart_values": {
-                    "0.0 - 4.0": 147109,
-                    "4.0 - 7.0": 147306,
-                    "7.0 - 12.0": 106088,
-                    "12.0 - 23.0": 12361,
-                    "23.0 - 175.0": 1613
+                    "0.0 - 4.0": 147079,
+                    "4.0 - 7.0": 147311,
+                    "7.0 - 12.0": 106092,
+                    "12.0 - 23.0": 12370,
+                    "23.0 - 175.0": 1619
                 }
             },
             {
@@ -578,8 +578,8 @@
                     "en": "Building height in Building Register"
                 },
                 "chart_values": {
-                    "-300.0 - 12.1": 198172,
-                    "12.1 - 314.0": 7861,
+                    "-300.0 - 12.1": 198314,
+                    "12.1 - 314.0": 7869,
                     "314.0 - 1200.0": 18,
                     "1200.0 - 5100.0": 2,
                     "5100.0 - 7940.0": 1
@@ -668,14 +668,14 @@
                     "en": "Building energy label in Building Register"
                 },
                 "chart_values": {
-                    "A": 5314,
-                    "B": 9047,
-                    "C": 8823,
-                    "D": 5747,
-                    "E": 3693,
-                    "F": 2353,
-                    "G": 916,
-                    "H": 971
+                    "A": 5326,
+                    "B": 9049,
+                    "C": 8819,
+                    "D": 5757,
+                    "E": 3704,
+                    "F": 2360,
+                    "G": 918,
+                    "H": 970
                 }
             },
             {
@@ -727,7 +727,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 919486,
+        "count": 919404,
         "desc": {
             "en": "Estonian Topographic Database buildings enriched with Building Register attributes",
             "et": "ETAK hooned EHR tärkväljadega - Eesti topograafia andmekogu hoonete ja maa-aluste hoonete ruumikujusid koos tärkandmetega on rikastatud ehitisregistri tärkandmetega"
@@ -773,10 +773,10 @@
                     "en": "Shape length"
                 },
                 "chart_values": {
-                    "11.66 - 1417.05": 9030,
-                    "1417.05 - 3429.52": 3890,
-                    "3429.52 - 6842.61": 1312,
-                    "6842.61 - 14152.25": 371,
+                    "11.66 - 1432.39": 9088,
+                    "1432.39 - 3454.28": 3848,
+                    "3454.28 - 6881.19": 1300,
+                    "6881.19 - 14152.25": 367,
                     "14152.25 - 48681.03": 69
                 }
             },
@@ -877,14 +877,14 @@
                 "chart_values": {}
             },
             {
-                "name": "knr_id",
-                "type": "Integer",
+                "name": "no_oid",
+                "type": "String(11)",
                 "meta_type": "register",
-                "link": "https://maaamet.ee/ruumiandmed-ja-kaardid/aadressid-ja-kohanimed/kohanimeregister",
+                "link": null,
                 "domain": "",
                 "desc": {
-                    "et": "Objekti identifikaator Riiklikus kohanimeregistris",
-                    "en": "Object identifier in National Place Names Register"
+                    "et": "Nimeobjekti identifikaator Riiklikus Kohanimeregistris.",
+                    "en": "Name object ID in the National Register of Place Names (KNR)"
                 },
                 "chart_values": {}
             },
@@ -912,8 +912,8 @@
                 },
                 "chart_values": {
                     "10": 2318,
-                    "30": 4445,
-                    "40": 1175
+                    "30": 4452,
+                    "40": 1173
                 }
             },
             {
@@ -975,7 +975,7 @@
                     "en": "Shape area"
                 },
                 "chart_values": {
-                    "20.01 - 18941345.09": 7934,
+                    "20.01 - 18941345.09": 7939,
                     "18941345.09 - 93422315.18": 1,
                     "93422315.18 - 202934062.27": 1,
                     "202934062.27 - 1018482765.57": 1,
@@ -993,7 +993,7 @@
                     "en": "Shape length"
                 },
                 "chart_values": {
-                    "16.18 - 7367.91": 7906,
+                    "16.18 - 7367.91": 7911,
                     "7367.91 - 33835.21": 28,
                     "33835.21 - 131746.75": 2,
                     "131746.75 - 425709.91": 1,
@@ -1013,7 +1013,7 @@
                 "chart_values": {}
             }
         ],
-        "count": 7938,
+        "count": 7943,
         "desc": {
             "en": "Island polygons created from the coastline of the Estonian Topographic Database and the data of the Estonian Nature Information System and the Place Names Register.",
             "et": "Eesti topograafia andmekogu kaldajoonest, Eesti looduse infosüsteemi (EELIS) ja Kohanimeregistri (KNR) andmetest tekitatud saarte polügoonid."
