@@ -1,6 +1,6 @@
 {
   "name": "etak-andmemudel-react",
-  "homepage": "https://etak-andmemudel-react.vercel.app",
+  "homepage": "https://andreskasekamp.github.io/etak-andmemudel-react/",
   "description": "ETD data model front-end written in React",
   "license": "MIT",
   "author": "Andres Kasekamp <andres.kasekamp@maaruum.ee> (https://www.linkedin.com/in/andres-kasekamp-a226b2198/)",
@@ -18,7 +18,9 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
