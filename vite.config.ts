@@ -15,7 +15,7 @@ const buildDate = () => {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/etak-andmemudel-react/",
+  // base: "/etak-andmemudel-react/",
   define: {
     __BUILD_DATE__: buildDate(),
   },
